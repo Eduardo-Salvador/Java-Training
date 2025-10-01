@@ -1,8 +1,8 @@
-package Seminar.System.Controller;
-import Seminar.System.Domain.Location;
-import Seminar.System.Domain.Seminar;
-import Seminar.System.Domain.Students;
-import Seminar.System.Domain.Teacher;
+package SeminarSystem.Controller;
+import SeminarSystem.Domain.Location;
+import SeminarSystem.Domain.Seminar;
+import SeminarSystem.Domain.Students;
+import SeminarSystem.Domain.Teacher;
 import java.util.Arrays;
 import java.util.Scanner;
 

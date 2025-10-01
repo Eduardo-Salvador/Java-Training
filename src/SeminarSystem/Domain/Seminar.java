@@ -1,4 +1,4 @@
-package Seminar.System.Domain;
+package SeminarSystem.Domain;
 
 public class Seminar {
     private String title;

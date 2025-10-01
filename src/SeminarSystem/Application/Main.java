@@ -1,5 +1,5 @@
-package Seminar.System.Application;
-import Seminar.System.Controller.Menu;
+package SeminarSystem.Application;
+import SeminarSystem.Controller.Menu;
 
 public class Main {
     public static void main(String[] args) {

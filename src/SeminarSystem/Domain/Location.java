@@ -1,4 +1,4 @@
-package Seminar.System.Domain;
+package SeminarSystem.Domain;
 
 public record Location(String address) {
 }
