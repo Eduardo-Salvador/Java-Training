@@ -3,7 +3,6 @@ import Seminar.System.Domain.Location;
 import Seminar.System.Domain.Seminar;
 import Seminar.System.Domain.Students;
 import Seminar.System.Domain.Teacher;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -514,7 +513,6 @@ public class Menu {
         while (option != 10){
             if(option < 0 || option > 10){
                 System.out.println("Invalid Option, try again.");
-                displayMenu();
             }
             displayMenu();
             option = newScanner.nextInt();
