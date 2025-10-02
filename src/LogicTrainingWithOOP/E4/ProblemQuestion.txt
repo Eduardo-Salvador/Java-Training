@@ -1,0 +1,1 @@
+Create an algorithm that receives an integer and prints its predecessor and successor on the screen.
