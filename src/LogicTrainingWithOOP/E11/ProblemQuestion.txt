@@ -1,0 +1,2 @@
+Create an algorithm that reads four grades obtained by a student, calculates the average of the grades obtained, and prints the student's name and
+whether the student passed or failed. For a student to be considered approved, their final average must be greater than or equal to 7.

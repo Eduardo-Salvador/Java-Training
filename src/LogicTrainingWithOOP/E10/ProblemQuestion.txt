@@ -1,0 +1,1 @@
+Create an algorithm that reads three grades obtained by a student and prints the average of the grades on the screen.

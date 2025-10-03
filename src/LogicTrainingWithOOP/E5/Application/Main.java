@@ -1,5 +1,4 @@
 package LogicTrainingWithOOP.E5.Application;
-
 import LogicTrainingWithOOP.E5.Controller.Report;
 
 public class Main {

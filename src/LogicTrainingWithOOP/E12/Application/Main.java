@@ -1,5 +1,5 @@
-package LogicTrainingWithOOP.E4.Application;
-import LogicTrainingWithOOP.E4.Controller.Report;
+package LogicTrainingWithOOP.E12.Application;
+import LogicTrainingWithOOP.E12.Controller.Report;
 
 public class Main {
     public static void main(String[] args) {

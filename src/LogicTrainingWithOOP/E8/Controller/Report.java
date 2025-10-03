@@ -1,7 +1,6 @@
 package LogicTrainingWithOOP.E8.Controller;
 import LogicTrainingWithOOP.CustomNumberDomain.CustomNumber;
 import LogicTrainingWithOOP.CustomNumberDomain.Value;
-
 import java.util.Locale;
 import java.util.Scanner;
 
