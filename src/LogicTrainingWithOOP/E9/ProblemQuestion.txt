@@ -1,0 +1,12 @@
+Create an algorithm that calculates a person's BMI (Body Mass Index), reads their weight and height,
+and prints their condition on the screen.
+According to the table below:
+
+BMI Formula = weight / (height) ²
+BMI Conditions Table:
+Below 18.5 | Underweight
+Between 18.6 and 24.9 | Ideal weight (congratulations)
+Between 25.0 and 29.9 | Slightly overweight
+Between 30.0 and 34.9 | Grade I obesity
+Between 35.0 and 39.9 | Grade II (severe) obesity
+Greater than or equal to 40 | Grade III (morbid) obesity

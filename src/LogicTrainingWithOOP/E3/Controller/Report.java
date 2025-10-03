@@ -18,11 +18,11 @@ public class Report {
         Value valueB = new CustomNumber();
         System.out.println("Algorithm 3:");
         System.out.print("Enter the (A) first number: ");
-        valueA.setValue(input.nextInt());
+        valueA.setValueInt(input.nextInt());
         System.out.print("Enter the (B) second number: ");
-        valueB.setValue(input.nextInt());
+        valueB.setValueInt(input.nextInt());
         input.close();
-        int valueC = calculationWithCondition(valueA.getValue(), valueB.getValue());
+        int valueC = calculationWithCondition(valueA.getValueInt(), valueB.getValueInt());
         System.out.println("Result C = " + valueC);
     }
 }

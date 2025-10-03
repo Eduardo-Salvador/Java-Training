@@ -1,0 +1,1 @@
+Write an algorithm that reads two boolean (logical) values and determines whether they are both TRUE or FALSE.

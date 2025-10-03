@@ -26,13 +26,13 @@ public class Report {
 
         System.out.println("Algorithm 1:");
         System.out.print("Enter the (A) first number: ");
-        valueA.setValue(input.nextInt());
+        valueA.setValueInt(input.nextInt());
         System.out.print("Enter the (B) second number: ");
-        valueB.setValue(input.nextInt());
+        valueB.setValueInt(input.nextInt());
         System.out.print("Enter the (C) third number: ");
-        valueC.setValue(input.nextInt());
+        valueC.setValueInt(input.nextInt());
         input.close();
 
-        compareValues(valueA.getValue(), valueB.getValue(), valueC.getValue());
+        compareValues(valueA.getValueInt(), valueB.getValueInt(), valueC.getValueInt());
     }
 }

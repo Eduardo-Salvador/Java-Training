@@ -14,8 +14,8 @@ public class Report {
         Value value = new CustomNumber();
         System.out.println("Algorithm 4:");
         System.out.print("Enter the any number: ");
-        value.setValue(input.nextInt());
+        value.setValueInt(input.nextInt());
         input.close();
-        generatePredecessorAndSuccessor(value.getValue());
+        generatePredecessorAndSuccessor(value.getValueInt());
     }
 }

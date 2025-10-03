@@ -1,0 +1,1 @@
+Create an algorithm that reads any value and prints it on the screen with a 5% adjustment.

@@ -1,0 +1,2 @@
+Create an algorithm that reads the minimum wage and a user's salary,
+calculates how many minimum breaks this user earns, and prints the result on the screen. (Minimum wage base: $1,293.20).
