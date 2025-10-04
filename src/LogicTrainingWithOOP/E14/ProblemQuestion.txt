@@ -1,0 +1,1 @@
+Make an algorithm that receives a value A and B, and exchanges the value of A for B and the value of B for A and prints the values on the screen.

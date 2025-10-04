@@ -1,0 +1,3 @@
+Create an algorithm that reads the year a person was born and prints on the screen how many years, months, and days that person has lived.
+Consider a year with 365 days and a month with 30 days.
+(Ex.: 5 years, 2 months, and 15 days of life)

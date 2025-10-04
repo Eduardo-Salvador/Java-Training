@@ -1,0 +1,1 @@
+Create an algorithm that reads the name and age of a person and prints the person's name and whether they are an adult or a minor on the screen.

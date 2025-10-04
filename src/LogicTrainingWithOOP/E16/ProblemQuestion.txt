@@ -1,0 +1,2 @@
+Create an algorithm that reads three values representing the three sides of a triangle and checks if they are valid. Determine whether the triangle is
+equilateral, isosceles, or scalene.
