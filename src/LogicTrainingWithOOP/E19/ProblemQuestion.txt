@@ -1,0 +1,1 @@
+Create an algorithm that prints the multiplication table from 1 to 10 on the screen.

@@ -4,7 +4,6 @@ import LogicTrainingWithOOP.CustomNumberDomain.CustomNumber;
 import java.util.Scanner;
 
 public class Report {
-
     private String verifierPairAndOdd(int number) {
         if (number % 2 == 0) {
             return "The number is Pair";

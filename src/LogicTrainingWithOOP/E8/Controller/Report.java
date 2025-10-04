@@ -5,7 +5,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private int[] descendingAlgorithm(int valueA, int valueB, int valueC){
         int[] arrayInt = new int[]{valueA, valueB, valueC};
         int valueMin = arrayInt[0];

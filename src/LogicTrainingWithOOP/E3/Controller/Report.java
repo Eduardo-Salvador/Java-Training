@@ -4,7 +4,6 @@ import LogicTrainingWithOOP.CustomNumberDomain.CustomNumber;
 import java.util.Scanner;
 
 public class Report {
-
     private int calculationWithCondition(int numberA, int numberB){
         if (numberA == numberB){
             return (numberA + numberB);

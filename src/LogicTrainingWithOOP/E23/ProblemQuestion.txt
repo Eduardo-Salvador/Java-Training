@@ -1,0 +1,3 @@
+Create an algorithm that calculates a teacher's net salary.
+The input data will be: hourly rate, number of classes taught per month,
+and INSS deduction percentage. Print the final net salary on the screen.

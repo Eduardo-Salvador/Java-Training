@@ -5,7 +5,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private void algorithmBMI(double weight, double height){
         double resultBMI = weight / (height * height);
         System.out.println("BMI Result:");

@@ -1,0 +1,1 @@
+Make an algorithm that displays a random value between 0 and 100.

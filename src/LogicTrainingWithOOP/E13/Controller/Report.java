@@ -3,7 +3,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private int verifyAge(int age, Scanner input){
         while(age < 0 || age > 130){
             System.out.println("Invalid age, enter your age again.");

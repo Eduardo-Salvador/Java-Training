@@ -1,0 +1,2 @@
+Francisco is 5'1" and grows 2 centimeters per year, while Sara is 4'1" and grows 3 centimeters per year.
+Create an algorithm that calculates and prints how many years it will take for Francisco to be taller than Sara.

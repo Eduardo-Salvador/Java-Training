@@ -1,0 +1,6 @@
+Create an algorithm that calculates the number of liters of fuel used in a trip,
+knowing that the car travels 12 km per liter. The user should be provided with the time spent on the trip,
+their average speed, the distance traveled, and the number of liters used to make the trip.
+
+Formula: distance = time x speed.
+liters used = distance / 12.

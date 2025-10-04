@@ -1,0 +1,2 @@
+Create an algorithm that reads two integer values A and B,
+prints the quotient and the remainder of the integer division between them on the screen.

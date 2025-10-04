@@ -5,7 +5,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private void verifyBool(char value){
         Value valueBool = new CustomNumber();
         if (Character.toLowerCase(value) == 'f'){

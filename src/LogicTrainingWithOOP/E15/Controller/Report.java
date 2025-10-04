@@ -4,7 +4,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private void lifeCounter(int day, int month, int year, Scanner input){
         while(year > 2025 || year < 0 || day < 1 || day > 31 || month < 1 || month > 12) {
             System.out.println("Invalid Birthdate, try again");

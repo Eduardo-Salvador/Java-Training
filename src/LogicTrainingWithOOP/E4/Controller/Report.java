@@ -4,7 +4,6 @@ import LogicTrainingWithOOP.CustomNumberDomain.Value;
 import java.util.Scanner;
 
 public class Report {
-
     private void generatePredecessorAndSuccessor(int number){
         System.out.println("Successor = " + (number+1) + "\nPredecessor = " + (number-1));
     }

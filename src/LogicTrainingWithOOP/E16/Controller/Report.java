@@ -1,12 +1,9 @@
 package LogicTrainingWithOOP.E16.Controller;
-
 import LogicTrainingWithOOP.CustomNumberDomain.CustomNumber;
-
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private int verifyValidSide(int num, Scanner input){
         while(num < 0){
             System.out.println("Invalid value, input again");

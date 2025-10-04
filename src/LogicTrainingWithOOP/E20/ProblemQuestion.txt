@@ -1,0 +1,1 @@
+Create an algorithm that receives an integer value and prints its multiplication table on the screen.

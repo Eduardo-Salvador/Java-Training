@@ -4,7 +4,6 @@ import LogicTrainingWithOOP.CustomNumberDomain.CustomNumber;
 import java.util.Scanner;
 
 public class Report {
-
     private void compareValues(int A, int B, int C){
         int resultAB = A + B;
         if (resultAB > C){

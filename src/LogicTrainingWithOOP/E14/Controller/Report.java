@@ -4,7 +4,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     public void runReport(){
         Scanner input = new Scanner(System.in).useLocale(Locale.US);
         CustomNumber n1 = new CustomNumber();

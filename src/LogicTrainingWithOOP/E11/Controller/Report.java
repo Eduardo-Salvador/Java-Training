@@ -5,7 +5,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Report {
-
     private void aprovedReproved(double n1, double n2, double n3, double n4){
         double average = (n1 + n2 + n3 + n4) / 4;
         if(average >= 7){

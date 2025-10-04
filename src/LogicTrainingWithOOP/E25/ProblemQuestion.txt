@@ -1,0 +1,46 @@
+A company wants to control the temperature of several smart rooms.
+Each room has sensors that report the current temperature, and a system must check whether it is within
+the acceptable range.
+If the temperature is above the maximum, the air conditioning must be turned on.
+If it is below the minimum, the heater must be turned on.
+Otherwise, nothing must be done.
+
+-------------------------------------------------------------
+
+Objective:
+Create a system that:
+Allows you to register rooms with:
+Room name
+Minimum allowed temperature
+Maximum allowed temperature
+Current temperature
+Automatically checks whether the room needs heating, cooling, or is stable.
+Display a report.
+
+-------------------------------------------------------------
+
+Technical requirements:
+At least two classes:
+Room → represents a room and its temperature control logic.
+AirConditioningSystem → contains an array/list of rooms and generates the report.
+Use encapsulation (private attributes and get/set).
+The logic must be in a method within the Room class, called checkClimate().
+
+Example of expected output
+=== Climate Control ===
+Room: Office 1
+Current temperature: 29.5°C → Needs cooling (AC on)
+
+Room: Meeting
+Current temperature: 20.0°C → Stable
+
+Room: Reception
+Current temperature: 17.0°C → Needs heating (Heater on)
+
+-------------------------------------------------------------
+
+Challenge:
+Add a static method countHeatedRooms() that tells how many rooms have the heater on.
+Implement constructor overloading to allow creating a Room with only a name and limits,
+and then set the current temperature.
+Translated with DeepL.com (free version)
