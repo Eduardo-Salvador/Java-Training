@@ -14,6 +14,27 @@ public class ReportRoom {
         }
     }
 
+    private boolean checker(Room[] rooms){
+        if(rooms[0] == null){
+            System.out.println("No rooms registered, please register rooms and try again.");
+            return true;
+        }
+        return false;
+    }
+
+    private static void countHeatedRooms(Room[] rooms){
+        int counter = 0;
+        for (Room value : rooms) {
+            if (value != null) {
+                if (value.getActualTemp() < value.getMinTemp()) {
+                    counter++;
+                }
+            }
+        }
+        System.out.println("We have " + counter + " rooms with heaters on.");
+
+    }
+
     public int menu(Room[] rooms) {
         Scanner input = new Scanner(System.in).useLocale(Locale.US);
         System.out.println("Algorithm 25:");
@@ -22,7 +43,8 @@ public class ReportRoom {
         System.out.println("1. Register a room");
         System.out.println("2. Change room settings");
         System.out.println("3. Check rooms");
-        System.out.println("4. Exit");
+        System.out.println("4. Check rooms with heater on");
+        System.out.println("5. Exit");
         int optionMenu = input.nextInt();
         int option = 0;
         switch (optionMenu) {
@@ -45,6 +67,9 @@ public class ReportRoom {
                 }
                 break;
             case 2:
+                if (checker(rooms)){
+                    break;
+                }
                 System.out.println("Which room do you want to change?");
                 for (int i = 0; i < rooms.length; i++) {
                     if (rooms[i] != null) {
@@ -84,6 +109,9 @@ public class ReportRoom {
                 }
                 break;
             case 3:
+                if (checker(rooms)){
+                    break;
+                }
                 System.out.println("=== Climate Control ===");
                 for (Room value : rooms) {
                     if (value != null) {
@@ -95,6 +123,12 @@ public class ReportRoom {
                 }
                 break;
             case 4:
+                if (checker(rooms)){
+                    break;
+                }
+                countHeatedRooms(rooms);
+                break;
+            case 5:
                 System.out.println("Ending...");
                 break;
             default:
@@ -110,7 +144,7 @@ public class ReportRoom {
         int optionMenu;
         do {
             optionMenu = menu(rooms);
-        } while (optionMenu != 4);
+        } while (optionMenu != 5);
         System.out.println("Program ended.");
     }
 }
