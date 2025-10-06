@@ -1,10 +1,9 @@
 package LogicTrainingWithOOP.E25.Application;
-
-import LogicTrainingWithOOP.E25.Controller.Report;
+import LogicTrainingWithOOP.E25.Controller.ReportRoom;
 
 public class Main {
     public static void main(String[] args) {
-        Report report = new Report();
+        ReportRoom report = new ReportRoom();
         report.runReport();
     }
 }

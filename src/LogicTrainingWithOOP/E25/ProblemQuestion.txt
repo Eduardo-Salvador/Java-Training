@@ -43,4 +43,3 @@ Challenge:
 Add a static method countHeatedRooms() that tells how many rooms have the heater on.
 Implement constructor overloading to allow creating a Room with only a name and limits,
 and then set the current temperature.
-Translated with DeepL.com (free version)
