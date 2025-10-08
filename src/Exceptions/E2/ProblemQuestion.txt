@@ -1,0 +1,2 @@
+Checked vs. Unchecked:
+Implement a method that reads a file using `FileReader`. Handle checked exceptions like `FileNotFoundException` and `IOException` appropriately.

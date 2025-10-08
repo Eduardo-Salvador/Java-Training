@@ -1,0 +1,3 @@
+Using AutoCloseable:
+Create a class that implements `AutoCloseable`, with some dummy resource (e.g., a mock connection). In the `close()`
+method, print an informative message. Use this class in a try-with-resources statement to ensure proper closing.

@@ -1,0 +1,3 @@
+Try-catch-finally:
+Implement code that opens a resource (e.g., a file) within the try block,
+catches any exceptions, and ensures the resource is always closed in the finally block, printing messages for each step.

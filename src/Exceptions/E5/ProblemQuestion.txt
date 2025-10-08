@@ -1,0 +1,3 @@
+Try-with-resources:
+Write a program to write text to a file using `BufferedWriter` within a try-with-resources block.
+Test by making the file inaccessible to generate an exception and handle it.

@@ -1,0 +1,3 @@
+Exceptions in business rules:
+Create a `BankAccount` class that throws a custom `BalanceInsufficientException`
+exception when attempting to withdraw an amount greater than the available balance, handling this exception in the main method.
