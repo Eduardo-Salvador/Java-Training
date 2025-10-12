@@ -1,0 +1,10 @@
+1. Invoice System
+Create an Invoice class with:
+
+number, issue date, total amount, due date
+
+isVencida() method that checks if the invoice is overdue
+
+calculateMulta(doublepercentagePerDay) method that returns the fine amount based on the number of days late
+
+Throw a custom InvoiceVencidaException exception if you attempt to pay an overdue invoice
