@@ -17,6 +17,5 @@ public class Main {
         double value = 5342.21;
         NumberFormat number = NumberFormat.getNumberInstance(localeIT);
         System.out.println(number.getCurrency() + ": " + number.format(value));
-
     }
 }

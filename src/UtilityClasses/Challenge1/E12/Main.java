@@ -4,7 +4,6 @@ import java.text.Normalizer;
 import java.util.Scanner;
 
 public class Main {
-
     public static String clearText(String text) throws IOException {
         if (text == null) {
             throw new IOException("String Null, try again");

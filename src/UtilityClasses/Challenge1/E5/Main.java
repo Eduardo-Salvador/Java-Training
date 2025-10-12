@@ -6,7 +6,6 @@ import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Main {
-
     private static void checkExpiration(LocalDate date) {
         LocalDate now = LocalDate.now();
         if (now.isAfter(date)) {
