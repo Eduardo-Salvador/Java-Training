@@ -1,0 +1,6 @@
+Customer Registration with Consumption.
+Customer class with name, CPF, registration date.
+Consumption class with amount, date, category (via Enum: FOOD, TRANSPORTATION, HEALTH, etc.)
+Each customer can have up to 100 consumption items registered.
+Calculate the total consumption per month, by category.
+Apply exceptions for invalid CPF numbers.
