@@ -3,10 +3,13 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Invoice {
-    private final int number;
-    private final LocalDate dateOfIssue;
+    private int number;
+    private LocalDate dateOfIssue;
     private double totalValue;
     private LocalDate dueDate;
+
+    public Invoice(){
+    }
 
     public void setTotalValue(double totalValue) {
         this.totalValue = totalValue;

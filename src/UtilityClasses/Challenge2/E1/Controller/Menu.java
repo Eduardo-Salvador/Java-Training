@@ -98,7 +98,7 @@ public class Menu {
                         System.out.println("No invoices registered, try again");
                     } else {
                         for (Invoice value : invoices) {
-                            if (value != null) {
+                            if (value != null && value.getNumber() != 0) {
                                 System.out.println("Number: " + value.getNumber() + " - Value: $" + value.getTotalValue() + " - Due Date: " + value.getDueDate());
                             }
                         }
@@ -110,14 +110,15 @@ public class Menu {
                         System.out.println("No invoices registered, try again");
                     } else {
                         for (Invoice value : invoices) {
-                            if (value != null) {
+                            if (value != null && value.getNumber() != 0) {
                                 System.out.println("Number: " + value.getNumber() + " - Value: $" + value.getTotalValue() + " - Due Date: " + value.getDueDate());
                             }
                         }
                         try {
+                            Invoice invNull = new Invoice();
                             int optionInv = inp.nextInt()-1;
                             invoices[optionInv].payInvoice();
-                            invoices[optionInv] = null;
+                            invoices[optionInv] = invNull;
                         } catch (PaymentException e) {
                             System.out.println(e.getMessage());
                         }
@@ -131,7 +132,7 @@ public class Menu {
                         System.out.println("No invoices registered, try again");
                     } else {
                         for (Invoice value : invoices) {
-                            if (value != null) {
+                            if (value != null && value.getNumber() != 0) {
                                 System.out.println("Number: " + value.getNumber() + " - Value: $" + value.getTotalValue() + " - Due Date: " + value.getDueDate());
                             }
                         }
