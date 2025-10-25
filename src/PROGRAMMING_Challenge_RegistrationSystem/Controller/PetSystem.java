@@ -4,12 +4,15 @@ import PROGRAMMING_Challenge_RegistrationSystem.Domain.Pet;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PetSystem {
 
 
-    public static void menu(){
+    public static void menu() {
         Scanner input = new Scanner(System.in);
         int option = 0;
         do {
@@ -28,8 +31,11 @@ public class PetSystem {
             }
             switch (option){
                 case 1:
-                    readForm(input);
-
+                    try {
+                        createPet(input);
+                    } catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 2:
                     break;
@@ -49,26 +55,42 @@ public class PetSystem {
         } while (option != 6);
     }
 
-    public static Pet readForm(Scanner input){
-        try(FileReader fr = new FileReader("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\Forms.txt")){
-            BufferedReader br = new BufferedReader(fr);
-            String[] questions = new String[7];
-            Pet pet = new Pet();
-            String line;
+    public static Pet createPet(Scanner input) throws IOException {
+        Pet pet = null;
+        String[] answers = new String[7];
+        String line;
+        //Lendo e inputando dados.
+        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\Forms.txt"))) {
             int i = 0;
-            while ((line = br.readLine()) != null){
-                if (i != 7) {
-                    questions[i] = line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+                if (i < 7) {
+                    answers[i] = input.nextLine();
+                    String regexName = "^[A-Za-z]+ [A-Za-z]+$";
+                    Pattern pattern = Pattern.compile(regexName);
+                    Matcher matcher = pattern.matcher(answers[0]);
+                    if (!matcher.matches()){
+                        throw new IOException("Invalid Name: Required name + surname without special characters");
+                    }
+                    if (i == 3) {
+                        System.out.println("What house number?");
+                        String addressComplet = input.nextLine();
+                        System.out.println("What a city");
+                        addressComplet += ", " + input.nextLine();
+                        System.out.println("Which street?");
+                        addressComplet += ", " + input.nextLine();
+                        answers[i] = addressComplet;
+                        i++;
+                        continue;
+                    }
+                    answers[i] = input.nextLine();
                     i++;
                 }
-            }
-            for (String question : questions) {
-                System.out.println(question);
-                input.nextLine();
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-    }
 
+        return pet;
+    }
 }
