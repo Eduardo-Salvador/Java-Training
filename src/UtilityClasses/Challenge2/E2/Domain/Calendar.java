@@ -1,5 +1,6 @@
 package UtilityClasses.Challenge2.E2.Domain;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Calendar {
     private final Event[] calendar = new Event[100];
@@ -114,5 +115,9 @@ public class Calendar {
                 System.out.println("---------------------------");
             }
         }
+    }
+
+    public LocalDateTime getTime() {
+        return null;
     }
 }
