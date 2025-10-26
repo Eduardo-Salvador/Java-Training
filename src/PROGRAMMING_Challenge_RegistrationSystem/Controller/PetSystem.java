@@ -3,14 +3,13 @@ import PROGRAMMING_Challenge_RegistrationSystem.Domain.Address;
 import PROGRAMMING_Challenge_RegistrationSystem.Domain.Pet;
 import PROGRAMMING_Challenge_RegistrationSystem.Domain.PetSex;
 import PROGRAMMING_Challenge_RegistrationSystem.Domain.PetType;
-
 import java.io.*;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -43,6 +42,11 @@ public class PetSystem {
                     }
                     break;
                 case 2:
+                    try {
+                        searchPet(input);
+                    } catch (IOException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 3:
                     break;
@@ -58,6 +62,7 @@ public class PetSystem {
                     break;
             }
         } while (option != 6);
+        input.close();
     }
 
     public static Pet createPet(Scanner input) throws IOException {
@@ -245,5 +250,106 @@ public class PetSystem {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    private static void searchPet(Scanner scanner) throws IOException {
+        int option;
+        PetType searchType;
+        String search;
+
+        System.out.println("What type of animal?");
+        System.out.println("1. Cat");
+        System.out.println("2. Dog");
+        try {
+            option = scanner.nextInt();
+            scanner.nextLine();
+            if (option == 1){
+                searchType = PetType.CAT;
+            } else {
+                searchType = PetType.DOG;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());;
+        }
+        do {
+            System.out.println("Search Pet:");
+            System.out.println("Select one option:");
+            System.out.println("1. First or Last Name\n" +
+                    "2. Sex\n" +
+                    "3. Age\n" +
+                    "4. Weight\n" +
+                    "5. Race\n" +
+                    "6. Address\n +" +
+                    "7. Combine criteria" +
+                    "8. Exit to menu");
+            option = scanner.nextInt();
+            scanner.nextLine();
+            switch (option){
+                case 1:
+                    System.out.println("Enter the First or Last Name");
+                    search = scanner.nextLine();
+                    break;
+                case 2:
+                    System.out.println("Enter the sex");
+                    search = scanner.nextLine();
+                    break;
+                case 3:
+                    System.out.println("Enter the weight");
+                    search = scanner.nextLine();
+                    break;
+                case 4:
+                    System.out.println("Enter the race");
+                    search = scanner.nextLine();
+                    break;
+                case 5:
+                    System.out.println("Enter the Address:");
+                    System.out.println("i. Enter the street");
+                    search = scanner.nextLine();
+                    System.out.println("ii. Enter the houseNumber");
+                    search += ", " + scanner.nextLine();
+                    System.out.println("iii. Enter the city");
+                    search += ", " + scanner.nextLine();
+                    break;
+                case 6:
+                    String[] criteria = {"Name", "Last Name", "Sex", "Age", "Weight", "Race", "Address"};
+                    System.out.println("Choose the first criterion:");
+                    for (int i = 0; i < criteria.length; i++) {
+                        System.out.println((i + 1) + ". " + criteria[i]);
+                    }
+                    int firstChoice = scanner.nextInt() - 1;
+                    System.out.println("You chose: " + criteria[firstChoice]);
+                    System.out.println("\nChoose the second criterion:");
+                    for (int i = 0; i < criteria.length; i++) {
+                        if (i != firstChoice) {
+                            System.out.println((i + 1) + ". " + criteria[i]);
+                        }
+                    }
+                    int secondChoice = scanner.nextInt() - 1;
+                    scanner.nextLine();
+                    if (secondChoice == firstChoice) {
+                        throw new IOException("Invalid choice, already selected!");
+                    } else {
+                        System.out.println("You chose: " + criteria[secondChoice]);
+                        System.out.println("Enter the: " + criteria[firstChoice] + " and " + criteria[firstChoice]);
+                        search = scanner.nextLine();
+                    }
+                    break;
+                case 8:
+                    menu();
+                    break;
+                default:
+                    System.out.println("Invalid option..");
+                    break;
+            }
+        } while (option != 8);
+        /* Path dir = Paths.get("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\RegisteredPets");
+        try(DirectoryStream<Path> stream = Files.newDirectoryStream(dir)){
+            for(Path path: stream){
+                System.out.println(path.getFileName());
+                if ()
+            }
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+        } */
     }
 }
