@@ -1,8 +1,9 @@
 package PROGRAMMING_Challenge_RegistrationSystem.Domain;
 
 public enum PetType {
-    DOG(1),
-    CAT(2);
+    DOG(),
+    CAT(),
+    NO_INFORMED();
 
-    PetType(int i){}
+    PetType(){}
 }

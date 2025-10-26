@@ -1,8 +1,10 @@
 package PROGRAMMING_Challenge_RegistrationSystem.Domain;
 
 public enum PetSex {
-    MALE(1),
-    FEMALE(2);
+    MALE(),
+    FEMALE(),
+    NO_INFORMED();
 
-    PetSex(int i){}
+    PetSex(){
+    }
 }

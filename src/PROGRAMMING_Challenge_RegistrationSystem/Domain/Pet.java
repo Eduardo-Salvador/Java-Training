@@ -4,11 +4,11 @@ public class Pet {
     private String name;
     private PetType type;
     private PetSex sex;
-    private String addressWasFound;
-    private double ageApproximate;
-    private double weightApproximate;
+    private Address addressWasFound;
+    private Double ageApproximate;
+    private Double weightApproximate;
     private String race;
-    private final String NO_INFORMED = "No informed";
+    private static final String NO_INFORMED = "No informed";
 
     public String getNO_INFORMED() {
         return NO_INFORMED;
@@ -16,6 +16,11 @@ public class Pet {
 
     public Pet(String name){
         this.name = name;
+        type = PetType.NO_INFORMED;
+        sex = PetSex.NO_INFORMED;
+        race = NO_INFORMED;
+        ageApproximate = null;
+        weightApproximate = null;
     }
 
     public String getName() {
@@ -42,27 +47,27 @@ public class Pet {
         this.sex = sex;
     }
 
-    public String getAddressWasFound() {
+    public Address getAddressWasFound() {
         return addressWasFound;
     }
 
-    public void setAddressWasFound(String addressWasFound) {
+    public void setAddressWasFound(Address addressWasFound) {
         this.addressWasFound = addressWasFound;
     }
 
-    public double getAgeApproximate() {
+    public Double getAgeApproximate() {
         return ageApproximate;
     }
 
-    public void setAgeApproximate(double ageApproximate) {
+    public void setAgeApproximate(Double ageApproximate) {
         this.ageApproximate = ageApproximate;
     }
 
-    public double getWeightApproximate() {
+    public Double getWeightApproximate() {
         return weightApproximate;
     }
 
-    public void setWeightApproximate(double weightApproximate) {
+    public void setWeightApproximate(Double weightApproximate) {
         this.weightApproximate = weightApproximate;
     }
 
@@ -73,4 +78,18 @@ public class Pet {
     public void setRace(String race) {
         this.race = race;
     }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "name='" + name + '\'' +
+                ", type=" + type +
+                ", sex=" + sex +
+                ", addressWasFound=" + addressWasFound +
+                ", ageApproximate=" + (ageApproximate == null ? NO_INFORMED : ageApproximate + " years") +
+                ", weightApproximate=" + (weightApproximate == null ? NO_INFORMED : weightApproximate + " kg") +
+                ", race='" + race + '\'' +
+                '}';
+    }
+
 }
