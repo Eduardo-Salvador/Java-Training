@@ -59,13 +59,13 @@ public class PetSystem {
         Pet pet = null;
         String[] answers = new String[7];
         String line;
-        //Lendo e inputando dados.
         try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\Forms.txt"))) {
             int i = 0;
+            int counter = 0;
             while ((line = br.readLine()) != null) {
+                counter++;
                 System.out.println(line);
-                if (i < 7) {
-                    answers[i] = input.nextLine();
+                if (i < counter) {
                     String regexName = "^[A-Za-z]+ [A-Za-z]+$";
                     Pattern pattern = Pattern.compile(regexName);
                     Matcher matcher = pattern.matcher(answers[0]);
@@ -83,12 +83,24 @@ public class PetSystem {
                         i++;
                         continue;
                     }
+                    if (Integer.parseInt(answers[4]) > 20) {
+                        throw new IOException("Invalid Age: Required < 20 years");
+                    }
+                    if (Integer.parseInt(answers[5]) > 60 || Integer.parseInt(answers[5]) < 0.5){
+                        throw new IOException("Invalid Weight: Required < 60Kgs and > 0.6Kgs");
+                    }
                     answers[i] = input.nextLine();
                     i++;
                 }
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+
+        try {
+            pet = new Pet(answers[0]);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
         return pet;

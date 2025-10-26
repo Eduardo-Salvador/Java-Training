@@ -8,6 +8,11 @@ public class Pet {
     private double ageApproximate;
     private double weightApproximate;
     private String race;
+    private final String NO_INFORMED = "No informed";
+
+    public String getNO_INFORMED() {
+        return NO_INFORMED;
+    }
 
     public Pet(String name){
         this.name = name;
