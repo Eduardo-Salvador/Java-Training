@@ -2,11 +2,10 @@ package PROGRAMMING_Challenge_RegistrationSystem.Controller;
 import PROGRAMMING_Challenge_RegistrationSystem.Domain.Pet;
 import PROGRAMMING_Challenge_RegistrationSystem.Domain.PetType;
 import java.io.*;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 import java.text.Normalizer;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,8 +23,7 @@ public class PetSystem {
                     3. Change the registered pet's data
                     4. Delete a registered pet
                     5. List all registered pets
-                    6. List pets by some criteria (age, name, breed)
-                    7. Exit.""");
+                    6. Exit.""");
             try {
                 option = input.nextInt();
                 input.nextLine();
@@ -61,24 +59,48 @@ public class PetSystem {
                         }
                         break;
                     case 4:
-
+                        try {
+                            System.out.println("First search the pet!");
+                            String[] pets = searchPet(input, 2);
+                            if (pets != null && pets[0] != null) {
+                                System.out.println("Which pet do you want to delete?");
+                                int optionChange = input.nextInt();
+                                String[] petIndividual = pets[optionChange-1].split(" - ");
+                                String namePet = petIndividual[0];
+                                deletePet(namePet, input);
+                            }
+                            break;
+                        } catch (IOException e) {
+                            System.out.println("ERROR: No pets in the search");
+                        }
                         break;
                     case 5:
+                        int i = 1;
+                        Path dir = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets");
+                        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)){
+                            System.out.println("Registered Pets:");
+                            for (Path path : stream){
+                                try (FileReader fr = new FileReader(path.toFile())){
+                                    BufferedReader br = new BufferedReader(fr);
+                                    String namePet = br.readLine().replaceAll("1 - ", (i + ". "));
+                                    System.out.println(namePet);
+                                    i++;
+                                }
+                            }
+                        }
                         break;
                     case 6:
-                        break;
-                    case 7:
                         System.out.println("Exit...");
                         break;
                     default:
-                        System.out.println("Invalid option. Scope: 1-7");
+                        System.out.println("Invalid option.\nOptions: 1 to 6");
                         break;
                 }
             } catch (Exception e) {
                 System.out.println("Only numbers");
             }
 
-        } while (option != 7);
+        } while (option != 6);
         input.close();
     }
 
@@ -296,6 +318,7 @@ public class PetSystem {
 
     private static void changePet(String name, Scanner input){
         int option = 0;
+        String newName = name;
         Path petArchive = null;
         List<String> lines = null;
         List<String> newLines = new ArrayList<>();
@@ -333,7 +356,7 @@ public class PetSystem {
             switch (option){
                 case 1:
                     System.out.println("Enter the new name:");
-                    String newName = input.nextLine();
+                    newName = input.nextLine();
                     for (String line : lines) {
                         newLines.add(line.startsWith("1 - ") ? "1 - " + newName : line);
                     }
@@ -376,16 +399,65 @@ public class PetSystem {
 
             if (option >= 1 && option <= 5) {
                 lines = new ArrayList<>(newLines);
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(petArchive.toFile(), false))) {
-                    for (String line : lines) {
-                        writer.write(line);
-                        writer.newLine();
+                try {
+                    String cleanName = newName.replaceAll("\u001B\\[[;\\d]*m", "").toLowerCase();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmm");
+                    String dateFormatted = LocalDateTime.now().format(formatter);
+                    Path newFile = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets/" + dateFormatted + "-" + cleanName.toUpperCase() + ".txt");
+                    Files.createFile(newFile);
+                    Files.setAttribute(newFile, "dos:readonly", false);
+
+                    try (BufferedWriter writer = new BufferedWriter(new FileWriter(newFile.toFile(), false)))    {
+                        for (String line : lines) {
+                            writer.write(line);
+                            writer.newLine();
+                        }
+
+                        File deleteOldFile = new File(petArchive.toString());
+                        if(deleteOldFile.delete()){
+                            System.out.println("Pet changed successfully");
+                            Files.setAttribute(newFile, "dos:readonly", true);
+                        }
+                        break;
                     }
-                    System.out.println("Pet data updated successfully.");
                 } catch (IOException e) {
                     System.out.println("Error writing file: " + e.getMessage());
                 }
             }
         } while (option != 6);
+    }
+
+    private static void deletePet(String name, Scanner input){
+        int option = 0;
+        File petArchive = null;
+        Path dir = Paths.get("src", "PROGRAMMING_Challenge_RegistrationSystem", "RegisteredPets");
+        try(DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+            for(Path path : stream) {
+                String fileName = path.getFileName().toString().toLowerCase();
+                String cleanName = name.replaceAll("\u001B\\[[;\\d]*m", "").trim().toLowerCase();
+                if (fileName.contains(cleanName)){
+                    petArchive = new File(path.toString());
+                    System.out.println("Are you sure to delete: " + petArchive.getName());
+                    while (option != 2) {
+                        System.out.println("""
+                            1. YES
+                            2. NO
+                            """);
+                        option = input.nextInt();
+                        if (option == 1){
+                            if(petArchive.delete()) {
+                                System.out.println("File deleted successfully: " + petArchive.getName());
+                                break;
+                            }
+                        } else {
+                            System.out.println("Operation canceled");
+                            break;
+                        }
+                    }
+                }
+            }
+        } catch (IOException e){
+            System.out.println("Error reading file: " + e.getMessage());
+        }
     }
 }

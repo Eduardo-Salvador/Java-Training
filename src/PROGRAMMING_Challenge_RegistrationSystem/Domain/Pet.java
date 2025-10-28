@@ -249,23 +249,8 @@ public class Pet {
                 String sex = pet.getSex() == PetSex.FEMALE ? "Female" : pet.getSex() == PetSex.MALE ? "Male" : NO_INFORMED;
                 bw.write("3 - " + sex);
                 bw.newLine();
-                String fullAddress;
-                if (address.getStreet().isEmpty()){
-                    fullAddress = "Street: " + NO_INFORMED;
-                } else {
-                    fullAddress = "Street: " + address.getStreet();
-                }
-                if (address.getHouseNumber().isEmpty()){
-                    fullAddress += " - Number: " + NO_INFORMED;
-                } else {
-                    fullAddress += " - Number: " + address.getHouseNumber();
-                }
-                if (address.getCity().isEmpty()){
-                    fullAddress += " - City: " + NO_INFORMED;
-                } else {
-                    fullAddress += " - City: " + address.getCity();
-                }
-                bw.write("4 - " + fullAddress);
+
+                bw.write("4 - " + getAddressString(address));
                 bw.newLine();
 
                 if (pet.getAgeApproximate() == null){
@@ -286,10 +271,31 @@ public class Pet {
                 bw.newLine();
 
                 bw.flush();
+                Files.setAttribute(file, "dos:readonly", true);
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    private static String getAddressString(Address address) {
+        String fullAddress;
+        if (address.getStreet().isEmpty()){
+            fullAddress = "Street: " + NO_INFORMED;
+        } else {
+            fullAddress = "Street: " + address.getStreet();
+        }
+        if (address.getHouseNumber().isEmpty()){
+            fullAddress += " - Number: " + NO_INFORMED;
+        } else {
+            fullAddress += " - Number: " + address.getHouseNumber();
+        }
+        if (address.getCity().isEmpty()){
+            fullAddress += " - City: " + NO_INFORMED;
+        } else {
+            fullAddress += " - City: " + address.getCity();
+        }
+        return fullAddress;
     }
 
     @Override
