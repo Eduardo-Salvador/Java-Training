@@ -59,7 +59,8 @@ public class PetSystem {
                                     throw new IOException("Option Null");
                                 }
                             } while (optionChoseChange > optionsChange.length  || optionChoseChange < 0);
-
+                            changePet(optionsChange[optionChoseChange], input);
+                            break;
                         } catch (IOException e) {
                             System.out.println(e.getMessage());
                         }
@@ -87,7 +88,6 @@ public class PetSystem {
 
     private static String[] searchPet(Scanner scanner, int typeSearch) throws IOException {
         int optionSearch;
-        String[] results;
         PetType searchType = null;
         String search;
         System.out.println("What type of animal?");
@@ -305,7 +305,39 @@ public class PetSystem {
         }
     }
 
-    private static void changePet(){
-
+    private static void changePet(String petValues, Scanner input){
+        int option = 0;
+        do {
+            System.out.println("What do you want to change?");
+            System.out.println("""
+                    1. First and last name
+                    2. Address
+                    3. Age
+                    4. Weight
+                    5. Breed
+                    6. Exit to Menu.
+                    """);
+            option = input.nextInt();
+            input.nextLine();
+            switch (option){
+                case 1:
+                    System.out.println("Enter the new name");
+                    String newName = input.nextLine();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    System.out.println("Invalid option");
+                    break;
+            }
+        } while (option != 6);
     }
 }
