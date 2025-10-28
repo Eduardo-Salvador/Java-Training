@@ -84,8 +84,8 @@ public class Pet {
         this.race = race;
     }
 
-    public static Pet createPet(Scanner input) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\Forms.txt"))) {
+    public static void createPet(Scanner input) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/PROGRAMMING_Challenge_RegistrationSystem/Forms.txt"))) {
             Pet pet;
             Address address = new Address();
             String[] answers = new String[7];
@@ -104,8 +104,6 @@ public class Pet {
                     if (!matcher.matches()) {
                         answers[i] = null;
                         throw new IOException("Invalid Name: Required name + surname without special characters");
-                    } else {
-                        i++;
                     }
                 }
                 else if (i == 1 || i == 2){
@@ -113,12 +111,6 @@ public class Pet {
                     Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
                     answers[i] = input.nextLine();
                     Matcher matcher = pattern.matcher(answers[i]);
-                    if (!matcher.matches()) {
-                        answers[i] = null;
-                        throw new IOException("Invalid Type: Required Dog or Cat, Male or Female");
-                    } else {
-                        i++;
-                    }
                 }
                 else if (i == 3) {
                     System.out.println("\nWhat house number?");
@@ -127,7 +119,6 @@ public class Pet {
                     address.setCity(input.nextLine());
                     System.out.println("Which street?");
                     address.setStreet(input.nextLine());
-                    i++;
                 }
                 else if (i == 4 || i == 5) {
                     String aux = input.nextLine();
@@ -143,9 +134,6 @@ public class Pet {
                             throw new IOException("Invalid Weight: Required < 60Kgs and > 0.6Kgs");
                         }
                         answers[i] = String.valueOf(value);
-                        i++;
-                    } else {
-                        throw new IOException("Invalid Input: Required format like 09, 09.30, 09,21, etc.");
                     }
                 }
                 else if (i == 6) {
@@ -155,11 +143,9 @@ public class Pet {
                     Matcher matcher = pattern.matcher(aux);
                     if (matcher.matches()) {
                         answers[i] = aux;
-                        i++;
-                    } else {
-                        throw new IOException("Invalid Breed: Required text, numbers are invalid.");
                     }
                 }
+                i++;
             }
 
         pet = new Pet(answers[0]);
@@ -169,11 +155,9 @@ public class Pet {
 
         savePet(pet.getName(), pet, address);
         System.out.println("Pet successfully registered!");
-        return pet;
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            return null;
         }
     }
 
@@ -189,11 +173,7 @@ public class Pet {
                     break;
                 }
                 case 3: {
-                    if (address != null) {
-                        pet.setAddressWasFound(address);
-                    } else {
-                        pet.setAddressWasFound(null);
-                    }
+                    pet.setAddressWasFound(address);
                     break;
                 }
                 case 4: {
@@ -250,8 +230,8 @@ public class Pet {
     private static void savePet(String animalName, Pet pet, Address address) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmm");
         String dateFormatted = LocalDateTime.now().format(formatter);
-        Path folder = Paths.get("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\RegisteredPets");
-        Path file = Paths.get("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\RegisteredPets\\" + dateFormatted + "-" + animalName.toUpperCase() + ".txt");
+        Path folder = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets");
+        Path file = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets/" + dateFormatted + "-" + animalName.toUpperCase() + ".txt");
 
         try {
             Files.createDirectories(folder);
@@ -261,21 +241,50 @@ public class Pet {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file.toFile(), true))) {
                 bw.write("1 - " + pet.getName());
                 bw.newLine();
-                String type = pet.getType() == PetType.DOG ? "Dog" : "Cat";
+
+                String type = pet.getType() == PetType.DOG ? "Dog" : pet.getType() == PetType.CAT ? "Cat" : NO_INFORMED;
                 bw.write("2 - " + type);
                 bw.newLine();
-                String sex = pet.getSex() == PetSex.FEMALE ? "Female" : "Male";
+
+                String sex = pet.getSex() == PetSex.FEMALE ? "Female" : pet.getSex() == PetSex.MALE ? "Male" : NO_INFORMED;
                 bw.write("3 - " + sex);
                 bw.newLine();
-                String fullAddress = address.getStreet() + " " + address.getHouseNumber() + " " + address.getCity();
+                String fullAddress;
+                if (address.getStreet().isEmpty()){
+                    fullAddress = "Street: " + NO_INFORMED;
+                } else {
+                    fullAddress = "Street: " + address.getStreet();
+                }
+                if (address.getHouseNumber().isEmpty()){
+                    fullAddress += " - Number: " + NO_INFORMED;
+                } else {
+                    fullAddress += " - Number: " + address.getHouseNumber();
+                }
+                if (address.getCity().isEmpty()){
+                    fullAddress += " - City: " + NO_INFORMED;
+                } else {
+                    fullAddress += " - City: " + address.getCity();
+                }
                 bw.write("4 - " + fullAddress);
                 bw.newLine();
-                bw.write("5 - " + pet.getAgeApproximate() + " years");
+
+                if (pet.getAgeApproximate() == null){
+                    bw.write("5 - " + NO_INFORMED + " years");
+                } else {
+                    bw.write("5 - " + pet.getAgeApproximate() + " years");
+                }
                 bw.newLine();
-                bw.write("6 - " + pet.getWeightApproximate() + " kgs");
+
+                if (pet.getAgeApproximate() == null){
+                    bw.write("6 - " + NO_INFORMED + " kgs");
+                } else {
+                    bw.write("6 - " + pet.getWeightApproximate() + " kgs");
+                }
                 bw.newLine();
+
                 bw.write("7 - " + pet.getRace());
                 bw.newLine();
+
                 bw.flush();
             }
         } catch (IOException e) {

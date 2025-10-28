@@ -1,0 +1,7 @@
+1 - Bob Jr
+2 - Dog
+3 - Male
+4 - Street: No informed - Number: No informed - City: Hong Kong
+5 - No informed years
+6 - No informed kgs
+7 - No informed

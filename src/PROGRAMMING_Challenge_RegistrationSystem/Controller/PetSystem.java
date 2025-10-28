@@ -46,26 +46,22 @@ public class PetSystem {
                         break;
                     case 3:
                         try {
-                            int optionChoseChange = 0;
-                            String[] optionsChange = searchPet(input, 2);
-                            System.out.println("Select one option to change:");
-                            do {
-                                if (optionsChange != null) {
-                                    for (int i = 0; i < optionsChange.length; i++) {
-                                        System.out.println((i + 1) + ". " + optionsChange[i]);
-                                    }
-                                    optionChoseChange = input.nextInt() - 1;
-                                } else {
-                                    throw new IOException("Option Null");
-                                }
-                            } while (optionChoseChange > optionsChange.length  || optionChoseChange < 0);
-                            changePet(optionsChange[optionChoseChange], input);
+                            System.out.println("First search the pet!");
+                            String[] pets = searchPet(input, 2);
+                            if (pets != null && pets[0] != null) {
+                                System.out.println("Which pet do you want to change?");
+                                int optionChange = input.nextInt();
+                                String[] petIndividual = pets[optionChange-1].split(" - ");
+                                String namePet = petIndividual[0];
+                                changePet(namePet, input);
+                            }
                             break;
                         } catch (IOException e) {
-                            System.out.println(e.getMessage());
+                            System.out.println("ERROR: No pets in the search");
                         }
                         break;
                     case 4:
+
                         break;
                     case 5:
                         break;
@@ -123,7 +119,7 @@ public class PetSystem {
                 System.out.println("Enter the First or Last Name");
                 search = scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -132,7 +128,7 @@ public class PetSystem {
                 System.out.println("Enter the sex");
                 search = scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -141,7 +137,7 @@ public class PetSystem {
                 System.out.println("Enter the age");
                 search = scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -150,7 +146,7 @@ public class PetSystem {
                 System.out.println("Enter the weight");
                 search = scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -159,7 +155,7 @@ public class PetSystem {
                 System.out.println("Enter the race");
                 search = scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -173,7 +169,7 @@ public class PetSystem {
                 System.out.println("iii. Enter the city");
                 search += ", " + scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -182,7 +178,7 @@ public class PetSystem {
                 System.out.println("Enter the date: mm/dd/yyyy");
                 search = scanner.nextLine();
                 if (typeSearch == 1) {
-                    searching(search, searchType);
+                    searchingArray(search, searchType);
                     return null;
                 } else {
                     return searchingArray(search, searchType);
@@ -210,7 +206,7 @@ public class PetSystem {
                     System.out.println("Enter the: " + criteria[firstChoice] + " and " + criteria[secondChoice]);
                     search = scanner.nextLine();
                     if (typeSearch == 1) {
-                        searching(search, searchType);
+                        searchingArray(search, searchType);
                         return null;
                     } else {
                         return searchingArray(search, searchType);
@@ -228,7 +224,7 @@ public class PetSystem {
     private static String[] searchingArray(String search, PetType petType){
         List<String> results = new ArrayList<>();
         StringBuilder dateFormatted = new StringBuilder();
-        Path dir = Paths.get("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\RegisteredPets");
+        Path dir = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets");
         try(DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
             if (search.contains("/") || search.contains("-")){
                 String dateFile = search.replaceAll("[/-]", " ");
@@ -298,15 +294,28 @@ public class PetSystem {
         return results.toArray(new String[0]);
     }
 
-    private static void searching(String search, PetType petType){
-        String[] printResult = searchingArray(search, petType);
-        for (int i = 0; i < printResult.length; i++) {
-            System.out.println((i + 1) + ". " + printResult[i]);
-        }
-    }
-
-    private static void changePet(String petValues, Scanner input){
+    private static void changePet(String name, Scanner input){
         int option = 0;
+        Path petArchive = null;
+        List<String> lines = null;
+        List<String> newLines = new ArrayList<>();
+        Path dir = Paths.get("src", "PROGRAMMING_Challenge_RegistrationSystem", "RegisteredPets");
+        try(DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+            for(Path path : stream) {
+                String fileName = path.getFileName().toString().toLowerCase();
+                String cleanName = name.replaceAll("\u001B\\[[;\\d]*m", "").trim().toLowerCase();
+                if (fileName.contains(cleanName)){
+                    petArchive = path;
+                }
+            }
+            if(petArchive != null){
+                lines = Files.readAllLines(petArchive);
+            }
+
+        } catch (IOException e){
+            System.out.println("Error reading file: " + e.getMessage());
+            return;
+        }
         do {
             System.out.println("What do you want to change?");
             System.out.println("""
@@ -319,24 +328,63 @@ public class PetSystem {
                     """);
             option = input.nextInt();
             input.nextLine();
+            if (lines == null) break;
+            newLines.clear();
             switch (option){
                 case 1:
-                    System.out.println("Enter the new name");
+                    System.out.println("Enter the new name:");
                     String newName = input.nextLine();
+                    for (String line : lines) {
+                        newLines.add(line.startsWith("1 - ") ? "1 - " + newName : line);
+                    }
                     break;
                 case 2:
+                    System.out.println("Enter the new address:");
+                    String newAddress = input.nextLine();
+                    for (String line : lines) {
+                        newLines.add(line.startsWith("4 - ") ? "4 - " + newAddress : line);
+                    }
                     break;
                 case 3:
+                    System.out.println("Enter the new age:");
+                    String newAge = input.nextLine();
+                    for (String line : lines) {
+                        newLines.add(line.startsWith("5 - ") ? "5 - " + newAge : line);
+                    }
                     break;
                 case 4:
+                    System.out.println("Enter the new weight:");
+                    String newWeight = input.nextLine();
+                    for (String line : lines) {
+                        newLines.add(line.startsWith("6 - ") ? "6 - " + newWeight : line);
+                    }
                     break;
                 case 5:
+                    System.out.println("Enter the new breed:");
+                    String newBreed = input.nextLine();
+                    for (String line : lines) {
+                        newLines.add(line.startsWith("7 - ") ? "7 - " + newBreed : line);
+                    }
                     break;
                 case 6:
+                    System.out.println("Returning to menu...");
                     break;
                 default:
                     System.out.println("Invalid option");
                     break;
+            }
+
+            if (option >= 1 && option <= 5) {
+                lines = new ArrayList<>(newLines);
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(petArchive.toFile(), false))) {
+                    for (String line : lines) {
+                        writer.write(line);
+                        writer.newLine();
+                    }
+                    System.out.println("Pet data updated successfully.");
+                } catch (IOException e) {
+                    System.out.println("Error writing file: " + e.getMessage());
+                }
             }
         } while (option != 6);
     }
