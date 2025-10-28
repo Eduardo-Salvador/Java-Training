@@ -1,9 +1,9 @@
 package PROGRAMMING_Challenge_RegistrationSystem.Application;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
+import PROGRAMMING_Challenge_RegistrationSystem.Controller.PetSystem;
 
 public class Main {
     public static void main(String[] args) {
+        PetSystem menu = new PetSystem();
+        menu.menu();
     }
 }

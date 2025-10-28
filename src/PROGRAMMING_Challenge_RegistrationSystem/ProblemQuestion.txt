@@ -1,200 +1,190 @@
-Introdução
-Você chegou ao primeiro grande desafio do guia! 😎 Agora, é hora de colocar a mão na massa e aplicar seus conhecimentos na prática, criando um Sistema de Adoção para Pets!
+Introduction
+Creating a Pet Adoption System!
 
-Leia TODO o desafio com ATENÇÃO antes de começar a faze-lo e respeite as regras, evite o uso do GPT ao máximo e use-o com sabedoria quando necessário!
+Objective
+In this challenge, you will be challenged to create a registration system via CLI (command line interface) so our future adopters can choose their pet.
+The animal shelter owner who will be the user of your program will be able to:
 
-Objetivo
-Neste desafio, você será desafiado a criar um sistema de cadastro via CLI (interface de linha de comando), para nossos futuros adotantes poderem escolher o seu animalzinho.
+Register a new pet
+Search for registered pet data
+Delete a registered pet
+List all registered pets
+List pets by any criteria (age, name, breed)
+And much more!
+The system must be implemented using Object-Oriented concepts and other good programming practices.
 
-O dono do abrigo de animais que será o usuário do seu programa será capaz de:
-
-Cadastrar um novo pet
-Buscar dados do pet cadastrado
-Deletar um pet cadastrado
-Listar todos os pets cadastrados
-Listar pets por algum critério (idade, nome, raça)
-E muito mais!
-O sistema deve ser implementado utilizando conceitos de Orientação a Objetos e outras boas práticas de programação. 🚀
-
-Conhecimentos que você irá aplicar:
-Orientação a Objetos (OO)
-Manipulação de arquivos e arrays
+Knowledge you will apply:
+Object Orientation (OO)
+File and array manipulation
 Java IO
-Exceções
-Boas práticas de código
+Exceptions
+Coding best practices
 File Systems
-Requisitos do Desafio 📋
-O desafio será organizado em PASSOS em que você irá desenvolver novas funcionalidades para nossa aplicação CLI.
+Challenge Requirements
+The challenge will be organized into STEPS in which you will develop new features for our CLI application.
 
-Fique a vontade para criar e organizar entidades, serviços, utils e como desejar para este projeto!
+Feel free to create and organize entities, services, utilities, and whatever you wish for this project!
 
-Para iniciar, crie um Fork deste repositório e clone-o em sua máquina local, e também deixe sua ⭐ no repositório.
+Step 1: Read the base file with the essential questions.
+Create a file called forms.txt, which should contain the following questions:
 
-📍Passo 1 - Leitura do arquivo de base com as perguntas essenciais. 📄
-Crie um arquivo chamado formulario.txt, que deverá conter as seguintes perguntas:
+1 - What is the pet's first and last name?
 
-1 - Qual o nome e sobrenome do pet?
+2 - What type of pet is it (Dog/Cat)?
 
-2 - Qual o tipo do pet (Cachorro/Gato)?
+3 - What is the animal's sex?
 
-3 - Qual o sexo do animal?
+4 - What is the address and neighborhood where it was found?
 
-4 - Qual endereço e bairro que ele foi encontrado?
+5 - What is the pet's approximate age?
 
-5 - Qual a idade aproximada do pet?
+6 - What is the pet's approximate weight?
 
-6 - Qual o peso aproximado do pet?
+7 - What is the pet's breed?
 
-7 - Qual a raça do pet?
+Your application must read the contents of this .txt file and display the questions in the terminal.
 
-Sua aplicação deve ler o conteúdo desse arquivo .txt e exibir as perguntas no terminal.
+"Print" is not allowed in the code; you must READ the file!
 
-Não é permitido usar o "print" nas perguntas no código, você deverá LER o arquivo!
+Step 2: Creating the initial menu
+After the file is printing the contents of the form.txt file to the terminal, you must create an initial menu with the following options:
+Register a new pet
+Search a pets
+Change the registered pet's data
+Delete a registered pet
+List all registered pets
+List pets by specific criteria (age, name, breed)
+Exit
+The menu should be displayed on the terminal, and the user should be able to choose an option by entering the corresponding number.
+Rules:
+The user cannot enter 0 or negative numbers.
+If the user enters an invalid number, the menu should be displayed again.
+The user can only enter numbers; they cannot enter letters or special characters.
 
-📍Passo 2: Criação do menu inicial 📝
-Após o arquivo estar printando o conteúdo do formulario.txt no terminal, você deverá criar um menu inicial com as seguintes opções:
+Step 3: Registering New Pets
+When selecting option 1, the user should be able to register a new pet. At this point, you should read the QUESTIONS from the formulario.txt file and store the answers in an object of the Pet type.
 
-Cadastrar um novo pet
-Alterar os dados do pet cadastrado
-Deletar um pet cadastrado
-Listar todos os pets cadastrados
-Listar pets por algum critério (idade, nome, raça)
-Sair
-O menu deve ser exibido no terminal e o usuário deve poder escolher uma opção digitando o número correspondente.
+Rules:
+The user must register a pet with a first and last name; otherwise, throw an exception.
+The full name cannot contain special characters, only letters from A-Z.
+For the pet's TYPE and SEX, you must use ENUM.
+In the address question, you should ask:
+i. House Number
+ii. City
+iii. Street
+For the pet's approximate age and weight, the user can enter numbers with commas or periods, but only numbers.
+If the user enters a weight greater than 60 kg or a weight less than 0.5 kg, throw an exception.
+If the user enters an age greater than 20 years, throw an exception.
+If the user enters an age less than 1 year (age in months), convert it to 0.x years.
+In the race field, the user cannot use numbers or special characters.
+In the questions about NAME, RACE, WEIGHT, AGE, and ADDRESS (number field only), if the user DOES NOT PROVIDE or leaves it blank, you must enter NOT PROVIDED
+(must be a constant)!
 
-Regras ⚠️
-O usuário não poderá usar 0 ou números negativos.
-Caso o usuário digite um número inválido, o menu deve ser exibido novamente.
-O usuário só poderá digitar números, não podendo digitar letras ou caracteres especiais.
-📍Passo 3: Cadastro de novos Pets 📝
-O usuário, ao selecionar a opção 1, deve ser capaz de cadastrar um novo pet. Neste momento, você deverá ler as PERGUNTAS do arquivo formulario.txt e armazenar as respostas em um objeto do tipo Pet.
-
-Regras ⚠️
-O usuário obrigatoriamente deverá cadastrar um pet com nome e sobrenome, caso contrário, lance uma exceção.
-O nome completo NÃO poderá conter caracteres especiais, somente letras de A-Z.
-Para o TIPO e SEXO do pet, você deverá usar ENUM.
-Na pergunta sobre o endereço, você deverá perguntar:
-Número da casa
-Cidade
-Rua
-Na idade e peso aproximados do pet, o usuário poderá digitar números com vírgulas ou ponto, mas somente números.
-Caso o usuário digite um peso maior que 60kg ou um peso menor que 0.5kg, lance uma exceção.
-Caso o usuário digite uma idade maior que 20 anos, lance uma exceção.
-Caso o usuário digite uma idade menor que 1 ano (idade em meses), transforme em 0.x anos.
-No campo raça o usuário não poderá usar números nem caracteres especiais.
-Nas perguntas sobre NOME, RAÇA, PESO, IDADE e ENDEREÇO (somente o campo número), caso o usuário NÃO INFORME ou deixe em branco, você deverá preencher com NÃO INFORMADO (deve ser uma constante)!
-📍Passo 4: Armazenamento em Arquivo 📂
-Agora, ao salvar o PET em um objeto, você deverá salvar as respostas em um arquivo .txt com o nome formatado da seguinte maneira:
-
+Step 4: File Storage
+Now, when saving the PET to an object, you must save the answers in a .txt file with the name formatted as follows:
 20231101T1234-FLORZINHADASILVA.TXT.
 
-Regras ⚠️
-O nome do arquivo deverá seguir o formato: ano, mês, dia,T, hora, minuto - NOME+SOBRENOME em maiúsculo.
-O arquivo deverá ser salvo na pasta petsCadastrados na raiz do projeto.
-O conteúdo do arquivo deverá conter TODAS AS RESPOSTAS POR LINHA, ou seja, cada resposta deverá estar em uma linha diferente.
-O campo endereço deverá ser salvo todo na mesma linha.
-O arquivo somente conterá RESPOSTAS, PERGUNTAS NÃO!
-Exemplo de arquivo salvo:
-
+Rules:
+The file name must follow the format: year, month, day, T, hour, minute - NAME+SURNAME in capital letters.
+The file must be saved in the petsCadastrados folder in the project root.
+The file contents must contain ALL ANSWERS PER LINE, that is, each answer must be on a separate line.
+The address field must be saved entirely on the same line.
+The file will only contain ANSWERS, NOT QUESTIONS! Example of a saved file:
 1 - Florzinha da Silva
-2 - Gato
-3 - Femea
-4 - Rua 2, 456, Seilandia
-5 - 6 anos
+2 - Cat
+3 - Female
+4 - Street 2, 456, Seilandia
+5 - 6 years
 6 - 5kg
-7 - Siames
-📍Passo 5: Buscar os dados do Pet Cadastrado 🔍
-O usuário, ao selecionar a opção 2, deverá ser capaz de buscar o pet usando determinados dados. O usuário poderá buscar o pet por:
+7 - Siamese
 
-Nome ou sobrenome
-Sexo
-Idade
-Peso
-Raça
-Endereço
-Além disso, o usuário poderá combinar de 1 a 2 critérios de busca, ou seja:
+Step 5: Search for the Registered Pet's Data
+When selecting option 2, the user should be able to search for the pet using specific data. The user can search for the pet by:
+First or Last Name
+Sex
+Age
+Weight
+Breed
+Address
+Furthermore, the user can combine one or two search criteria, i.e.:
+First and/or Last Name AND Age
+Age AND Weight
+At this point, you should DISPLAY a new menu asking the user which criteria they want to use to search for the pet.
 
-Nome e / ou sobrenome E IDADE
-Idade E peso
-Então, neste momento, você deverá EXIBIR um novo menu perguntando sobre quais critérios o usuário desejará usar para buscar o pet.
+After the user selects the criteria, you must print the pets that match the search criteria, which can be one or more, in the terminal in this format:
+Rules:
+The user must FIRST and ALWAYS select the ANIMAL TYPE criterion.
+The response format must ALWAYS display a list of possible results, for example:
+1. Rex - Dog - Male - 123, Street 1 - City 1 - 2 years old - 5 kg - Mixed-breed
+2. Florzinha da Silva - Cat - Female - 456, Street 2 - Seilandia - 6 years old - 5 kg - Siamese
+If the user selects, for example, NAME, the search results must include PARTS of the name. For example, if they search for FLOR, they must include case 2 mentioned above.
+All searches must be case-sensitive, meaning they ignore uppercase and lowercase letters (treating them as equal) and accents.
 
-Após o usuário selecionar os critérios, você deverá printar no terminal os pets que correspondem aos critérios de busca, podendo ser 1 ou mais, neste formato:
+Level 2 Rule (not mandatory):
+Allow the user to search by REGISTRATION DATE in the system. For example, you enter the month and year (+ 1 or 2 criteria), and it displays this information.
+When printing the results, put the search term used in BOLD when found in the response. (Example: If a user searches for FLOWER, the pet's name should be printed in BOLD.)
 
-Regras ⚠️
-O usuário PRIMEIRAMENTE e SEMPRE deverá escolher o critério TIPO DE ANIMAL.
-O formato de resposta, deverá exibir SEMPRE uma lista de possiveis resultados, por exemplo:
-1.  Rex - Cachorro - Macho  - Rua 1, 123 - Cidade 1 - 2 anos - 5kg - Vira-lata
-2.  Florzinha da Silva - Gato - Femea - Rua 2, 456 - Seilandia - 6 anos - 5kg - Siames
-Caso o usuário escolha por exemplo, NOME, os resultados da busca devem trazer PARTES do nome, por exemplo, caso ele pesquise por FLOR, deverá trazer o caso 2 citado anteriormente.
-Toda busca deverá ser case-sensitive, ou seja, ignorar maiuscula e minuscula (tratando como iguais) e acentos.
-Regra nível 2 (não obrigatória) ⚠️
-Permitir que o usuário busque por DATA de CADASTRO no sistema, por exemplo, você informa mês e ano (+ 1 ou 2 critérios) e ele traz essas informações
-Ao imprimir os resultados encontrados, colocar em NEGRITO o termo da pesquisa utilizado quando for encontrado na resposta. (Exemplo: Se ele pesquisar por FLOR, o nome do pet deverá ser impresso em NEGRITO)
-📍Passo 6: Altera um pet cadastrado ✍️
-Permitir que o usuário altere os dados de um pet cadastrado.
+Step 6: Edit a registered pet ️
+Allow the user to edit the information of a registered pet.
 
-Regras ⚠️
-O usuário deverá BUSCAR seguindo os critérios da resposta anterior.
-Caso o usuário digite um número de busca inválido, o menu de busca deverá ser exibido novamente.
-O usuário receberá uma LISTA (igual a exibição anterior) com os resultados da busca, e deverá escolher o número do pet que deseja alterar.
-O usuário poderá alterar TODOS os dados do pet, EXCETO o TIPO E SEXO
-📍Passo 7: Deletar um animal cadastro 🔍
-O usuário, ao selecionar a opção de 4, deverá ser capaz de deletar o pet.
+Rules:
+The user must SEARCH according to the criteria in the previous answer.
+If the user enters an invalid search number, the search menu will be displayed again.
+The user will receive a LIST (similar to the previous display) with the search results, and must choose the pet number they wish to edit.
+The user can edit ALL pet information EXCEPT TYPE AND SEX.
 
-Regras ⚠️
-O usuário deverá BUSCAR seguindo os critérios da resposta anterior.
-Caso o usuário digite um número de busca inválido, o menu de busca deverá ser exibido novamente.
-O usuário receberá uma LISTA (igual a exibição anterior) com os resultados da busca, e deverá escolher o número do pet que deseja deletar.
-O usuário deverá confirmar a exclusão do pet, digitando SIM ou NÃO.
-Só poderá ser deletado um pet por vez.
-Caso o usuário digite SIM, o pet deverá ser deletado e uma mensagem de sucesso deverá ser exibida.
-📍Passo 8: Sair
-Ao selecionar a opção 5, o programa deverá ser encerrado.
+Step 7: Delete an animal from the registry
+When selecting option 4, the user must be able to delete the pet.
 
-📍Passo EXTRA ☠️☠️☠️
-Caso você tenha concluído todos os passos anteriores, você poderá implementar uma funcionalidade extra para o seu programa.
+Rules:
+The user must SEARCH according to the criteria in the previous answer.
+If the user enters an invalid search number, the search menu will be displayed again.
+The user will receive a LIST (similar to the previous display) with the search results and must select the number of the pet they wish to delete.
+The user must confirm the deletion of the pet by typing YES or NO.
+Only one pet can be deleted at a time.
+If the user enters YES, the pet will be deleted and a success message will be displayed.
 
-Você irá criar na tela inicial, uma nova tela de opções, sendo:
+Step 8: Exit
+Selecting option 5 will close the program.
 
-1 - Iniciar o sistema para cadastro de PETS
-2 - Iniciar o sistema para alterar formulário
-Caso o usuário escolha a opção 2, você deverá exibir um novo menu com as seguintes opções:
+EXTRA Step:
+If you've completed all the previous steps, you can implement additional functionality for your program.
 
-Criar nova pergunta
-Alterar pergunta existente
-Excluir pergunta existente
-Voltar para o menu inicial
-Sair
-Regras Opção 1 ⚠️
-O usuário deverá digitar a nova pergunta, e você deverá salvar no arquivo formulario.txt a nova pergunta
-A pergunta deverá SEGUIR a ordem com a númeração obrigatória, ou seja, ele deverá olhar para a pergunta ANTERIOR e adicionar +1 na númeração.
-Novas perguntas não tem obrigatoriedade de resposta, mas caso o usuário NÃO responda, coloque um NÃO INFORMADO.
-Regras Opção 2 ⚠️
-O usuário NÃO PODERÁ modificar as perguntas ORIGINAIS (de 1 a 7), somente as perguntas que ele adicionou.
-O usuário deverá digitar o número da pergunta que deseja alterar,então você deverá printar na tela e oferecer a opção a ser alterada.
-O usuário poderá alterar a pergunta, mas não a resposta, ou seja, você deverá perguntar a nova pergunta e salvar no arquivo.
-Regras Opção 3 ⚠️
-O usuário NÃO PODERÁ deletar as perguntas ORIGINAIS (de 1 a 7), somente as perguntas que ele adicionou.
-O usuário deverá digitar o número da pergunta que deseja deletar, então você deverá printar na tela e oferecer a opção a ser deletada.
-O usuário deverá confirmar a exclusão da pergunta, digitando SIM ou NÃO.
-Regras GERAIS das novas opções ⚠️
-Caso existam 9 perguntas (2 adicionadas), e o usuário DELETE A PERGUNTA 8, a pergunta 9 deverá tomar o lugar da 8.
-Não deixe NENHUMA LINHA VAZIA no arquivo de perguntas ou de respostas, sempre reorganize-os
-Ao perguntar uma das novas PERGUNTAS adicionadas (caso existam), você deverá ler o arquivo de perguntas e exibir as perguntas adicionadas normalmente.
-Caso o usuário RESPONDA, o arquivo salvo com o pet deverá conter a resposta da pergunta adicionada no seguinte formato:
+You'll create a new options screen on the home screen, as follows:
+1 - Start the system to register pets
+2 - Start the system to modify the form
+If the user chooses option 2, you should display a new menu with the following options:
+Create a new question
+Edit an existing question
+Delete an existing question
+Return to the main menu
+Exit
+
+Rules Option 1:
+The user must enter the new question, and you must save the new question in the form.txt file.
+The question must FOLLOW the order with the mandatory numbering, that is, the user must look at the PREVIOUS question and add +1 to the numbering.
+New questions are not mandatory, but if the user DOES NOT answer, mark it as NOT INFORMED.
+
+Rules Option 2:
+The user CANNOT modify the ORIGINAL questions (1 to 7), only the questions they added.
+The user must enter the number of the question they want to change, then you must print it on the screen and offer the option to change.
+The user can change the question, but not the answer. That is, you must ask the new question and save it to the file.
+
+Rules for Option 3:
+The user CANNOT delete the ORIGINAL questions (1 to 7), only the questions they added.
+The user must enter the number of the question they wish to delete, then print it on the screen and offer the option to delete.
+The user must confirm the deletion of the question by typing YES or NO.
+
+GENERAL Rules for New Options:
+If there are 9 questions (2 added), and the user DELETES QUESTION 8, question 9 must take the place of question 8.
+Do not leave ANY BLANK LINES in the question or answer file; always reorder them.
+When asking one of the newly added QUESTIONS (if any), you must read the question file and display the added questions normally. If the user RESPONDS, the file saved with the pet must contain the answer to the added question in the following format:
 1 - Florzinha da Silva
-2 - Gato
-3 - Femea
+2 - Cat
+3 - Female
 4 - Rua 2, 456, Seilandia
-5 - 6 anos
+5 - 6 years
 6 - 5kg
-7 - Siames
-8 - [EXTRA - PERGUNTA NOVA ADICIONADA] - RESPOSTA DO USUÁRIO
-9 - [EXTRA - PERGUNTA NOVA ADICIONADA] - RESPOSTA DO USUÁRIO
-Considerações Finais 📝
-Siga implementando o projeto e fazendo commits à medida que for concluindo as funcionalidades, seguindo o padrão sempre de Conventional commits
-
-Crie um arquivo README.md com uma descrição do seu projeto e instruções de como executá-lo.
-
-Gostou do projeto?
-Se você chegou até aqui, parabéns! Você concluiu o primeiro grande desafio do guia. 🚀
+7 - Siamese
+8 - [EXTRA - NEW QUESTION ADDED] - USER'S RESPONSE
+9 - [EXTRA - NEW QUESTION ADDED] - USER'S RESPONSE
