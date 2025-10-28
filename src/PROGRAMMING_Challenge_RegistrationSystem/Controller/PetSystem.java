@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.Normalizer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PetSystem {
@@ -30,19 +32,37 @@ public class PetSystem {
                 switch (option){
                     case 1:
                         try {
-                            Pet pet = Pet.createPet(input);
+                            Pet.createPet(input);
                         } catch (IOException e){
                             System.out.println(e.getMessage());
                         }
                         break;
                     case 2:
                         try {
-                            searchPet(input);
+                            searchPet(input, 1);
                         } catch (IOException e) {
                             System.out.println(e.getMessage());
                         }
                         break;
                     case 3:
+                        try {
+                            int optionChoseChange = 0;
+                            String[] optionsChange = searchPet(input, 2);
+                            System.out.println("Select one option to change:");
+                            do {
+                                if (optionsChange != null) {
+                                    for (int i = 0; i < optionsChange.length; i++) {
+                                        System.out.println((i + 1) + ". " + optionsChange[i]);
+                                    }
+                                    optionChoseChange = input.nextInt() - 1;
+                                } else {
+                                    throw new IOException("Option Null");
+                                }
+                            } while (optionChoseChange > optionsChange.length  || optionChoseChange < 0);
+
+                        } catch (IOException e) {
+                            System.out.println(e.getMessage());
+                        }
                         break;
                     case 4:
                         break;
@@ -65,8 +85,9 @@ public class PetSystem {
         input.close();
     }
 
-    private static void searchPet(Scanner scanner) throws IOException {
+    private static String[] searchPet(Scanner scanner, int typeSearch) throws IOException {
         int optionSearch;
+        String[] results;
         PetType searchType = null;
         String search;
         System.out.println("What type of animal?");
@@ -83,10 +104,9 @@ public class PetSystem {
         } catch (Exception e) {
             System.out.println(e.getMessage());;
         }
-        do {
-            System.out.println("Search Pet:");
-            System.out.println("Select one option:");
-            System.out.println("""
+        System.out.println("Search Pet:");
+        System.out.println("Select one option:");
+        System.out.println("""
                     1. First or Last Name
                     2. Sex
                     3. Age
@@ -96,89 +116,117 @@ public class PetSystem {
                     7. Registration Date
                     8. Combine criteria
                     9. Exit to menu""");
-            optionSearch = scanner.nextInt();
-            scanner.nextLine();
-            switch (optionSearch){
-                case 1:
-                    System.out.println("Enter the First or Last Name");
-                    search = scanner.nextLine();
+        optionSearch = scanner.nextInt();
+        scanner.nextLine();
+        switch (optionSearch) {
+            case 1:
+                System.out.println("Enter the First or Last Name");
+                search = scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 2:
-                    System.out.println("Enter the sex");
-                    search = scanner.nextLine();
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 2:
+                System.out.println("Enter the sex");
+                search = scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 3:
-                    System.out.println("Enter the age");
-                    search = scanner.nextLine();
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 3:
+                System.out.println("Enter the age");
+                search = scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 4:
-                    System.out.println("Enter the weight");
-                    search = scanner.nextLine();
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 4:
+                System.out.println("Enter the weight");
+                search = scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 5:
-                    System.out.println("Enter the race");
-                    search = scanner.nextLine();
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 5:
+                System.out.println("Enter the race");
+                search = scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 6:
-                    System.out.println("Enter the Address:");
-                    System.out.println("i. Enter the street");
-                    search = scanner.nextLine();
-                    System.out.println("ii. Enter the houseNumber");
-                    search += ", " + scanner.nextLine();
-                    System.out.println("iii. Enter the city");
-                    search += ", " + scanner.nextLine();
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 6:
+                System.out.println("Enter the Address:");
+                System.out.println("i. Enter the street");
+                search = scanner.nextLine();
+                System.out.println("ii. Enter the houseNumber");
+                search += ", " + scanner.nextLine();
+                System.out.println("iii. Enter the city");
+                search += ", " + scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 7:
-                    System.out.println("Enter the date: mm/dd/yyyy");
-                    search = scanner.nextLine();
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 7:
+                System.out.println("Enter the date: mm/dd/yyyy");
+                search = scanner.nextLine();
+                if (typeSearch == 1) {
                     searching(search, searchType);
-                    break;
-                case 8:
-                    String[] criteria = {"Name", "Last Name", "Sex", "Age", "Weight", "Race", "Address", "Registration Date"};
-                    System.out.println("Choose the first criterion:");
-                    for (int i = 0; i < criteria.length; i++) {
+                    return null;
+                } else {
+                    return searchingArray(search, searchType);
+                }
+            case 8:
+                String[] criteria = {"Name", "Last Name", "Sex", "Age", "Weight", "Race", "Address", "Registration Date"};
+                System.out.println("Choose the first criterion:");
+                for (int i = 0; i < criteria.length; i++) {
+                    System.out.println((i + 1) + ". " + criteria[i]);
+                }
+                int firstChoice = scanner.nextInt() - 1;
+                System.out.println("You chose: " + criteria[firstChoice]);
+                System.out.println("\nChoose the second criterion:");
+                for (int i = 0; i < criteria.length; i++) {
+                    if (i != firstChoice) {
                         System.out.println((i + 1) + ". " + criteria[i]);
                     }
-                    int firstChoice = scanner.nextInt() - 1;
-                    System.out.println("You chose: " + criteria[firstChoice]);
-                    System.out.println("\nChoose the second criterion:");
-                    for (int i = 0; i < criteria.length; i++) {
-                        if (i != firstChoice) {
-                            System.out.println((i + 1) + ". " + criteria[i]);
-                        }
-                    }
-                    int secondChoice = scanner.nextInt() - 1;
-                    scanner.nextLine();
-                    if (secondChoice == firstChoice) {
-                        throw new IOException("Invalid choice, already selected!");
-                    } else {
-                        if (firstChoice == 7){
-
-                        }
-                        System.out.println("You chose: " + criteria[secondChoice]);
-                        System.out.println("Enter the: " + criteria[firstChoice] + " and " + criteria[secondChoice]);
-                        search = scanner.nextLine();
+                }
+                int secondChoice = scanner.nextInt() - 1;
+                scanner.nextLine();
+                if (secondChoice == firstChoice) {
+                    throw new IOException("Invalid choice, already selected!");
+                } else {
+                    System.out.println("You chose: " + criteria[secondChoice]);
+                    System.out.println("Enter the: " + criteria[firstChoice] + " and " + criteria[secondChoice]);
+                    search = scanner.nextLine();
+                    if (typeSearch == 1) {
                         searching(search, searchType);
+                        return null;
+                    } else {
+                        return searchingArray(search, searchType);
                     }
-                    break;
-                case 9:
-                    System.out.println("Back to menu...");
-                    break;
-                default:
-                    System.out.println("Invalid option..");
-                    break;
-            }
-        } while (optionSearch != 9);
+                }
+            case 9:
+                System.out.println("Back to menu...");
+                return null;
+            default:
+                System.out.println("Invalid option..");
+                return null;
+        }
     }
 
-    private static void searching(String search, PetType petType){
-        int i = 1;
+    private static String[] searchingArray(String search, PetType petType){
+        List<String> results = new ArrayList<>();
         StringBuilder dateFormatted = new StringBuilder();
         Path dir = Paths.get("C:\\Users\\edugo\\OneDrive\\Área de Trabalho\\Java-OOP-Training\\src\\PROGRAMMING_Challenge_RegistrationSystem\\RegisteredPets");
         try(DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
@@ -214,7 +262,7 @@ public class PetSystem {
                     }
 
                     if (petText.contains(typeString) && (anyWordFound || dateMatched)) {
-                        String words[] = petText.split(" - ");
+                        String[] words = petText.split(" - ");
                         for (String word : words) {
                             boolean matched = false;
                             for (String wSearch : wordsSearch) {
@@ -227,23 +275,37 @@ public class PetSystem {
                             if (dateMatched) {
                                 matched = true;
                             }
+                            word = word.toUpperCase();
                             if (matched) {
-                                word = word.toUpperCase();
                                 petData2.append("\033[1m").append(word).append("\033[0m");
                             } else {
-                                word = word.toUpperCase();
                                 petData2.append(word);
                             }
                             petData2.append(" - ");
                         }
                         String result = petData2.toString().replaceAll(" - $", "");
-                        System.out.println(i + ". " + result);
-                        i++;
+                        results.add(result);
                     }
                 }
             }
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
+        String[] printResult = results.toArray(new String[0]);
+        for (int i = 0; i < printResult.length; i++) {
+            System.out.println((i + 1) + ". " + printResult[i]);
+        }
+        return results.toArray(new String[0]);
+    }
+
+    private static void searching(String search, PetType petType){
+        String[] printResult = searchingArray(search, petType);
+        for (int i = 0; i < printResult.length; i++) {
+            System.out.println((i + 1) + ". " + printResult[i]);
+        }
+    }
+
+    private static void changePet(){
+
     }
 }
