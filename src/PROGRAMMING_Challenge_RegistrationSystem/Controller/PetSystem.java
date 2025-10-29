@@ -11,8 +11,235 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PetSystem {
+
     public static void menu() {
         Scanner input = new Scanner(System.in);
+        int option = 0;
+        do {
+            System.out.println("What do you want to do?");
+            System.out.println("""
+                    1 - Start the system to register pets
+                    2 - Start the system to modify the form
+                    3 - Exit
+                    """);
+            try {
+                option = input.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid input, please try numbers");
+            }
+            switch (option) {
+                case 1:
+                    option = menuPet(input);
+                    break;
+                case 2:
+                    option = menuForms(input);
+                    break;
+                case 3:
+                    System.out.println("Thank you for using our services...");
+                    break;
+                default:
+                    System.out.println("Invalid Option, try again.");
+                    break;
+            }
+        } while (option != 3);
+        input.close();
+    }
+
+    private static int menuForms(Scanner input){
+        int option = 0;
+        do {
+            System.out.println("Forms Pet System");
+            System.out.println("Choose one option:");
+            System.out.print("""
+                       1 - Create a new question
+                       2 - Edit an existing question
+                       3 - Delete an existing question
+                       4 - Return to the main menu
+                       5 - Exit
+                       """);
+            try {
+                option = input.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid input, please try numbers");
+            }
+            switch (option) {
+                case 1:
+                    createQuestionForms(input);
+                    break;
+                case 2:
+                    changeQuestionForms(input);
+                    break;
+                case 3:
+                    deleteQuestionForms(input);
+                    break;
+                case 4:
+                    System.out.println("Exit...");
+                    return 0;
+                case 5:
+                    System.out.println("Thank you for using our services...");
+                    return 3;
+            default:
+                System.out.println("Invalid Option, try again.");
+                break;
+            }
+        } while (option != 5);
+        return 0;
+    }
+
+    private static void createQuestionForms(Scanner input){
+        String file = "src/PROGRAMMING_Challenge_RegistrationSystem/Forms.txt";
+        try(BufferedReader br = new BufferedReader(new FileReader(file));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(file, true)))  {
+            String line;
+            char number = '0';
+            while((line = br.readLine()) != null){
+                if(!line.isEmpty()){
+                    number = line.charAt(0);
+                }
+            }
+            int numberQuestion = Character.getNumericValue(number);
+            if (numberQuestion == 19){
+                System.out.println("Forms is full, delete one question for continue");
+            } else {
+                System.out.println("Enter the new Question");
+                input.nextLine();
+                String newQuestion = input.nextLine();
+                bw.newLine();
+                bw.write((numberQuestion + 1) + " - [EXTRA - " + newQuestion + "]");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void changeQuestionForms(Scanner input) {
+        String file = "src/PROGRAMMING_Challenge_RegistrationSystem/Forms.txt";
+        List<String> lines = new ArrayList<>();
+        boolean found = false;
+        boolean updated = false;
+        int choice = 0;
+        String newQuestion = "";
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (!line.isEmpty()) {
+                    lines.add(line);
+                }
+            }
+            for (String l : lines) {
+                try {
+                    int number = Character.getNumericValue(l.charAt(0));
+                    if (number >= 8) {
+                        System.out.println(l);
+                        found = true;
+                    }
+                } catch (Exception ignored) {}
+            }
+            if (found) {
+                System.out.print("\nChoose one question number to change: ");
+                choice = input.nextInt();
+                input.nextLine();
+                System.out.print("Enter the new text for question " + choice + ": ");
+                newQuestion = input.nextLine().trim();
+            }
+            if (!newQuestion.isEmpty()) {
+                for (int i = 0; i < lines.size(); i++) {
+                    try {
+                        int number = Character.getNumericValue(lines.get(i).charAt(0));
+                        if (number == choice) {
+                            lines.set(i, choice + " - " + newQuestion);
+                            updated = true;
+                            break;
+                        }
+                    } catch (Exception ignored) {}
+                }
+            }
+            if (updated) {
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+                    for (String l : lines) {
+                        bw.write(l);
+                        bw.newLine();
+                    }
+                }
+                System.out.println("Question " + choice + " updated successfully!");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void deleteQuestionForms(Scanner input) {
+        String file = "src/PROGRAMMING_Challenge_RegistrationSystem/Forms.txt";
+        List<String> lines = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (!line.isEmpty()) {
+                    lines.add(line);
+                }
+            }
+            for (String l : lines) {
+                try {
+                    int number = Character.getNumericValue(l.charAt(0));
+                    if (number >= 8) {
+                        System.out.println(l);
+                    }
+                } catch (Exception ignored) {}
+            }
+            System.out.print("\nChoose one question number to delete: ");
+            int choice = input.nextInt();
+            input.nextLine();
+
+            boolean confirmation = false;
+            for (String l : lines) {
+                int number = Character.getNumericValue(l.charAt(0));
+                if (choice == number){
+                    System.out.println("Are you sure you want to remove the question: " + l);
+                    System.out.println("""
+                            1. YES
+                            2. NO
+                            """);
+                    if (input.nextInt() == 1) {
+                        confirmation =  true;
+                    }
+                }
+            }
+
+            boolean removed = false;
+            for (int i = 0; i < lines.size(); i++) {
+                int number = Character.getNumericValue(lines.get(i).charAt(0));
+                if (number == choice && number >= 8) {
+                    lines.remove(i);
+                    removed = true;
+                    break;
+                }
+            }
+            if (removed && confirmation) {
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+                    int newNumberQuestion = 8;
+                    for (String l : lines) {
+                        int number = Character.getNumericValue(l.charAt(0));
+                        String text = l.substring(4);
+                        if (number >= 8) {
+                            bw.write(newNumberQuestion + " - " + text);
+                            newNumberQuestion++;
+                        } else {
+                            bw.write(number + " - " + text);
+                        }
+                        bw.newLine();
+                    }
+                }
+                System.out.println("Question deleted successfully!");
+            } else {
+                System.out.println("Exit...");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static int menuPet(Scanner input) {
         int option = 0;
         do {
             System.out.println("Pet Adoption System");
@@ -23,7 +250,8 @@ public class PetSystem {
                     3. Change the registered pet's data
                     4. Delete a registered pet
                     5. List all registered pets
-                    6. Exit.""");
+                    6. Return to main menu
+                    7. Exit.""");
             try {
                 option = input.nextInt();
                 input.nextLine();
@@ -91,17 +319,20 @@ public class PetSystem {
                         break;
                     case 6:
                         System.out.println("Exit...");
-                        break;
+                        return 0;
+                    case 7:
+                        System.out.println("Thank you for using our services...");
+                        return 3;
                     default:
-                        System.out.println("Invalid option.\nOptions: 1 to 6");
+                        System.out.println("Invalid option.\nOptions: 1 to 7");
                         break;
                 }
             } catch (Exception e) {
                 System.out.println("Only numbers");
+                break;
             }
-
-        } while (option != 6);
-        input.close();
+        } while (option != 7);
+        return 0;
     }
 
     private static String[] searchPet(Scanner scanner, int typeSearch) throws IOException {

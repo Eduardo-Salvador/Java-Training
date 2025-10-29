@@ -5,6 +5,5 @@ public enum PetSex {
     FEMALE(),
     NO_INFORMED();
 
-    PetSex(){
-    }
+    PetSex(){}
 }

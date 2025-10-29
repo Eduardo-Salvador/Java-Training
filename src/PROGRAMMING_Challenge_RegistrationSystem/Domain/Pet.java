@@ -88,7 +88,7 @@ public class Pet {
         try (BufferedReader br = new BufferedReader(new FileReader("src/PROGRAMMING_Challenge_RegistrationSystem/Forms.txt"))) {
             Pet pet;
             Address address = new Address();
-            String[] answers = new String[7];
+            String[] answers = new String[20];
             String line;
             int i = 0;
             while ((line = br.readLine()) != null) {
@@ -144,6 +144,11 @@ public class Pet {
                     if (matcher.matches()) {
                         answers[i] = aux;
                     }
+                } else if (!line.isEmpty() && i > 6) {
+                    String aux = input.nextLine();
+                    answers[i] = aux.isEmpty() ? NO_INFORMED : aux;
+                    i++;
+                    continue;
                 }
                 i++;
             }
@@ -153,11 +158,36 @@ public class Pet {
             fillPet(pet, i, answers[i], address);
         }
 
-        savePet(pet.getName(), pet, address);
+        savePet(pet.getName(), pet, address, input);
         System.out.println("Pet successfully registered!");
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    private static String[] responseQuestions(Scanner input){
+        String file = "src/PROGRAMMING_Challenge_RegistrationSystem/Forms.txt";
+        try(BufferedReader br = new BufferedReader(new FileReader(file));) {
+            String line;
+            char number = '0';
+            int numberQuestion = 0;
+            int i = 0;
+            String[] anwser = new String[13];
+            while ((line = br.readLine()) != null) {
+                if (!line.isEmpty()) {
+                    number = line.charAt(0);
+                    numberQuestion = Character.getNumericValue(number);
+                    if (numberQuestion > 7) {
+                        System.out.println(line);
+                        anwser[i] = numberQuestion + " - " + input.nextLine();
+                        i++;
+                    }
+                }
+            }
+            return anwser;
+        } catch(IOException e){
+            throw new RuntimeException(e);
         }
     }
 
@@ -227,7 +257,7 @@ public class Pet {
         }
     }
 
-    private static void savePet(String animalName, Pet pet, Address address) {
+    private static void savePet(String animalName, Pet pet, Address address, Scanner input) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmm");
         String dateFormatted = LocalDateTime.now().format(formatter);
         Path folder = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets");
@@ -270,6 +300,13 @@ public class Pet {
                 bw.write("7 - " + pet.getRace());
                 bw.newLine();
 
+                String[] newQuestions = responseQuestions(input);
+                for (String response : newQuestions) {
+                    if (response != null && !response.isEmpty()) {
+                        bw.write(response + " [EXTRA]");
+                        bw.newLine();
+                    }
+                }
                 bw.flush();
                 Files.setAttribute(file, "dos:readonly", true);
             }
