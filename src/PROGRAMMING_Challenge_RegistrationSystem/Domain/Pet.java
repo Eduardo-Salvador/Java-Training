@@ -95,6 +95,9 @@ public class Pet {
                 if (line.trim().isEmpty()) {
                     continue;
                 }
+                if (i > 6) {
+                    break;
+                }
                 System.out.println(line);
                 if (i == 0) {
                     String regex = "^[A-Za-zÀ-ÿ]+(?: [A-Za-zÀ-ÿ]+)*$";
@@ -141,9 +144,6 @@ public class Pet {
                     if (matcher.matches()) {
                         answers[i] = aux;
                     }
-                } else {
-                    String aux = input.nextLine();
-                    answers[i] = aux.isEmpty() ? NO_INFORMED : aux;
                 }
                 i++;
             }
@@ -155,7 +155,6 @@ public class Pet {
 
             savePet(pet.getName(), pet, address, input);
             System.out.println("Pet successfully registered!");
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -257,7 +256,7 @@ public class Pet {
         String dateFormatted = LocalDateTime.now().format(formatter);
         Path folder = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets");
         Path file = Paths.get("src/PROGRAMMING_Challenge_RegistrationSystem/RegisteredPets/" + dateFormatted + "-" + animalName.toUpperCase() + ".txt");
-
+        int i = 8;
         try {
             Files.createDirectories(folder);
             if (!Files.exists(file)) {
@@ -298,8 +297,18 @@ public class Pet {
                 String[] newQuestions = responseQuestions(input);
                 for (String response : newQuestions) {
                     if (response != null && !response.isEmpty()) {
-                        bw.write(response + " [EXTRA]");
-                        bw.newLine();
+                        String regex = "^([1-9]|[1-9][0-9])\\s*-\\s*$";
+                        Pattern pattern = Pattern.compile(regex);
+                        Matcher matcher = pattern.matcher(response);
+                        if (matcher.matches()){
+                            bw.write(i + " - " + pet.getNO_INFORMED() + " [EXTRA]");
+                            bw.newLine();
+                            i++;
+                        } else {
+                            bw.write(response + " [EXTRA]");
+                            bw.newLine();
+                            i++;
+                        }
                     }
                 }
                 bw.flush();

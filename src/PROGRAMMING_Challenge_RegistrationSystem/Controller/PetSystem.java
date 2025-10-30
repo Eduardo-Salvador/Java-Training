@@ -509,7 +509,6 @@ public class PetSystem {
                             break;
                         }
                     }
-
                     if (petText.contains(typeString) && (anyWordFound || dateMatched)) {
                         String[] words = petText.split(" - ");
                         for (String word : words) {
