@@ -91,7 +91,7 @@ public class Pet {
             String[] answers = new String[20];
             String line;
             int i = 0;
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null && i < answers.length) {
                 if (line.trim().isEmpty()) {
                     continue;
                 }
@@ -107,10 +107,7 @@ public class Pet {
                     }
                 }
                 else if (i == 1 || i == 2){
-                    String regex = "^(dog|cat|male|female)$";
-                    Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
                     answers[i] = input.nextLine();
-                    Matcher matcher = pattern.matcher(answers[i]);
                 }
                 else if (i == 3) {
                     System.out.println("\nWhat house number?");
@@ -144,22 +141,20 @@ public class Pet {
                     if (matcher.matches()) {
                         answers[i] = aux;
                     }
-                } else if (!line.isEmpty() && i > 6) {
+                } else {
                     String aux = input.nextLine();
                     answers[i] = aux.isEmpty() ? NO_INFORMED : aux;
-                    i++;
-                    continue;
                 }
                 i++;
             }
 
-        pet = new Pet(answers[0]);
-        for (i = 0; i < answers.length; i++) {
-            fillPet(pet, i, answers[i], address);
-        }
+            pet = new Pet(answers[0]);
+            for (i = 0; i < answers.length; i++) {
+                fillPet(pet, i, answers[i], address);
+            }
 
-        savePet(pet.getName(), pet, address, input);
-        System.out.println("Pet successfully registered!");
+            savePet(pet.getName(), pet, address, input);
+            System.out.println("Pet successfully registered!");
 
         } catch (Exception e) {
             System.out.println(e.getMessage());

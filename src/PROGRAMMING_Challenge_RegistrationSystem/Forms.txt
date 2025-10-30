@@ -5,5 +5,3 @@
 5 - What is the pet's approximate age?
 6 - What is the pet's approximate weight?
 7 - What is the pet's breed?
-8 - [EXTRA - What kind of pet food do you buy for your pet]?
-9 - [EXTRA - Do you take your pet for walks?]
