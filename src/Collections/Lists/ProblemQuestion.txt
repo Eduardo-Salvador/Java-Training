@@ -1,0 +1,43 @@
+Exercise: Inventory Management
+Objective:
+Create a small system that manages products in a list, allowing you to add, update, remove, and list products, practicing basic List operations.
+
+Requirements:
+Create the Product class with:
+Private attributes: String name, Double price, Integer quantity
+Constructor, getters, and setters.
+Formatted toString() method.
+Override `equals()` and `hashCode()` to consider equality by name only.
+In the `InventoryManager` class, implement the methods below using a `List<Product>`:
+`public static void addProduct(List<Product> products, Product product)`
+`public static void removeProduct(List<Product> products, String name)`
+`public static void updatePrice(List<Product> products, String name, Double newPrice)`
+`public static void sortByPrice(List<Product> products)`
+`public static void showAllProducts(List<Product> products)`
+
+In the `Main` class:
+Create a list with some products.
+Use the methods above to:
+Add a new product.
+Remove an existing product.
+Update the price of a product.
+Display all products sorted by price.
+
+List Methods You Will Use
+Method Function
+add() Adds element
+removeIf() or remove() Removes element
+set() Replaces element at position
+contains() Checks for existence
+indexOf() Returns element position
+sort() Sorts elements with Comparator
+
+Expected Output (simulation):
+Product added: Mouse - R$ 80.00
+Product added: Keyboard - R$ 120.00
+Product added: Monitor - R$ 900.00
+Product removed: Keyboard
+Updated price: Mouse - R$ 100.00
+Products in stock (sorted by price):
+Mouse - R$ 100.00 - Qty: 10
+Monitor - R$ 900.00 - Qty: 5
