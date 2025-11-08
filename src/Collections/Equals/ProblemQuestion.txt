@@ -1,0 +1,25 @@
+Exercise: Registering Unique Employees
+Create a program that stores employees in a list (ArrayList).
+Two employees should be considered equal if they have the same CPF (Brazilian tax identification number).
+
+Requirements:
+Create an Employee class with:
+Private attributes: String name, String cpf, Double salary.
+Constructor and getter/setter methods.
+Override the equal method to consider two employees equal if their CPF is the same.
+Also override hashCode (using cpf.hashCode()).
+
+Lesson Director:
+Create an `ArrayList<Funcional>`.
+Add some employees (including a repeated CPF).
+Before adding, check if the employee already exists in the list using the `contains()` method.
+
+If it already exists, do not add it and display a message:
+"Employee with CPF already registered: <cpf>".
+Finally, display all registered employees.
+
+Expected Example (simulated output)
+Employee with already registered CPF: 123.456.789-00
+Registered Employees:
+Name: Ana, CPF: 123.456.789-00, Salary: 4500.00
+Name: Bruno, CPF: 987.654.321-00, Salary: 5200.00
