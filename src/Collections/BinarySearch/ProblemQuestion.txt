@@ -1,0 +1,26 @@
+Exercise – Binary Book Search:
+You have been hired to develop a small book search system for a digital library.
+The goal is to allow users to quickly locate a book by title using binary search (Collections.binarySearch).
+
+Requirements:
+Create the Book class with the following attributes:
+String title
+String author
+Integer year
+Have the Book class implement Comparable<Book>, where the natural order will be by title in alphabetical order.
+
+Create a LibrarySearch class with:
+A searchBook(List<Book> books, String title) method that:
+Sorts the list of books by title.
+Uses Collections.binarySearch() to search for the book.
+Returns the found book, or displays a message if it does not exist.
+
+Create the main class Main to:
+Create a list of 5 books.
+Display the sorted list.
+Perform a binary search for an existing book and a non-existent book.
+
+Tips:
+The binarySearch() method requires the list to already be sorted according to the same criteria as compareTo.
+If the book is not found, binarySearch() returns a negative value.
+Remember to override toString() to display the book information.
