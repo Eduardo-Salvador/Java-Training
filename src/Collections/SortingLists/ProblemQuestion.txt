@@ -1,0 +1,29 @@
+Exercise – Student Sorting:
+Create a program to manage a list of students (Student) in a school.
+Implement the system so that it is possible to sort the students in different ways.
+
+Requirements:
+Create the Student class with the following attributes:
+String name
+Integer age
+Double grade (final grade)
+Make the Student class implement Comparable<Student>,
+so that the natural order of the objects is by name in alphabetical order.
+Create two comparators (Comparator<Student>) to sort:
+By ascending age
+By descending grade
+Create a main class StudentManager that:
+Creates a list (List<Student>)
+Adds 5 different students
+
+Shows:
+The original list
+The list sorted by name (Comparable)
+The list sorted by age (Comparator)
+The list sorted by descending grade (Comparator)
+
+Rules and Tips:
+Use Collections.sort() for sorting with Comparable.
+Use list.sort() for sorting with Comparator.
+Use the forEach(System.out::println) method to print the list.
+Keep the code well organized and modularized.
