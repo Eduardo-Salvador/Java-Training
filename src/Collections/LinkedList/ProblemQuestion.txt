@@ -1,0 +1,26 @@
+Exercise: LinkedList (Service Queue)
+Create a program that simulates a technical support service queue using LinkedList.
+
+Requirements:
+Create a Client class with:
+client name;
+problem description;
+toString() method returning name and problem.
+
+Without main program:
+Create a LinkedList<Customer> representing the queue.
+Add 5 clients to the queue (in order of arrival).
+
+Show:
+the first in the queue;
+the service of a client (removing the first);
+the current size of the queue;
+the complete queue after each service.
+
+Use LinkedList methods such as:
+addLast(), removeFirst(), peekFirst(), isEmpty(), size().
+
+Extra challenge (optional):
+Make the queue not accept duplicate customers (same name).
+Add an option to serve all customers until the queue is empty.
+Replace LinkedList with Queue<Customer> and see what changes.
