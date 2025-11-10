@@ -1,0 +1,19 @@
+Exercise: Book Catalog with TreeSet (NavigableSet)
+Create a program that manages a book catalog using TreeSet.
+
+Requirements:
+Create a Book class with:
+title (String)
+author (String)
+number of pages (Integer)
+The class must implement Comparable<Book> so that the default sorting is alphabetical by title.
+
+In the main program:
+Create a TreeSet<Book> (or NavigableSet<Book>).
+Add 5 different books to the set.
+Display the books in alphabetical order.
+
+Show:
+the first and last book in the order;
+the book immediately before and after a specific book (use lower() and higher());
+the catalog in reverse order (use descendingSet()).
