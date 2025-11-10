@@ -1,5 +1,5 @@
-package Collections.Iterator_ListArray_Conversion.Controller;
-import Collections.Iterator_ListArray_Conversion.Domain.City;
+package Collections.Iterator.ListArray.Conversion.Controller;
+import Collections.Iterator.ListArray.Conversion.Domain.City;
 import java.util.*;
 
 public class CityManager {

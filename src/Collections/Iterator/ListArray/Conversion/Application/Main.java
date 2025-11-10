@@ -1,6 +1,6 @@
-package Collections.Iterator_ListArray_Conversion.Application;
-import Collections.Iterator_ListArray_Conversion.Controller.CityManager;
-import Collections.Iterator_ListArray_Conversion.Domain.City;
+package Collections.Iterator.ListArray.Conversion.Application;
+import Collections.Iterator.ListArray.Conversion.Controller.CityManager;
+import Collections.Iterator.ListArray.Conversion.Domain.City;
 import java.util.ArrayList;
 import java.util.List;
 

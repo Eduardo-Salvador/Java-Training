@@ -1,4 +1,4 @@
-package Collections.Iterator_ListArray_Conversion.Domain;
+package Collections.Iterator.ListArray.Conversion.Domain;
 
 public class City {
     private String name;
