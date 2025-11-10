@@ -1,0 +1,18 @@
+Exercise: Product Inventory Control
+Create a program that manages a product inventory using Map.
+
+Requirements:
+Create a Product class with:
+name (String)
+code (String)
+price (Double)
+
+In the main program:
+Create a HashMap<String, Product> where the key will be the product code and the value will be the Product object itself.
+Add 5 products to the map.
+Display all registered products (showing the code as the key).
+Check if a code already exists before adding it.
+Update the price of a specific product.
+Remove a product by code.
+Show the total number of registered products.
+Show the products in order of insertion (use LinkedHashMap for this).
