@@ -1,0 +1,16 @@
+Animal Report with Wildcards
+You are creating a system to manage different types of animals in a zoo.
+There is a base class called Animal and subclasses such as Dog, Cat, and Lion.
+You need to implement a method that receives a generic list of animals and prints information about them.
+The detail is that the method must accept any type of list that contains objects that are subtypes of Animal.
+To do this, you must use wildcards (? extends Animal).
+
+Objectives:
+Create the Animal class with a makeSound() method.
+Create subclasses (Dog, Cat, Lion) that override makeSound().
+Create a printAnimalSounds(List<? extends Animal> animals) method that iterates through the list and calls makeSound() for each animal.
+Test the method by passing different lists (List<Dog>, List<Cat>, etc.).
+
+Extra Challenge:
+Also implement an addAnimal(List<? super Animal> animals, Animal a) method that adds an animal to a list that can accept Animal or supertypes.
+This will show you the difference between `? extends` (reading) and `? super` (writing).
