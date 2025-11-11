@@ -1,0 +1,16 @@
+Generic Printing:
+Create a generic method called printArray that receives an array of any type and prints all its elements. Test with Integer, String, and Double arrays.
+
+Generic Maximum:
+Create a generic method called maxValue that receives three elements and returns the largest one. Use type restriction (extends Comparable)
+to ensure that the elements can be compared. Test with numbers (Integer, Double) and with String.
+
+Generic Swap:
+Create a generic method called swap that swaps two elements of an array in different positions. Test with String and Integer arrays.
+
+Generic Search:
+Create a generic method called containsElement that checks if an element is present in a list. Test with String and Integer lists.
+
+Extra Challenge:
+Create a generic method called copyList that copies the elements of one list to another, using wildcards (? extends T and ? super T).
+Test it by copying a list of integers to a list of numbers.
