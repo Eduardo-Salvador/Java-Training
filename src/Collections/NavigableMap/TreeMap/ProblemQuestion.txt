@@ -1,0 +1,26 @@
+Exercise: Phone Book with TreeMap (NavigableMap)
+Create a program that manages a phone book using TreeMap or NavigableMap.
+
+Requirements:
+Create a Contact class with:
+String name
+String phoneNumber
+String email
+
+In the main program:
+Create a NavigableMap<String, Contact>, where the key will be the contact's name and the value will be the Contact object itself.
+Add at least 5 contacts.
+Display all contacts in alphabetical order by name.
+Show the first and last contact in the phone book.
+Given a name, show:
+the immediately preceding contact (lowerEntry)
+the immediately following contact (higherEntry)
+Display the phone book in reverse order (use descendingMap()).
+
+Extra Challenges:
+Allow removing a contact by name.
+Allow updating the phone number or email of an existing contact.
+Use methods like:
+firstEntry(), lastEntry()
+lowerEntry(), higherEntry()
+descendingMap()
