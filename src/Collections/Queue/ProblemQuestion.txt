@@ -1,0 +1,17 @@
+Mixed Hospital Queue System:
+Imagine you are developing a patient care system for an emergency room.
+Patients arrive and are registered in a regular queue, in order of arrival.
+However, some patients have urgent cases and need to be seen before others. These patients are placed in a PriorityQueue,
+where priority is defined by a number (the lower the number, the greater the urgency).
+
+he system should work like this:
+Whenever there are patients in the PriorityQueue, they are seen first (in order of priority).
+If there are no urgent patients, the care follows the order of the regular queue.
+After each patient visit, the system shows who was seen and which queue was used.
+Continue until all queues are empty.
+
+Objective:
+Create two structures: a queue for regular patients and a PriorityQueue for urgent patients.
+Simulate the arrival of patients in both queues.
+Implement a service logic that always prioritizes the urgent queue.
+Show the final service order.

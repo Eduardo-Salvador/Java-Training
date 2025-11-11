@@ -1,0 +1,6 @@
+PriorityQueue
+Now imagine an emergency queue in a hospital.
+Each patient has a name and a priority level (the lower the number, the greater the urgency).
+Patients are seen not in order of arrival, but according to medical priority.
+Your task is to create a patient queue using PriorityQueue, insert some patients with different priority levels, and simulate the process until everyone is seen.
+In the end, show the order in which the patients were seen.
