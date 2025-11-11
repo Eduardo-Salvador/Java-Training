@@ -1,0 +1,19 @@
+Generic Box:
+You need to implement a generic class called Box<T> that can store any type of object.
+
+Objectives:
+Create the Box<T> class with:
+A private attribute called content of type T.
+Methods setContent(T content) and getContent() to manipulate the content.
+A toString() method that prints the box's content.
+
+In the main method, create different instances of the Box:
+A Box<String> to store a word.
+A Box<Integer> to store a number.
+A Box<Animal> to store an object of the Animal class.
+Show that the same Box class works for different types without needing to duplicate code.
+
+Extra Challenge:
+Implement a generic class Pair<K, V> that stores a pair of values (as a key and a value).
+Create instances like Pair<String, Integer> (e.g., "Age", 25) and Pair<String, String> (e.g., "Name", "John").
+Print the pairs to see how it works.
