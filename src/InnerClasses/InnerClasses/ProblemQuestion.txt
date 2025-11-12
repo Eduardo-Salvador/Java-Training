@@ -1,0 +1,20 @@
+Exercise: University Student Registration:
+Create a program to manage student registration in a university using Inner Classes.
+
+Requirements:
+Create a University class with:
+name (String)
+city (String)
+Inside University, create an inner class Student with:
+name (String)
+registrationNumber (String)
+course (String)
+
+In the main program:
+Create a University object.
+Add 5 students using the inner class Student.
+Display all registered students (showing registration number and course).
+Search for a student by registration number.
+Remove a student by registration number.
+Display the total number of students.
+The Student class should have access to the university name when printing student details.
