@@ -1,0 +1,18 @@
+Event Ticket Management:
+Create a program to manage tickets for an event using Local Classes.
+
+Requirements:
+Create a class Event with:
+eventName (String)
+maxTickets (Integer)
+
+In the method generateTickets():
+Declare a local class Ticket with:
+code (String)
+price (Double)
+
+Inside the method:
+Generate 5 tickets with random codes (e.g., “T001”, “T002”…).
+Store them in a List.
+Display all tickets with their codes and prices.
+Calculate and display the total revenue if all tickets are sold.
