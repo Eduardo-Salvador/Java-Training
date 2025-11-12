@@ -1,0 +1,42 @@
+Event Notification System:
+Create a program that simulates a simple notification system for events, using anonymous classes.
+
+Requirements:
+Create an interface called Notifier with one method:
+void notifyUser(String message);
+
+In the main program:
+Create a class called Event with attributes:
+private String name;
+private String date;
+and a constructor to initialize them.
+
+In the main method:
+Create a list of 3 events.
+For each event, create an anonymous class that implements the Notifier interface and prints a message like:
+
+[Email] New event registered: Tech Conference - 25/11/2025 or [SMS] Event reminder: Hackathon - 30/11/2025
+
+Simulate sending notifications using different types (e.g., Email, SMS, Push) — all using anonymous classes (no named subclasses).
+Print all notifications sent.
+
+--------------------------------------------------------------------------
+
+Anonymous Class with Inheritance:
+Create a simple internal notification management system for a company.
+Create a class called Notification with the attributes:
+message (String)
+priority (Integer)
+
+Add a send() method that simply prints:
+Sending notification: <message> (Priority: <priority>)
+
+In the main method, create two instances of anonymous classes based on Notification, overriding the send() method for different behaviors:
+A critical system notification, which prints the entire text in uppercase.
+A regular user notification, which adds the user's name to the end of the message.
+Create a list of Notification classes and add both instances.
+Iterate through the list and call the send() method for each notification.
+
+Extra challenge (optional):
+Create an abstract class Alert with an abstract method execute().
+Create two different anonymous classes that inherit from Alert and print distinct messages. Run both without creating named subclasses.
