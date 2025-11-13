@@ -1,0 +1,18 @@
+Payment Processing System with Behavior Parameterization:
+Create a class called PaymentProcessor that will be responsible for processing different payment methods.
+
+Requirements:
+Define a functional interface called PaymentStrategy with a single method:
+void pay(double amount);
+In the PaymentProcessor class, create a method called processPayment(double amount, PaymentStrategy strategy)
+that delegates the payment behavior to the strategy received as a parameter.
+
+In the main method, create different payment strategies using lambda expressions or anonymous classes, for example:
+Credit Card Payment (prints: "Payment of <amount> with credit card").
+Pix Payment (prints: "Payment of <amount> via Pix").
+Bank Slip Payment (prints: "Payment of <amount> with bank slip").
+Test the system by calling processPayment with different values and strategies.
+
+Extra Challenge:
+Create a list of different payment strategies and iterate over it, processing the same amount with each one.
+Add a strategy that applies a discount before making the payment.
