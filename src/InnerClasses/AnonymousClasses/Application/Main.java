@@ -1,4 +1,5 @@
 package InnerClasses.AnonymousClasses.Application;
+import InnerClasses.AnonymousClasses.Domain.Alert;
 import InnerClasses.AnonymousClasses.Domain.Event;
 import InnerClasses.AnonymousClasses.Domain.Notification;
 import InnerClasses.AnonymousClasses.Domain.Notifier;
@@ -45,13 +46,25 @@ public class Main {
         Notification n1 = new Notification("Hello, please call me", 5){
             @Override
             public void send(){
-                System.out.println("SENDING NOTIFICATION: <" + getMessage().toUpperCase() + "> PRIORITY: <" + getPriority() + ">");
+                System.out.println("Sending notification: <" + getMessage().toUpperCase() + "> Priority: <" + getPriority() + ">");
             }
         };
         Notification n2 = new Notification("Hello, how are you?", 1){
             @Override
             public void send(){
-                System.out.println("Sending notification: <" + getMessage() + "> Priority: <" + getPriority() + "> - User: Potato");
+                class User {
+                    private String name;
+
+                    public User(String name) {
+                        this.name = name;
+                    }
+
+                    public String getName() {
+                        return name;
+                    }
+                }
+                User u1 = new User("John");
+                System.out.println("Sending notification: <" + getMessage() + "> Priority: <" + getPriority() + "> - User: " + u1.getName());
             }
         };
 
@@ -60,5 +73,22 @@ public class Main {
             n.send();
             System.out.println("----------------------");
         }
+
+        Alert a1 = new Alert() {
+            @Override
+            public void execute() {
+                System.out.println("Java is the best!");
+            }
+        };
+
+        Alert a2 = new Alert() {
+            @Override
+            public void execute() {
+                System.out.println("I love you Java!");
+            }
+        };
+
+        a1.execute();
+        a2.execute();
     }
 }
