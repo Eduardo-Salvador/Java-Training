@@ -1,0 +1,23 @@
+Product Inventory Management with Predicate and Function:
+Objective: Use lambda expressions with the Predicate and Function functional interfaces to filter and modify a list of products.
+
+Requirements:
+Product Class: Create a class named Product with the attributes:
+name (String)
+price (Double)
+
+Main Class Implementation:
+In the main method, create an ArrayList of Product objects, adding several sample products.
+
+Filtering with Predicate:
+Implement a method filterProducts(List<Product> products, Predicate<Product> condition) that accepts a list and a Predicate.
+This method should return a new list containing only the products that satisfy the given condition.
+In the main method, use a lambda expression with this method to filter and print only the products with a price greater than R$ 50.00.
+
+Mapping with Function:
+Implement a method mapProducts(List<Product> products, Function<Product, String> mapper) that accepts a list and a Function.
+This method should return a new List<String> where each element is the result of applying the mapping function to the original product.
+In the main method, use a lambda expression with this method to generate and print a list containing only the names of all products in uppercase letters.
+Chaining Operations (Extra Challenge):
+Combine the filtering and mapping logic.
+Use a stream pipeline (or chained calls to your methods) to get a list of the uppercase names of all products priced over R$ 50.00. Print the final list.
