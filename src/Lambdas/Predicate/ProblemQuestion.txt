@@ -1,0 +1,23 @@
+Employee Filtering System with Predicate:
+Create a class called Employee with the following attributes:
+name (String)
+age (Integer)
+salary (Double)
+
+Requirements:
+In the main class, create a list of employees with different age and salary values.
+Create a utility method called filterEmployees(List<Employee> employees, Predicate<Employee> condition) that receives:
+The list of employees.
+A Predicate<Employee> that defines the filtering condition.
+The method should return only the employees that satisfy the condition.
+In the main method, use lambda expressions to create different Predicate<Employee> and test the method:
+Filter employees older than 30.
+Filter employees with a salary above 5000.
+Filter employees whose name begins with the letter "A".
+Display the results of each filtering in the console.
+
+Extra Challenge:
+Combine two Predicates using the `and()` and `or()` methods.
+Example: age > 30 and salary > 5000.
+Example: name starts with "A" or salary < 3000.
+Create a negated Predicate (`negate()`) to show employees who do not meet a given condition.
