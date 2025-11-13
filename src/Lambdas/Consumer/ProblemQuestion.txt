@@ -1,0 +1,22 @@
+Product Processing System with Consumer:
+
+Create a class called Product with the following attributes:
+name (String)
+price (Double)
+
+Requirements:
+In the main class, create a list of products with different names and prices.
+Create a utility method called processProducts(List<Product> products, Consumer<Product> action) that receives:
+The list of products.
+A Consumer<Product> that defines the action to be applied to each product.
+The method should iterate over the list and apply the Consumer to each item.
+
+In the main class, use lambda expressions to create different Consumer<Product> and test the method:
+One that prints the product name and price.
+One that applies a 10% discount to the price and prints the new value.
+One that prints only the names in uppercase letters.
+Execute the processProducts method with each Consumer and observe the results.
+
+Extra Challenge:
+Create a list of Consumer<Product> and apply them all sequentially to each product (e.g., first print, then apply discount, then print in uppercase).
+Combine Consumer using the andThen() method to chain actions into a single process.
