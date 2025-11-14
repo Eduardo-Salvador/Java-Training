@@ -1,0 +1,41 @@
+1. Sorting Products with Method Reference:
+Create a class called Product with the following attributes:
+name (String)
+price (Double)
+
+Requirements:
+In the main class, create a list of Product objects
+Sort the list alphabetically by the product name using a method reference:
+String::compareToIgnoreCase
+Display the sorted list in the console.
+
+Extra Challenge:
+Create a static method inside Product called compareByPrice(Product p1, Product p2) and sort the list using:
+Product::compareByPrice
+
+----
+
+2. Converting Strings to Integers with Method Reference:
+Create a list containing numeric Strings such as "10", "25", "40".
+Requirements:
+Convert each String into an Integer using a method reference:
+Integer::parseInt
+Store the converted values in a new List<Integer>.
+Print all the converted integers.
+
+Extra Challenge:
+Convert all integers back to Strings using the method reference:
+String::valueOf
+
+----
+
+3. Printing Elements with System.out Method Reference:
+Create a list of city names (Strings).
+Requirements:
+Iterate through the list and print each city using a method reference:
+System.out::println
+No lambda expressions should be used for printing.
+
+Extra Challenge:
+Create a static method printDecorated(String s) in a utility class and print all cities using:
+Utility::printDecorated
