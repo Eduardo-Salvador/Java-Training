@@ -1,0 +1,89 @@
+Exercise 1 — User Profile Search with Optional:
+Create a User class with the following attributes:
+id (integer)
+name (String)
+email (String)
+
+Requirements:
+Create a UserRepository class containing a method `Optional<User> findByEmail(String email)` that returns:
+`Optional.of(user) was found`
+`Optional.empty() was not found`
+In the main method, create a list with some registered users.
+
+Perform searches using `findByEmail` and use:
+`ifPresent()` to display the name of the found user.
+`ifPresentOrElse()` to display: "User not found" when the Optional is empty.
+`orElse()` to return a default user.
+`orElseGet()` to generate an alternate user only when necessary.
+`orElseThrow()` to throw a custom exception when the user does not exist.
+Apply a `map()` to the returned Optional to extract only the username.
+Use `filter()` to return an Optional only if the email contains "@gmail.com".
+
+------
+
+Exercise 2 — Product Price Analyzer with Optional and flatMap:
+Create the following classes:
+Product
+name (String)
+price (Double)
+Order
+id (Integer)
+product (Optional<Product>)
+An order can exist even without a product registered.
+
+Requirements:
+In the main method, create several Orders with products and some without products.
+Create a method Optional<Double> getProductPrice(Order order) that:
+Uses flatMap() to access the Product Optional.
+Returns Optional.of(price) when there is a product.
+Returns Optional.empty() when the order has no product.
+
+In the main method, for each order:
+Use orElse() to return 0.0 if the price does not exist.
+Use map() to apply a 10% discount only when the price is present.
+Use `filter()` to return an Optional only if the price is greater than 100.
+
+Display:
+the original price
+the discounted price (if applicable)
+“Product not available” using `orElseGet()`
+
+------
+
+Exercise 3 — Library Book Loan System using Optional Chains:
+
+Create the classes:
+Author
+name (String)
+
+Book
+title (String)
+author (Optional<Author>)
+
+Loan
+book (Optional<Book>)
+
+Requirements:
+In main, create several books:
+some with a defined author
+others without an author
+And create several loans (some without an attached book).
+
+Create a method:
+Optional<String> getAuthorName(Loan loan)
+
+that:
+Uses a chain of flatMap() to navigate: Loan → Book → Author → Name
+Returns Optional.of(name) if the author exists.
+Returns Optional.empty() if any step is missing.
+
+In main, show:
+The author's name using orElse("Unknown author")
+A call using orElseThrow() when the author does not exist. A transformation using `map()` to return the name in uppercase.
+A `filter()` to return the author only if the name has more than 5 letters.
+Use `ifPresent()` to display the authors found.
+
+Example of expected chain:
+`loan.getBook()`
+`.flatMap(Book::getAuthor)`
+`.map(Author::getName)`
