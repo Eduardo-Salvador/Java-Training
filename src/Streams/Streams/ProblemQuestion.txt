@@ -1,0 +1,31 @@
+Employee Stream Processing:
+Create a class called Employee with the following attributes:
+name (String)
+age (Integer)
+salary (Double)
+
+Requirements:
+In the main method:
+Create a list with several employees containing varying ages and salaries.
+Using Stream, perform the following operations:
+Filter: select only employees with salaries above 5000.
+Map: transform each employee into a string containing only:
+"NAME - SALARY"
+Sorted: sort by name in alphabetical order.
+Distinct: ensure there are no duplicate names.
+Collect: transform the final result into a List<String>.
+
+Using terminal operations:
+`count()` → number of employees above 5000
+`max(Comparator)` → employee with the highest salary
+`min(Comparator)` → employee with the lowest salary
+`anyMatch()` → is there anyone older than 60?
+`allMatch()` → do all employees have a salary above 2000?
+`noneMatch()` → are there no employees with empty names?
+
+Display in the console:
+The final formatted list
+The count
+The highest salary
+The lowest salary
+The results of `anyMatch`, `allMatch`, `noneMatch`
