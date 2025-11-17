@@ -37,9 +37,9 @@ When something prevents normal execution, such as dividing by zero, reading a no
 
 ---
 
-### Two main types:
+## Two main types:
 
-#### Checked Exceptions
+### Checked Exceptions
 Must be handled or declared with throws.
 
 Examples:
@@ -47,7 +47,7 @@ Examples:
 - FileNotFoundException
 - Custom exceptions that extend Exception
 
-#### Unchecked Exceptions
+### Unchecked Exceptions
 Do not require mandatory handling.
 
 Examples:
@@ -221,7 +221,7 @@ Withdrawal attempts exceeding the balance will cause a BalanceInsufficientExcept
 
 ---
 
-### Learning Objectives
+## Learning Objectives
 - Difference between checked and unchecked exceptions
 - try, catch, finally
 - throw vs throws
