@@ -23,7 +23,7 @@ Each structure has its own internal behavior and performance characteristics.
 
 ---
 
-## 2. Brief Notes on Data Structures (Light Overview)
+## 2. Brief Notes on Data Structures
 This module touches on several underlying structures:
 
 ### Array-backed structures (e.g., ArrayList)
@@ -48,7 +48,7 @@ A complete deep-dive into trees, hashing functions, collision management, or lin
 
 ---
 
-## Big-O Notation (Superficial Overview)
+## Big-O Notation
 This module does not perform algorithmic analysis in depth. However, Big-O concepts help explain structural performance:
 - O(1) constant time (e.g., hash lookups)
 - O(log n) logarithmic time (e.g., tree insertion/search)
@@ -59,7 +59,7 @@ These performance factors are mentioned only to contextualize how the chosen str
 
 ---
 
-## 4. Hash vs. Tree (Didactic View)
+## 4. Hash vs. Tree 
 ### 4.1 Hash: Concept and Purpose
 Structures like **HashSet** and **HashMap** use hash tables:
 - Each key (or element, in the case of a HashSet) generates a hashCode().
@@ -80,7 +80,7 @@ Exercises with hash:
 - Implementations of equals() and hashCode()
 - Email User System
 
-### 4.2 Trees (Balanced Trees)
+### 4.2 Trees
 TreeSet and TreeMap use a tree structure (usually Red-Black Tree):
 - Always store ordered data
 - All operations cost O(log n)
@@ -267,7 +267,6 @@ Every exercise includes its own ProblemQuestion.txt inside the corresponding dir
 ---
 
 ## 8. Summary
-This Collections module provides a complete practical foundation for:
 - Using core collections (List, Set, Map, Queue)
 - Understanding structural behaviors (hashing, trees, arrays, links)
 - Performing sorting and searching
