@@ -8,6 +8,8 @@ All exercises include their own ProblemQuestion.txt file inside the correspondin
 ## 1. Foundations: What Are Generics?
 Generics allow types (classes and interfaces) to be parameters when defining classes, methods, and interfaces.
 
+You create Classes, Methods, etc., and you don't define what type it will receive, thus making it a Generic type, able to receive and work with the same behavior for various types, avoiding rewriting the same code multiple times.
+
 They enable:
 - Type safety (compile-time validation of types)
 - Prevention of ClassCastException
