@@ -1,4 +1,4 @@
-# Java Exceptions
+# Exceptions
 
 ---
 
