@@ -100,7 +100,7 @@ Todos possuem um arquivo **ProblemQuestion.txt** com o enunciado completo.
 
 ------------------------------------------------------------------------
 
-## **E1 --- Calculadora de Divisão (ArithmeticException + InputMismatchException)**
+## **E1 - Calculadora de Divisão (ArithmeticException + InputMismatchException)**
 
 ### Tópico
 
@@ -122,7 +122,7 @@ Todos possuem um arquivo **ProblemQuestion.txt** com o enunciado completo.
 
 ------------------------------------------------------------------------
 
-## **E2 --- Leitor de Arquivos (Checked Exceptions + Multiple Catches)**
+## **E2 - Leitor de Arquivos (Checked Exceptions + Multiple Catches)**
 
 ### Tópico
 
@@ -144,7 +144,7 @@ Todos possuem um arquivo **ProblemQuestion.txt** com o enunciado completo.
 
 ------------------------------------------------------------------------
 
-## **E3 --- Exceção Personalizada (InvalidAgeException)**
+## **E3 - Exceção Personalizada (InvalidAgeException)**
 
 ### Tópico
 
@@ -165,7 +165,7 @@ InvalidAgeException.
 
 ------------------------------------------------------------------------
 
-## **E4 --- Bloco Finally + Exceção Personalizada**
+## **E4 - Bloco Finally + Exceção Personalizada**
 
 ### Tópico
 
@@ -186,7 +186,7 @@ Semelhante ao E3, mas com uso explícito de finally, que fecha o Scanner manualm
 
 ------------------------------------------------------------------------
 
-## **E5 --- Escritor de Arquivos (IOException + Finally + BufferedWriter)**
+## **E5 - Escritor de Arquivos (IOException + Finally + BufferedWriter)**
 
 ### Tópico
 
@@ -207,7 +207,7 @@ Qualquer falha de escrita gera uma exceção.
 
 ------------------------------------------------------------------------
 
-## **E6 --- AutoCloseable + try-with-resources**
+## **E6 - AutoCloseable + try-with-resources**
 
 ### Tópico
 
@@ -227,7 +227,7 @@ Demonstra como o método close() é chamado automaticamente.
 
 ------------------------------------------------------------------------
 
-## **E7 --- Conta Bancária (Exceção Personalizada + Regras de Negócio)**
+## **E7 - Conta Bancária (Exceção Personalizada + Regras de Negócio)**
 
 ### Tópico
 
