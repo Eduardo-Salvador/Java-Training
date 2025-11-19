@@ -37,7 +37,7 @@ características de desempenho.
 
 ------------------------------------------------------------------------
 
-## 2. Notas Breves sobre Estruturas de Dados (Visão Leve)
+## 2. Notas Breves sobre Estruturas de Dados 
 
 Este módulo aborda algumas estruturas subjacentes:
 
@@ -48,20 +48,20 @@ Este módulo aborda algumas estruturas subjacentes:
 
 ### Estruturas encadeadas (ex.: LinkedList)
 
--   Inserções/remoções rápidas nas extremidades (**O(1)**)\
+-   Inserções/remoções rápidas nas extremidades (**O(1)**)
 -   Acesso aleatório lento (**O(n)**)
 
 ### Estruturas baseadas em hash (HashMap, HashSet)
 
 -   Utilizam hashing: uma função matemática transforma uma chave em um
-    valor inteiro.\
--   Oferecem, em média, **O(1)** para acesso, inserção e remoção.\
+    valor inteiro.
+-   Oferecem, em média, **O(1)** para acesso, inserção e remoção.
 -   Não garantem ordem.
 
 ### Estruturas baseadas em árvores (TreeMap, TreeSet)
 
--   Baseadas em árvores balanceadas (como Red-Black Tree).\
--   Mantêm os elementos ou chaves em ordem crescente.\
+-   Baseadas em árvores balanceadas (como Red-Black Tree).
+-   Mantêm os elementos ou chaves em ordem crescente.
 -   Operações custam **O(log n)**.
 
 Uma análise aprofundada sobre árvores, funções de hash, gerenciamento de
@@ -70,7 +70,7 @@ Estruturas de Dados mencionado.
 
 ------------------------------------------------------------------------
 
-## Big-O Notation (Visão Superficial)
+## Big-O Notation
 
 Este módulo não realiza análise algorítmica profunda. No entanto,
 conceitos de Big-O ajudam a explicar o desempenho das estruturas:
@@ -85,7 +85,7 @@ estrutura escolhida impacta o comportamento dos exercícios.
 
 ------------------------------------------------------------------------
 
-## 4. Hash vs. Tree (Visão Didática)
+## 4. Hash vs. Tree 
 
 ### 4.1 Hash: Conceito e Propósito
 
@@ -116,7 +116,7 @@ Exercícios com hash:
 
 ------------------------------------------------------------------------
 
-### 4.2 Trees (Árvores Balanceadas)
+### 4.2 Trees
 
 **TreeSet** e **TreeMap** usam uma árvore (geralmente Red-Black Tree):
 
@@ -161,7 +161,7 @@ de prioridade e estruturas baseadas em árvores.
 
 ------------------------------------------------------------------------
 
-# 6. Sintaxe Básica de Listas (Usada em Todo o Módulo)
+# 6. Sintaxe Básica de Listas
 
 ``` java
 List<Product> products = new ArrayList<>();
