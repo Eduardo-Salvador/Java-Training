@@ -1,155 +1,193 @@
-# Inner Classes
+# Java Inner Classes — Exercises Collection
 
 ---
 
-## 1. Fundamental Concepts of Inner Classes
+## Overview
 
-Java allows declaring classes inside other classes, providing logical
-grouping, increased encapsulation, and access to external class members.
-The four types of inner classes are:
+This project contains a collection of independent exercises focused on Inner Classes in Java, organized into the following packages:
+- InnerClasses.InnerClasses — Member Inner Classes
+- 	InnerClasses.LocalClasses — Local Classes
+- InnerClasses.AnonymousClasses — Anonymous Classes
+-	InnerClasses.StaticAlignedClasses — Static Nested Classes
 
-### 1.1 Non‑static Inner Class
+### Each exercise includes:
+- A minimal structure with Application and Domain layers
+- Independent logic showcasing different inner-class mechanisms
+- A ProblemQuestion.txt file describing the original exercise
+- Practical examples of:
+	- Member Inner Classes
+	- Local Classes
+	- Anonymous Classes
+	- Static Nested Classes
+	- Encapsulation and scope relations
+	- Modular organization using nested structures
 
--   Associated with an instance of the outer class.
--   Can access all members of the outer class.
--   Used when the inner class exists only within the context of the
-    outer object.
+The goal is to provide hands-on understanding of how inner classes work, when to use them, and how they improve organization, encapsulation, and code expressiveness.
 
-### 1.2 Local Class
+---
 
--   Declared inside a method.
--   Useful for temporary, method-scoped structures.
--   Can access effectively final variables.
+## What Are Inner Classes?
 
-### 1.3 Anonymous Class
+Inner Classes are classes declared inside other classes.
+They allow:
+	- Strong grouping of related classes
+	- Direct access between inner and outer contexts
+	- Greater encapsulation
+	- Clear modular organization when objects are tightly related
 
--   Declared and instantiated in a single expression.
--   Used to override behavior quickly without creating additional files.
--   Common in event handlers and callback logic.
+---
 
-### 1.4 Static Nested Class
+## Main Types
 
--   Belongs to the outer class itself, not to its instance.
--   Can only access static members of the outer class.
--   Useful for grouping related utilities or domain types.
+### 1. Member Inner Classes
+- Declared inside another class (but outside methods).
+- Have full access to the outer class instance.
 
-------------------------------------------------------------------------
+### 2. Local Classes
+- Classes declared inside a method.
+- They only exist within the method where they are defined.
 
-## 2. Inner Classes Module --- University
+### 3. Anonymous Classes
+- Classes created without a name, usually to override methods or implement interfaces inline.
 
-### Description
+### 4. Static Nested Classes
+- Declared as static.
+- Do not depend on an instance of the outer class.
 
-A `University` contains multiple students. Each student is represented
-by a **non-static inner class**, meaning each `Student` instance is tied
-to a specific `University` object.
+---
 
-### Key Implementation Points
+## Concepts Used
 
--   **Instantiating a non-static inner class:**
+### The exercises demonstrate:
+- Object composition through inner classes
+- Access to the outer class via OuterClass.this
+- Local scoping rules
+- Polymorphism with anonymous classes
+- Static and non-static nested structures
+- Iteration over lists of nested objects
+- Modular domain-driven organization
 
-    ``` java
-    University u1 = new University("Harvard", "Cambridge");
-    University.Student s1 = u1.new Student("Eduardo", "A11C3", "Computer Engineering");
-    ```
+---
 
--   Inner class accesses outer class data via `University.this`.
+## Exercises Summary
 
--   Includes search, delete, and count operations on lists of `Student`.
+Below is a description of each module and what it demonstrates.
 
-------------------------------------------------------------------------
+---
 
-## 3. Local Classes Module --- Event & Ticket
+### 1. Member Inner Classes — University & Student
 
-### Description
+	Package: InnerClasses.InnerClasses
 
-Inside `generateTickets()`, a **local class** `Ticket` is created, as
-tickets only exist during the ticket-generation process.
+#### Topics:
+- Member Inner Classes
+- Tight coupling between entities
+- Access to outer class attributes
 
-### Key Implementation Points
+#### Description:
+The University class contains a Student inner class.
+Each student is inherently linked to its university, including in the toString() output.
 
--   Local class declared inside a method:
+#### Features:
+- Search student by registration number
+- Remove student
+- Count total students
+- Print all students with reference to the parent university
 
-    ``` java
-    class Ticket { ... }
-    ```
+#### Technical Highlights:
+- Instantiation via u1.new Student(...)
+- Usage of University.this.name inside Student
+- Handling lists of inner-class objects
 
--   Includes a static method inside the local class (`sellAll`), which
-    sums ticket prices.
+---
 
--   Tickets cannot escape the method scope, ensuring strict
-    encapsulation.
+### 2. Local Classes — Event & Ticket
 
-------------------------------------------------------------------------
+	Package: InnerClasses.LocalClasses
 
-## 4. Anonymous Classes Module --- Notifications & Alerts
+#### Topics:
+- Local Classes declared inside methods
+- Restricted scope
+- Static-like methods within local classes
 
-### Description
+#### Description:
+Inside generateTickets(), a local class Ticket is declared.
+It is used solely within that method to create and handle ticket objects.
 
-Demonstrates two typical uses of anonymous classes: 1. **Implementing
-interfaces quickly** (e.g., Notifier) 2. **Overriding behavior of
-existing classes** (e.g., Notification, Alert)
+#### Features:
+- Dynamic creation of ticket objects
+- Printing tickets
+- Summing ticket prices using a static method inside the local class
 
-### Key Implementation Points
+#### Technical Highlights:
+- Local class defined within a method
+- Encapsulated logic restricted to internal computation
+- Internal list manipulation with objects created on the fly
 
--   Anonymous implementation of an interface:
+---
 
-    ``` java
-    Notifier email = new Notifier() {
-        @Override
-        public void notifyUser(String message) { ... }
-    };
-    ```
+### 3. Anonymous Classes — Events, Notifiers & Notifications
 
--   Anonymous subclass overriding a concrete class method.
+	Package: InnerClasses.AnonymousClasses
 
--   Anonymous class containing its own local class for specialized
-    behavior.
+#### Topics:
+- Anonymous class creation
+- Inline method overriding
+- Polymorphism without named classes
+- Anonymous classes containing local classes
 
-------------------------------------------------------------------------
+#### Description:
+This module demonstrates:
+	1.	Anonymous implementations of the Notifier interface (Email, SMS, Push).
+	2.	Anonymous subclasses of Notification overriding the send() method.
+	3.	A local class inside an anonymous class.
+	4.	Anonymous implementations of the abstract class Alert.
 
-## 5. Static Nested Classes Module --- Library
+#### Technical Highlights:
+- new Interface() { ... }
+- new Class() { @Override ... }
+- Polymorphism with no class declarations
+ -Encapsulated behavior created inline
 
-### Description
+---
 
-`Library` contains two **static nested classes**: `Book` and
-`Statistics`.
+### 4. Static Nested Classes — Library, Book & Statistics
 
-### Key Implementation Points
+	Package: InnerClasses.StaticAlignedClasses
 
--   Static nested class does NOT require an outer instance:
+#### Topics:
+- Static Nested Classes
+- Grouping domain logic inside a parent class
+- Utility classes living inside a domain container
 
-    ``` java
-    Library.Book b = new Library.Book("Dom Casmurro", "Machado de Assis", 1899);
-    ```
+#### Description:
+The Library class contains:
+- Book — represents book entities
+- Statistics — calculates analytics on the book list
 
--   `Statistics` processes lists of `Book` objects (count, average
-    publication year).
+These classes are static and therefore do not depend on a Library instance.
 
--   Represents domain grouping without outer-instance dependency.
+#### Features:
+- Printing book information
+- Counting total books
+- Calculating the average publication year
 
-------------------------------------------------------------------------
+#### Technical Highlights:
+- Instantiation via new Library.Book(...)
+- Independent from the outer class instance
+- Useful for grouping domain-related utilities
 
-## 6. Module Summary
+---
 
-| Module              | Inner Class Type        | Purpose                                      |
-|---------------------|--------------------------|----------------------------------------------|
-| InnerClasses        | Non-static inner class   | Strongly dependent related objects           |
-| LocalClasses        | Local class              | Method-restricted scope                      |
-| AnonymousClasses    | Anonymous class          | Quick, customized polymorphism               |
-| StaticAlignedClasses| Static nested class      | Logical grouping + instance-independent types|
+#### Learning Objectives
 
-
-------------------------------------------------------------------------
-
-## 7. Conclusion
-
-- Proper organization using inner class types
-- Enhanced encapsulation through scoped class definitions
-- Dynamic polymorphism via anonymous classes
-- Domain grouping and utilities via static nested classes
-- Clear, structured patterns for real-world Java systems
-
-Each directory includes its own `ProblemQuestion.txt` with the exercise
-specification.
+- Differences between Member Inner, Local, Anonymous, and Static Nested classes
+- When and why to use each type
+- Encapsulation and scoping rules in nested structures
+- How inner classes improve modular design
+- How to override behavior dynamically using anonymous classes
+- How to organize domain logic inside composite structures
+- Interaction between inner classes and lists
+- Clean architecture using Application + Domain organization
 
 ---
