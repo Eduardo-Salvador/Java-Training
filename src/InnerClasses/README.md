@@ -138,10 +138,10 @@ It is used solely within that method to create and handle ticket objects.
 
 #### Description:
 This module demonstrates:
-	1.	Anonymous implementations of the Notifier interface (Email, SMS, Push).
-	2.	Anonymous subclasses of Notification overriding the send() method.
-	3.	A local class inside an anonymous class.
-	4.	Anonymous implementations of the abstract class Alert.
+- Anonymous implementations of the Notifier interface (Email, SMS, Push).
+- Anonymous subclasses of Notification overriding the send() method.
+- A local class inside an anonymous class.
+- Anonymous implementations of the abstract class Alert.
 
 #### Technical Highlights:
 - new Interface() { ... }
