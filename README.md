@@ -23,6 +23,10 @@
 
 ---
 
-### Collections:
+## Collections:
+
+🇺🇸: https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README.md
+🇧🇷: https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README_PT-BR.md
+
 
 ---
