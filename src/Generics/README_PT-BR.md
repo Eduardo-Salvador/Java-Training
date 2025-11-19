@@ -7,6 +7,7 @@ Este módulo fornece uma introdução completa aos Generics em Java, com foco em
 ## 1. Fundamentos: O que são Generics?
 
 Generics permitem que tipos (classes e interfaces) sejam parâmetros ao definir classes, métodos e interfaces.
+Você cria Classes, Métodos, etc; E não define qual tipo ele vai receber, sendo assim um tipo Genérico, conseguindo receber e trabalhar o mesmo comportamento para diversos tipos, evitando reescrever o mesmo código diversas vezes.
 
 Eles possibilitam:
 - Segurança de tipos (validação em tempo de compilação)
