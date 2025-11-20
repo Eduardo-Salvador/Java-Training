@@ -1,4 +1,4 @@
-# Java Lambdas
+# Lambdas
 
 ## Overview
 This module contains a set of independent exercises that demonstrate the use of **Java Lambdas** and the main functional interfaces from the `java.util.function` package.  
@@ -79,7 +79,6 @@ Demonstrates the use of **Predicate<T>** for conditional evaluation.
 ---
 
 ## Purpose
-Each exercise is designed to:
 - Introduce Java's functional programming features
 - Show real use cases for Lambdas in collections
 - Demonstrate the main functional interfaces used in enterprise Java
@@ -87,7 +86,6 @@ Each exercise is designed to:
 ---
 
 ## Files Included
-Each package includes:
 - `Domain/` classes  
 - `Application/` classes  
 - `ProblemQuestion.txt`  
@@ -108,7 +106,8 @@ Each package includes:
 ---
 
 ## Notes
-These exercises aim to help you practice:
 - Clean lambda syntax
 - Functional interface usage
 - Better control of data processing pipelines in Java
+
+---
