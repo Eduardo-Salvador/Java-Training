@@ -3,7 +3,7 @@
 ## Requisitos
 
 Confira a descrição do problema aqui:  
-https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/ProblemQuestion.md
+https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/ProblemQuestion_PT-BR.md
 
 ---
 
