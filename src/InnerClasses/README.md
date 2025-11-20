@@ -1,4 +1,4 @@
-# Java Inner Classes — Exercises Collection
+# Inner Classes
 
 ---
 
