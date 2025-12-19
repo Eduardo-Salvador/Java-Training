@@ -27,87 +27,63 @@ Os tópicos estão divididos em suas respectivas pastas e possuem arquivos READM
 
 ## Topics: 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+<div align="center">
+
 ## Logic Training: 
-
-[🇺🇸 English] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/LogicTrainingWithOOP/README.md 
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/LogicTrainingWithOOP/README_PT-BR.md
-
+  
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/LogicTrainingWithOOP/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/LogicTrainingWithOOP/README.md)
 
 ## Seminar System (Part of Logic Training):
-[🇺🇸 English] https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/SeminarSystem
 
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/SeminarSystem/README.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/SeminarSystem) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/SeminarSystem/README.md)
 
 ## Exceptions: 
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README_PT-BR.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README_PT-BR.md)
 
 ## UtilityClasses:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
 
 ## First Major Learning Challenge: 
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README_PT-BR.md)
 
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README_PT-BR.md
 
 ## Collections:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README_PT-BR.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README.md)
 
 ## Generics:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README_PT-BR.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README_PT-BR.md)
 
 ## Inner Classes:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README_PT-BR.md
-
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README_PT-BR.md)
 
 ## Parameterizing Behaviors:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md)
 
 ## Lambdas:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README_PT-BR.md
-
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README_PT-BR.md)
 
 ## Method Reference:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md
-
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md)
 
 ## Optional:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README.md
-
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README_PT-BR.md
-
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README_PT-BR.md)
 
 ## Streams:
 
-[🇺🇸 English]  https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README.md
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README_PT-BR.md)
 
-[🇧🇷 Português] https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README_PT-BR.md
+</div>
 
 ---
 
