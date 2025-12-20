@@ -88,3 +88,11 @@ Os tópicos estão divididos em suas respectivas pastas e possuem arquivos READM
 ---
 
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+
+<div align="center">
+
+## What is Apache Maven?
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Maven_README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Maven_README_PT-BR.md)
+
+</div>
