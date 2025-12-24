@@ -30,13 +30,18 @@ Os tópicos estão divididos em suas respectivas pastas e possuem arquivos READM
 
 <div align="center">
 
-## Logic Training: 
+## Programming Logic Training: 
   
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/LogicTrainingWithOOP/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/LogicTrainingWithOOP/README.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README_PT-BR.md)
 
-## Seminar System (Part of Logic Training):
+## Seminar System:
+#### Study Challenge of Programming Logic with Object-Oriented Programming
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/SeminarSystem) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/SeminarSystem/README.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/SeminarSystem/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/SeminarSystem/README_PT-BR.md)
+
+## Naval Battle Game:
+#### Study Challenge of Programming Logic with Object-Oriented Programming
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/NavalBattleGame/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/NavalBattleGame/README_PT-BR.md)
 
 ## Exceptions: 
 

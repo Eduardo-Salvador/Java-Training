@@ -1,0 +1,9 @@
+package StudyChallenges.RegistrationSystem.Domain;
+
+public enum PetType {
+    DOG(),
+    CAT(),
+    NO_INFORMED();
+
+    PetType(){}
+}

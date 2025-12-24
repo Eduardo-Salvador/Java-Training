@@ -1,0 +1,5 @@
+Create an algorithm that reads two integer values, A and B. If the values of A and B are equal, add the two values.
+Otherwise, multiply A by B. At the end of either calculation, assign the result to a variable, C, and print its value on the screen.
+
+Crie um algoritmo que leia dois valores inteiros, A e B. Se os valores de A e B forem iguais, some os dois valores.
+Caso contrário, multiplique A por B. Ao final de qualquer um dos cálculos, atribua o resultado a uma variável, C, e imprima seu valor na tela.

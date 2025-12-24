@@ -1,0 +1,3 @@
+Make an algorithm that reads the values of A, B, C and then prints the sum between A and B on the screen and shows if the sum is less than C.
+
+Crie um algoritmo que leia os valores de A, B e C e, em seguida, imprima a soma entre A e B na tela, indicando se a soma é menor que C.

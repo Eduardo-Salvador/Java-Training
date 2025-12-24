@@ -1,2 +1,0 @@
-Create an algorithm to receive any number and print on the screen
-whether the number is even or odd, positive or negative.
