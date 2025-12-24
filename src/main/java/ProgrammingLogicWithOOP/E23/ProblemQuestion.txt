@@ -1,3 +1,5 @@
 Create an algorithm that calculates a teacher's net salary.
-The input data will be: hourly rate, number of classes taught per month,
-and INSS deduction percentage. Print the final net salary on the screen.
+The input data will be: hourly rate, number of classes taught per month, and INSS deduction percentage. Print the final net salary on the screen.
+
+Crie um algoritmo que calcule o salário líquido de um professor.
+Os dados de entrada serão: valor da hora, número de aulas ministradas por mês, e percentual de dedução do INSS. Imprima o salário líquido final na tela.

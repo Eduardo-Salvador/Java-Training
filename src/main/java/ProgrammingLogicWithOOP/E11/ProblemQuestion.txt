@@ -1,2 +1,3 @@
-Create an algorithm that reads four grades obtained by a student, calculates the average of the grades obtained, and prints the student's name and
-whether the student passed or failed. For a student to be considered approved, their final average must be greater than or equal to 7.
+Create an algorithm that reads four grades obtained by a student, calculates the average of the grades obtained, and prints the student's name and whether the student passed or failed. For a student to be considered approved, their final average must be greater than or equal to 7.
+
+Crie um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das notas obtidas e imprima o nome do aluno e se ele foi aprovado ou reprovado. Para que um aluno seja considerado aprovado, sua média final deve ser maior ou igual a 7.

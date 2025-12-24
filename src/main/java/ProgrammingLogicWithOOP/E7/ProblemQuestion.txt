@@ -1,1 +1,3 @@
 Write an algorithm that reads two boolean (logical) values and determines whether they are both TRUE or FALSE.
+
+Escreva um algoritmo que leia dois valores booleanos (lógicos) e determine se ambos são VERDADEIROS ou FALSOS.

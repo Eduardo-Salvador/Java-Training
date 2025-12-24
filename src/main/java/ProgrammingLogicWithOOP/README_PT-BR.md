@@ -214,6 +214,8 @@ Arrays multidimensionais são arrays com linhas e colunas.
 - #### Scanners:
   Classe Java que facilita a leitura de entrada de dados de diferentes fontes (teclado, arquivos). Oferece métodos para ler strings, números e outros tipos de dados formatados.
 
+- #### LocalDate:
+  Classe Java que facilita a manipulação de Datas.
 ---
 
 ## Resultados de Aprendizagem

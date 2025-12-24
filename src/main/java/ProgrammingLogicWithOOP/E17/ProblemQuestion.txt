@@ -1,3 +1,7 @@
 Create an algorithm that reads a temperature in Fahrenheit and calculates the corresponding temperature in Celsius.
 Print both temperatures on the screen.
 Formula: C = (5 * (F-32) / 9)
+
+Crie um algoritmo que leia uma temperatura em Fahrenheit e calcule a temperatura correspondente em Celsius.
+Imprima ambas as temperaturas na tela.
+Fórmula: C = (5 * (F-32) / 9)

@@ -1,1 +1,3 @@
 Create an algorithm that receives an integer and prints its predecessor and successor on the screen.
+
+Crie um algoritmo que receba um número inteiro e imprima seu antecessor e seu sucessor na tela.

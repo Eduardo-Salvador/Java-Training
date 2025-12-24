@@ -3,8 +3,16 @@ by the buyer, and prints the final price of the product to be paid on the screen
 Use the codes from the payment terms table to perform the appropriate calculation.
 
 Payment Terms Code Table
-
 1 - Cash or Pix, receive a 15% discount
 2 - Cash by credit card, receive a 10% discount
 3 - Two installments on credit card, regular product price, interest-free
 4 - Three or more installments on credit card, regular product price plus 10% interest
+
+Crie um algoritmo que leia o preço de um produto e determine o valor a ser pago, com base no método de pagamento escolhido pelo comprador, e imprima o preço final do produto na tela.
+Use os códigos da tabela de condições de pagamento para realizar o cálculo apropriado.
+
+Tabela de Códigos de Condições de Pagamento
+1 - Dinheiro ou Pix, receba 15% de desconto
+2 - Dinheiro com cartão de crédito, receba 10% de desconto
+3 - Duas parcelas no cartão de crédito, preço normal do produto, sem juros
+4 - Três ou mais parcelas no cartão de crédito, preço normal do produto mais 10% de juros

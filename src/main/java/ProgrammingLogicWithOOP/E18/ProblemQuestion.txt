@@ -1,2 +1,5 @@
 Francisco is 5'1" and grows 2 centimeters per year, while Sara is 4'1" and grows 3 centimeters per year.
 Create an algorithm that calculates and prints how many years it will take for Francisco to be taller than Sara.
+
+Francisco tem 1,55 m de altura e cresce 2 centímetros por ano, enquanto Sara tem 1,24 m de altura e cresce 3 centímetros por ano.
+Crie um algoritmo que calcule e imprima quantos anos levará para Francisco ficar mais alto que Sara.

@@ -1,2 +1,3 @@
-Create an algorithm that reads three different integer values
-and prints the values on the screen in descending order.
+Create an algorithm that reads three different integer values and prints the values on the screen in descending order.
+
+Crie um algoritmo que leia três valores inteiros diferentes e imprima os valores na tela em ordem decrescente.

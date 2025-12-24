@@ -1,4 +1,15 @@
+<div align="center">
+
+![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-<COLOR>.svg)
+
 # Seminar System
+
+## Technologies
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
+
+
 
 ---
 
@@ -22,7 +33,7 @@ The project does not use a database; everything is stored in arrays in memory.
 
 ## What Was Used
 
-### 1. Classes and Objects
+### 1. Classes and Objects:
 The system is divided into main entities:
 
 - Location → Implemented as a record, representing the seminar's address.
@@ -34,7 +45,7 @@ These objects model the domain in a clear and object-oriented way.
 
 ---
 
-### 2. Encapsulation
+### 2. Encapsulation:
 All classes (except the record) feature:
 
 - Private attributes
@@ -44,14 +55,14 @@ All classes (except the record) feature:
 
 ---
 
-### 3. Records
+### 3. Records:
 The Location class uses records, which offer immutability and less verbosity:
 
     public record Location(String address) {}
 
 ---
 
-### 4. Associations (Associations between Classes)
+### 4. Associations (Associations between Classes):
 The project demonstrates different forms of association:
 
 - Seminar has a Location (1:1)
@@ -61,7 +72,7 @@ The project demonstrates different forms of association:
 
 ---
 
-### 5. Arrays
+### 5. Arrays:
 Instead of dynamic lists, the system uses fixed arrays to store data:
 
     Students[] students = new Students[100];
@@ -72,7 +83,7 @@ These arrays function as simple in-memory "databases".
 
 ---
 
-### 6. Interactive Menu (Console)
+### 6. Interactive Menu (Console):
 All system logic is accessed through a text menu, displayed repeatedly to the user:
 
     1. Register Seminar
@@ -95,7 +106,7 @@ Each option calls methods responsible for:
 
 ---
 
-### 7. Conditionals
+### 7. Conditionals:
 The project uses extensively:
 
 - if / else
@@ -113,7 +124,7 @@ Example:
 
 ---
 
-### 8. Loops
+### 8. Loops:
 To iterate through arrays and display elements:
 
 - for (int i = 0; i < array.length; i++)
@@ -122,7 +133,7 @@ Used to list entities and find empty spaces.
 
 ---
 
-### 9. Input Handling
+### 9. Input Handling:
 Uses Scanner for:
 
 - Strings
@@ -183,17 +194,15 @@ With complete information.
 
 ## Learning Outcomes
 
-By developing or analyzing this project, you will practice:
-
-- Modular organization (Domain and Controller packages)
-- Object-oriented programming
-- Constructors and overloading
-- Encapsulation and attribute access
-- Arrays as a storage structure
-- Associations between objects
-- Data manipulation in the console
-- Conditional structures and loops
-- Interactive menu navigation
-- User input and validation
+- Modular organization (Domain and Controller packages).
+- Object-oriented programming.
+- Constructors and overloading.
+- Encapsulation and attribute access.
+- Arrays as a storage structure.
+- Associations between objects.
+- Data manipulation in the console.
+- Conditional structures and loops.
+- Interactive menu navigation.
+- User input and validation.
 
 ---

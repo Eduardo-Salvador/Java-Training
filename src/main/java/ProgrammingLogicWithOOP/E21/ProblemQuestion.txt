@@ -1,1 +1,3 @@
 Make an algorithm that displays a random value between 0 and 100.
+
+Crie um algoritmo que exiba um valor aleatório entre 0 e 100.

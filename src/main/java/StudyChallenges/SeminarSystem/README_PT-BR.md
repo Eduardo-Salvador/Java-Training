@@ -1,4 +1,13 @@
+<div align="center">
+
+![Generic badge](https://img.shields.io/badge/STATUS-FINALIZADO-<COLOR>.svg)
+
 # Sistema de Seminários
+
+## Tecnologias
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
 
 ---
 
@@ -14,7 +23,7 @@ O projeto não utiliza banco de dados; tudo é armazenado em arrays na memória.
 
 ## O Que Foi Utilizado
 
-### 1. Classes e Objetos
+### 1. Classes e Objetos:
 O sistema é dividido em entidades principais:
 - **Location** → Implementado como um *record*, representando o endereço do seminário.
 - **Seminar** → Possui título e localização.
@@ -22,28 +31,28 @@ O sistema é dividido em entidades principais:
 - **Teacher** → Possui nome, especialidade e um conjunto de seminários ministrados.  
 Esses objetos modelam o domínio de forma clara e orientada a objetos.
 
-### 2. Encapsulamento
+### 2. Encapsulamento:
 Todas as classes (exceto o *record*) possuem:
 - Atributos privados  
 - Getters e setters  
 - Construtores sobrecarregados  
 - Método `toString()` quando necessário
 
-### 3. Records
+### 3. Records:
 A classe Location utiliza *records*, que oferecem imutabilidade e menos verbosidade:
 
 ```java
 public record Location(String address) {}
 ```
 
-### 4. Associações (Associações entre Classes)
+### 4. Associações (Associações entre Classes):
 O projeto demonstra diferentes formas de associação:
 - Seminar possui uma Location (1:1)
 - Student pode estar relacionado a um Seminar (N:1)
 - Teacher pode ministrar vários Seminars (1:N com array)
 - Arrays são usados para armazenar múltiplas entidades no sistema
 
-### 5. Arrays
+### 5. Arrays:
 Em vez de listas dinâmicas, o sistema usa arrays fixos para armazenar dados:
 
 ```java
@@ -54,7 +63,7 @@ Teacher[] teachers = new Teacher[100];
 
 Esses arrays funcionam como “bancos de dados” simples em memória.
 
-### 6. Menu Interativo (Console)
+### 6. Menu Interativo (Console):
 Toda a lógica do sistema é acessada por meio de um menu textual, exibido repetidamente ao usuário:
 
 ```
@@ -76,7 +85,7 @@ Cada opção chama métodos responsáveis por:
 - Exibir mensagens ao usuário
 - Manipular objetos nos arrays
 
-### 7. Condicionais
+### 7. Condicionais:
 O projeto utiliza extensivamente:
 - `if / else`
 - `switch` (ex.: alterar dados de seminário/estudante/professor)
@@ -93,18 +102,20 @@ switch (changeOption) {
 }
 ```
 
-### 8. Laços
+### 8. Laços:
 Para percorrer arrays e exibir elementos:
 - `for (int i = 0; i < array.length; i++)`  
 Usado para listar entidades e encontrar espaços vazios.
 
-### 9. Manipulação de Entrada
+### 9. Manipulação de Entrada:
 Uso de Scanner para:
 - Strings
 - Inteiros
 - Caracteres (Y/N)
 - Opções do menu  
 Tratamento de `nextLine()` para evitar quebras de linha indesejadas.
+
+---
 
 ## Funcionalidades
 
@@ -151,16 +162,15 @@ Permite alterar:
 - Com informações completas.  
 
 ## Aprendizados
-Ao desenvolver ou analisar este projeto, você praticará:
-- Organização modular (pacotes Domain e Controller)  
-- Programação orientada a objetos  
-- Construtores e sobrecarga  
-- Encapsulamento e acesso a atributos  
-- Arrays como estrutura de armazenamento  
-- Associações entre objetos  
-- Manipulação de dados no console  
-- Estruturas condicionais e laços  
-- Navegação por menu interativo  
-- Entrada e validação de dados pelo usuário  
+- Organização modular (pacotes Domain e Controller).
+- Programação orientada a objetos.  
+- Construtores e sobrecarga.
+- Encapsulamento e acesso a atributos.
+- Arrays como estrutura de armazenamento.  
+- Associações entre objetos.
+- Manipulação de dados no console. 
+- Estruturas condicionais e laços.
+- Navegação por menu interativo.
+- Entrada e validação de dados pelo usuário.
 
 ---

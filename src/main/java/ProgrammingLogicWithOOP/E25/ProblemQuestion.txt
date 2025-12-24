@@ -1,6 +1,5 @@
 A company wants to control the temperature of several smart rooms.
-Each room has sensors that report the current temperature, and a system must check whether it is within
-the acceptable range.
+Each room has sensors that report the current temperature, and a system must check whether it is within the acceptable range.
 If the temperature is above the maximum, the air conditioning must be turned on.
 If it is below the minimum, the heater must be turned on.
 Otherwise, nothing must be done.
@@ -43,3 +42,46 @@ Challenge:
 Add a static method countHeatedRooms() that tells how many rooms have the heater on.
 Implement constructor overloading to allow creating a Room with only a name and limits,
 and then set the current temperature.
+
+-------------------------------------------------------------
+
+Uma empresa deseja controlar a temperatura de várias salas inteligentes.
+Cada sala possui sensores que reportam a temperatura atual, e um sistema deve verificar se ela está dentro da faixa aceitável.
+
+Se a temperatura estiver acima da máxima, o ar-condicionado deve ser ligado.
+Se estiver abaixo da mínima, o aquecedor deve ser ligado.
+
+Caso contrário, nada deve ser feito.
+
+-------------------------------------------------------------
+
+Requisitos técnicos:
+Pelo menos duas classes:
+Sala → representa uma sala e sua lógica de controle de temperatura.
+
+SistemaDeArCondicionado → contém um array/lista de salas e gera o relatório.
+
+Utilize encapsulamento (atributos privados e métodos get/set).
+
+A lógica deve estar em um método dentro da classe Sala, chamado verificarClima().
+
+Exemplo de saída esperada
+=== Controle de Clima ===
+Sala: Escritório 1
+Temperatura atual: 29,5°C → Necessita de resfriamento (Ar condicionado ligado)
+
+Sala: Sala de Reunião
+Temperatura atual: 20,0°C → Estável
+
+Sala: Recepção
+Temperatura atual: 17,0°C → Necessita de aquecimento (Aquecedor ligado)
+
+-------------------------------------------------------------
+
+Desafio:
+Adicione um método estático `countHeatedRooms()` que informe quantos cômodos estão com o aquecedor ligado.
+
+Implemente sobrecarga de construtor para permitir a criação de um cômodo com apenas um nome e limites,
+e então defina a temperatura atual.
+
+-------------------------------------------------------------

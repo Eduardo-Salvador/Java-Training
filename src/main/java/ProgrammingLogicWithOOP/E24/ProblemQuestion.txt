@@ -1,6 +1,11 @@
-Create an algorithm that calculates the number of liters of fuel used in a trip,
-knowing that the car travels 12 km per liter. The user should be provided with the time spent on the trip,
-their average speed, the distance traveled, and the number of liters used to make the trip.
+Create an algorithm that calculates the number of liters of fuel used in a trip, knowing that the car travels 12 km per liter.
+The user should be provided with the time spent on the trip, their average speed, the distance traveled, and the number of liters used to make the trip.
 
 Formula: distance = time x speed.
 liters used = distance / 12.
+
+Crie um algoritmo que calcule o número de litros de combustível usados em uma viagem, sabendo que o carro percorre 12 km por litro.
+O usuário deve receber o tempo gasto na viagem, a velocidade média, a distância percorrida e o número de litros usados para fazer a viagem.
+
+Fórmula: distância = tempo x velocidade.
+litros usados = distância / 12.

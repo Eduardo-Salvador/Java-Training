@@ -1,1 +1,3 @@
 Create an algorithm that receives an integer value and prints its multiplication table on the screen.
+
+Crie um algoritmo que receba um valor inteiro e imprima sua tabuada na tela.

@@ -1,1 +1,3 @@
 Create an algorithm that reads three grades obtained by a student and prints the average of the grades on the screen.
+
+Crie um algoritmo que leia três notas obtidas por um aluno e imprima a média dessas notas na tela.

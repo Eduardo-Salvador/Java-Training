@@ -212,6 +212,9 @@ Multidimensional arrays are arrays with rows and columns.
 - #### Scanners:
   Java class that facilitates reading input data from different sources (keyboard, files). It offers methods to read strings, numbers and other types of formatted data.
 
+- #### LocalDate:
+  Java class that facilitates data manipulation.
+
 ---
 
 ## Learning Outcomes

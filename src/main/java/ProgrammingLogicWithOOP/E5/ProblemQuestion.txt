@@ -1,2 +1,3 @@
-Create an algorithm that reads the minimum wage and a user's salary,
-calculates how many minimum breaks this user earns, and prints the result on the screen. (Minimum wage base: $1,293.20).
+Create an algorithm that reads the minimum wage and a user's salary, calculates how many minimum wages this user receives, and prints the result on the screen. (Minimum wage base: $1,293.20).
+
+Crie um algoritmo que leia o salário mínimo e o salário de um usuário, calcule quantos salários mínimos esse usuário recebe e imprima o resultado na tela. (Salário mínimo base: $ 1.293,20).

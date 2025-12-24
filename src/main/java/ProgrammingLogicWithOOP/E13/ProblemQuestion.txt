@@ -1,1 +1,3 @@
 Create an algorithm that reads the name and age of a person and prints the person's name and whether they are an adult or a minor on the screen.
+
+Crie um algoritmo que leia o nome e a idade de uma pessoa e imprima na tela o nome da pessoa e se ela é adulta ou menor de idade.
