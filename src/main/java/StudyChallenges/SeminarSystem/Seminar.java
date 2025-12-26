@@ -1,4 +1,4 @@
-package StudyChallenges.SeminarSystem.Domain;
+package StudyChallenges.SeminarSystem;
 
 public class Seminar {
     private String title;

@@ -1,5 +1,4 @@
-package StudyChallenges.SeminarSystem.Application;
-import StudyChallenges.SeminarSystem.Controller.Menu;
+package StudyChallenges.SeminarSystem;
 
 public class Main {
     public static void main(String[] args) {

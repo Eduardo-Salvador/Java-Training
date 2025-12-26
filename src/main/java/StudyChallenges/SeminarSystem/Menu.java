@@ -1,8 +1,4 @@
-package StudyChallenges.SeminarSystem.Controller;
-import StudyChallenges.SeminarSystem.Domain.Location;
-import StudyChallenges.SeminarSystem.Domain.Seminar;
-import StudyChallenges.SeminarSystem.Domain.Students;
-import StudyChallenges.SeminarSystem.Domain.Teacher;
+package StudyChallenges.SeminarSystem;
 import java.util.Arrays;
 import java.util.Scanner;
 
