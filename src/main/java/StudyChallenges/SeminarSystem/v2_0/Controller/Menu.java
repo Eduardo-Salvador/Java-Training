@@ -1,15 +1,22 @@
-package StudyChallenges.SeminarSystem;
-import java.util.Arrays;
+package StudyChallenges.SeminarSystem.v2_0.Controller;
+import StudyChallenges.SeminarSystem.v2_0.Domain.Location;
+import StudyChallenges.SeminarSystem.v2_0.Domain.Seminar;
+import StudyChallenges.SeminarSystem.v2_0.Domain.Students;
+import StudyChallenges.SeminarSystem.v2_0.Domain.Teacher;
+import StudyChallenges.SeminarSystem.v2_0.Service.BaseService;
+import StudyChallenges.SeminarSystem.v2_0.Service.SeminarService;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
 
-    Students[] students = new Students[100];
-    Seminar[] seminars = new Seminar[500];
-    Teacher[] teachers = new Teacher[100];
+    BaseService<Teacher> teacherBaseService = new BaseService<>(new ArrayList<>());
+    BaseService<Students> studentsBaseService = new BaseService<>(new ArrayList<>());
+    SeminarService seminarBaseService = new SeminarService(new ArrayList<>());
 
-    static void displayMenu(){
-        System.out.println("\nSeminar System:");
+    public static void displayMenu(){
+        System.out.println("\n=== Seminar System ===");
         System.out.println("1. Register Seminar");
         System.out.println("2. Change Seminar");
         System.out.println("3. List Seminars");
@@ -22,40 +29,9 @@ public class Menu {
         System.out.println("10. Exit");
     }
 
-    private void registerSeminar(Scanner inputDatas){
-        System.out.println("Seminar Register:");
+    /*
 
-        System.out.print("Title: ");
-        inputDatas.nextLine();
-        String title = inputDatas.nextLine();
 
-        System.out.print("Adress: ");
-        String adress = inputDatas.nextLine();
-
-        Seminar seminar = new Seminar(title, new Location(adress));
-        System.out.println("\nSeminar successfully registered.\nTitle: " + seminar.getTitle() + "\nLocation: " + adress);
-        for (int i = 0; i < students.length; i++) {
-            if(seminars[i] == null){
-                seminars[i] = seminar;
-                break;
-            }
-        }
-    }
-
-    private void changeSeminar(Scanner inputDatas) {
-        System.out.print("\nChoose a Seminar:");
-        System.out.println();
-        for (int i = 0; i < seminars.length; i++) {
-            if (seminars[i] != null) {
-                System.out.println("Seminar: " + (i + 1) + ": - Title: " + seminars[i].getTitle());
-            }
-        }
-        System.out.println("\nPress 0 to Exit");
-        int seminarOption = inputDatas.nextInt();
-        if (seminarOption == 0) {
-            displayMenu();
-        }
-        seminarOption--;
 
         System.out.println("What would you like to change?");
         System.out.println("1. Title");
@@ -501,7 +477,7 @@ public class Menu {
             }
         }
     }
-
+*/
     public void runApp(){
         Scanner newScanner = new Scanner(System.in);
         int option = 0;
@@ -514,31 +490,32 @@ public class Menu {
             option = newScanner.nextInt();
             switch (option){
                 case 1:
-                    registerSeminar(newScanner);
+                    seminarBaseService.register(newScanner);
                     break;
                 case 2:
-                    changeSeminar(newScanner);
+
+                    seminarBaseService.change(, newScanner);
                     break;
                 case 3:
-                    listSeminars();
+                    seminarBaseService.list();
                     break;
                 case 4:
-                    registerStudent(newScanner);
+                    studentsBaseService.register(newScanner);
                     break;
                 case 5:
-                    changeStudent(newScanner);
+                    studentsBaseService.change(10, newScanner);
                     break;
                 case 6:
-                    listStudents();
+                    studentsBaseService.list();
                     break;
                 case 7:
-                    registerTeacher(newScanner);
+                    teacherBaseService.register(newScanner);
                     break;
                 case 8:
-                    changeTeacher(newScanner);
+                    teacherBaseService.change(10, newScanner);
                     break;
                 case 9:
-                    listTeachers();
+                    teacherBaseService.list();
                     break;
                 case 10:
                     System.out.println("Exit...");

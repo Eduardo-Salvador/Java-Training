@@ -1,12 +1,20 @@
-package StudyChallenges.SeminarSystem;
+package StudyChallenges.SeminarSystem.v2_0.Domain;
 
 public class Seminar {
+    private long id = 1L;
+    private int counter;
     private String title;
     private Location location;
 
     public Seminar(String title, Location location) {
+        this.id = counter;
+        counter++;
         this.title = title;
         this.location = location;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {

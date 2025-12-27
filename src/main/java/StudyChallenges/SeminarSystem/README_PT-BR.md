@@ -15,12 +15,6 @@
 O Sistema de Seminários é um sistema simples para registrar e gerenciar seminários, estudantes e professores, desenvolvido em Java com foco em lógica de programação, programação orientada a objetos (OOP) e manipulação básica de dados em memória.  
 O usuário interage com o sistema através de um menu textual, podendo registrar, modificar e listar seminários, estudantes e professores.
 
-## Requisitos
-Todo o código-fonte está organizado em pacotes:
-- **SeminarSystem.Domain** → Contém as classes de domínio (Location, Seminar, Students, Teacher).
-- **SeminarSystem.Controller** → Contém o menu principal, regras de cadastro, regras de modificação e regras de listagem.  
-O projeto não utiliza banco de dados; tudo é armazenado em arrays na memória.
-
 ## O Que Foi Utilizado
 
 ### 1. Classes e Objetos:
@@ -162,7 +156,6 @@ Permite alterar:
 - Com informações completas.  
 
 ## Aprendizados
-- Organização modular (pacotes Domain e Controller).
 - Programação orientada a objetos.  
 - Construtores e sobrecarga.
 - Encapsulamento e acesso a atributos.

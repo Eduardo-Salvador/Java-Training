@@ -1,18 +1,28 @@
-package StudyChallenges.SeminarSystem;
+package StudyChallenges.SeminarSystem.v2_0.Domain;
+
+import java.util.ArrayList;
 
 public class Teacher {
+    private long id = 1L;
+    private int counter;
     private String name;
     private String specialty;
-    private Seminar[] seminars;
+    private ArrayList<Seminar> seminars;
 
     public Teacher(String name, String specialty) {
+        this.id = counter;
+        counter++;
         this.name = name;
         this.specialty = specialty;
     }
 
-    public Teacher(String name, String specialty, Seminar[] seminars) {
+    public Teacher(String name, String specialty, ArrayList<Seminar> seminars) {
         this(name, specialty);
         this.seminars = seminars;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getName() {
@@ -23,7 +33,7 @@ public class Teacher {
         return specialty;
     }
 
-    public Seminar[] getSeminars() {
+    public ArrayList<Seminar> getSeminars() {
         return seminars;
     }
 
@@ -35,7 +45,7 @@ public class Teacher {
         this.specialty = specialty;
     }
 
-    public void setSeminars(Seminar[] seminars) {
+    public void setSeminars(ArrayList<Seminar> seminars) {
         this.seminars = seminars;
     }
 }
