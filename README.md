@@ -35,7 +35,7 @@ Os tópicos estão divididos em suas respectivas pastas e possuem arquivos READM
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README_PT-BR.md)
 
 ## Seminar System:
-#### Study Challenge of Programming Logic with Object-Oriented Programming, Simple Architecture and Generics
+#### Study Challenge of Programming Logic with Object-Oriented Programming, Simple Architecture and [Generics](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md)
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/SeminarSystem/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/SeminarSystem/README_PT-BR.md)
 
