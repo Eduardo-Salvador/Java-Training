@@ -4,6 +4,8 @@
 
 # Sistema de Seminários
 
+Version 2.0 - Refactored
+
 ## Tecnologias
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
@@ -13,23 +15,38 @@
 
 ## Visão Geral
 O Sistema de Seminários é um sistema simples para registrar e gerenciar seminários, estudantes e professores, desenvolvido em Java com foco em lógica de programação, programação orientada a objetos (OOP) e manipulação básica de dados em memória.  
+
 O usuário interage com o sistema através de um menu textual, podendo registrar, modificar e listar seminários, estudantes e professores.
 
-## Requisitos
-Todo o código-fonte está organizado em pacotes:
-- **SeminarSystem.Domain** → Contém as classes de domínio (Location, Seminar, Students, Teacher).
-- **SeminarSystem.Controller** → Contém o menu principal, regras de cadastro, regras de modificação e regras de listagem.  
-O projeto não utiliza banco de dados; tudo é armazenado em arrays na memória.
+---
+
+## Novidades da v2.0:
+- **Uso de Herança.**
+- **Melhor compreensão da arquitetura do sistema.**
+- **Uso de Generics.**
+- **Uso de ArrayLists.**
+- **Econômia de Código e modularização das classes ajudando a manutenção e entendimento.**
+
+---
+
+## Arquitetura:
+- **Domain** → Classes e Entidades.
+- **Services** → Regras de negócio e manipulação dos dados.
+- **Controller** → Entrada e saída dos dados para o usuário.
+- **App** → Inicializa a aplicação.
+
+---
 
 ## O Que Foi Utilizado
 
 ### 1. Classes e Objetos:
 O sistema é dividido em entidades principais:
 - **Location** → Implementado como um *record*, representando o endereço do seminário.
-- **Seminar** → Possui título e localização.
-- **Students** → Possui nome, idade e associação opcional a um seminário.
-- **Teacher** → Possui nome, especialidade e um conjunto de seminários ministrados.  
-Esses objetos modelam o domínio de forma clara e orientada a objetos.
+- **Seminar** → Possui id, título e localização.
+- **Students** → Possui id, nome, idade e associação opcional a um seminário.
+- **Teacher** → Possui id, nome, especialidade e um conjunto de seminários ministrados.  
+- **BaseService** → Classe pai dos outros services, compartilham 3 métodos em comum que são implementados por cada classe.
+- **Services (Seminar, Students e Teacher)** → Regras de negócio específico de cada classe.
 
 ### 2. Encapsulamento:
 Todas as classes (exceto o *record*) possuem:
@@ -45,25 +62,61 @@ A classe Location utiliza *records*, que oferecem imutabilidade e menos verbosid
 public record Location(String address) {}
 ```
 
-### 4. Associações (Associações entre Classes):
+
+
+### 4. Generics
+Generics permitem criar classes, interfaces e métodos que trabalham com diferentes tipos de dados mantendo segurança de tipos em tempo de compilação.
+
+```java
+public class Caixa<T> {
+    private T conteudo;
+    
+    public void guardar(T item) {
+        this.conteudo = item;
+    }
+    
+    public T pegar() {
+        return conteudo;
+    }
+}
+```
+
+### 5. Herança
+Herança permite que uma classe (subclasse/filha) herde atributos e métodos de outra classe (superclasse/pai), promovendo reuso de código e hierarquia.
+
+```java
+public class Animal {
+    protected String nome;
+    public void comer() {
+        System.out.println("Comendo...");
+    }
+}
+
+public class Cachorro extends Animal {
+    public void latir() {
+    System.out.println("Au au!");
+    }
+}
+```
+
+### 6. Associações (Associações entre Classes):
 O projeto demonstra diferentes formas de associação:
 - Seminar possui uma Location (1:1)
 - Student pode estar relacionado a um Seminar (N:1)
 - Teacher pode ministrar vários Seminars (1:N com array)
-- Arrays são usados para armazenar múltiplas entidades no sistema
+- ArraysLists são usados para armazenar múltiplas entidades no sistema
 
-### 5. Arrays:
-Em vez de listas dinâmicas, o sistema usa arrays fixos para armazenar dados:
+### 7. ArrayLists:
+Anteriormente manipulamos com Array, porém agora foi utilizado ArrayLists
 
 ```java
-Students[] students = new Students[100];
-Seminar[] seminars = new Seminar[500];
-Teacher[] teachers = new Teacher[100];
+ArrayList<Students> students = new ArrayList<>();
+etc...
 ```
 
-Esses arrays funcionam como “bancos de dados” simples em memória.
+Esses ArraysLists funcionam como “bancos de dados” simples em memória.
 
-### 6. Menu Interativo (Console):
+### 8. Menu Interativo (Console):
 Toda a lógica do sistema é acessada por meio de um menu textual, exibido repetidamente ao usuário:
 
 ```
@@ -80,16 +133,16 @@ Toda a lógica do sistema é acessada por meio de um menu textual, exibido repet
 ```
 
 Cada opção chama métodos responsáveis por:
-- Capturar entradas com Scanner
-- Validar opções
-- Exibir mensagens ao usuário
-- Manipular objetos nos arrays
+- Capturar entradas com Scanner no Controller.
+- Validar opções no Service.
+- Exibir mensagens ao usuário via Controller.
+- Manipular objetos nos arrays via Service.
 
-### 7. Condicionais:
+### 9. Condicionais:
 O projeto utiliza extensivamente:
 - `if / else`
 - `switch` (ex.: alterar dados de seminário/estudante/professor)
-- Validações com condições aninhadas
+- Validações com condições aninhadas.
 
 Exemplo:
 
@@ -102,12 +155,11 @@ switch (changeOption) {
 }
 ```
 
-### 8. Laços:
+### 10. Laços:
 Para percorrer arrays e exibir elementos:
-- `for (int i = 0; i < array.length; i++)`  
-Usado para listar entidades e encontrar espaços vazios.
+- `for (Object obj : list)`
 
-### 9. Manipulação de Entrada:
+### 11. Manipulação de Entrada:
 Uso de Scanner para:
 - Strings
 - Inteiros
@@ -119,54 +171,55 @@ Tratamento de `nextLine()` para evitar quebras de linha indesejadas.
 
 ## Funcionalidades
 
-### ✔ Registrar Seminários
+#### Registrar Seminários
 - Título  
 - Localização  
-- Armazenamento incremental no array  
+- Armazenamento no ArrayList  
 
-### ✔ Modificar Seminários
+#### Modificar Seminários
 - Alterar título  
 - Alterar localização  
 - Alterar ambos  
 
-### ✔ Listar Seminários
-- Exibe todos os seminários cadastrados.  
+#### Listar Seminários
+- Exibe todos os seminários cadastrados
 
-### ✔ Registrar Estudantes
+#### Registrar Estudantes
 - Nome  
 - Idade  
 - Pergunta se o estudante pertence a um seminário  
 
-### ✔ Alterar Estudantes
-Permite alterar:
-- Nome  
-- Idade  
-- Seminário  
+#### Alterar Estudantes
+- Alterar Nome  
+- Alterar Idade  
+- Alterar Seminário  
 - Combinações das opções acima  
 
-### ✔ Listar Estudantes
+#### Listar Estudantes
 - Com informações completas.  
 
-### ✔ Registrar Professores
+#### Registrar Professores
 - Nome  
 - Especialidade  
 - Seleção de vários seminários para lecionar  
 
-### ✔ Alterar Professores
-- Nome  
-- Especialidade  
-- Seminários ministrados  
-- Combinações  
+#### Alterar Professores
+- Alterar Nome  
+- Alterar Especialidade  
+- Alterar Seminários ministrados  
+- Combinações das opções acima
 
-### ✔ Listar Professores
+#### Listar Professores
 - Com informações completas.  
 
 ## Aprendizados
-- Organização modular (pacotes Domain e Controller).
 - Programação orientada a objetos.  
+- Herança.
+- Arquitetura de Software.
 - Construtores e sobrecarga.
 - Encapsulamento e acesso a atributos.
-- Arrays como estrutura de armazenamento.  
+- Generics.
+- ArraysLists como estrutura de armazenamento.  
 - Associações entre objetos.
 - Manipulação de dados no console. 
 - Estruturas condicionais e laços.

@@ -9,8 +9,6 @@
 
 </div>
 
-
-
 ---
 
 ## Overview
@@ -20,14 +18,24 @@ The user interacts with the system through a text menu, being able to register, 
 
 ---
 
-## Requirements
+## New features in v2.0:
+- **Use of Inheritance.**
+- **Improved understanding of the system architecture.**
+- **Use of Generics.**
+- **Use of ArrayLists.**
+- **Code economy and modularization of classes aiding maintenance and understanding.**
 
-All source code is organized into packages:
+---
 
-- SeminarSystem.Domain → Contains the domain classes (Location, Seminar, Students, Teacher).
-- SeminarSystem.Controller → Contains the main menu, registration rules, modification rules, and listing rules.
+## Architecture:
 
-The project does not use a database; everything is stored in arrays in memory.
+- **Domain** → Classes and Entities.
+
+- **Services** → Business rules and data manipulation.
+
+- **Controller** → Input and output of data for the user.
+
+- **App** → Initializes the application.
 
 ---
 
@@ -35,13 +43,14 @@ The project does not use a database; everything is stored in arrays in memory.
 
 ### 1. Classes and Objects:
 The system is divided into main entities:
+- **Location** → Implemented as a *record*, representing the seminar address.
+- **Seminar** → Has an id, title, and location.
+- **Students** → Has an id, name, age, and optional association with a seminar.
+- **Teacher** → Has an id, name, specialty, and a set of seminars taught.
 
-- Location → Implemented as a record, representing the seminar's address.
-- Seminar → Has a title and location.
-- Students → Has a name, age, and optional association with a seminar.
-- Teacher → Has a name, specialty, and a set of seminars taught.
+- **BaseService** → Parent class of the other services, sharing 3 common methods that are implemented by each class.
 
-These objects model the domain in a clear and object-oriented way.
+- **Services (Seminar, Students, and Teacher)** → Business rules specific to each class.
 
 ---
 
@@ -62,28 +71,63 @@ The Location class uses records, which offer immutability and less verbosity:
 
 ---
 
-### 4. Associations (Associations between Classes):
+### 4. Generics
+Generics allow you to create classes, interfaces, and methods that work with different data types while maintaining type safety at compile time.
+
+```java
+public class Box<T> {
+    private T content;
+
+    public void store(T item) {
+        this.content = item;
+    }
+
+    public T get() {
+        return content;
+    }
+}
+```
+
+### 5. Inheritance
+Inheritance allows a class (subclass/child) to inherit attributes and methods from another class (superclass/parent), promoting code reuse and hierarchy.
+
+```java
+public class Animal {
+    protected String name;
+    public void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+public class Dog extends Animal {
+    public void bark() {
+        System.out.println("Woof woof!");
+    }
+}
+```
+
+
+### 6. Associations (Associations between Classes):
 The project demonstrates different forms of association:
 
 - Seminar has a Location (1:1)
 - Student can be related to a Seminar (N:1)
 - Teacher can teach multiple Seminars (1:N with array)
-- Arrays are used to store multiple entities in the system
+- ArraysLists are used to store multiple entities in the system
 
----
 
-### 5. Arrays:
-Instead of dynamic lists, the system uses fixed arrays to store data:
+### 7. ArrayLists:
+Previously we manipulated arrays, but now we've used ArrayLists.
 
-    Students[] students = new Students[100];
-    Seminar[] seminars = new Seminar[500];
-    Teacher[] teachers = new Teacher[100];
+```java
+ArrayList<Students> students = new ArrayList<>();
+etc...
+```
 
-These arrays function as simple in-memory "databases".
+These ArraysLists function as simple in-memory "databases".
 
----
 
-### 6. Interactive Menu (Console):
+### 8. Interactive Menu (Console):
 All system logic is accessed through a text menu, displayed repeatedly to the user:
 
     1. Register Seminar
@@ -99,14 +143,12 @@ All system logic is accessed through a text menu, displayed repeatedly to the us
 
 Each option calls methods responsible for:
 
-- Capturing inputs with Scanner
-- Validating options
-- Showing messages to the user
-- Manipulating objects in arrays
+- Capturing inputs with Scanner in the Controller.
+- Validating options in the Service.
+- Displaying messages to the user via the Controller.
+- Manipulating objects in arrays via the Service.
 
----
-
-### 7. Conditionals:
+### 9. Conditionals:
 The project uses extensively:
 
 - if / else
@@ -122,18 +164,13 @@ Example:
         ...
     }
 
----
-
-### 8. Loops:
+### 10. Loops:
 To iterate through arrays and display elements:
 
-- for (int i = 0; i < array.length; i++)
+- `for (Object obj : list)`
 
-Used to list entities and find empty spaces.
 
----
-
-### 9. Input Handling:
+### 11. Input Handling:
 Uses Scanner for:
 
 - Strings
@@ -146,63 +183,61 @@ Handling nextLine() to avoid unwanted line breaks.
 ---
 
 ## Features
-### ✔ Register Seminars
-
+#### Register Seminars
 - Title
 - Location
-- Incremental storage in the array
+- Incremental storage in the ArrayList
 
-### ✔ Modify Seminars
+#### Modify Seminars
 - Modify title
 - Modify location
 - Modify both
 
-### ✔ List Seminars
+#### List Seminars
 - Displays all registered seminars.
   
-### ✔ Register Students
-
+#### Register Students
 - Name
 - Age
 - Asks if the student belongs to a seminar
 
-### ✔ Change Students
-Allows changing:
-- Name
-- Age
-- Seminar
+#### Change Students
+- Modify Name
+- Modify Age
+- Modify Seminar
 - Combinations of the above
 
-### ✔ List Students
+#### List Students
 With complete information.
 
-### ✔ Register Professors
+#### Register Professors
 - Name
 - Specialty
 - Selection of several seminars to teach
 
-### ✔ Change Professors
-- Name
-- Specialty
-- Seminars taught
-- Combinations
+#### Change Professors
+- Modify Name
+- Modify Specialty
+- Modify Seminars taught
+- Combinations of the above
 
-### ✔ List Professors
+#### List Professors
 With complete information.
 
 ---
 
 ## Learning Outcomes
-
-- Modular organization (Domain and Controller packages).
 - Object-oriented programming.
+- Inheritance.
+- Software architecture.
 - Constructors and overloading.
 - Encapsulation and attribute access.
-- Arrays as a storage structure.
+- Generics.
+- ArrayLists as a storage structure.
 - Associations between objects.
 - Data manipulation in the console.
 - Conditional structures and loops.
 - Interactive menu navigation.
-- User input and validation.
+- User input and data validation.
 
 ---
