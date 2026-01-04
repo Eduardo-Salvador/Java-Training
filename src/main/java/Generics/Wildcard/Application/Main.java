@@ -1,5 +1,5 @@
 package Generics.Wildcard.Application;
-import Generics.Wildcard.Controller.AnimalManager;
+import Generics.Wildcard.Services.AnimalManager;
 import Generics.Wildcard.Domain.Animal;
 import Generics.Wildcard.Domain.Cat;
 import Generics.Wildcard.Domain.Dog;
@@ -10,9 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Dog> dogs = new ArrayList<>(List.of(new Dog("Rex"), new Dog("Bolt")));
-
         List<Cat> cats = new ArrayList<>(List.of(new Cat("Mimi"), new Cat("Garfield")));
-
         List<Lion> lions = new ArrayList<>(List.of(new Lion("Simba")));
 
         AnimalManager.printAnimalSounds(dogs);

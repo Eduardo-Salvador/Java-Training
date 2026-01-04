@@ -1,6 +1,4 @@
-package Collections.Equals.Application;
-import Collections.Equals.Controller.EmployeeList;
-import Collections.Equals.Domains.Employee;
+package Collections.Equals;
 
 import java.util.ArrayList;
 import java.util.List;

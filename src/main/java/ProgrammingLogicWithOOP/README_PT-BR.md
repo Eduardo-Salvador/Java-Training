@@ -193,23 +193,11 @@ Arrays multidimensionais são arrays com linhas e colunas.
 - #### Associações:
   Relacionamentos entre classes onde objetos de uma classe se conectam com objetos de outra. Podem ser unidirecionais ou bidirecionais, representando dependências entre entidades.
 
-- #### Herança:
-  Mecanismo que permite criar classes derivadas (filhas) a partir de classes existentes (pais), reutilizando código. A classe filha herda atributos e métodos da classe pai, podendo adicionar ou modificar comportamentos.
-
 - #### toStrings:
   Método que retorna uma representação textual de um objeto, facilitando sua exibição e depuração. Sobrescreve o método toString() herdado da classe Object em Java.
 
 - #### Enumerações:
   Tipo especial que define um conjunto fixo de constantes nomeadas, representando valores predefinidos. Úteis para representar opções limitadas como dias da semana, status, categorias etc.
-
-- #### Interfaces:
-  Contratos que definem métodos que classes devem implementar, sem especificar como. Permitem polimorfismo e garantem que classes diferentes sigam um padrão comum de comportamento.
-
-- #### Classes Abstratas:
-  Classes que não podem ser instanciadas diretamente e servem como base para outras classes. Podem conter métodos abstratos (sem implementação) e concretos (com implementação).
-
-- #### Polimorfismo:
-  Capacidade de objetos de diferentes classes serem tratados através de uma interface comum. Permite que o mesmo código funcione com diferentes tipos de objetos, decidindo o comportamento em tempo de execução.
 
 - #### Scanners:
   Classe Java que facilita a leitura de entrada de dados de diferentes fontes (teclado, arquivos). Oferece métodos para ler strings, números e outros tipos de dados formatados.
@@ -220,9 +208,9 @@ Arrays multidimensionais são arrays com linhas e colunas.
 
 ## Resultados de Aprendizagem
 
-- Programação Orientada a Objetos (POO), Polimorfismo e outros conceitos
-- Lógica de programação
-- Manipulação de pacotes
-- Resolução de problemas
+- Programação Orientada a Objetos (POO) básica.
+- Lógica de programação.
+- Manipulação de pacotes.
+- Resolução de problemas.
 
 ---

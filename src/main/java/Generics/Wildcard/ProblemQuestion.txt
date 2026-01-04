@@ -13,4 +13,23 @@ Test the method by passing different lists (List<Dog>, List<Cat>, etc.).
 
 Extra Challenge:
 Also implement an addAnimal(List<? super Animal> animals, Animal a) method that adds an animal to a list that can accept Animal or supertypes.
-This will show you the difference between `? extends` (reading) and `? super` (writing).
+This will show you the difference between ? extends (reading) and ? super (writing).
+
+----------------------------------------------------------------------------------------------------
+
+Relatório de Animais com Wildcards
+Você está criando um sistema para gerenciar diferentes tipos de animais em um zoológico.
+Há uma classe base chamada Animal e subclasses como Cachorro, Gato e Leão.
+Você precisa implementar um método que receba uma lista genérica de animais e imprima informações sobre eles.
+O detalhe é que o método deve aceitar qualquer tipo de lista que contenha objetos que sejam subtipos de Animal.
+Para fazer isso, você deve usar Wildcards (? extends Animal).
+
+Objetivos:
+Criar a classe Animal com um método makeSound().
+Criar subclasses (Cachorro, Gato, Leão) que sobrescrevam o método makeSound().
+Criar um método printAnimalSons(List<? extends Animal> animais) que itere pela lista e chame makeSound() para cada animal.
+Testar o método passando listas diferentes (List<Cachorro>, List<Gato>, etc.).
+
+Desafio Extra:
+Implemente também um método addAnimal(List<? super Animal> animals, Animal a) que adiciona um animal a uma lista que pode aceitar Animal ou supertipos.
+Isso mostrará a diferença entre ? extends (leitura) e ? super (escrita).

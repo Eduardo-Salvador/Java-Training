@@ -1,4 +1,4 @@
-package Generics.Wildcard.Controller;
+package Generics.Wildcard.Services;
 import Generics.Wildcard.Domain.Animal;
 import java.util.List;
 
@@ -10,8 +10,13 @@ public class AnimalManager {
         }
     }
 
-    public static void add(List<? super Animal> animalList, List<? extends Animal> a){
-        animalList.addAll(a);
-        System.out.println("Added: " + a);
+    public static void add(List<? super Animal>... animalList){
+        for (List<? super Animal> a: animalList) {
+            System.out.println("Added: " + a);
+            animalList.add(a)
+        }
+
     }
+
+    private AnimalManager(){}
 }

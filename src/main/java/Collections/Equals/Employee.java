@@ -1,4 +1,4 @@
-package Collections.Equals.Domains;
+package Collections.Equals;
 
 public class Employee {
     private final String name;

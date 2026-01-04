@@ -191,23 +191,11 @@ Multidimensional arrays are arrays with rows and columns.
 - #### Associations:
   Relationships between classes where objects of one class connect with objects of another. They can be unidirectional or bidirectional, representing dependencies between entities.
 
-- #### Inheritance:
-  Mechanism that allows creating derived classes (children) from existing classes (parents), reusing code. The child class inherits attributes and methods from the parent class, being able to add or modify behaviors.
-
 - ####  toStrings:
   Method that returns a textual representation of an object, facilitating its display and debugging. It overrides the toString() method inherited from the Object class in Java.
 
 - ####  Enumerations:
   Special type that defines a fixed set of named constants, representing predefined values. Useful for representing limited options like days of the week, status, categories, etc.
-
-- ####  Interfaces:
-  Contracts that define methods that classes must implement, without specifying how. They enable polymorphism and ensure that different classes follow a common behavior pattern.
-
-- #### Abstract Classes:
-  Classes that cannot be instantiated directly and serve as a base for other classes. They can contain abstract methods (without implementation) and concrete methods (with implementation).
-
-- #### Polymorphism:
-  Ability of objects from different classes to be treated through a common interface. It allows the same code to work with different types of objects, deciding the behavior at runtime.
 
 - #### Scanners:
   Java class that facilitates reading input data from different sources (keyboard, files). It offers methods to read strings, numbers and other types of formatted data.
@@ -219,7 +207,7 @@ Multidimensional arrays are arrays with rows and columns.
 
 ## Learning Outcomes
 
-- Object-Oriented Programming (OOP), Polymorphism, and other concepts
+- Basic Object-Oriented Programming (OOP) Concepts.
 - Programming logic.
 - Package handling.
 - Problem solving.

@@ -31,58 +31,63 @@ Os tópicos estão divididos em suas respectivas pastas e possuem arquivos READM
 <div align="center">
 
 ## Programming Logic Training: 
+Basic programming language concepts: Variables, Conditional Structures, Loops, Conditionals, Repetition Structures, Switch, Operators, Arrays, etc.
   
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README_PT-BR.md)
-
-## Seminar System:
-#### Study Challenge of Programming Logic with Object-Oriented Programming, Simple Architecture and [Generics](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md)
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/SeminarSystem/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/SeminarSystem/README_PT-BR.md)
-
-## Exceptions: 
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README_PT-BR.md)
-
-## UtilityClasses:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
-
-## First Major Learning Challenge: 
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README_PT-BR.md)
-
-
-## Collections:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Collections/README.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README_PT-BR.md)
 
 ## Generics:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Generics/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Generics/README_PT-BR.md)
 
-## Inner Classes:
+## Seminar System:
+Challenge of Programming Logic with basic concepts to Object-Oriented Programming, Simple Architecture and [Generics](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md)
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/SeminarSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/SeminarSystem/README_PT-BR.md)
 
-## Parameterizing Behaviors:
+## Collections:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README.md)
+
+## Data Structure in Java:
+
+[Click here for open the Project for Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)
+
+## Exceptions:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README_PT-BR.md)
 
 ## Lambdas:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README_PT-BR.md)
-
-## Method Reference:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README_PT-BR.md)
 
 ## Optional:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README_PT-BR.md)
 
 ## Streams:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Streams/README_PT-BR.md)
+
+## Utility Classes:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
+
+## Inner Classes:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README_PT-BR.md)
+
+## Parameterizing Behaviors:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md)
+
+## Method Reference:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md)
+
+## Pet Adoption System (CLI) 
+First Major Learning Challenge: 
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/PROGRAMMING_Challenge_RegistrationSystem/README_PT-BR.md)
 
 </div>
 
@@ -94,6 +99,6 @@ Os tópicos estão divididos em suas respectivas pastas e possuem arquivos READM
 
 ## What is Apache Maven?
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Maven_README.md) | [Click here for read in Português](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Maven_README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Maven_README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Maven_README_PT-BR.md)
 
 </div>

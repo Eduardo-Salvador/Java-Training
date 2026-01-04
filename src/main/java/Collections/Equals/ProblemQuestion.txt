@@ -10,9 +10,9 @@ Override the equal method to consider two employees equal if their CPF is the sa
 Also override hashCode (using cpf.hashCode()).
 
 Lesson Director:
-Create an `ArrayList<Funcional>`.
+Create an ArrayList<Funcional>.
 Add some employees (including a repeated CPF).
-Before adding, check if the employee already exists in the list using the `contains()` method.
+Before adding, check if the employee already exists in the list using the contains() method.
 
 If it already exists, do not add it and display a message:
 "Employee with CPF already registered: <cpf>".
@@ -23,3 +23,38 @@ Employee with already registered CPF: 123.456.789-00
 Registered Employees:
 Name: Ana, CPF: 123.456.789-00, Salary: 4500.00
 Name: Bruno, CPF: 987.654.321-00, Salary: 5200.00
+
+-------------------------------------------------------------------------------------------------------------
+
+Exercício: Cadastro de Funcionários Únicos
+Crie um programa que armazene funcionários em uma lista (ArrayList).
+
+Dois funcionários devem ser considerados iguais se tiverem o mesmo CPF (Cadastro de Pessoa Física).
+
+Requisitos:
+Crie uma classe Employee com:
+Atributos privados: String name, String cpf, Double salary.
+
+Construtor e métodos getter/setter.
+
+Sobrescreva o método equals para considerar dois funcionários iguais se seus CPFs forem iguais.
+
+Sobrescreva também o método hashCode (usando `cpf.hashCode()`).
+
+Instruções:
+Crie um ArrayList<Funcional>.
+
+Adicione alguns funcionários (incluindo um CPF repetido).
+
+Antes de adicionar, verifique se o funcionário já existe na lista usando o método contains().
+
+Se já existir, não o adicione e exiba a mensagem:
+"Funcionário com CPF já cadastrado: <cpf>".
+
+Finalmente, exiba todos os funcionários cadastrados.
+
+Exemplo esperado (saída simulada)
+Funcionário com CPF já cadastrado: 123.456.789-00
+Funcionários cadastrados:
+Nome: Ana, CPF: 123.456.789-00, Salário: 4500,00
+Nome: Bruno, CPF: 987.654.321-00, Salário: 5200,00
