@@ -1,5 +1,5 @@
 package Generics.GenericMethods.Application;
-import Generics.GenericMethods.Controller.GenericMethods;
+import Generics.GenericMethods.Services.GenericMethods;
 import java.util.ArrayList;
 import java.util.List;
 

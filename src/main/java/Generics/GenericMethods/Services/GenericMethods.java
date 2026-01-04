@@ -1,4 +1,4 @@
-package Generics.GenericMethods.Controller;
+package Generics.GenericMethods.Services;
 import java.util.Arrays;
 import java.util.List;
 

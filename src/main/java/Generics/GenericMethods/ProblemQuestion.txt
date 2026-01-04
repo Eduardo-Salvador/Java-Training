@@ -14,3 +14,22 @@ Create a generic method called containsElement that checks if an element is pres
 Extra Challenge:
 Create a generic method called copyList that copies the elements of one list to another, using wildcards (? extends T and ? super T).
 Test it by copying a list of integers to a list of numbers.
+
+----------------------------------------------------------------------------
+
+Impressão Genérica:
+Crie um método genérico chamado printArray que receba um array de qualquer tipo e imprima todos os seus elementos. Teste com arrays de Integer, String e Double.
+
+Máximo Genérico:
+Crie um método genérico chamado maxValue que receba três elementos e retorne o maior deles. Use restrição de tipo (extends Comparable).
+para garantir que os elementos possam ser comparados. Teste com números (Integer, Double) e com String.
+
+Troca Genérica:
+Crie um método genérico chamado swap que troque dois elementos de um array em posições diferentes. Teste com arrays de String e Integer.
+
+Busca Genérica:
+Crie um método genérico chamado containsElement que verifique se um elemento está presente em uma lista. Teste com listas de String e Integer.
+
+Desafio Extra:
+Crie um método genérico chamado copyList que copie os elementos de uma lista para outra, usando curingas (? extends T e ? super T).
+Teste copiando uma lista de inteiros para uma lista de números.

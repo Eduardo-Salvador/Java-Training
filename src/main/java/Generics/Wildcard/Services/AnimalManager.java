@@ -10,13 +10,7 @@ public class AnimalManager {
         }
     }
 
-    public static void add(List<? super Animal>... animalList){
-        for (List<? super Animal> a: animalList) {
-            System.out.println("Added: " + a);
-            animalList.add(a)
-        }
-
+    public static void add(List<? super Animal> animals, Animal a){
+        animals.add(a);
     }
-
-    private AnimalManager(){}
 }

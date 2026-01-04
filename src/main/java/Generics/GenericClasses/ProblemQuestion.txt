@@ -10,10 +10,31 @@ A toString() method that prints the box's content.
 In the main method, create different instances of the Box:
 A Box<String> to store a word.
 A Box<Integer> to store a number.
-A Box<Animal> to store an object of the Animal class.
 Show that the same Box class works for different types without needing to duplicate code.
 
 Extra Challenge:
 Implement a generic class Pair<K, V> that stores a pair of values (as a key and a value).
 Create instances like Pair<String, Integer> (e.g., "Age", 25) and Pair<String, String> (e.g., "Name", "John").
 Print the pairs to see how it works.
+
+------------------------------------------------------------------------------------------------
+
+Caixa Genérica:
+Você precisa implementar uma classe genérica chamada Box<T> que possa armazenar qualquer tipo de objeto.
+
+Objetivos:
+Criar a classe Box<T> com:
+Um atributo privado chamado content do tipo T.
+Métodos setContent(T content) e getContent() para manipular o conteúdo.
+Um método toString() que imprime o conteúdo da caixa.
+
+No método main, crie diferentes instâncias da classe Box:
+Uma Box<String> para armazenar uma palavra.
+Uma Box<Integer> para armazenar um número.
+Mostrar que a mesma classe Box funciona para diferentes tipos sem a necessidade de duplicar código.
+
+Desafio Extra:
+Implementar uma classe genérica Pair<K, V> que armazena um par de valores (como chave e valor).
+
+Crie instâncias como Pair<String, Integer> (por exemplo, "Idade", 25) e Pair<String, String> (por exemplo, "Nome", "John").
+Imprima os pares para ver como funciona.

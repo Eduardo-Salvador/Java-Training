@@ -1,250 +1,252 @@
+<div align="center">
+
+[![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-<COLOR>.svg)](https://shields.io/)
+
 # Generics
 
-This module provides a complete introduction to Java Generics, focusing on type parameterization, generic classes, generic methods, wildcards, and the interaction between generics and polymorphism.
-All exercises include their own ProblemQuestion.txt file inside the corresponding directory.
+This module provides a complete introduction to Generics in Java, focusing on type parameterization, generic classes, generic methods, wildcards, and the interaction between generics and polymorphism. All exercises include their own **ProblemQuestion.txt** file within the corresponding directory.
+
+## Technologies
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
 
 ---
 
-## 1. Foundations: What Are Generics?
-Generics allow types (classes and interfaces) to be parameters when defining classes, methods, and interfaces.
+## Overview
+- Generics are resources for working with parameterized types. They make collections safer and more reusable.**
+- Uses the **diamond operator for typing <>, always considering an object, whether it's a Wrapper or not.**
+- **Type Safety is the process by which the Java compiler removes generic type information during compilation.** This means that generic types are only used to ensure type safety at compile time, but are never executed by the JVM. Thus maintaining compatibility with older versions.
 
-You create Classes, Methods, etc., and you don't define what type it will receive, thus making it a Generic type, able to receive and work with the same behavior for various types, avoiding rewriting the same code multiple times.
+**They enable:**
+- Type safety (compile-time validation)
+- Prevention of `ClassCastException`
+- Reuse of algorithms and data structures.
 
-They enable:
-- Type safety (compile-time validation of types)
-- Prevention of ClassCastException
-- Reusability of algorithms and data containers
-- More expressive APIs
-
-In Java, generics are implemented via type erasure, but the syntax allows developers to model logic in a type-safe and flexible way.
+- More expressive APIs.
 
 **Typical notation:**
 
-    class Box<T> { ... }
-    T value;
-    List<String> list;
+```java
+class Box<T> { ... }
+T value;
+List<String> list;
+List<? extends String>;
+List<? super String>;
+```
 
 ---
 
-## 2. Generic Classes
-A generic class declares one or more type parameters.
-This allows the same class to store or process different kinds of objects without rewriting code.
+## Architecture:
 
-Example from the module:
+- **Domain** → Classes and Entities.
+- **Services** → Business rules and data manipulation.
+- **App** → Initializes the application.
 
-### Box<T>
-    Box<String> stringBox = new Box<>("Hello");
+---
 
-    Box<Integer> numberBox = new Box<>(10);
+## What Was Used
 
-    Box<Animal> animalBox = new Box<>(new Animal("Bolt"));
+### 1. Wildcards in Generics
 
-**Characteristics:**
-- T is a placeholder for a real type.
-- Each instance binds T to a specific type.
-- Eliminates need for casting.
+Wildcards (`?`) allow controlled flexibility when working with related types.
+
+Also called a wildcard character, it uses concepts such as polymorphism.
+
+### 1.1 `? extends T` — Upper-Bounded Wildcard
+Used for reading objects of type `T` or subclasses.
+
+#### Example:
+```java
+public static void printAnimalSounds(List<? extends Animal> animalList){
+    for (Animal a : animalList){
+        System.out.println(a);
+        a.makeSound();
+    } // -> Everything that extends (IS A) Animal. (Dog dog = new Dog())
+}
+```
+
+#### Usage:
+- Consume values
+- Prevent unsafe insertion of subclasses
+- Accepts any type of object that extends Animal, however, I can no longer add things to the list in the method, **read-only.**
+- ```? extends Type``` **and Classes below in the hierarchy** (read-only because it doesn't guarantee that it's the supertype that is used as a reference).
+
+---
+
+### 2. Wildcards and Polymorphism
+
+Wildcards allow polymorphic behavior within generic structures.
+
+Example:
+
+```java
+List<Dog> dogs;
+List<Cat> cats;
+List<Lion> lions;
+
+AnimalManager.printAnimalSounds(dogs);
+AnimalManager.printAnimalSounds(cats);
+AnimalManager.printAnimalSounds(lions);
+```
+
+#### Without wildcards:
+
+- It would not be possible to pass `List<Dog>` to a method that expects `List<Animal>`
+- Generics are invariant.
+
+#### With `? extends Animal`:
+
+- Any list of subtypes works.
+- Each animal executes its own `makeSound()` function.
+
+#### Demonstrates:
+
+- Compile-time type safety
+- Runtime polymorphism
+- Covariance and contravariance patterns.
+
+### 3. Generic Classes
+
+A generic class declares one or more type parameters. This allows the same class to store or process different types without rewriting code.
+
+### Box
+```java
+Box<String> stringBox = new Box<>("Hello");
+Box<Integer> numberBox = new Box<>(10);
+Box<Animal> animalBox = new Box<>(new Animal("Bolt"));
+```
+
+#### Characteristics:
+
+- `T` is a placeholder for a real type.
+- Each instance associates `T` with a specific type.
+- Eliminates the need for casting.
 - Increases reusability.
 
 ### Pair<K, V>
+
 A generic class with two type parameters:
+```java
+Pair<String, Integer> age = new Pair<>("Age", 25);
+Pair<String, String> name = new Pair<>("Name", "John");
+```
 
-    Pair<String, Integer> age = new Pair<>("Age", 25);
-
-    Pair<String, String> name = new Pair<>("Name", "John");
-
-Used to model key–value structures or dual associations.
-
----
-
-## 3. Generic Methods
-
-A **generic method** declares its own type parameters independently of the class it is in.
-
-Syntax:
-
-    public static <T> void printArray(T[] array) { ... }
-
-Examples from this module:
-- printArray(T[] array)
-- maxValue(T a, T b, T c) with <T extends Comparable<T>>
-- containsElements(List<T> list, T element)
-- swap(T[] array, T e1, T e2)
-- copyList(List<? extends T> from, List<? super T> to)
-
-Generic methods provide:
-- Reusable logic independent of object types
--  Strong compile-time checking
--  in algorithms and utilities
+Used to model key-value structures or double associations.
 
 ---
 
-## 4. Wildcards in Generics
-Wildcards (?) allow controlled flexibility when working with groups of related types.
+### 4. Generic Methods
 
-There are three main forms:
+A generic method declares its own type parameters independently of the class it belongs to.
 
-### 4.1 ? extends T — Upper-Bounded Wildcard
-Used when reading objects as type T or its subclasses.
+#### Syntax:
 
-**Meaning:**
-“The list contains objects that are T or any subclass of T.”
+```java
+public static <T> void printArray(T[] array) { ... }
+```
+- `printArray(T[] array)`
+- `maxValue(T a, T b, T c)` with `<T extends Comparable>`
+- `containsElements(List list, T element)`
+- `swap(T[] array, T e1, T e2)`
+- `copyList(List<? extends T> from, List<? super T> to)`
 
-Example:
+#### Generic methods offer:
 
-    public static void printAnimalSounds(List<? extends Animal> animals)
-
-**Use cases:**
-- You consume values (read)
-- You do not insert new specific subclasses safely
-
-### 4.2 ? super T — Lower-Bounded Wildcard
-Used when writing/inserting.
-
-**Meaning:**
-“The list accepts T or any superclass of T.”
-
-Example:
-
-    public static void add(List<? super Animal> list, List<? extends Animal> animals)
-
-**Use cases:**
-- Used for inserting objects of type T
-- Supports covariance when adding elements
-
-### 4.3 Unbounded Wildcard ?
-
-**Meaning:**
-“I don't know the type.”
-
-*Use cases:**
-- You only want to read Object
-- Type is irrelevant for the operation
+- Reusable logic independent of concrete types.
+- Strong verification at compile time.
+- Usefulness in algorithms and tools.
 
 ---
 
-## 5. Wildcards and Polymorphism
-Wildcards enable polymorphic behavior inside generic structures.
+### 5. Exercises:
 
-Example in this module:
+### 5.1 Wildcards and Polymorphism
+Covers:
 
-    List<Dog> dogs;
+- Covariant lists (`? extends Animal`)
+- Contravariant lists (`? super Animal`)
+- Polymorphism within generics
+- Methods that accept specialized lists while maintaining safety
 
-    List<Cat> cats;
-
-    List<Lion> lions;
-
-    AnimalManager.printAnimalSounds(dogs);
-
-    AnimalManager.printAnimalSounds(cats);
-
-    AnimalManager.printAnimalSounds(lions);
-
-
-Without wildcards:
-- You could not pass List<Dog> to a method expecting List<Animal>
-- Java generics are invariant (List<Dog> ≠ List<Animal>)
-
-With ? extends Animal:
-- Any subtype list works polymorphic
-- Each animal still executes its own overridden makeSound()
-
-This demonstrates:
-- Compile-time type safety
-- Runtime polymorphism with overridden behavior
-- Contravariance and covariance patterns
-
----
-
-## 6. Module Overview and Exercise Documentation
-Each directory contains a ProblemQuestion.txt describing the requirements for that exercise.
-
----
-
-### 6.1 Generic Classes
-#### Covers:
-- Creating generic containers
-- Using single type parameters (T)
-- Using multiple type parameters (K, V)
-- Overriding toString()
-- Working with various bindings (String, Integer, domain objects)
-
-#### Exercises:
-**Box<T>**
-- Store and return generic content
-- Demonstrate binding to different types
-- Application: Box<T>, Main
-
-**Pair<K, V>**
-- Store key/value pairs using generics
-- Multiple type parameters
-- Application: Pair<K, V>, Main
-
----
-
-### 6.2 Generic Methods
-#### Covers:
-- Defining independent type parameters
-- Array processing with generics
-- Using bounded types (<T extends Comparable<T>>)
-- Working with lists
-- Implementing utilities such as swap, copy, max value, contains
-
-#### Exercises:
-**printArray()**
-- Identify array type at runtime
-- Iterate over generic arrays
-
-**maxValue()**
-- Determine maximum element using Comparable
-- containsElements()
-- Check list membership generically
-
-**swap()**
-- Swap two elements inside a generic array
-
-**copyList()**
-- Uses wildcards:
-  - < ? extends T > for reading 
-  - < ? super T > for inserting
-- Practical demonstration of PECS (Producer Extends, Consumer Super)
-
----
-
-### 6.3 Wildcards and Polymorphism
-#### Covers:
-- Covariant lists (? extends Animal)
-- Contravariant lists (? super Animal)
-- Polymorphic behavior inside bounded wildcards
-- Methods that accept specialized lists while preserving safety
-
-#### Exercises:
-
-**printAnimalSounds()**
-- Accepts List<? extends Animal>
+Exercises:
+#### printAnimalSounds()
+- Accepts `List<? extends Animal>`
 - Prints each animal
-- Calls overridden makeSound()
+- Calls an overridden `makeSound()`
 
-**add()**
-- Demonstrates safe insertion using ? super Animal
-- Allows merging lists of subtypes into a parent list
+#### add()
+- Demonstrates safe insertion with `? super Animal`
+- Joins objects of subtypes into a parent list
 
 Domain:
-- Animal, Dog, Cat, Lion
-- Controllers: AnimalManager
+
+- `Animal`, `Dog`, `Cat`, `Lion`
+- `AnimalManager`
 
 ---
 
-## 7. Summary
+### 5.2 Generic Classes
+#### Covers:
 
-This Generics module provides a complete foundation for understanding:
-- Type parameterization and generic type safety
-- How to create and use generic classes
-- How to implement generic methods with bounded and unbounded parameters
-- How wildcards enable controlled polymorphism within collections
-- The distinction between extends and super in generic contexts
-- Reusable utilities that adapt to different type bindings
-- Practical data manipulation with generics and polymorphism
+- Creation of generic containers.
+- Use of single parameters (`T`).
+- Use of multiple parameters (`K`, `V`).
+- Overriding `toString()`.
+- Use with various types (String, Integer, domain classes).
 
-Every exercise is paired with a ProblemQuestion.txt, ensuring that each concept is learned through structured practice.
+Exercises:
+
+#### Box
+- Stores and returns generic content.
+- Application: `Box`, `Main`
+
+#### Pair<K, V>
+- Stores key/value pairs.
+- Uses multiple type parameters.
+- Application: `Pair<K, V>`, `Main`
+
+---
+
+### 5.3 Generic Methods
+#### Covers:
+
+- Definition of independent parameters.
+- Processing of generic arrays.
+- Bounded types (`<T extends Comparable>`).
+- Operations with lists.
+- Utility functions such as swap, copy, max, contains.
+
+Exercises:
+#### printArray()
+- Identifies array type at runtime
+- Iterates over generic arrays
+
+#### maxValue()
+- Determines the largest element using `Comparable`
+
+#### containsElements()
+- Checks membership in lists generically.
+
+#### swap()
+- Swaps two elements of a generic array.
+
+#### copyList()
+- Uses wildcards:
+- `? extends T` for reading.
+- `? super T` for writing.
+- Demonstrates the PECS principle (Producer Extends, Consumer Super).
+
+---
+
+### 6. Learning Objectives:
+
+- Type parameterization and compile-time safety.
+- How to create and use generic classes.
+- How to implement generic methods with bounded or unbounded parameters.
+- How wildcards allow controlled polymorphism.
+- Difference between `extends` and `super`.
+- Creation of reusable generic utilities.
+- Practical data manipulation with generics and polymorphism.
 
 ---
