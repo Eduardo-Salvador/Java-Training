@@ -18,6 +18,7 @@ Extra challenges:
 Ask the user to enter an email (via Scanner) and check if it is already registered.
 Remove a user by email, if it exists.
 Show the updated set again.
+Repeat for for LinkedHashSet.
 
 --------------------------------------------------------
 
@@ -41,3 +42,4 @@ Desafios extras:
 Peça ao usuário para inserir um e-mail (via Scanner) e verifique se ele já está cadastrado.
 Remova um usuário pelo e-mail, se ele existir.
 Exiba o conjunto atualizado novamente.
+Repita para para LinkedHashSet.

@@ -1,6 +1,7 @@
 package Collections.Set_HashSet.Application;
 import Collections.Set_HashSet.Domain.User;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ public class Main {
         User u3 = new User("Carla Mendes", "carla@yahoo.com");
         User u4 = new User("Daniel Souza", "daniel@gmail.com");
         User u5 = new User("Alice Johnson", "alice@gmail.com");
+
         Set<User> userSet = new HashSet<>();
         userSet.add(u1);
         userSet.add(u2);
@@ -20,6 +22,7 @@ public class Main {
         userSet.add(u1);
 
         System.out.println("Set Size: " + userSet.size());
+        System.out.println("Hash Set");
         userSet.forEach(System.out::println);
         Scanner s = new Scanner(System.in);
         System.out.println("-----------------");
@@ -30,6 +33,30 @@ public class Main {
 
         System.out.println("-----------------");
         System.out.println("Set Size: " + userSet.size());
+        System.out.println("Hash Set");
         userSet.forEach(System.out::println);
+
+        System.out.println("-----------------");
+        Set<User> userLinkedSet = new LinkedHashSet<>();
+        userLinkedSet.add(u1);
+        userLinkedSet.add(u2);
+        userLinkedSet.add(u3);
+        userLinkedSet.add(u4);
+        userLinkedSet.add(u5);
+        userLinkedSet.add(u1);
+
+        System.out.println("Set Size: " + userLinkedSet.size());
+        System.out.println("Linked Hash Set: insertion order:");
+        userLinkedSet.forEach(System.out::println);
+        System.out.println("-----------------");
+
+        System.out.println("Enter any e-mail: ");
+        String email2 = s.nextLine();
+        userLinkedSet.removeIf(e -> e.getEmail().equals(email2));
+
+        System.out.println("-----------------");
+        System.out.println("Set Size: " + userLinkedSet.size());
+        System.out.println("Linked Hash Set: insertion order:");
+        userLinkedSet.forEach(System.out::println);
     }
 }
