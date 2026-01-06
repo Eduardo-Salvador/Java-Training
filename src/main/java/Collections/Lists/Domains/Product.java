@@ -1,9 +1,9 @@
 package Collections.Lists.Domains;
 
 public class Product {
-    private final String name;
+    private String name;
     private Double price;
-    private final Integer quantity;
+    private Integer quantity;
 
     public Product(String name, Double price, Integer quantity) {
         this.name = name;
@@ -25,6 +25,14 @@ public class Product {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     @Override

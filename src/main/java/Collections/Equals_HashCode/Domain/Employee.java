@@ -1,9 +1,9 @@
-package Collections.Equals;
+package Collections.Equals_HashCode.Domain;
 
 public class Employee {
-    private final String name;
-    private final String cpf;
-    private final double salary;
+    private String name;
+    private String cpf;
+    private double salary;
 
     public Employee(String name, String cpf, double salary) {
         this.name = name;
@@ -23,13 +23,23 @@ public class Employee {
         return salary;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
     @Override
     public boolean equals(Object obj){
-        if(obj == null) return false;
-        if(this == obj) return true;
-        if(this.getClass() != obj.getClass()) return false;
+        if(obj == null || this.getCpf() == null || this.getClass() != obj.getClass()) return false;
         Employee employee = (Employee) obj;
-        return getCpf() != null && getCpf().equals(employee.getCpf());
+        return this.getCpf().equals(employee.getCpf());
     }
 
     @Override

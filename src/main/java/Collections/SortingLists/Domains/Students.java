@@ -23,6 +23,18 @@ public class Students implements Comparable<Students> {
         return grade;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setGrade(Double grade) {
+        this.grade = grade;
+    }
+
     @Override
     public int compareTo(Students o) {
         return this.name.compareTo(o.getName());

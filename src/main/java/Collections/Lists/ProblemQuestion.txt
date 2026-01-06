@@ -7,15 +7,15 @@ Create the Product class with:
 Private attributes: String name, Double price, Integer quantity
 Constructor, getters, and setters.
 Formatted toString() method.
-Override `equals()` and `hashCode()` to consider equality by name only.
-In the `InventoryManager` class, implement the methods below using a `List<Product>`:
-`public static void addProduct(List<Product> products, Product product)`
-`public static void removeProduct(List<Product> products, String name)`
-`public static void updatePrice(List<Product> products, String name, Double newPrice)`
-`public static void sortByPrice(List<Product> products)`
-`public static void showAllProducts(List<Product> products)`
+Override equals() and hashCode() to consider equality by name only.
+In the InventoryManager class, implement the methods below using a List<Product>:
+public static void addProduct(List<Product> products, Product product)
+public static void removeProduct(List<Product> products, String name)
+public static void updatePrice(List<Product> products, String name, Double newPrice)
+public static void sortByPrice(List<Product> products)
+public static void showAllProducts(List<Product> products)
 
-In the `Main` class:
+In the Main class:
 Create a list with some products.
 Use the methods above to:
 Add a new product.
@@ -41,3 +41,51 @@ Updated price: Mouse - R$ 100.00
 Products in stock (sorted by price):
 Mouse - R$ 100.00 - Qty: 10
 Monitor - R$ 900.00 - Qty: 5
+
+
+-----------------------------------------------------------
+
+Exercício: Gerenciamento de Estoque
+Objetivo:
+Criar um pequeno sistema que gerencie produtos em uma lista, permitindo adicionar, atualizar, remover e listar produtos, praticando operações básicas de lista.
+
+Requisitos:
+Criar a classe Produto com:
+Atributos privados: String nome, Double preço, Integer quantidade
+Construtor, getters e setters.
+Método toString() formatado.
+Sobrescrever os métodos equals() e hashCode() para considerar a igualdade apenas pelo nome.
+Na classe InventoryManager, implemente os métodos abaixo usando uma List<Product>:
+public static void addProduct(List<Product> products, Product product)
+public static void removeProduct(List<Product> products, String name)
+public static void updatePrice(List<Product> products, String name, Double newPrice)
+public static void sortByPrice(List<Product> products)
+public static void showAllProducts(List<Product> products)
+
+Na classe Main:
+Crie uma lista com alguns produtos.
+
+Use os métodos acima para:
+Adicionar um novo produto.
+Remover um produto existente.
+Atualizar o preço de um produto.
+Exibir todos os produtos ordenados por preço.
+
+Métodos que você usará
+Método Função
+add() Adiciona elemento
+removeIf() ou remove() Remove elemento
+set() Substitui elemento na posição
+contains() Verifica a existência do elemento
+indexOf() Retorna a posição do elemento
+sort() Ordena os elementos com um comparador
+
+Saída esperada (simulação):
+Produto adicionado: Mouse - R$ 80,00
+Produto adicionado: Teclado - R$ 120,00
+Produto adicionado: Monitor - R$ 900,00
+Produto removido: Teclado
+Preço atualizado: Mouse - R$ 100,00
+Produtos em estoque (ordenados por preço):
+Mouse - R$ 100,00 - Qtd: 10
+Monitor - R$ 900,00 - Qtd: 5

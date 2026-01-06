@@ -1,5 +1,5 @@
 package Collections.Lists.Application;
-import Collections.Lists.Controller.InventoryManager;
+import Collections.Lists.Services.InventoryManager;
 import Collections.Lists.Domains.Product;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +36,12 @@ public class Main {
         System.out.println("-------------------");
 
         InventoryManager.removeProduct(products, "Headset");
+        System.out.println("-------------------");
+
+        InventoryManager.removeProduct(products, "Wireless Headset");
+        System.out.println("-------------------");
+
+        InventoryManager.removeProduct(products, "Dell Laptop");
         System.out.println("-------------------");
 
         InventoryManager.sortByPrice(products);

@@ -1,4 +1,4 @@
-package Collections.Lists.Controller;
+package Collections.Lists.Services;
 import Collections.Lists.Domains.Product;
 import java.util.Comparator;
 import java.util.List;
@@ -22,10 +22,10 @@ public class InventoryManager {
     }
 
     public static void updatePrice(List<Product> products, String name, Double newPrice) {
-        for (int i = 0; i < products.size(); i++) {
-            if(products.get(i).getName().equalsIgnoreCase(name)) {
-                products.get(i).setPrice(newPrice);
-                System.out.printf("Price updated for %s to $%.2f%n", products.get(i).getName(), newPrice);
+        for (Product product : products) {
+            if (product.getName().equalsIgnoreCase(name)) {
+                product.setPrice(newPrice);
+                System.out.printf("Price updated for %s to $%.2f%n", product.getName(), newPrice);
                 return;
             }
         }

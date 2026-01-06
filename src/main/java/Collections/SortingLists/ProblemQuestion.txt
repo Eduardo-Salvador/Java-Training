@@ -27,3 +27,38 @@ Use Collections.sort() for sorting with Comparable.
 Use list.sort() for sorting with Comparator.
 Use the forEach(System.out::println) method to print the list.
 Keep the code well organized and modularized.
+
+------------------------------------------------------------------
+
+Exercício – Ordenação de Alunos:
+Crie um programa para gerenciar uma lista de alunos (Student) em uma escola.
+
+Implemente o sistema de forma que seja possível ordenar os alunos de diferentes maneiras.
+
+Requisitos:
+Crie a classe Student com os seguintes atributos:
+String name
+Integer age
+Double grade (nota final)
+Faça com que a classe Student implemente a interface Comparable<Student>,
+para que a ordem natural dos objetos seja por nome em ordem alfabética.
+
+Crie dois comparadores (Comparator<Student>) para ordenar:
+Por idade crescente
+Por nota decrescente
+Crie uma classe principal StudentManager que:
+Crie uma lista (List<Student>)
+Adicione 5 alunos diferentes
+
+Mostre:
+A lista original
+A lista ordenada por nome (Comparable)
+A lista ordenada por idade (Comparator)
+A lista ordenada por nota decrescente (Comparator)
+
+Regras e Dicas:
+Use Collections.sort() para ordenar com Comparable.
+Use list.sort() para ordenar com Comparator.
+Use o método forEach(System.out::println) para imprimir a lista.
+
+Mantenha o código bem organizado e modularizado.
