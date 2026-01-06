@@ -1,5 +1,5 @@
-package Collections.Set.HashSet.Application;
-import Collections.Set.HashSet.Domain.User;
+package Collections.Set_HashSet.Application;
+import Collections.Set_HashSet.Domain.User;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;

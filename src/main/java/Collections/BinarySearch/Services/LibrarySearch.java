@@ -1,4 +1,4 @@
-package Collections.BinarySearch.Controller;
+package Collections.BinarySearch.Services;
 import Collections.BinarySearch.Domain.Book;
 import java.util.Collections;
 import java.util.List;

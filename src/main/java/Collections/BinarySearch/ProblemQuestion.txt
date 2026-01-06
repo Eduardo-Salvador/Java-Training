@@ -24,3 +24,32 @@ Tips:
 The binarySearch() method requires the list to already be sorted according to the same criteria as compareTo.
 If the book is not found, binarySearch() returns a negative value.
 Remember to override toString() to display the book information.
+
+------------------------------------------------------------------------
+
+Exercício – Busca Binária de Livros:
+Você foi contratado para desenvolver um pequeno sistema de busca de livros para uma biblioteca digital.
+O objetivo é permitir que os usuários localizem rapidamente um livro pelo título usando a busca binária (Collections.binarySearch).
+
+Requisitos:
+Crie a classe Book com os seguintes atributos:
+String title
+String author
+Integer year
+Faça com que a classe Book implemente a interface Comparable<Book>, onde a ordem natural será por título em ordem alfabética.
+
+Crie uma classe LibrarySearch com:
+Um método searchBook(List<Book> books, String title) que:
+Ordene a lista de livros por título.
+Use Collections.binarySearch() para buscar o livro.
+Retorne o livro encontrado ou exiba uma mensagem caso ele não exista.
+
+Crie a classe principal Main para:
+Criar uma lista de 5 livros.
+Exibir a lista ordenada.
+Realizar uma busca binária por um livro existente e por um livro inexistente.
+
+Dicas:
+O método binarySearch() exige que a lista já esteja ordenada de acordo com os mesmos critérios de compareTo.
+Se o livro não for encontrado, binarySearch() retorna um valor negativo.
+Lembre-se de sobrescrever o método toString() para exibir as informações do livro.

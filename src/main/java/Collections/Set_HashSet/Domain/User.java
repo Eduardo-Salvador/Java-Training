@@ -1,4 +1,4 @@
-package Collections.Set.HashSet.Domain;
+package Collections.Set_HashSet.Domain;
 
 public class User {
     private String name;
@@ -27,6 +27,14 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override

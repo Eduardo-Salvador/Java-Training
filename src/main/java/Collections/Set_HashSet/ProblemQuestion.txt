@@ -1,0 +1,43 @@
+Exercise – Working with Set and HashSet:
+Create a Java program that manages a set of emails registered in a system.
+
+Requirements:
+Create a User class with the following attributes:
+String name
+String email
+Override the equals() and hashCode() methods so that two users are considered equal if they have the same email, regardless of their name.
+
+In the main method, do the following:
+Create a Set<User> (use HashSet).
+Add at least 5 users, 2 of whom have the same email.
+Try adding a duplicate user again (with an already existing email).
+Display the size of the set (how many unique users there are).
+List all users in the Set.
+
+Extra challenges:
+Ask the user to enter an email (via Scanner) and check if it is already registered.
+Remove a user by email, if it exists.
+Show the updated set again.
+
+--------------------------------------------------------
+
+Exercício – Trabalhando com Set e HashSet:
+Crie um programa Java que gerencie um conjunto de e-mails registrados em um sistema.
+
+Requisitos:
+Crie uma classe User com os seguintes atributos:
+String name
+String email
+Sobrescreva os métodos equals() e hashCode() para que dois usuários sejam considerados iguais se tiverem o mesmo e-mail, independentemente do nome.
+
+No método main, faça o seguinte:
+Crie um Set<User> (use HashSet).
+Adicione pelo menos 5 usuários, sendo que 2 deles têm o mesmo e-mail.
+Tente adicionar um usuário duplicado (com um e-mail já existente).
+Exiba o tamanho do conjunto (quantos usuários únicos existem).
+Liste todos os usuários no conjunto.
+
+Desafios extras:
+Peça ao usuário para inserir um e-mail (via Scanner) e verifique se ele já está cadastrado.
+Remova um usuário pelo e-mail, se ele existir.
+Exiba o conjunto atualizado novamente.

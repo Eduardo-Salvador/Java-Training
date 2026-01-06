@@ -1,5 +1,5 @@
 package Collections.BinarySearch.Application;
-import Collections.BinarySearch.Controller.LibrarySearch;
+import Collections.BinarySearch.Services.LibrarySearch;
 import Collections.BinarySearch.Domain.Book;
 import java.util.ArrayList;
 import java.util.Collections;
