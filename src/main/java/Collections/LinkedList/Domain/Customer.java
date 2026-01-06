@@ -1,5 +1,7 @@
 package Collections.LinkedList.Domain;
 
+import java.util.Objects;
+
 public class Customer {
     private String name;
     private String description;
@@ -17,13 +19,24 @@ public class Customer {
         return description;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public boolean equals(Object o){
-        if (o == null) return false;
-        if (this == o) return true;
-        if (this.getClass() != o.getClass()) return false;
+        if (o == null || this.getClass() != o.getClass()) return false;
         Customer c = (Customer) o;
         return getName() != null && getName().equals(c.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return getName() == null ? 0 : getName().hashCode();
     }
 
     @Override

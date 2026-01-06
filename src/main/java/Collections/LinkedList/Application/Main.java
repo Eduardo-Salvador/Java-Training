@@ -1,6 +1,6 @@
 package Collections.LinkedList.Application;
 
-import Collections.LinkedList.Controller.QueueManager;
+import Collections.LinkedList.Services.QueueManager;
 import Collections.LinkedList.Domain.Customer;
 
 import java.util.LinkedList;

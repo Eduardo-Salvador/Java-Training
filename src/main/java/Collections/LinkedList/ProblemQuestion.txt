@@ -24,3 +24,35 @@ Extra challenge (optional):
 Make the queue not accept duplicate customers (same name).
 Add an option to serve all customers until the queue is empty.
 Replace LinkedList with Queue<Customer> and see what changes.
+
+-----------------------------------------------------------------------
+
+Exercício: Linked List (Fila de Atendimento)
+Crie um programa que simule uma fila de atendimento de suporte técnico usando uma Lista Ligada.
+
+Requisitos:
+Crie uma classe Cliente com:
+nome do cliente;
+descrição do problema;
+método toString() que retorna o nome e o problema.
+
+Sem o programa principal:
+Crie uma Lista Ligada<Cliente> representando a fila.
+
+Adicione 5 clientes à fila (em ordem de chegada).
+
+Mostre:
+o primeiro da fila;
+o atendimento de um cliente (removendo o primeiro);
+o tamanho atual da fila;
+a fila completa após cada atendimento.
+
+Use métodos da Lista Ligada como:
+adicionarUltimo(), removerPrimeiro(), verificarPrimeiro(), estáVazio(), tamanho().
+
+Desafio extra (opcional):
+Faça com que a fila não aceite clientes duplicados (mesmo nome).
+
+Adicione uma opção para atender todos os clientes até que a fila esteja vazia.
+
+Substitua a Lista Ligada por uma Fila<Cliente> e veja as mudanças.
