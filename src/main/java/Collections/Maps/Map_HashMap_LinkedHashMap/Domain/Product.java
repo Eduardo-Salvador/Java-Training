@@ -11,10 +11,6 @@ public class Product {
         this.price = price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
     public String getName() {
         return name;
     }
@@ -25,6 +21,18 @@ public class Product {
 
     public Double getPrice() {
         return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

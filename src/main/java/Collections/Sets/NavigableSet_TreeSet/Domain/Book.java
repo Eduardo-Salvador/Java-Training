@@ -23,6 +23,18 @@ public class Book implements Comparable<Book>{
         return pages;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setPages(Integer pages) {
+        this.pages = pages;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;

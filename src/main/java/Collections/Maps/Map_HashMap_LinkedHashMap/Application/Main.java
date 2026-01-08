@@ -1,6 +1,5 @@
 package Collections.Maps.Map_HashMap_LinkedHashMap.Application;
 import Collections.Maps.Map_HashMap_LinkedHashMap.Domain.Product;
-
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -25,14 +24,9 @@ public class Main {
         }
         System.out.println("------------------------");
 
-        System.out.println("Updated P1: " + p1.getName());
-        p1.setPrice(129.90);
-        for (String key : productMap.keySet()){
-            System.out.println(key + ": " + productMap.get(key));
-        }
-        System.out.println("------------------------");
-
-        productMap.remove(p1.getCode());
+        System.out.println("Updated and Remove 1 Product:");
+        productMap.get("B2002").setPrice(219.90);
+        productMap.remove("E5005");
         for (String key : productMap.keySet()){
             System.out.println(key + ": " + productMap.get(key));
         }
@@ -46,7 +40,11 @@ public class Main {
         productMapSorted.putIfAbsent(p5.getCode(), p5);
         productMapSorted.putIfAbsent(p1.getCode(), p3);
         System.out.println("Products in list sorted by insertion: " + productMapSorted.size());
-        productMapSorted.forEach((key, value) -> System.out.println(key + ": $" + value));
+        productMapSorted.forEach((key, product) -> System.out.println(key + ": " + product));
         System.out.println("------------------------");
+        System.out.println("Updated and Remove 1 Product:");
+        productMapSorted.get("C3003").setPrice(599.90);
+        productMapSorted.remove("B2002");
+        productMapSorted.forEach((key, product) -> System.out.println(key + ": " + product));
     }
 }

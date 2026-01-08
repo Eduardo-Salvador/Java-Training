@@ -25,9 +25,7 @@ public class Main {
         System.out.println("Lower: " + books.lower(b3));
         System.out.println("Higher: " + books.higher(b3));
         System.out.println("--------------");
-        for (Book book : books.descendingSet()) {
-            System.out.println(book);
-        }
+        books.descendingSet().forEach(System.out::println);
         System.out.println("--------------");
     }
 }

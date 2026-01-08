@@ -17,3 +17,25 @@ Show:
 the first and last book in the order;
 the book immediately before and after a specific book (use lower() and higher());
 the catalog in reverse order (use descendingSet()).
+
+---------------------------------------------------
+
+Exercício: Catálogo de Livros com TreeSet (NavigableSet)
+Crie um programa que gerencie um catálogo de livros usando TreeSet.
+
+Requisitos:
+Crie uma classe Book com:
+título (String)
+autor (String)
+número de páginas (Integer)
+A classe deve implementar Comparable<Book> para que a ordenação padrão seja alfabética por título.
+
+No programa principal:
+Crie um TreeSet<Book> (ou NavigableSet<Book>).
+Adicione 5 livros diferentes ao conjunto.
+Exiba os livros em ordem alfabética.
+
+Mostre:
+o primeiro e o último livro da ordem;
+o livro imediatamente anterior e posterior a um livro específico (use lower() e higher());
+o catálogo em ordem inversa (use descendingSet()).

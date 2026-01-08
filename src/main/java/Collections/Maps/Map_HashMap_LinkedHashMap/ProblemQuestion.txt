@@ -16,3 +16,24 @@ Update the price of a specific product.
 Remove a product by code.
 Show the total number of registered products.
 Show the products in order of insertion (use LinkedHashMap for this).
+
+--------------------------------------------------------------------
+
+Exercício: Controle de Estoque de Produtos
+Crie um programa que gerencie o estoque de um produto usando um mapa (Map).
+
+Requisitos:
+Crie uma classe Product com:
+nome (String)
+código (String)
+preço (Double)
+
+No programa principal:
+Crie um HashMap<String, Product> onde a chave será o código do produto e o valor será o próprio objeto Product.
+Adicione 5 produtos ao mapa.
+Exiba todos os produtos cadastrados (mostrando o código como chave).
+Verifique se um código já existe antes de adicioná-lo.
+Atualize o preço de um produto específico.
+Remova um produto pelo código.
+Mostre o número total de produtos cadastrados.
+Mostre os produtos na ordem de inserção (use um `LinkedHashMap` para isso).

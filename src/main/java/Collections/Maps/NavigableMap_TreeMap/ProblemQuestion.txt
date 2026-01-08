@@ -24,3 +24,34 @@ Use methods like:
 firstEntry(), lastEntry()
 lowerEntry(), higherEntry()
 descendingMap()
+
+-------------------------------------------------------------------
+
+Exercício: Agenda Telefônica com TreeMap (NavigableMap)
+Crie um programa que gerencie uma agenda telefônica usando TreeMap ou NavigableMap.
+
+Requisitos:
+Crie uma classe Contact com:
+String name
+String phoneNumber
+String email
+
+No programa principal:
+Crie um NavigableMap<String, Contact>, onde a chave será o nome do contato e o valor será o próprio objeto Contact.
+
+Adicione pelo menos 5 contatos.
+Exiba todos os contatos em ordem alfabética por nome.
+Mostre o primeiro e o último contato na agenda telefônica.
+Dado um nome, mostre:
+o contato imediatamente anterior (lowerEntry)
+o contato imediatamente seguinte (higherEntry)
+Exiba a agenda telefônica em ordem inversa (use descendingMap()).
+
+Desafios Extras:
+Permita a remoção de um contato pelo nome.
+
+Permita a atualização do número de telefone ou email de um contato existente.
+Use métodos como:
+firstEntry(), lastEntry()
+lowerEntry(), higherEntry()
+descendingMap()

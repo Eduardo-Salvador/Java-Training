@@ -1,6 +1,37 @@
-PriorityQueue
-Now imagine an emergency queue in a hospital.
-Each patient has a name and a priority level (the lower the number, the greater the urgency).
-Patients are seen not in order of arrival, but according to medical priority.
-Your task is to create a patient queue using PriorityQueue, insert some patients with different priority levels, and simulate the process until everyone is seen.
-In the end, show the order in which the patients were seen.
+Mixed Hospital Queue System:
+Imagine you are developing a patient care system for an emergency room.
+Patients arrive and are registered in a regular queue, in order of arrival.
+However, some patients have urgent cases and need to be seen before others. These patients are placed in a PriorityQueue,
+where priority is defined by a number (the lower the number, the greater the urgency).
+
+He system should work like this:
+Whenever there are patients in the PriorityQueue, they are seen first (in order of priority).
+If there are no urgent patients, the care follows the order of the regular queue.
+After each patient visit, the system shows who was seen and which queue was used.
+Continue until all queues are empty.
+
+Objective:
+Create two structures: a queue for regular patients and a PriorityQueue for urgent patients.
+Simulate the arrival of patients in both queues.
+Implement a service logic that always prioritizes the urgent queue.
+Show the final service order.
+
+-------------------------------------------------------------------------------------------
+
+Sistema de Filas Mistas em um Hospital:
+Imagine que você está desenvolvendo um sistema de atendimento ao paciente para um pronto-socorro.
+Os pacientes chegam e são registrados em uma fila normal, por ordem de chegada.
+No entanto, alguns pacientes têm casos urgentes e precisam ser atendidos antes dos outros. Esses pacientes são colocados em uma Fila de Prioridade,
+onde a prioridade é definida por um número (quanto menor o número, maior a urgência).
+
+O sistema deve funcionar da seguinte forma:
+Sempre que houver pacientes na Fila de Prioridade, eles serão atendidos primeiro (por ordem de prioridade).
+Se não houver pacientes urgentes, o atendimento segue a ordem da fila normal.
+Após cada atendimento, o sistema mostra quem foi atendido e qual fila foi utilizada.
+Continue até que todas as filas estejam vazias.
+
+Objetivo:
+Criar duas estruturas: uma fila para pacientes normais e uma Fila de Prioridade para pacientes urgentes.
+Simular a chegada de pacientes em ambas as filas.
+Implementar uma lógica de serviço que sempre priorize a fila de urgência.
+Mostrar a ordem final de atendimento.

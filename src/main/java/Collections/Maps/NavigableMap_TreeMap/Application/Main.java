@@ -1,5 +1,5 @@
 package Collections.Maps.NavigableMap_TreeMap.Application;
-import Collections.Maps.NavigableMap_TreeMap.Controller.ContactManager;
+import Collections.Maps.NavigableMap_TreeMap.Services.ContactManager;
 import Collections.Maps.NavigableMap_TreeMap.Domain.Contact;
 
 import java.util.*;
@@ -23,25 +23,20 @@ public class Main {
 
         System.out.println("First contact:");
         System.out.println(contactNavigableMap.firstEntry());
-        System.out.println("Contact Higher:");
-        System.out.println(contactNavigableMap.higherEntry(contactNavigableMap.firstKey()));
-        System.out.println("---------------------");
         System.out.println("Last contact:");
         System.out.println(contactNavigableMap.lastEntry());
+        System.out.println("Contact: " + contactNavigableMap.get("Carla Mendes"));
+        System.out.println("Contact Higher:");
+        System.out.println(contactNavigableMap.higherEntry("Carla Mendes"));
         System.out.println("Contact Lower:");
-        System.out.println(contactNavigableMap.lowerEntry(contactNavigableMap.lastKey()));
+        System.out.println(contactNavigableMap.lowerEntry("Carla Mendes"));
         System.out.println("---------------------");
-
         contactNavigableMap.descendingKeySet().forEach(c -> System.out.println(c + " - " + contactNavigableMap.get(c)));
         System.out.println("---------------------");
-
-        ContactManager.removeContact(contactNavigableMap, c4.getName());
+        contactNavigableMap.remove("Carla Mendes");
         contactNavigableMap.forEach((key, value) -> System.out.println(key + " - " + value));
         System.out.println("---------------------");
-
-        Scanner input = new Scanner(System.in);
-        ContactManager.updateContact(contactNavigableMap, input);
-        contactNavigableMap.forEach((key, value) -> System.out.println(key + " - " + value));
+        ContactManager.updateContact(contactNavigableMap);
         System.out.println("---------------------");
     }
 }
