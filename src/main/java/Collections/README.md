@@ -1,280 +1,423 @@
+<div align="center">
+
+![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-<COLOR>.svg)
+
 # Collections
-This module consolidates a comprehensive set of exercises involving the Java Collections Framework, focusing on lists, queues, sets, maps, sorting mechanisms, searching strategies, iteration patterns, and object comparison. Each exercise is accompanied by a ProblemQuestion.txt file containing the full specifications.
 
-Although this module is centered on Collections, brief conceptual references to data structures, hashing, tree-based ordering, and algorithmic cost (Big-O) are included. These topics are addressed only at a high level.
-A dedicated project for deeper structural analysis is available at:
+## Technologies
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
-**Data Structures Project:**
-https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java
+</div>
+
+## Overview
+
+This module consolidates a comprehensive set of exercises involving the
+Java Collections Framework, focusing on lists, queues, sets, maps,
+sorting mechanisms, search strategies, iteration patterns, and
+object comparison. Each exercise is accompanied by a
+**ProblemQuestion.txt** file containing the complete specifications.
+
+Although this module focuses on Collections, brief conceptual references
+on data structures, hashing, tree-based sorting
+and algorithmic cost (Big-O) are also included. These details are
+only superficially involved. A dedicated project for a more in-depth structural analysis is available at:
+[Data Structures Project](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)
 
 ---
 
-## 1. Foundations: Collections and Data Structures
-### 1.1 Java Collections Framework Overview
-The Collections Framework unifies a set of interfaces and implementations designed to store, manipulate, and organize data efficiently. This module uses:
-- List (ArrayList, LinkedList)
-- Set (HashSet, TreeSet, NavigableSet)
-- Map (HashMap, LinkedHashMap, TreeMap, NavigableMap)
-- Queue (LinkedList, PriorityQueue)
-- Sorting utilities and binary search
-- Iterators and enhanced iteration patterns
+## Architecture
+- **Domain** → Classes and Entities.
+
+- **Services** → Business rules and data manipulation.
+
+- **App** → Initializes the application.
+
+- Some exercises involve the app manipulating the data.
+
+---
+
+## What was used:
+
+### 1. Overview of the Java Collections Framework
+
+The Collections Framework unifies a set of interfaces and implementations designed to efficiently store, manipulate, and organize data. This module uses:
+
+- **List** (ArrayList, LinkedList)
+- **Set** (HashSet, TreeSet, NavigableSet)
+- **Map** (HashMap, LinkedHashMap, TreeMap, NavigableMap)
+- **Queue** (LinkedList, PriorityQueue)
+- **Sorting and binary search utilities**
+- **Iterators and advanced iteration patterns**
 
 Each structure has its own internal behavior and performance characteristics.
 
 ---
 
-## 2. Brief Notes on Data Structures
-This module touches on several underlying structures:
+### 2. Brief Notes on Data Structures
 
-### Array-backed structures (e.g., ArrayList)
-- Fast index access (O(1))
-- bSlower insertions/removals in the middle (O(n))
-
-### Linked structures (e.g., LinkedList)
-- Fast insertions/removals at ends (O(1))
-- Slow random access (O(n))
-
-#### Hash-based structures (HashMap, HashSet)
-- Use hashing: a mathematical function transforms a key into a hashed integer.
-- Provide average O(1) for access, insertion, and removal.
-- No ordering guarantee.
-
-### Tree-based structures (TreeMap, TreeSet)
-- Backed by balanced trees (e.g., Red-Black Tree).
-- Maintain sorted order of elements or keys.
-- Operations run in O(log n).
-
-A complete deep-dive into trees, hashing functions, collision management, or linked representations is provided in the referenced Data Structures project.
+#### Lists:
+Ordered collections that allow duplicate elements and index access. ArrayList offers O(1) for index access but O(n) for insertion/removal in the middle; LinkedList has O(n) for access but O(1) for insertion/removal at the ends. Choose ArrayList for frequent reading and LinkedList for many insertions/removals.
+#### Maps:
+Key-value structures that do not allow duplicate keys. HashMap offers O(1) for basic operations but without ordering; TreeMap maintains ordered keys with O(log n); LinkedHashMap preserves insertion order. Choice based on the need for ordering vs. performance.
+#### Sets:
+Collections that do not allow duplicate elements. HashSet offers O(1) for add/remove/contains without ordering; TreeSet maintains ordered elements with O(log n); LinkedHashSet preserves insertion order. Useful for checking for existence and eliminating duplicates.
+### Queues:
+FIFO (first-in-first-out) structures for ordered processing. LinkedList implements a simple queue; PriorityQueue orders by priority (heap) with O(log n) for add/poll; ArrayDeque is efficient for queue/stack. Ideal for sequential processing and algorithms with priorities.
 
 ---
 
-## Big-O Notation
-This module does not perform algorithmic analysis in depth. However, Big-O concepts help explain structural performance:
-- O(1) constant time (e.g., hash lookups)
-- O(log n) logarithmic time (e.g., tree insertion/search)
-- O(n) linear time (e.g., iterating over lists or sets)
-- O(n log n) typical for sorting operations
+### 3. Big-O Notation
 
-These performance factors are mentioned only to contextualize how the chosen structure impacts behavior in the provided exercises.
+This module does not perform in-depth algorithmic analysis. However, Big-O concepts help explain the performance of the following structures:
 
----
+- **O(1)** constant time (e.g., hash searches)
+- **O(log n)** logarithmic time (e.g., insertion/search in trees)
+- **O(n)** linear time (e.g., iterating over lists or sets)
+- **O(n log n)** common in sorting operations
 
-## 4. Hash vs. Tree 
-### 4.1 Hash: Concept and Purpose
-Structures like **HashSet** and **HashMap** use hash tables:
-- Each key (or element, in the case of a HashSet) generates a hashCode().
-- This hash value is processed (usually by spreading/mixing bits) to determine the bucket where the object will be stored.
-- The bucket may contain one or more entries due to collisions, handled internally (Java uses linked lists or balanced trees depending on the case).
-- Because lookup, insertion and removal operate on hashed bucket positions, they provide average time complexity O(1).
-- Worst-case time becomes O(log n) when collisions form tree-based buckets in modern Java (since Java 8).
-- Hash-based structures do not maintain order — elements are stored based on hash distribution.
-- It offers more **performance.** 
-
-Therefore, duplicates are avoided by comparing:
-1. Hash Code
-2. Equal (to confirm)
-
-Exercises with hash:
-- Collections.Set.HashSet
-- Collections.Map.HashMap
-- Implementations of equals() and hashCode()
-- Email User System
-
-### 4.2 Trees
-TreeSet and TreeMap use a tree structure (usually Red-Black Tree):
-- Always store ordered data
-- All operations cost O(log n)
-- Allow navigable operations:
-  - higher()
-  - lowest()
-  - first()
-  - last()
-  - subMap(), etc.
-- It offers **more methods**, but **loses a little in performance**.
-
-Exercises with trees:
-- TreeSet of books
-- TreeMap of contacts
-- Navigation in ascending/descending order
-- Updates while maintaining the order
+These factors are mentioned only to contextualize how the chosen structure impacts the behavior of the exercises.
 
 ---
 
-## 5. Object Comparison: Comparable and Comparator
-### Comparable
-Used when a class defines its default natural ordering, implementing:
+### 4. Object Comparison: Comparable and Comparator
 
-    public int compareTo(T o)
+#### Comparable:
 
-Example from the module:
+Used when the class defines its natural ordering:
+
+``` java
+public interface Comparable<T> {
+  int compareTo(T o);
+}
+```
+
+Examples in the module:
+
 - Students sorted by name
 - Books sorted alphabetically by title
 
-### Comparator
-Used to define custom or alternative ordering strategies.
+#### Comparator:
+
+Used to define alternative sorting strategies.
+
+``` java
+public interface Comparator<T> {
+  int compare(T o1, T o2);
+}
+```
 
 Examples:
-- Compare Students by age
-- Compare Students by grade (including reverse sorting)
 
-These mechanisms enable flexible sorting while interacting with lists, sets, priority queues, and tree-based structures.
+- Compare students by age
+- Compare students by grade (descending)
 
----
-
-## 6. Basic Syntax for Lists (Used Throughout the Module)
-Lists are the starting point for most collection operations. This module uses:
-
-    List<Product> products = new ArrayList<>();
-    products.add(new Product("Mouse", 120.0, 10));
-    products.get(0);
-    products.removeIf(p -> p.getName().equals("Mouse"));
-    products.sort(Comparator.comparing(Product::getPrice));
-
-Key characteristics:
-- Ordered
-- Allow duplicates
-- Index-based access
-
-This foundation enables transitions into more advanced structures presented in other sections.
+These mechanisms allow flexible sorting in lists, sets, priority queues, and tree-based structures.
 
 ---
 
-## 7. Module Overview and Exercise Documentation
-Each group of exercises is organized by topic.
-Every exercise includes its own ProblemQuestion.txt inside the corresponding directory.
+### 5. Structures
+
+#### Array-based structures (ArrayList):
+
+It **stores data in an ordered and linear way and defines the standard operations of the List data structure.**
+
+- Allows duplicates.
+- Two elements cannot be in the same position.
+- The order criterion defines the element's position.
+- Removal and Addition via index.
+
+  | Operation | Complexity |
+    | --- | --- |
+  | `add(E)` | O(1) Amortized |
+  | `add(index, E)` | O(n) |
+  | `get(index)` | O(1) |
+  | `set(index, E)` | O(1) |
+  | `remove(index)` | O(n) |
+  | `indexOf(Object)` | O(n) |
+  | `contains(Object)` | O(n) |
+  | `size()` | O(1) |
+``` java
+List<String> list = new ArrayList<>();
+```
 
 ---
 
-### 7.1 Lists – ArrayList and LinkedList
-#### Topics covered:
-- Adding, removing, updating objects
-- Iteration and enhanced for-loop
-- Sorting using Comparator
-- Natural ordering with Comparable
-- Conversion between lists and arrays
-- Object equality (equals / hashCode)
-- LinkedList as a double-ended queue
-- Practical business scenarios (inventory management, customer queues)
-#### Exercises Included:
-**1. Inventory Management (ArrayList)**
-- CRUD operations
-- Sorting by price
-- Preventing duplicates using equals and hashCode
-- Domain: Product, Controller: InventoryManager, Application: Main
+#### Linked Structures (LinkedList):
 
-**2. Technical Support Queue (LinkedList)**
-- peek, poll, removeFirst, addLast
-- Queue operations
-- Iterator usage
-- Avoiding duplicate customer tickets
+It **stores data in an ordered and linear way and defines the standard operations of the List data structure.**
 
-**3. List/Array Conversion**
-- Removing items based on conditions
-- Converting list → array → list
-- Preventing re-insertion of duplicates
+- Allows duplicates.
+- Two elements cannot be in the same position.
+- The order criterion defines the element's position.
+- Removal and Addition via index.
 
-**4. Employee Registration Using Equals**
-- Detecting employees with duplicate CPF
-- Building an additional filtered employee list
+| Operation | Complexity |
+  | --- | --- |
+| `add(E)` | O(1) |
+| `add(index, E)` | O(n) |
+| `get(index)` | O(n) |
+| `set(index, E)` | O(n) |
+| `remove(index)` | O(n) |
+| `indexOf(Object)` | O(n) |
+| `contains(Object)` | O(n) |
+| `size()` | O(1) |
+``` java
+List<String> list = new LinkedList<>();
+```
 
 ---
 
-### 7.2 Sets – HashSet and TreeSet
-#### Topics covered:
-- Eliminating duplicates through hashing
-- Understanding unpredictability of ordering in HashSet
-- Using TreeSet for ordered sequences
-- Navigating ordered sets through lower, higher, first, last
+#### Queue-based structures (Queue, PriorityQueue):
 
-#### Exercises Included:
-**1. User Registration with HashSet**
-- Duplicate suppression via email hashing
-- Removing based on user input
-- Practical demonstration of hash-based semantics
+- Queue follows the FIFO (First-In-First-Out) principle for sequential processing.
+- PriorityQueue is based on a binary heap (min-heap by default).
+- Simple Queue has O(1) operations, while PriorityQueue has O(log n) for insertion/removal.
+An in-depth analysis of heaps, load balancing, and queue structures is available in the aforementioned Data Structures project.
 
-**2. Book Catalog with TreeSet**
-- Ordering books by title via natural ordering
-- Navigating neighbors in the sorted set
-- Reversing set order with descendingSet()
+#### Queue (LinkedList):
+| Operation | Complexity | Observations |
+| --- | --- |-------------------------------------|
+| **offer(element) / add(element)** | O(1) | Adds to the end of the queue |
+| **poll() / remove()** | O(1) | Removes and returns the first element |
+| **peek() / element()** | O(1) | Returns the first element without removing it |
+| **size()** | O(1) | Keeps the internal counter |
+| **isEmpty()** | O(1) | Checks if it is empty |
+| **contains(element)** | O(n) | Requires traversing the queue |
+| **Full iteration** | O(n) | Traverses all elements |
+```java
+Queue<String> queue = new LinkedList<>();
+```
 
----
-
-### 7.3 Maps – HashMap, LinkedHashMap, TreeMap (NavigableMap)
-#### Topics covered:
-- Key/value associations
-- Duplicate key suppression
-- Updating mapped objects
-- Maintaining insertion order (LinkedHashMap)
-- Natural ordering of keys (TreeMap)
-- Navigable operations: higherEntry, lowerEntry, firstEntry, lastEntry
-- Editing map entries
-
-### Exercises Included:
-**1. Product Map (HashMap + LinkedHashMap)**
-- Keyed insertion
-- Updating values by key
-- Removing entries
-- Demonstration of classic map behaviors
-
-**2. Contact Directory (TreeMap)**
-- Ordered contact management
-- Updating attributes using user input
-- Demonstrating key-based navigation
+#### PriorityQueue:
+| Operation | Complexity | Observations |
+| --- | --- | --- |
+| **offer(element) / add(element)** | O(log n) | Insert and reorganize the heap |
+| **poll() / remove()** | O(log n) | Root removal and rebalancing |
+| **peek() / element()** | O(1) | Returns the element with the highest priority |
+| **remover(element)** | Over(n) | Requires searching and then rebalancing |
+| **contains(element)** | Over(n) | Linear search in the heap |
+| **size()** | O(1) | Keeps internal counter |
+| **Full iteration** | Over(n) | Traverses but does NOT guarantee order |
+```java
+PriorityQueue<Integer> pq = new PriorityQueue<>(); // Min-heap
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+```
 
 ---
 
-### 7.4 Queues – LinkedList, Queue Interface, PriorityQueue
-#### Topics covered:
-- FIFO operations with LinkedList
-- Serving customers in order
-- Clearing and monitoring queues
-- Priority-based queues (min-heap behavior)
-- Custom comparable implementation for priority models
+#### Hash-based structures (HashMap, HashSet):
 
-#### Exercises Included:
-**1. Basic Queue Operations**
-- Viewing next customer
-- Serving customers
-- Clearing the queue
+- They use hashing: a mathematical function transforms a key into an integer value.
+- They offer, on average, **O(1)** for access, insertion, and removal.
+- They do not guarantee order.
 
-**2. Priority-Based Medical Queue**
-- Normal queue + priority queue acting together
-- Serving based on severity level
-- Using Comparable<Patient> for priority comparison
+#### Equals:
 
-**3. PriorityQueue Standalone**
-- Demonstration of built-in priority behavior
-- Polling in ascending priority order
+Works with comparisons based on values ​​and not object references.
+- **Rules:**
 
-### 7.5 Sorting Lists and Binary Search
-#### Topics covered:
-- Using Collections.sort() with Comparable
-- Using custom Comparators
-- Reversing order
-- Binary search on sorted lists
+- **Reflexive**: `x.equals(x)` must be `true` for everything that is different from `null`.
+- **Symmetric**: for `x and y ≠ null`, if `x.equals(y) == true`, then `y.equals(x) == true;`
+- **Transitivity**: for `x, y, z ≠ null`, if `x.equals(y) == true`, `x.equals(z) == true`, `y.equals(z) == true.`
+- **Consistent**: `x.equals(x)` is always `true` if `x ≠ null`
 
-#### Exercises Included:
-**1. Sorting Students**
-- Natural ordering (name)
-- Sorting by age
-- Sorting by grade (descending)
+``` java
+@Override
+public boolean equals(Object obj) {
+  if(obj == null) return false; 
+  // If the object is not null.
+  if(this == obj) return true; 
+  //If the object is equal to this.
+  if(this.getClass() != obj.getClass()) return false;
+  // If the class of this is different from the class of the passed object.
+  Smartphone smartphone = (Smartphone) obj;
+  // Casting of this compared to the object.
+  return serialNumber != null && serialNumber.equals(smartphone.serialNumber);
+}
+// Returns true if the serialNumber attribute is not null
+// And the serialNumber of this is equal to the serialNumber of the object.
+// I can have more attributes to consider in an equals.
+// -> I define what I want the comparison value to be for
+// -> one object to be equal to another (even with different addresses on the Heap)
 
-**2. Library Search (Binary Search)**
-- Sorting books
-- Searching using Collections.binarySearch()
-- Returning the located object
+```
+
+#### HashCode:
+
+**Maps values, generating numeric codes for each occurrence.**
+
+*Think of several buckets, each with its own code, and inside these buckets we have values.
+This is a summary of Hash; we index collections with numeric values for identification, helping with performance and direct value searching, without needing to iterate over large arrays.*
+
+Basically, we say, **generate a specific Hash based on this attribute; if another object has the same attribute, it will have the same Hash. The implementation is useful mainly for Hash collections.**
+
+NOTE: **HashCode must match the equals attribute.** That is, the attribute that generates a hash must be in the equals attribute and vice versa.
+
+```java
+@Override
+public int hashCode() {
+    return Objects.hash(cpf, nome); // Uses CPF and name
+}
+
+@Override
+  public boolean equals(Object obj) {
+  Pessoa outra = (Pessoa) obj;
+  return cpf.equals(outra.cpf) && nome.equals(outra.nome); // Uses CPF and name
+}
+
+```
+
+> **HashCode is like a house's ZIP code. The equals method checks the house number within that street!**
+
+*If the HashCode is not overridden, it will automatically generate based on the address in memory, which can lead to undesirable behavior in HashSets, etc.*
+
+#### Hash: Concept and Purpose:
+
+Structures like **HashSet** and **HashMap** use hash tables:
+
+- Each key (or element, in the case of HashSet) generates a **hashCode()**.
+- The hash value is processed to determine the *bucket* where the object will be stored.
+- The bucket can contain more than one entry due to collisions.
+- Since searching, inserting, and removing operate on hash positions, the average performance is **O(1)**.
+- The worst case becomes **O(log n)** when the buckets become balanced trees (Java 8+).
+- Hash-based structures **do not maintain order**.
+- They offer better performance.
+
+Therefore, duplicates are avoided through comparison:
+
+1. **Hash Code**
+2. **equals()** (for confirmation)
+
+#### HashSet:
+| Operation | Complexity | Explanation |
+| --- | --- | --- |
+| `add(E)` | **O(1)** | Hash directly to the bucket |
+| `remove(Object)` | **O(1)** | Hash directly to the bucket |
+| `contains(Object)` | **O(1)** | Hash directly to the bucket |
+| `size()` | **O(1)** | Counter attribute |
+| `isEmpty()` | **O(1)** | Check size |
+| `clear()` | **O(n)** | Clean all buckets |
+| `iterator()` | **O(1)** | Create iterator |
+| Iterar todos | **O(n)** | Cycle through n elements |
+| `addAll(Collection)` | **O(m)** | m = collection size |
+| `retainAll(Collection)` | **O(n)** | Cycle through current set |
+| `removeAll(Collection)` | **O(n)** | Cycle through current set |
+| `containsAll(Collection)` | **O(m)** | Check each element |
+
+```java
+Set<Manga> mangas = new HashSet<>();
+```
+
+#### LinkedHashSet:
+| Operation | Complexity | Explanation |
+| --- | --- | --- |
+| `add(E)` | **O(1)** | Hash + pointer adjustment |
+| `remove(Object)` | **O(1)** | Hash + pointer adjustment |
+| `contains(Object)` | **O(1)** | Hash directly to the bucket |
+| `size()` | **O(1)** | Counter attribute |
+| `isEmpty()` | **O(1)** | Checks size |
+| `clear()` | **O(n)** | Clears buckets and list |
+| `iterator()` | **O(1)** | Creates iterator |
+| Iterate all | **O(n)** | Traverses linked list |
+| `addAll(Collection)` | **O(m)** | m = collection size |
+| `retainAll(Collection)` | **O(n)** | Traverses current set |
+| `removeAll(Collection)` | **O(n)** | Traverses current set |
+| `containsAll(Collection)` | **O(m)** | Checks each element |
+
+```java
+Set<Manga> mangas = new LinkedHashSet<>();
+```
+
+#### HashMap:
+| Operation | Average Case | Worst Case | Observation |
+| --- | --- | --- |-------------------------|
+| **get(key)** | O(1) | O(log n)* | *O(n) before Java 8 |
+| **put(key, value)** | O(1) | O(log n)* | *O(n) before Java 8 |
+| **remove(key)** | O(1) | O(log n)* | *O(n) before Java 8 |
+| **containsKey(key)** | O(1) | O(log n)* | *O(n) before Java 8 |
+| **containsValue(value)** | O(n) | O(n) | Needs to iterate through all |
+| There are more methods |  |  |                         |
+
+```java
+Map<String, String> map = new HashMap<>();
+```
+
+#### LinkedHashMap:
+| Operation | Average Case | Worst Case | Observations |
+| --- | --- | --- | --- |
+| **get(key)** | O(1) | O(log n) | Same as HashMap |
+| **put(key, value)** | O(1) | O(log n) | + cost of adjusting list pointers |
+| **remove(key)** | O(1) | O(log n) | + cost of adjusting list pointers |
+| **containsKey(key)** | O(1) | O(log n) | Same as HashMap |
+| **containsValue(value)** | O(n) | O(n) | Can iterate through the sorted list |
+| **Iteration** | O(n) | O(n) | More efficient than HashMap! |
+| There are more methods |  |  |  |
+
+```java
+Map<String, String> map = new LinkedHashMap<>();
+```
+
+Hash exercises:
+- Collections.Set.HashSet
+- Collections.Map.HashMap
+- Implementations of equals() and hashCode()
+- User System via Email
 
 ---
 
-## 8. Summary
-- Using core collections (List, Set, Map, Queue)
-- Understanding structural behaviors (hashing, trees, arrays, links)
-- Performing sorting and searching
-- Handling equality and object identity
-- Navigating ordered structures
-- Modeling realistic scenarios with domain objects
-- Transitioning into advanced data-structure reasoning
+#### Tree-based structures (TreeMap, TreeSet):
 
-All exercises are paired with a ProblemQuestion.txt, and more advanced structural concepts can be explored in the dedicated Data Structures project.
+- Based on balanced trees (such as Red-Black Tree).
+
+- Maintain elements or keys in ascending order.
+
+- Operations cost **O(log n)**.
+
+An in-depth analysis of trees, hash functions, collision management, or chained representations is available in the aforementioned Data Structures project.
+
+#### TreeMap:
+| Operation | Complexity | Observations |
+| --- | --- | --- |
+| **get(key)** | O(log n) | Descends the tree comparing keys |
+| **put(key, value)** | O(log n) | Inserts and rebalances |
+| **remove(key)** | O(log n) | Removes and rebalances |
+| **containsKey(key)** | O(log n) | Searches the tree |
+| **containsValue(value)** | O(n) | Requires traversing all nodes |
+| **firstKey() / lastKey()** | O(log n) | Goes to the end of the tree |
+| **lowerKey() / higherKey()** | O(log n) | Navigates the tree |
+| **subMap() / headMap() / tailMap()** | O(log n) | Creates a view, does not copy |
+| **Full iteration** | O(n) | Traverses all elements in order |
+
+```java
+NavigableMap<String, String> map = new TreeMap<>();
+```
+
+#### TreeSet:
+| Operation | Complexity | Observations |
+| --- | --- | --- |
+| **add(element)** | O(log n) | Inserts and rebalances the tree |
+| **remove(element)** | O(log n) | Removes and rebalances the tree |
+| **contains(element)** | O(log n) | Searches the tree |
+| **first() / last()** | O(log n) | Goes to the end of the tree |
+| **lower() / higher()** | O(log n) | Navigates the tree |
+| **floor() / ceiling()** | O(log n) | Searches for the largest ≤ or smallest ≥ |
+| **pollFirst() / pollLast()** | O(log n) | Removes and returns the end |
+| **subSet() / headSet() / tailSet()** | O(log n) | Creates a view, does not copy |
+| **size()** | O(1) | Maintains internal counter |
+| **isEmpty()** | O(1) | Checks if size == 0 |
+| **clear()** | O(n) | Removes all elements |
+| **Full iteration** | O(n) | Iterates through all elements in ascending order |
+| **descendingSet()** | O(1) | Returns reverse view |
+| **descendingIterator()** | O(1) | Creates reverse iterator (O(n) iteration) |
+
+```java
+NavigableSet<Smartphone> set = new TreeSet<>();
+```
 
 ---
+
+### 6. Summary:
+
+The Collections module provides a complete practical foundation for using the core structures, understanding performance, sorting, searching, object equality, navigation, and modeling real-world scenarios.
+
+Understanding the data structures present in the Collections API is fundamental for developing scalable and high-performing applications.
