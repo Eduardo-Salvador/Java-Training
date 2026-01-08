@@ -13,7 +13,7 @@
 ## Requirements
 All problem descriptions are in their respective folders (ProblemQuestion.txt).
 
-There is a class for generating numeric objects; although primitive variables exist, the goal is to use it as an auxiliary object, since it can be reused in all the exercises involved (OOP concept).
+There is a class for generating numeric objects, although primitive variables exist, the goal is to use it as an auxiliary object, since it can be reused in all the exercises involved (OOP concept).
 
 ---
 

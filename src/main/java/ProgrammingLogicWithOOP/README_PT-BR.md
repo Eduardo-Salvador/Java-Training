@@ -14,7 +14,7 @@
 ## Requisitos
 Todas as descrições dos problemas estão em suas respectivas pastas (ProblemQuestion.txt).
 
-Existe uma classe para gerar objetos numéricos; embora existam variáveis, o objetivo é usá-la como um objeto auxiliar, já que pode ser reutilizada em todos os exercícios envolvidos (Conceito de OOP).
+Existe uma classe para gerar objetos numéricos, embora existam variáveis, o objetivo é usá-la como um objeto auxiliar, já que pode ser reutilizada em todos os exercícios envolvidos (Conceito de OOP).
 
 ---
 
