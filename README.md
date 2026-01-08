@@ -46,7 +46,7 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 ## Collections:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README_PT-BR.md)
 
 ## Data Structure in Java:
 

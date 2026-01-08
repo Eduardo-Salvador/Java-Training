@@ -66,6 +66,18 @@ public static void printAnimalSounds(List<? extends Animal> animalList){
 }
 ```
 
+### 1.2 `? super T` - Wildcard with lower bound
+Used when you want to insert objects.
+
+#### Example:
+
+```java
+public static void add(List<? super Animal> animals, Animal a){
+    animals.add(a);
+} // -> Anything that is specifically Animal (Animal a = new Dog()) or above it.
+
+```
+
 #### Usage:
 - Consume values
 - Prevent unsafe insertion of subclasses

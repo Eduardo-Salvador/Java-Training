@@ -41,8 +41,25 @@ List<? super String>;
 - **App** → Inicializa a aplicação.
 
 ---
+### 1. Wildcards em Generics
 
-.
+Os coringas (`?`) permitem flexibilidade controlada ao trabalhar com tipos relacionados.
+
+Também chamado de caractere curinga, ele utiliza conceitos como polimorfismo.
+
+### 1.1 `? extends T` — Wildcard com Limite Superior
+Usado para ler objetos do tipo `T` ou subclasses.
+
+#### Exemplos:
+```java
+public static void printAnimalSounds(List<? extends Animal> animalList){
+for (Animal a : animalList){
+    System.out.println(a);
+    a.makeSound();
+    } // -> Tudo que estende (É um) Animal. (Dog dog = new Dog())
+}
+```
+
 ### 1.2 `? super T` — Lower-Bounded Wildcard
 Usado quando se deseja inserir objetos.
 
