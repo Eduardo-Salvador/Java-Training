@@ -1,39 +1,36 @@
-package StudyChallenges.Hospital_PriorityQueue.Controller;
-import StudyChallenges.Hospital_PriorityQueue.Domain.Patient;
+package Collections.Queues.Queue.Controller;
 import Collections.Queues.Queue.Domain.Client;
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class PatientManager implements Queue<Client> {
+public class ClientManager implements Queue<Client> {
     private final Queue<Client> queue = new LinkedList<>();
 
-    public static void service(Queue<Patient> normalQueue, PriorityQueue<Patient> priorityQueue){
-        System.out.println("Actual Queue:");
-        if (!priorityQueue.isEmpty()){
-            priorityQueue.forEach(System.out::println);
-        }
-        normalQueue.forEach(System.out::println);
-        System.out.println("-----------------------------");
-        if (priorityQueue.isEmpty()){
-            System.out.println("Performing normal service: ");
-            System.out.println(normalQueue.poll());
-            System.out.println("Service provided");
-            System.out.println("-----------------------------");
-            return;
-        }
-        System.out.println("Performing priority service: ");
-        System.out.println(priorityQueue.poll());
-        System.out.println("Service provided");
-        System.out.println("-----------------------------");
+    public static void serveCustomer(Queue<Client> queue){
+        System.out.println("Actual Queue: ");
+        queue.forEach(System.out::println);
+        System.out.println("----------------------");
+        System.out.println("Providing service and releasing");
+        System.out.println(queue.poll());
+        System.out.println("Completed");
+        System.out.println("----------------------");
+        System.out.println("New Queue: ");
+        queue.forEach(System.out::println);
     }
 
-    public static void addPatient(Queue<Patient> normalQueue, PriorityQueue<Patient> priorityQueue, Patient p){
-        if(p.getPriority() > 0){
-            priorityQueue.add(p);
-            System.out.println("Add in priority!");
-            return;
-        }
-        System.out.println("Add in normal!");
-        normalQueue.add(p);
+    public static void viewNextCustomer(Queue<Client> queue){
+        System.out.println("Next Customer: ");
+        System.out.println(queue.peek());
+    }
+
+    public static void clearQueue(Queue<Client> queue){
+        System.out.println("Cleaning Queue");
+        queue.clear();
+        System.out.println("Done!");
+        System.out.println("Queue:");
+        queue.forEach(System.out::println);
     }
 
     @Override
