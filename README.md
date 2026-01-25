@@ -39,6 +39,10 @@ Basic programming language concepts: Variables, Conditional Structures, Loops, C
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Generics/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Generics/README_PT-BR.md)
 
+## Exceptions:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Exceptions/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Exceptions/README_PT-BR.md)
+
 ## Seminar System:
 Challenge of Programming Logic with basic concepts to Object-Oriented Programming, Simple Architecture and [Generics](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md)
 
@@ -51,10 +55,6 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 ## Data Structure in Java:
 
 [Click here for open the Project for Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)
-
-## Exceptions:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Exceptions/README_PT-BR.md)
 
 ## Lambdas:
 
