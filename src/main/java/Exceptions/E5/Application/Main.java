@@ -1,5 +1,5 @@
 package Exceptions.E5.Application;
-import Exceptions.E5.Controller.WriteText;
+import Exceptions.E5.Services.WriteText;
 
 public class Main {
     public static void main(String[] args) {

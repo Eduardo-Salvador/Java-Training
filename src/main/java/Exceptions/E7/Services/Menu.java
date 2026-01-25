@@ -1,4 +1,4 @@
-package Exceptions.E7.Controller;
+package Exceptions.E7.Services;
 import Exceptions.E7.Domain.BalanceInsufficientException;
 import Exceptions.E7.Domain.BankAccount;
 import java.util.Scanner;

@@ -1,3 +1,9 @@
 Try-with-resources:
 Write a program to write text to a file using `BufferedWriter` within a try-with-resources block.
 Test by making the file inaccessible to generate an exception and handle it.
+
+----------------------------------------------------------
+
+Try-with-resources:
+Escreva um programa para escrever texto em um arquivo usando BufferedWriter dentro de um bloco try-with-resources.
+Teste tornando o arquivo inacessível para gerar uma exceção e tratá-la.

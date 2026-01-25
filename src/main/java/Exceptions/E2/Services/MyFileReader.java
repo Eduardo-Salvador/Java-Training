@@ -1,4 +1,4 @@
-package Exceptions.E2.Controller;
+package Exceptions.E2.Services;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,2 +1,9 @@
 Creating a custom exception:
-Define a custom exception called `InvalidAgeException`. Create a `Person` class that throws this exception if the age is less than 0 or greater than 120.
+Define a custom exception called InvalidAgeException.
+Create a `Person` class that throws this exception if the age is less than 0 or greater than 120.
+
+-------------------------------------------------------------
+
+Criando uma exceção personalizada:
+Defina uma exceção personalizada chamada InvalidAgeException.
+Crie uma classe Person que lance essa exceção se a idade for menor que 0 ou maior que 120.

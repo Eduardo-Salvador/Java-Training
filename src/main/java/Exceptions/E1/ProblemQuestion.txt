@@ -1,2 +1,9 @@
 Basic exception handling:
-Create a program that throws and catches an `ArithmeticException` when attempting to divide a number by zero. Print a friendly message when the exception is caught.
+Create a program that throws and catches an ArithmeticException when attempting to divide a number by zero.
+Print a friendly message when the exception is caught.
+
+-------------------------------------------------------------------
+
+Tratamento básico de exceções:
+Crie um programa que lance e capture uma exceção ArithmeticException ao tentar dividir um número por zero.
+Imprima uma mensagem amigável quando a exceção for capturada.

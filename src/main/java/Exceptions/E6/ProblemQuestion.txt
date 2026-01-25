@@ -1,3 +1,11 @@
 Using AutoCloseable:
-Create a class that implements `AutoCloseable`, with some dummy resource (e.g., a mock connection). In the `close()`
-method, print an informative message. Use this class in a try-with-resources statement to ensure proper closing.
+Create a class that implements AutoCloseable, with some dummy resource (e.g., a mock connection).
+In the close() method, print an informative message.
+Use this class in a try-with-resources statement to ensure proper closing.
+
+---------------------------------------------------------
+
+Usando AutoCloseable:
+Crie uma classe que implemente AutoCloseable, com algum recurso fictício (por exemplo, uma conexão simulada).
+No método close(), imprima uma mensagem informativa.
+Use esta classe em um bloco try-with-resources para garantir o fechamento correto.

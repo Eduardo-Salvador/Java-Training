@@ -1,4 +1,4 @@
-package Exceptions.E6.Controller;
+package Exceptions.E6.Services;
 import Exceptions.E6.Domain.MockConnection;
 import java.util.InputMismatchException;
 import java.util.Scanner;

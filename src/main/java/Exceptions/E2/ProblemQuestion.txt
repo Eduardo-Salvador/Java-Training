@@ -1,2 +1,9 @@
 Checked vs. Unchecked:
-Implement a method that reads a file using `FileReader`. Handle checked exceptions like `FileNotFoundException` and `IOException` appropriately.
+Implement a method that reads a file using FileReader.
+Handle checked exceptions like FileNotFoundException and IOException appropriately.
+
+---------------------------------------------------------------------
+
+Exceções verificadas vs. não verificadas:
+Implemente um método que leia um arquivo usando FileReader.
+Trate exceções verificadas como FileNotFoundException e IOException adequadamente.

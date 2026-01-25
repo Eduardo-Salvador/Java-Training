@@ -1,5 +1,5 @@
 package Exceptions.E6.Application;
-import Exceptions.E6.Controller.Connection;
+import Exceptions.E6.Services.Connection;
 
 public class Main {
     public static void main(String[] args) {

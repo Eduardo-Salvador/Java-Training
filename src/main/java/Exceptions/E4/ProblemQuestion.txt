@@ -1,3 +1,7 @@
 Try-catch-finally:
-Implement code that opens a resource (e.g., a file) within the try block,
-catches any exceptions, and ensures the resource is always closed in the finally block, printing messages for each step.
+Implement code that opens a resource (e.g., a file) within the try block, catches any exceptions, and ensures the resource is always closed in the finally block, printing messages for each step.
+
+-----------------------------------------------------------------------
+
+Try-catch-finally:
+Implemente um código que abra um recurso (por exemplo, um arquivo) dentro do bloco try, capture quaisquer exceções e assegure que o recurso seja sempre fechado no bloco finally, imprimindo mensagens para cada etapa.

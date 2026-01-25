@@ -1,4 +1,4 @@
-package Exceptions.E3.Controller;
+package Exceptions.E3.Services;
 import Exceptions.E3.Domain.InvalidAgeException;
 import Exceptions.E3.Domain.PersonAge;
 import java.util.Scanner;
