@@ -16,3 +16,24 @@ Generate 5 tickets with random codes (e.g., “T001”, “T002”…).
 Store them in a List.
 Display all tickets with their codes and prices.
 Calculate and display the total revenue if all tickets are sold.
+
+--------------------------------------------------------
+
+Gerenciamento de Ingressos para Eventos:
+Crie um programa para gerenciar ingressos para um evento usando classes locais.
+
+Requisitos:
+Crie uma classe Event com:
+eventName (String)
+maxTickets (Integer)
+
+No método generateTickets():
+Declare uma classe local Ticket com:
+code (String)
+price (Double)
+
+Dentro do método:
+Gere 5 ingressos com códigos aleatórios (por exemplo, “T001”, “T002”...).
+Armazene-os em uma lista.
+Exiba todos os ingressos com seus códigos e preços.
+Calcule e exiba a receita total se todos os ingressos forem vendidos.

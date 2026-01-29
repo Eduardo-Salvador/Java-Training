@@ -1,0 +1,43 @@
+Library Management System with Static Inner Classes:
+Create a main class called Library that represents a library.
+
+Requirements:
+Within the Library class, create a static inner class called Book with the attributes:
+title (String)
+author (String)
+year (Integer)
+The Book class should have a method that displays the book information in a readable format.
+In the main class, create a list of Book objects and add at least three different books.
+Iterate over the list and display the information for each book.
+
+Extra Challenge:
+Create another static inner class called Statistics inside Library.
+
+This class should have methods to:
+Count how many books are in the list.
+Calculate the average number of years of publication of the books.
+In the main method, use this class to display these statistics.
+
+--------------------------------------------------------
+
+Sistema de Gerenciamento de Biblioteca com Classes Internas Estáticas:
+Crie uma classe principal chamada Biblioteca que represente uma biblioteca.
+
+Requisitos:
+Dentro da classe Biblioteca, crie uma classe interna estática chamada Livro com os atributos:
+título (String)
+autor (String)
+ano (Integer)
+A classe Livro deve ter um método que exiba as informações do livro em um formato legível.
+
+Na classe principal, crie uma lista de objetos Livro e adicione pelo menos três livros diferentes.
+Itere sobre a lista e exiba as informações de cada livro.
+
+Desafio Extra:
+Crie outra classe interna estática chamada Estatísticas dentro da Biblioteca.
+
+Esta classe deve ter métodos para:
+Contar quantos livros estão na lista.
+Calcular a média de anos de publicação dos livros.
+
+No método principal, use esta classe para exibir essas estatísticas.

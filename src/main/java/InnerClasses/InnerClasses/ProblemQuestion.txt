@@ -18,3 +18,27 @@ Search for a student by registration number.
 Remove a student by registration number.
 Display the total number of students.
 The Student class should have access to the university name when printing student details.
+
+---------------------------------------
+
+Exercício: Matrícula de Estudantes Universitários:
+Crie um programa para gerenciar a matrícula de estudantes em uma universidade usando classes internas.
+
+Requisitos:
+Crie uma classe University com:
+nome (String)
+cidade (String)
+Dentro de University, crie uma classe interna Student com:
+nome (String)
+número de matrícula (String)
+curso (String)
+
+No programa principal:
+Crie um objeto University.
+
+Adicione 5 estudantes usando a classe interna Student.
+Exiba todos os estudantes matriculados (mostrando o número de matrícula e o curso).
+Busque um estudante pelo número de matrícula.
+Remova um estudante pelo número de matrícula.
+Exiba o número total de estudantes.
+A classe Student deve ter acesso ao nome da universidade ao imprimir os detalhes do estudante.

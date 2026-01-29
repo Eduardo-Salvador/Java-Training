@@ -3,12 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Event {
-    private String eventName;
-    private Integer maxTickets;
-
     public Event(String eventName, Integer maxTickets) {
-        this.eventName = eventName;
-        this.maxTickets = maxTickets;
     }
 
     public void generateTickets() {
@@ -29,7 +24,7 @@ public class Event {
                         '}';
             }
 
-            public static void sellAll(List<Ticket> tickets){
+            public static void sellAll(final List<Ticket> tickets){
                 Double sum = 0D;
                 for (Ticket t : tickets) {
                     sum += t.price;

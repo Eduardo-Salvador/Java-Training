@@ -39,4 +39,48 @@ Iterate through the list and call the send() method for each notification.
 
 Extra challenge (optional):
 Create an abstract class Alert with an abstract method execute().
-Create two different anonymous classes that inherit from Alert and print distinct messages. Run both without creating named subclasses.
+Create two different anonymous classes that inherit from Alert and print distinct messages.
+Run both without creating named subclasses.
+
+--------------------------------
+
+Sistema de Notificação de Eventos:
+Crie um programa que simule um sistema simples de notificação de eventos, utilizando classes anônimas.
+
+Requisitos:
+Crie uma interface chamada Notifier com um método:
+void notifyUser(String message);
+
+No programa principal:
+Crie uma classe chamada Event com os atributos:
+private String name;
+private String date;
+e um construtor para inicializá-los.
+
+No método principal:
+Crie uma lista de 3 eventos.
+Para cada evento, crie uma classe anônima que implemente a interface Notifier e imprima uma mensagem como:
+[Email] Novo evento registrado: Conferência de Tecnologia - 25/11/2025 ou [SMS] Lembrete de evento: Hackathon - 30/11/2025
+Simule o envio de notificações usando diferentes tipos (por exemplo, E-mail, SMS, Push) — todas utilizando classes anônimas (sem subclasses nomeadas).
+Imprima todas as notificações enviadas.
+
+--------------------------------------------------------------------------
+
+Classe Anônima com Herança:
+Crie um sistema simples de gerenciamento de notificações internas para uma empresa.
+Crie uma classe chamada Notification com os atributos:
+message (String)
+priority (Integer)
+
+Adicione um método send() que simplesmente imprima:
+Enviando notificação: <mensagem> (Prioridade: <priority>)
+No método main, crie duas instâncias de classes anônimas baseadas em Notification, sobrescrevendo o método send() para comportamentos diferentes:
+Uma notificação crítica do sistema, que imprime todo o texto em maiúsculas.
+Uma notificação comum para o usuário, que adiciona o nome do usuário ao final da mensagem.
+Crie uma lista de classes Notification e adicione ambas as instâncias.
+Itere pela lista e chame o método send() para cada notificação.
+
+Desafio extra (opcional):
+Crie uma classe abstrata Alert com um método abstrato execute().
+Crie duas classes anônimas diferentes que herdem de Alert e imprimam mensagens distintas.
+Execute ambas sem criar subclasses nomeadas.

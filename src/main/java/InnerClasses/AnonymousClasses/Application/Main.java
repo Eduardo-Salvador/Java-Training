@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         List<Event> events = new ArrayList<>();
         events.add(new Event("Tech Conference", "25/11/2025"));
-        events.add(new Event("Hackathon ", "30/11/2025"));
+        events.add(new Event("Hackathon", "30/11/2025"));
         events.add(new Event("Dev Summit", "10/12/2025"));
         events.add(new Event("AI Workshop", "15/12/2025"));
         events.add(new Event("Cloud Expo", "20/12/2025"));
