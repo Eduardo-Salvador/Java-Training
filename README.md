@@ -56,9 +56,21 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for open the Project for Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)
 
+## Inner Classes:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/InnerClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/InnerClasses/README_PT-BR.md)
+
+## Parameterizing Behaviors:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md)
+
 ## Lambdas:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README_PT-BR.md)
+
+## Method Reference:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md)
 
 ## Optional:
 
@@ -71,18 +83,6 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 ## Utility Classes:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
-
-## Inner Classes:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/InnerClasses/README_PT-BR.md)
-
-## Parameterizing Behaviors:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md)
-
-## Method Reference:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md)
 
 ## Pet Adoption System (CLI) 
 First Major Learning Challenge: 
