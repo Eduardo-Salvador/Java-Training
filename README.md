@@ -62,7 +62,7 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 ## Parameterizing Behaviors:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/ParameterizingBehaviors/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ParameterizingBehaviors/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ParameterizingBehaviors/README_PT-BR.md)
 
 ## Lambdas:
 
