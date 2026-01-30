@@ -1,26 +1,101 @@
-# Comportamentos Parametrizados
+<div align="center">
+
+[![Generic badge](https://img.shields.io/badge/STATUS-FINALIZADO-<COLOR>.svg)](https://shields.io/)
+
+# Parametrizando Comportamentos:
+
+Este módulo oferece uma introdução abrangente às Comportamentos Parametrizando.
+O objetivo é proporcionar uma compreensão prática de como os comportamentos parametrizados tornam o código mais flexível, permitindo que você passe comportamentos (lógica/ação) como parâmetro para métodos.
+
+## Tecnologias
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
 
 ---
 
-## Overview
-Este módulo contém um exercício demonstrando o uso de **Comportamentos Parametrizados** em Java, aplicando o padrão Strategy para representar diferentes formas de pagamento.  
+## Visão Geral
+Este módulo contém um exercício demonstrando o uso de **Comportamentos Parametrizados** em Java.  
 A ideia é mostrar como parametrizar comportamentos dinamicamente, evitando condicionais rígidas e permitindo maior flexibilidade no código.
 
-**Breve explicação:**  
-O padrão Strategy define uma família de algoritmos, encapsula cada um deles e os torna intercambiáveis.  
-Neste exercício, diferentes estratégias de pagamento são implementadas como comportamentos parametrizados, aplicando descontos específicos conforme o valor.
+---
 
+## Arquitetura
 O exercício está organizado em três pacotes principais:
 - **Domain** — contém a interface `PaymentStrategy`  
-- **Controller** — contém a classe `PaymentProcessor` responsável por processar pagamentos  
+- **Services** — contém a classe `PaymentProcessor` responsável por processar pagamentos  
 - **Application** — contém a classe `Main` demonstrando o uso das estratégias de pagamento  
 Há também um arquivo **ProblemQuestion.txt** com o enunciado original do problema.
 
 ---
 
-## Folder Structure
+## 1. O que são Comportamentos Parametrizados
+É a **base de programação funcional e das Streams do Java 8+**
 
-### 1. ParameterizingBehaviors.Domain
+Parametrização de comportamentos serve para ***tornar código mais flexível, permitindo que você passe comportamentos (lógica/ação) como parâmetro para métodos***, ao invés de apenas dados.
+
+### 1.1. Principais utilidades:
+
+**Reutilização de código** - Um único método pode ter comportamentos diferentes sem duplicação de código.
+
+**Flexibilidade** - Você define o "o quê fazer" no momento da chamada, não quando escreve o método.
+
+**Elimina condicionais** - Ao invés de vários `if/else` para diferentes comportamentos, você passa a lógica diretamente.
+
+### 1.2. Usa-se interfaces funcionais para fazer a parametrização de comportamentos:
+
+```java
+// Predicate<T> - recebe T, retorna boolean (testes/filtros)
+Predicate<Integer> ehPar = n -> n % 2 == 0;
+boolean resultado = ehPar.test(4); // true
+
+// Consumer<T> - recebe T, não retorna nada (ações)
+Consumer<String> imprimir = s -> System.out.println(s);
+imprimir.accept("Olá"); // imprime "Olá"
+
+// Function<T, R> - recebe T, retorna R (transformações)
+Function<String, Integer> tamanho = s -> s.length();
+int tam = tamanho.apply("Java"); // 4
+
+// Supplier<T> - não recebe nada, retorna T (geração de valores)
+Supplier<Double> aleatorio = () -> Math.random();
+double valor = aleatorio.get(); // número aleatório
+
+// BiFunction<T, U, R> - recebe T e U, retorna R
+BiFunction<Integer, Integer, Integer> somar = (a, b) -> a + b;
+int soma = somar.apply(5, 3); // 8
+
+// Comparator<T> - compara dois objetos
+Comparator<Produto> porPreco = (p1, p2) -> p1.getPreco().compareTo(p2.getPreco());
+```
+
+### Você também pode criar suas próprias interfaces funcionais:
+
+```java
+@FunctionalInterface
+public interface Calculadora {
+    double calcular(double a, double b);
+}
+
+// Uso
+public double executar(double x, double y, Calculadora calc) {
+    return calc.calcular(x, y);
+}
+
+executar(10, 5, (a, b) -> a + b); // soma = 15
+executar(10, 5, (a, b) -> a * b); // multiplicação = 50
+executar(10, 5, (a, b) -> a - b); // subtração = 5
+```
+
+> Você define uma **interface com um método (parâmetro)**, e passa a **implementação desse método como lambda, classe anônima ou referência** no momento que precisa. 
+
+- `Predicate`  e outras são só uma das interfaces prontas que o Java oferece!
+
+---
+
+## 2. Estrutura do Exercício:
+
+### 2.1. ParameterizingBehaviors.Domain
 Contém a interface que define o contrato para as estratégias de pagamento.
 
 **Interface: PaymentStrategy**
@@ -29,7 +104,7 @@ Contém a interface que define o contrato para as estratégias de pagamento.
 
 ---
 
-### 2. ParameterizingBehaviors.Controller
+### 2.2. ParameterizingBehaviors.Services
 Contém a classe responsável por processar pagamentos usando uma estratégia fornecida.
 
 **Class: PaymentProcessor**
@@ -39,7 +114,7 @@ Contém a classe responsável por processar pagamentos usando uma estratégia fo
 
 ---
 
-### 3. ParameterizingBehaviors.Application
+### 2.3. ParameterizingBehaviors.Application
 Demonstra múltiplos cenários reais de uso de comportamentos parametrizados.
 
 **Class: Main**
@@ -62,42 +137,17 @@ Executa diferentes estratégias de pagamento:
 - Iteração sobre uma lista de estratégias (`List<PaymentStrategy>`)  
 - Execução de múltiplos pagamentos com diferentes comportamentos parametrizados  
 
----
-
-## Purpose
-- Ensinar o uso de comportamentos parametrizados com Strategy  
-- Demonstrar boas práticas para evitar condicionais rígidas  
-- Mostrar como encapsular diferentes lógicas de negócio em estratégias independentes  
-- Incentivar design modular e extensível  
+> Foi aplicado as duas formas de usar os comportamentos: via Lambdas (próximo tópico do projeto no Github) e via Classes Anônimas.
 
 ---
 
-## Files Included
-- **Domain/PaymentStrategy.java**  
-- **Controller/PaymentProcessor.java**  
-- **Application/Main.java**  
-- **ProblemQuestion.txt**
-
----
-
-## How to Run
-1. Navegue até a pasta **ParameterizingBehaviors/Application**  
-2. Execute a classe **Main**  
-3. Observe a saída no console mostrando os diferentes comportamentos de pagamento e descontos aplicados  
-
----
-
-## Requirements
-- **Java 17+**  
-- Conhecimento básico de interfaces e POO  
-- Familiaridade com listas e laços de repetição  
-
----
-
-## Notes
-- Uso consistente do padrão Strategy para parametrizar comportamentos  
-- Evita condicionais fixas e repetitivas  
-- Demonstra como diferentes estratégias podem ser aplicadas dinamicamente  
-- Mostra claramente como o design orientado a objetos facilita extensibilidade e manutenção  
+## 3. Resumo: 
+- Uso de diferentes formas de parametro de comportamento.
+- Demonstrar boas práticas para evitar condicionais rígidas.
+- Mostrar como encapsular diferentes lógicas de negócio em estratégias independentes. 
+- Incentivar design modular e extensível.
+- Evita condicionais fixas e repetitivas. 
+- Demonstra como diferentes estratégias podem ser aplicadas dinamicamente.
+- Mostra claramente como o design orientado a objetos facilita extensibilidade e manutenção.
 
 ---

@@ -4,9 +4,7 @@ Create a class called PaymentProcessor that will be responsible for processing d
 Requirements:
 Define a functional interface called PaymentStrategy with a single method:
 void pay(double amount);
-In the PaymentProcessor class, create a method called processPayment(double amount, PaymentStrategy strategy)
-that delegates the payment behavior to the strategy received as a parameter.
-
+In the PaymentProcessor class, create a method called processPayment(double amount, PaymentStrategy strategy) that delegates the payment behavior to the strategy received as a parameter.
 In the main method, create different payment strategies using lambda expressions or anonymous classes, for example:
 Credit Card Payment (prints: "Payment of <amount> with credit card").
 Pix Payment (prints: "Payment of <amount> via Pix").
@@ -16,3 +14,22 @@ Test the system by calling processPayment with different values and strategies.
 Extra Challenge:
 Create a list of different payment strategies and iterate over it, processing the same amount with each one.
 Add a strategy that applies a discount before making the payment.
+
+------------------------------------------------------------------
+
+Sistema de Processamento de Pagamentos com Parametrização de Comportamento:
+Crie uma classe chamada PaymentProcessor que será responsável por processar diferentes métodos de pagamento.
+
+Requisitos:
+Defina uma interface funcional chamada PaymentStrategy com um único método:
+void pay(double amount);
+Na classe PaymentProcessor, crie um método chamado processPayment(double amount, PaymentStrategy strategy) que delega o comportamento do pagamento à estratégia recebida como parâmetro.
+No método main, crie diferentes estratégias de pagamento usando expressões lambda ou classes anônimas, por exemplo:
+Pagamento com Cartão de Crédito (imprime: "Pagamento de <valor> com cartão de crédito").
+Pagamento Pix (imprime: "Pagamento de <valor> via Pix").
+Pagamento com Comprovante Bancário (imprime: "Pagamento de <valor> com comprovante bancário").
+Teste o sistema chamando processPayment com diferentes valores e estratégias.
+
+Desafio Extra:
+Crie uma lista de diferentes estratégias de pagamento e itere sobre ela, processando o mesmo valor com cada uma.
+Adicione uma estratégia que aplique um desconto antes de efetuar o pagamento.
