@@ -66,7 +66,7 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 ## Lambdas:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Lambdas/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Lambdas/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Lambdas/README_PT-BR.md)
 
 ## Method Reference:
 
