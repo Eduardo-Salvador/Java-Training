@@ -18,6 +18,36 @@ Mapping with Function:
 Implement a method mapProducts(List<Product> products, Function<Product, String> mapper) that accepts a list and a Function.
 This method should return a new List<String> where each element is the result of applying the mapping function to the original product.
 In the main method, use a lambda expression with this method to generate and print a list containing only the names of all products in uppercase letters.
+
 Chaining Operations (Extra Challenge):
 Combine the filtering and mapping logic.
-Use a stream pipeline (or chained calls to your methods) to get a list of the uppercase names of all products priced over R$ 50.00. Print the final list.
+Use a stream pipeline (or chained calls to your methods) to get a list of the uppercase names of all products priced over R$ 50.00.
+Print the final list.
+
+--------------------------------------------------
+
+Gerenciamento de Estoque de Produtos com Predicado e Função:
+Objetivo: Utilizar expressões lambda com as interfaces funcionais Predicate e Function para filtrar e modificar uma lista de produtos.
+
+Requisitos:
+Classe Produto: Criar uma classe chamada Produto com os atributos:
+nome (String)
+preço (Double)
+
+Implementação da Classe Principal:
+No método principal, criar um ArrayList de objetos Produto, adicionando vários produtos de exemplo.
+
+Filtragem com Predicate:
+Implementar um método filterProducts(List<Produto> produtos, Predicate<Produto> condição) que aceita uma lista e um Predicate.
+Este método deve retornar uma nova lista contendo apenas os produtos que satisfazem a condição fornecida.
+No método principal, utilizar uma expressão lambda com este método para filtrar e imprimir apenas os produtos com preço superior a R$ 50,00.
+
+Mapeamento com Function:
+Implementar um método mapProducts(List<Produto> produtos, Function<Produto, String> mapeador) que aceita uma lista e uma Function.
+Este método deve retornar uma nova List<String> onde cada elemento é o resultado da aplicação da função de mapeamento ao produto original.
+No método principal, use uma expressão lambda com este método para gerar e imprimir uma lista contendo apenas os nomes de todos os produtos em letras maiúsculas.
+
+Encadeamento de Operações (Desafio Extra):
+Combine a lógica de filtragem e mapeamento.
+Use um pipeline de fluxo (ou chamadas encadeadas aos seus métodos) para obter uma lista com os nomes em maiúsculas de todos os produtos com preço acima de R$ 50,00.
+Imprima a lista final.

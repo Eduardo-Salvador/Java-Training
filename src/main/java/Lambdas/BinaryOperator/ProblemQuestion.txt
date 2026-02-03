@@ -1,0 +1,37 @@
+BinaryOperator - Inventory Merge System
+Create a class called Warehouse with the following attributes:
+location (String)
+stock (Integer)
+
+Requirements:
+In the main class, create two lists of warehouses (warehouseA and warehouseB) representing different storage locations with stock quantities.
+Create a utility method called mergeStock(List<Warehouse> warehouseA, List<Warehouse> warehouseB, BinaryOperator<Integer> mergeOperation) that receives:
+Two lists of warehouses (assume same locations in both lists).
+A BinaryOperator<Integer> that defines how to merge the stock values.
+The method should return a new list with merged stock values.
+In the main method, use lambda expressions to create different BinaryOperator<Integer> and test the method:
+Sum stocks from both warehouses: (stock1, stock2) -> stock1 + stock2
+Keep the maximum stock: (stock1, stock2) -> Math.max(stock1, stock2)
+Keep the minimum stock: (stock1, stock2) -> Math.min(stock1, stock2)
+Calculate average stock: (stock1, stock2) -> (stock1 + stock2) / 2
+Display the merged results in the console.
+
+-------------------------------------------
+
+BinaryOperator - Sistema de Mesclagem de Inventário
+Crie uma classe chamada Warehouse com os seguintes atributos:
+location (String)
+stock (Integer)
+
+Requisitos:
+Na classe principal, crie duas listas de armazéns (warehouseA e warehouseB) representando diferentes locais de armazenamento com quantidades de estoque.
+Crie um método utilitário chamado mergeStock(List<Warehouse> warehouseA, List<Warehouse> warehouseB, BinaryOperator<Integer> mergeOperation) que recebe:
+Duas listas de armazéns (assuma as mesmas localizações em ambas as listas).
+Um BinaryOperator<Integer> que define como mesclar os valores de estoque.
+O método deve retornar uma nova lista com os valores de estoque mesclados.
+No método main, use expressões lambda para criar diferentes BinaryOperator<Integer> e testar o método:
+Somar estoques de ambos os armazéns: (stock1, stock2) -> stock1 + stock2
+Manter o estoque máximo: (stock1, stock2) -> Math.max(stock1, stock2)
+Manter o estoque mínimo: (stock1, stock2) -> Math.min(stock1, stock2)
+Calcular estoque médio: (stock1, stock2) -> (stock1 + stock2) / 2
+Exibir os resultados mesclados no console.

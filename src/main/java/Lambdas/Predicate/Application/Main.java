@@ -14,24 +14,24 @@ public class Main {
         List<Employee> list = new ArrayList<>(List.of(e1, e2, e3, e4, e5));
 
         System.out.println("Salary > 5000:");
-        Employee.filterEmployee(list, employee -> employee.getSalary() > 5000D);
+        Employee.filterEmployees(list, e -> e.getSalary() > 5000D);
         System.out.println("----------------------------");
 
         System.out.println("Age > 30:");
-        Employee.filterEmployee(list, employee -> employee.getAge() > 30);
+        Employee.filterEmployees(list, e -> e.getAge() > 30);
         System.out.println("----------------------------");
 
         System.out.println("Name starts A:");
-        Employee.filterEmployee(list, employee -> employee.getName().charAt(0) == 'A');
+        Employee.filterEmployees(list, e -> e.getName().charAt(0) == 'A');
         System.out.println("----------------------------");
 
         System.out.println("Name starts E and Salary > 10.000:");
-        Employee.filterEmployee(list, (employee -> employee.getName().charAt(0) == 'E' && employee.getSalary() > 10000));
+        Employee.filterEmployees(list, (e -> e.getName().charAt(0) == 'E' && e.getSalary() > 10000));
         System.out.println("----------------------------");
 
         Predicate<Employee> highSalary = e -> e.getSalary() > 10000;
         System.out.println("Salary < 10.000:");
-        Employee.filterEmployee(list, highSalary.negate());
+        Employee.filterEmployees(list, highSalary.negate());
         System.out.println("----------------------------");
     }
 }

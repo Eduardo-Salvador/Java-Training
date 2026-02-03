@@ -1,12 +1,11 @@
 package Lambdas.Predicate.Domain;
-
 import java.util.List;
 import java.util.function.Predicate;
 
 public class Employee {
-    private String name;
-    private Integer age;
-    private Double salary;
+    private final String name;
+    private final Integer age;
+    private final Double salary;
 
     public String getName() {
         return name;
@@ -31,7 +30,7 @@ public class Employee {
         return name + " - Age: " + age + " - Salary: $" + salary;
     }
 
-    public static void filterEmployee(List<Employee> list, Predicate<Employee> condition){
+    public static void filterEmployees(List<Employee> list, Predicate<Employee> condition){
         for(Employee e : list){
             if(condition.test(e)){
                 System.out.println(e);

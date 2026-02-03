@@ -1,0 +1,59 @@
+BiPredicate - Product Comparison System
+Create a class called Product with the following attributes:
+
+name (String)
+price (Double)
+stock (Integer)
+
+Requirements:
+
+In the main class, create a list of products with different price and stock values.
+Create a utility method called compareProducts(List<Product> products, Double threshold, BiPredicate<Product, Double> condition) that receives:
+
+The list of products.
+A threshold value (Double).
+A BiPredicate<Product, Double> that defines the comparison condition.
+
+
+The method should return only the products that satisfy the condition.
+In the main method, use lambda expressions to create different BiPredicate<Product, Double> and test the method:
+
+Products with price lower than the threshold.
+Products with stock greater than the threshold (convert threshold to Integer).
+Products with price equal to the threshold.
+
+
+Display the results of each comparison in the console.
+
+Extra Challenge:
+
+Create a method that compares two products using BiPredicate<Product, Product>.
+Example: compare if product1.price is greater than product2.price.
+Example: compare if product1.stock equals product2.stock.
+
+------------------------------
+
+BiPredicate - Sistema de Comparação de Produtos
+Crie uma classe chamada Product com os seguintes atributos:
+
+nome (String)
+preço (Double)
+estoque (Integer)
+
+Requisitos:
+Na classe principal, crie uma lista de produtos com diferentes preços e valores de estoque.
+Crie um método utilitário chamado compareProducts(List<Product> products, Double threshold, BiPredicate<Product, Double> condition) que receba:
+A lista de produtos.
+Um valor limite (Double).
+Um BiPredicate<Product, Double> que define a condição de comparação.
+O método deve retornar apenas os produtos que satisfazem a condição.
+No método principal, use expressões lambda para criar diferentes BiPredicate<Product, Double> e teste o método:
+Produtos com preço menor que o limite.
+Produtos com estoque maior que o limite (converta o limite para Integer).
+Produtos com preço igual ao limite.
+Exiba os resultados de cada comparação no console.
+
+Desafio Extra:
+Crie um método que compare dois produtos usando BiPredicate<Product, Product>.
+Exemplo: compare se product1.price é maior que product2.price.
+Exemplo: compare se product1.stock é igual a product2.stock.

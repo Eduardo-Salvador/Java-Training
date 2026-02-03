@@ -17,7 +17,37 @@ Filter employees whose name begins with the letter "A".
 Display the results of each filtering in the console.
 
 Extra Challenge:
-Combine two Predicates using the `and()` and `or()` methods.
+Combine two Predicates using the and() and or() methods.
 Example: age > 30 and salary > 5000.
 Example: name starts with "A" or salary < 3000.
-Create a negated Predicate (`negate()`) to show employees who do not meet a given condition.
+Create a negated Predicate (negate()) to show employees who do not meet a given condition.
+
+-----------------------------------------------------------------
+
+Sistema de Filtragem de Funcionários com Predicate:
+Crie uma classe chamada Employee com os seguintes atributos:
+nome (String)
+idade (Integer)
+salário (Double)
+
+Requisitos:
+Na classe principal, crie uma lista de funcionários com diferentes valores de idade e salário.
+
+Crie um método utilitário chamado filterEmployees(List<Employee> employees, Predicate<Employee> condition) que receba:
+A lista de funcionários.
+Um Predicate<Employee> que defina a condição de filtragem.
+
+O método deve retornar apenas os funcionários que satisfazem a condição.
+
+No método principal, use expressões lambda para criar diferentes Predicate<Employee> e teste o método:
+Filtrar funcionários com mais de 30 anos.
+Filtrar funcionários com salário acima de 5000.
+Filtrar funcionários cujo nome começa com a letra "A".
+
+Exiba os resultados de cada filtragem no console.
+
+Desafio Extra:
+Combine dois predicates usando os métodos and() e or().
+Exemplo: idade > 30 e salário > 5000.
+Exemplo: nome começa com "A" ou salário < 3000.
+Crie um predicate negado (negate()) para mostrar os funcionários que não atendem a uma determinada condição.

@@ -1,0 +1,41 @@
+BiConsumer - Order Processing System
+Create a class called Order with the following attributes:
+
+orderId (String)
+totalAmount (Double)
+discount (Double) - initially 0.0
+
+Requirements:
+In the main class, create a list of orders with different totalAmount values.
+Create a utility method called processOrders(List<Order> orders, Double discountRate, BiConsumer<Order, Double> action) that receives:
+The list of orders.
+A discount rate (Double).
+A BiConsumer<Order, Double> that defines the action to perform.
+The method should apply the action to each order.
+In the main method, use lambda expressions to create different BiConsumer<Order, Double> and test the method:
+Apply a discount percentage to each order (update the discount attribute).
+Print the order ID and the final price after discount.
+Add a processing fee to orders (modify totalAmount).
+Display the updated orders in the console.
+
+----------------------------------------------------
+
+BiConsumer - Sistema de Processamento de Pedidos
+Crie uma classe chamada Order com os seguintes atributos:
+
+orderId (String)
+totalAmount (Double)
+discount (Double) - inicialmente 0.0
+
+Requisitos:
+Na classe principal, crie uma lista de pedidos com diferentes valores de totalAmount.
+Crie um método utilitário chamado processOrders (List<Order> orders, Double discountRate, BiConsumer<Order, Double> action) que receba:
+A lista de pedidos.
+A taxa de desconto (Double).
+Um BiConsumer<Order, Double> que define a ação a ser executada.
+O método deve aplicar a ação a cada pedido.
+No método principal, use expressões lambda para criar diferentes BiConsumer<Order, Double> e teste o método:
+Aplique um desconto percentual a cada pedido (atualize o atributo discount).
+Imprima o ID do pedido e o preço final após o desconto.
+Adicione uma taxa de processamento aos pedidos (modifique totalAmount).
+Exiba os pedidos atualizados no console.

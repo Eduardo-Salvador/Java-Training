@@ -1,0 +1,40 @@
+BiFunction - Shopping Cart Calculator
+Create a class called CartItem with the following attributes:
+productName (String)
+quantity (Integer)
+unitPrice (Double)
+
+Requirements:
+
+In the main class, create a list of cart items.
+Create a utility method called calculateTotal(List<CartItem> items, Double taxRate, BiFunction<Double, Double, Double> calculation) that receives:
+The list of cart items.
+A tax rate (Double).
+A BiFunction<Double, Double, Double> that defines how to calculate the final price.
+The method should calculate the subtotal of all items and then apply the BiFunction with the subtotal and tax rate.
+In the main method, use lambda expressions to create different BiFunction<Double, Double, Double> and test the method:
+Calculate total with tax: (subtotal, tax) -> subtotal * (1 + tax)
+Calculate total with fixed fee: (subtotal, fee) -> subtotal + fee
+Calculate total with percentage discount: (subtotal, discount) -> subtotal * (1 - discount)
+Display the results of each calculation in the console.
+
+------------------
+
+BiFunction - Calculadora de Carrinho de Compras
+Crie uma classe chamada CartItem com os seguintes atributos:
+productName (String)
+quantity (Integer)
+unitPrice (Double)
+
+Requisitos:
+Na classe principal, crie uma lista de itens do carrinho.
+Crie um método utilitário chamado calculateTotal(List<CartItem> items, Double taxRate, BiFunction<Double, Double, Double> calculation) que receba:
+A lista de itens do carrinho.
+A taxa de imposto (Double).
+Uma BiFunction<Double, Double, Double> que define como calcular o preço final.
+O método deve calcular o subtotal de todos os itens e, em seguida, aplicar a BiFunction com o subtotal e a taxa de imposto.
+No método principal, use expressões lambda para criar diferentes BiFunction<Double, Double, Double> e teste o método:
+Calcular o total com imposto
+Calcular o total com taxa fixa
+Calcular o total com desconto percentual
+Exiba os resultados de cada cálculo no console.

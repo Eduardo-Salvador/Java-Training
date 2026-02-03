@@ -1,7 +1,5 @@
 package Lambdas.Function.Application;
-
 import Lambdas.Function.Domain.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 

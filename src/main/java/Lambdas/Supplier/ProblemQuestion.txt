@@ -1,0 +1,44 @@
+Supplier - Random Data Generator
+
+Create a class called Customer with the following attributes:
+customerId (String)
+name (String)
+registrationDate (LocalDateTime)
+
+Requirements:
+In the main class, create a utility method called generateCustomers(int count, Supplier<Customer> customerSupplier) that receives:
+The number of customers to generate.
+A Supplier<Customer> that defines how to create each customer.
+The method should return a list of generated customers.
+In the main method, use lambda expressions to create different Supplier<Customer> and test the method:
+Generate customers with random IDs: Use UUID.randomUUID().toString()
+Generate customers with sequential names: "Customer 1", "Customer 2", etc. (hint: use a counter with AtomicInteger)
+Generate customers with current timestamp for registration date: LocalDateTime.now()
+Display the generated customers in the console.
+
+Extra Challenge:
+Create a Supplier<Double> that generates random prices between 10.0 and 100.0.
+
+---------------------------------------
+
+Supplier - Gerador de Dados Aleatórios
+
+Crie uma classe chamada Customer com os seguintes atributos:
+customerId (String)
+name (String)
+registrationDate (LocalDateTime)
+
+Requisitos:
+Na classe principal, crie um método utilitário chamado generateCustomers(int count, Supplier<Customer> customerSupplier) que recebe:
+O número de clientes a serem gerados.
+Um Supplier<Customer> que define como criar cada cliente.
+
+O método deve retornar uma lista de clientes gerados.
+No método main, use expressões lambda para criar diferentes Supplier<Customer> e testar o método:
+Gerar clientes com IDs aleatórios: Use UUID.randomUUID().toString()
+Gerar clientes com nomes sequenciais: "Customer 1", "Customer 2", etc. (dica: use um contador com AtomicInteger)
+Gerar clientes com timestamp atual para a data de registro: LocalDateTime.now()
+Exibir os clientes gerados no console.
+
+Desafio Extra:
+Crie um Supplier<Double> que gera preços aleatórios entre 10.0 e 100.0.

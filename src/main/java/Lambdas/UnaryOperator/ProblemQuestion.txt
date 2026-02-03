@@ -1,0 +1,44 @@
+UnaryOperator - Price Adjustment System
+Create a class called Product with the following attributes:
+name (String)
+price (Double)
+
+Requirements:
+
+In the main class, create a list of products with different prices.
+Create a utility method called adjustPrices(List<Product> products, UnaryOperator<Double> priceAdjustment) that receives:
+The list of products.
+A UnaryOperator<Double> that defines how to adjust the price.
+The method should apply the adjustment to each product's price and update it.
+In the main method, use lambda expressions to create different UnaryOperator<Double> and test the method:
+Increase all prices by 10%: price -> price * 1.10
+Apply a fixed increase of $5: price -> price + 5.0
+Round prices to nearest integer: price -> Math.round(price)
+Display the updated prices in the console.
+
+Extra Challenge:
+Use the andThen() method to chain multiple adjustments (increase by 10%, then round).
+Use the compose() method to apply operations in reverse order.
+
+---------------------------------------------
+
+UnaryOperator - Sistema de Ajuste de Preços
+Crie uma classe chamada Product com os seguintes atributos:
+name (String)
+price (Double)
+
+Requisitos:
+Na classe principal, crie uma lista de produtos com diferentes preços.
+Crie um método utilitário chamado adjustPrices(List<Product> products, UnaryOperator<Double> priceAdjustment) que recebe:
+A lista de produtos.
+Um UnaryOperator<Double> que define como ajustar o preço.
+O método deve aplicar o ajuste ao preço de cada produto e atualizá-lo.
+No método main, use expressões lambda para criar diferentes UnaryOperator<Double> e testar o método:
+Aumentar todos os preços em 10%: price -> price * 1.10
+Aplicar um aumento fixo de $5: price -> price + 5.0
+Arredondar preços para o inteiro mais próximo: price -> Math.round(price)
+Exibir os preços atualizados no console.
+
+Desafio Extra:
+Use o método andThen() para encadear múltiplos ajustes (aumentar em 10%, depois arredondar).
+Use o método compose() para aplicar operações em ordem reversa.
