@@ -1,124 +1,256 @@
-# Method Reference
+<div align="center">
 
-## Overview
-This module contains a collection of independent exercises demonstrating **Method References** in Java.
+[![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-<COLOR>.svg)](https://shields.io/)
 
-**Brief explanation:**  
-A *method reference* is a shorthand syntax for using an existing method as a lambda expression.  
-Instead of writing a lambda like `x -> obj.method(x)`, a method reference lets you write simply `obj::method`.  
-They improve readability and reduce boilerplate when the lambda only calls an existing method.
+# Method References
 
-The exercises follow the same structure as the previous modules, organized into packages **MethodReference.E1**, **E2**, and **E3**.  
-Each exercise contains:
-- A **Domain** class representing the entity used in the example
-- An **Application** class demonstrating method reference usage
-- A **ProblemQuestion.txt** file with the original instructions
+This module contains a set of independent exercises demonstrating the use of Method References in Java, a concise syntax for referencing existing methods in place of lambda expressions.
+
+## Technologies
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
 
 ---
 
-## Folder Structure
+## Overview
 
-### 1. MethodReference.E1  
-Demonstrates method references with **instance methods**, **static methods**, and **Comparator** utilities.
+Method Reference is a shorthand way to use an existing method in place of a lambda expression. 
 
-**Key Concepts:**
-- Referencing an instance method of a class (`Product::getName`)
-- Referencing a static method (`Product::compareByPrice`)
-- Combining method references with `Comparator.comparing`
-- Using method references in list sorting
+Instead of writing a lambda like `x -> obj.method(x)`, you can simply use `obj::method`.
+
+This reduces unnecessary code and improves readability when the lambda simply calls an existing method, making the code cleaner and more expressive!
+
+---
+
+## Architecture:
+
+The exercises are organized into five categories:
+
+- **E1 - Sorting with Method Reference**
+- **E2 - Type Conversion with Method Reference**
+- **E3 - Utility Methods with Method Reference**
+- **E4 - Instance Method Reference**
+- **E5 - Constructor Reference**
+
+Each category contains:
+
+- A **Domain** class, which models the entity used in the exercise
+- An **Application** class, with the *main* method demonstrating the use of method references
+- A **ProblemQuestion.txt** file with the original problem description
+
+---
+
+## 1. What are Method References:
+
+Method References are a concise way to reference methods without executing them, introduced in Java 8 alongside lambda expressions. It is essentially a **simplified syntax for lambdas that only call an existing method**.
+
+### 1.1. Basic Syntax:
+
+The syntax uses the **`::` operator (double colon)**:
+```java
+ClassName::methodName
+```
+
+### 1.2. Types of Method Reference:
+
+**1.2.1 Reference to a static method**
+```java
+// Lambda
+Function<String, Integer> parser = s -> Integer.parseInt(s);
+
+// Method Reference
+Function<String, Integer> parser = Integer::parseInt;
+```
+
+**1.2.2. Reference to an instance method of a specific object**
+```java
+String text = "Hello";
+
+// Lambda
+Supplier<Integer> length = () -> text.length();
+
+// Method Reference
+Supplier<Integer> length = text::length;
+```
+
+**1.2.3. Reference to an instance method of an arbitrary type**
+```java
+// Lambda
+Function<String, String> upperCase = s -> s.toUpperCase();
+
+// Method Reference
+Function<String, String> upperCase = String::toUpperCase;
+```
+
+**1.2.4. Reference to a constructor**
+```java
+// Lambda
+Supplier<ArrayList<String>> list = () -> new ArrayList<>();
+
+// Method Reference
+Supplier<ArrayList<String>> list = ArrayList::new;
+```
+
+### 1.3. Advantages of Method References:
+
+**Cleaner code** - less verbosity than lambdas
+
+**Reusability** - leveraging existing methods
+
+**Readability** - clearer code intent
+
+**Maintainability** - changes to the method are automatically reflected
+
+### 1.4. Signature Compatibility:
+
+For a method reference to work, it is necessary that:
+
+1. **Number of parameters match**
+2. **Parameter types are compatible**
+3. **Return type is compatible**
+
+> **In summary:** Method References are **NOT limited to Java interfaces**. They work with any functional interface (including your own), as long as the method signature is compatible with the abstract method of the interface!
+
+---
+
+## 2. Exercises:
+
+### 2.1. MethodReference.E1 - Sorting with Method Reference
+Demonstrates method references with instance methods, static methods, and **Comparator** utilities.
+
+**Key concepts:**
+- Reference to instance method of a class (`Product::getName`)
+- Reference to static method (`Product::compareByPrice`)
+- Combining method reference with `Comparator.comparing`
+- Sorting lists using method references
 - Printing elements using `System.out::println`
 
 **Domain Class: Product**
-- Fields: `name`, `price`
+- Attributes: `name`, `price`
 - Methods:
   - `getName()` and `getPrice()`
-  - `static compareByPrice(Product p1, Product p2)` — used as a comparator
-  - `toString()` override for formatted printing
+  - `static compareByPrice(Product p1, Product p2)` — used as comparator
+  - `toString()` overridden for formatted printing
 
 **Application:**
 - Creates a list of products
-- Sorts products alphabetically ignoring case using  
-  `Comparator.comparing(Product::getName, String::compareToIgnoreCase)`
-- Prints the list using `System.out::println`
-- Sorts products by price using `Product::compareByPrice`
+- Sorts alphabetically ignoring case using `Comparator.comparing(Product::getName, String::compareToIgnoreCase)`
+- Prints the list with `System.out::println`
+- Sorts by price using `Product::compareByPrice`
 - Prints again using method reference
 
 ---
 
-### 2. MethodReference.E2  
-Demonstrates method references to **conversion methods** and the use of **Function**.
+### 2.2. MethodReference.E2 - Type Conversion with Method Reference
+Demonstrates method references applied to **conversion** methods and use of **Function**.
 
-**Key Concepts:**
-- Using method reference for parsing: `Integer::parseInt`
-- Converting values back to strings: `String::valueOf`
-- Applying transformations with `Function<T, R>`
-- Iterating collections and applying method-referenced functions
+**Key concepts:**
+- String to integer conversion with `Integer::parseInt`
+- Integer to string conversion with `String::valueOf`
+- Transformations applied with `Function<T, R>`
+- Collection iteration applying referenced functions
 
-**Domain Class: Empty**
-- Placeholder domain class for structural consistency
+**Domain Class: N/A**
 
 **Application:**
-- Creates a list of numeric strings
-- Converts all strings to integers using `Integer::parseInt`
-- Prints converted values with `System.out::println`
+- Creates a list of strings containing numbers
+- Converts all to integers using `Integer::parseInt`
+- Prints values with `System.out::println`
 - Converts integers back to string using `String::valueOf`
-- Prints updated list
+- Prints the updated list
 
 ---
 
-### 3. MethodReference.E3  
-Demonstrates method references to **custom static methods** for processing collections.
+### 2.3. MethodReference.E3 - Utility Methods with Method Reference
+Demonstrates the use of method references for **custom utility methods**.
 
-**Key Concepts:**
-- Referencing custom utility methods (`Utility::printDecorated`)
-- Using method references with `forEach`
-- Clear separation between domain logic and formatting logic
+**Key concepts:**
+- Reference to custom static method (`Utility::printDecorated`)
+- Using method reference with `forEach`
+- Clear separation between domain logic and presentation logic
 
 **Domain Class: Utility**
-- Static method:  
-  `printDecorated(String s)` – responsible for printing strings (can be expanded in future)
+- Static method: `printDecorated(String s)` — responsible for printing strings with custom formatting
 
 **Application:**
 - Creates a list of city names
 - Prints the list using `System.out::println`
-- Prints again using custom method reference `Utility::printDecorated`
+- Prints again using the method reference `Utility::printDecorated`
 
 ---
 
-## Purpose
-- Introduce method references as a cleaner alternative to simple lambda expressions  
-- Show practical scenarios where they increase readability  
-- Demonstrate their usage together with Java’s functional interfaces and collection processing  
+### 2.4. MethodReference.E4 - Instance Method Reference
+Demonstrates reference to **instance method of a specific object**.
+
+**Key concepts:**
+- Reference to instance method (`object::instanceMethod`)
+- Using `Consumer<T>` with method reference
+- Composing method references with transformations
+- Reusing method references
+
+**Domain Class: MessagePrinter**
+- Method: `printMessage(String message)` — prints the message with additional formatting
+
+**Application:**
+- Creates an instance of `MessagePrinter`
+- Creates a list of messages
+- Uses `Consumer<String>` with method reference `messagePrinter::printMessage`
+- Iterates through the list applying the consumer
+- Combines method reference with `String::toUpperCase` for transformation
+- Prints messages in uppercase using composition
 
 ---
 
-## Files Included
-- **Domain/** classes (Product, Utility, Empty)
-- **Application/** classes (Main for each exercise)
-- **ProblemQuestion.txt** for each exercise package
+### 2.5. MethodReference.E5 - Constructor Reference
+Demonstrates reference to **constructor** using `Class::new`.
+
+**Key concepts:**
+- Reference to constructor (`User::new`)
+- Using `BiFunction<T, U, R>` with constructor reference
+- Creating custom functional interface (`UserFactory`)
+- Dynamic object construction from multiple data sources
+
+**Domain Class: User**
+- Attributes: `name`, `age`
+- Constructor: `User(String name, Integer age)`
+
+**Domain Class: UserFactory**
+- Custom functional interface
+- Abstract method: `User create(String name, Integer age)`
+
+**Application:**
+- Creates separate lists of names and ages
+- Uses `BiFunction<String, Integer, User>` with `User::new`
+- Combines data from lists to create `User` objects
+- Demonstrates the use of custom functional interface
+- Uses `UserFactory` with the same constructor reference
+- Prints all created users
 
 ---
 
-## How to Run
-1. Navigate to any **Application** folder  
-2. Run the `Main` class  
-3. Observe console output demonstrating method reference behavior  
+## 3. Objectives Achieved
 
----
+**Complete mastery of the four types of method reference**
+- Reference to static method
+- Reference to instance method of specific object
+- Reference to instance method of arbitrary type
+- Reference to constructor
 
-## Requirements
-- **Java 17+**
-- Basic understanding of lambdas, collections, and functional interfaces  
+**Practical application of method references**
+- Replacing simple lambdas with method references
+- Cleaner and more readable code
+- Reusing existing methods
 
----
+**Integration with functional interfaces**
+- Usage with `Consumer`, `Function`, `BiFunction`
+- Creating custom functional interfaces
+- Composition and chaining of operations
 
-## Notes
-- Clean method reference syntax  
-- Demonstrates all four types of method references  
-  - `object::instanceMethod`  
-  - `Class::staticMethod`  
-  - `Class::instanceMethod`  
-  - `ClassName::new` (future exercises may include this)  
-- Helps simplify repetitive lambda expressions  
+**Advanced techniques**
+- Sorting with `Comparator` and method references
+- Data transformation with type conversions
+- Dynamic object construction
+- Separation of concerns (domain vs presentation)
 
 ---

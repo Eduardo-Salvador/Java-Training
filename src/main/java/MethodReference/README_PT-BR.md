@@ -1,25 +1,123 @@
-# Method Reference
+<div align="center">
 
-## Visão Geral
-Este módulo contém uma coleção de exercícios independentes que demonstram o uso de **Method References** em Java.
+[![Generic badge](https://img.shields.io/badge/STATUS-FINALIZADO-<COLOR>.svg)](https://shields.io/)
 
-**Breve explicação:**  
-Um *method reference* é uma forma abreviada de usar um método já existente no lugar de uma expressão lambda.  
-Em vez de escrever uma lambda como `x -> obj.metodo(x)`, você pode simplesmente usar `obj::metodo`.  
-Isso reduz código desnecessário e melhora a legibilidade quando a lambda apenas chama um método já existente.
+# Method References
 
-Os exercícios seguem a mesma estrutura dos módulos anteriores, organizados nos pacotes **MethodReference.E1**, **E2** e **E3**.  
-Cada exercício contém:
-- Uma classe **Domain**, representando a entidade usada no exemplo
-- Uma classe **Application**, demonstrando o uso de method references
-- Um arquivo **ProblemQuestion.txt** com o enunciado original do exercício
+Este módulo contém um conjunto de exercícios independentes que demonstram o uso de Method References em Java, uma sintaxe concisa para referenciar métodos existentes no lugar de expressões lambda.
+
+## Tecnologias
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
 
 ---
 
-## Estrutura de Pastas
+## Visão Geral
 
-### 1. MethodReference.E1
-Demonstra method references com **métodos de instância**, **métodos estáticos** e utilitários de **Comparator**.
+Method Reference é uma forma abreviada de usar um método já existente no lugar de uma expressão lambda. 
+
+Em vez de escrever uma lambda como `x -> obj.metodo(x)`, você pode simplesmente usar `obj::metodo`.
+
+Isso reduz código desnecessário e melhora a legibilidade quando a lambda apenas chama um método já existente, tornando o código mais limpo e expressivo!
+
+---
+
+## Arquitetura:
+
+Os exercícios estão organizados em cinco categorias:
+
+- **E1 - Sorting with Method Reference**
+- **E2 - Type Conversion with Method Reference**
+- **E3 - Utility Methods with Method Reference**
+- **E4 - Instance Method Reference**
+- **E5 - Constructor Reference**
+
+Cada categoria contém:
+
+- Uma classe **Domain**, que modela a entidade usada no exercício
+- Uma classe **Application**, com o método *main* demonstrando o uso de method references
+- Um arquivo **ProblemQuestion.txt** com a descrição original do problema
+
+---
+
+## 1. O que são Method References:
+
+Method References são uma forma concisa de referenciar métodos sem executá-los, introduzida no Java 8 junto com expressões lambda. É essencialmente uma **sintaxe simplificada para lambdas que apenas chamam um método existente**.
+
+### 1.1. Sintaxe Básica:
+
+A sintaxe usa o **operador `::` (dois pontos duplos)**:
+```java
+NomeClasse::nomeMetodo
+```
+
+### 1.2. Tipos de Method Reference:
+
+**1.2.1. Referência a método estático**
+```java
+// Lambda
+Function<String, Integer> parser = s -> Integer.parseInt(s);
+
+// Method Reference
+Function<String, Integer> parser = Integer::parseInt;
+```
+
+**1.2.2. Referência a método de instância de um objeto específico**
+```java
+String texto = "Olá";
+
+// Lambda
+Supplier<Integer> tamanho = () -> texto.length();
+
+// Method Reference
+Supplier<Integer> tamanho = texto::length;
+```
+
+**1.2.3. Referência a método de instância de um tipo arbitrário**
+```java
+// Lambda
+Function<String, String> upperCase = s -> s.toUpperCase();
+
+// Method Reference
+Function<String, String> upperCase = String::toUpperCase;
+```
+
+**1.2.4. Referência a construtor**
+```java
+// Lambda
+Supplier<ArrayList<String>> lista = () -> new ArrayList<>();
+
+// Method Reference
+Supplier<ArrayList<String>> lista = ArrayList::new;
+```
+
+### 1.3. Vantagens das Method References:
+
+**Código mais limpo** - menos verbosidade que lambdas
+
+**Reutilização** - aproveitamento de métodos já existentes
+
+**Legibilidade** - intenção do código mais clara
+
+**Manutenibilidade** - mudanças no método são refletidas automaticamente
+
+### 1.4. Compatibilidade de Assinatura:
+
+Para um method reference funcionar, é necessário que:
+
+1. **Número de parâmetros coincida**
+2. **Tipos dos parâmetros sejam compatíveis**
+3. **Tipo de retorno seja compatível**
+
+> **Em resumo:** Method References **NÃO estão limitados às interfaces do Java**. Funcionam com qualquer interface funcional (incluindo as suas), desde que a assinatura do método seja compatível com o método abstrato da interface!
+
+---
+
+## 2. Exercícios:
+
+### 2.1. MethodReference.E1 - Sorting with Method Reference
+Demonstra method references com métodos de instância, métodos estáticos e utilitários de **Comparator**.
 
 **Conceitos-chave:**
 - Referência a método de instância de uma classe (`Product::getName`)
@@ -37,16 +135,15 @@ Demonstra method references com **métodos de instância**, **métodos estático
 
 **Application:**
 - Cria uma lista de produtos
-- Ordena alfabeticamente ignorando caixa usando  
-  `Comparator.comparing(Product::getName, String::compareToIgnoreCase)`
+- Ordena alfabeticamente ignorando caixa usando `Comparator.comparing(Product::getName, String::compareToIgnoreCase)`
 - Imprime a lista com `System.out::println`
 - Ordena pelo preço usando `Product::compareByPrice`
 - Imprime novamente usando method reference
 
 ---
 
-### 2. MethodReference.E2
-Demonstra method references aplicados a **métodos de conversão** e uso de **Function**.
+### 2.2. MethodReference.E2 - Type Conversion with Method Reference
+Demonstra method references aplicados a métodos de **conversão** e uso de **Function**.
 
 **Conceitos-chave:**
 - Conversão de string para inteiro com `Integer::parseInt`
@@ -54,8 +151,7 @@ Demonstra method references aplicados a **métodos de conversão** e uso de **Fu
 - Transformações aplicadas com `Function<T, R>`
 - Iteração de coleções aplicando funções referenciadas
 
-**Domain Class: Empty**
-- Classe vazia usada apenas para manter o padrão estrutural
+**Domain Class: N/A**
 
 **Application:**
 - Cria uma lista de strings contendo números
@@ -66,7 +162,7 @@ Demonstra method references aplicados a **métodos de conversão** e uso de **Fu
 
 ---
 
-### 3. MethodReference.E3
+### 2.3. MethodReference.E3 - Utility Methods with Method Reference
 Demonstra o uso de method references para **métodos utilitários personalizados**.
 
 **Conceitos-chave:**
@@ -75,8 +171,7 @@ Demonstra o uso de method references para **métodos utilitários personalizados
 - Separação clara entre lógica de domínio e lógica de apresentação
 
 **Domain Class: Utility**
-- Método estático:  
-  `printDecorated(String s)` — responsável por imprimir strings (pode ser expandido futuramente)
+- Método estático: `printDecorated(String s)` — responsável por imprimir strings com formatação personalizada
 
 **Application:**
 - Cria uma lista de nomes de cidades
@@ -85,40 +180,77 @@ Demonstra o uso de method references para **métodos utilitários personalizados
 
 ---
 
-## Propósito
-- Introduzir method references como uma alternativa mais limpa a lambdas simples  
-- Mostrar cenários reais onde eles aumentam a clareza do código  
-- Demonstrar seu uso junto com interfaces funcionais e operações com coleções  
+### 2.4. MethodReference.E4 - Instance Method Reference
+Demonstra referência a método de **instância de um objeto específico**.
+
+**Conceitos-chave:**
+- Referência a método de instância (`objeto::métodoDeInstância`)
+- Uso de `Consumer<T>` com method reference
+- Composição de method references com transformações
+- Reutilização de referências de método
+
+**Domain Class: MessagePrinter**
+- Método: `printMessage(String message)` — imprime a mensagem com formatação adicional
+
+**Application:**
+- Cria uma instância de `MessagePrinter`
+- Cria uma lista de mensagens
+- Utiliza `Consumer<String>` com method reference `messagePrinter::printMessage`
+- Itera pela lista aplicando o consumer
+- Combina method reference com `String::toUpperCase` para transformação
+- Imprime mensagens em letras maiúsculas usando composição
 
 ---
 
-## Arquivos Incluídos
-- Classes **Domain/**
-- Classes **Application/**
-- Arquivos **ProblemQuestion.txt**
+### 2.5. MethodReference.E5 - Constructor Reference
+Demonstra referência a **construtor** usando `Classe::new`.
+
+**Conceitos-chave:**
+- Referência a construtor (`User::new`)
+- Uso de `BiFunction<T, U, R>` com constructor reference
+- Criação de interface funcional personalizada (`UserFactory`)
+- Construção dinâmica de objetos a partir de múltiplas fontes de dados
+
+**Domain Class: User**
+- Atributos: `name`, `age`
+- Construtor: `User(String name, Integer age)`
+
+**Domain Class: UserFactory**
+- Interface funcional personalizada
+- Método abstrato: `User create(String name, Integer age)`
+
+**Application:**
+- Cria listas separadas de nomes e idades
+- Utiliza `BiFunction<String, Integer, User>` com `User::new`
+- Combina dados das listas para criar objetos `User`
+- Demonstra o uso de interface funcional personalizada
+- Utiliza `UserFactory` com a mesma constructor reference
+- Imprime todos os usuários criados
 
 ---
 
-## Como Executar
-1. Navegue até qualquer pasta **Application**  
-2. Execute a classe `Main`  
-3. Observe a saída no console demonstrando o uso de method references  
+## 3. Objetivos Alcançados
 
----
+**Domínio completo dos quatro tipos de method reference**
+- Referência a método estático
+- Referência a método de instância de objeto específico
+- Referência a método de instância de tipo arbitrário
+- Referência a construtor
 
-## Requisitos
-- **Java 17+**
-- Entendimento básico de lambdas, coleções e interfaces funcionais  
+**Aplicação prática de method references**
+- Substituição de lambdas simples por method references
+- Código mais limpo e legível
+- Reutilização de métodos existentes
 
----
+**Integração com interfaces funcionais**
+- Uso com `Consumer`, `Function`, `BiFunction`
+- Criação de interfaces funcionais personalizadas
+- Composição e encadeamento de operações
 
-## Notas
-- Sintaxe limpa de method reference  
-- Demonstra os quatro tipos de method reference:  
-  - `objeto::métodoDeInstância`  
-  - `Classe::métodoEstático`  
-  - `Classe::métodoDeInstância`  
-  - `Classe::new` (pode aparecer em exercícios futuros)  
-- Facilita a remoção de lambdas redundantes  
+**Técnicas avançadas**
+- Ordenação com `Comparator` e method references
+- Transformação de dados com conversões de tipo
+- Construção dinâmica de objetos
+- Separação de responsabilidades (domínio vs apresentação)
 
 ---

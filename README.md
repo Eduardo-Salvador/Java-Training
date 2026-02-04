@@ -70,7 +70,7 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 ## Method Reference:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/MethodReference/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/MethodReference/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/MethodReference/README_PT-BR.md)
 
 ## Optional:
 
