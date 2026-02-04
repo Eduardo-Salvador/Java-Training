@@ -39,3 +39,141 @@ No lambda expressions should be used for printing.
 Extra Challenge:
 Create a static method printDecorated(String s) in a utility class and print all cities using:
 Utility::printDecorated
+
+----
+
+4. Method Reference to a Specific Object
+Create a class called MessagePrinter with the following method:
+printMessage(String message) → prints the message to the console with some additional text (e.g., "Message: ").
+
+Requirements:
+In the main class (main), create an instance of MessagePrinter
+Create a list of messages (List<String>)
+Use a method reference to call the method of that specific instance, in the form:
+printer::printMessage
+Iterate through the list and print all messages using this reference
+Do not use lambda expressions
+Concept practiced:
+object::instanceMethod
+
+Extra Challenge:
+Modify the method to print the message in uppercase
+Reuse the same method reference
+
+----
+
+5. Constructor Reference
+Create a class called User with the following attributes:
+name (String)
+age (Integer)
+Create a constructor that receives both values.
+
+Requirements:
+Create two lists:
+A list of names (List<String>)
+A list of ages (List<Integer>)
+Create a new list of User
+Use a constructor method reference:
+User::new
+Combine the data from both lists to create User objects
+Print all created users to the console
+Concept practiced:
+Class::new
+
+Extra Challenge:
+Create your own functional interface (e.g., UserFactory) to represent the constructor
+Use the constructor reference with that interface
+
+-----------------------------------------------
+
+1. Ordenando Produtos com Method Reference
+Crie uma classe chamada Product com os seguintes atributos:
+name (String)
+price (Double)
+
+Requisitos:
+Na classe principal (main), crie uma lista de objetos Product
+Ordene a lista alfabeticamente pelo nome do produto usando uma method reference:
+String::compareToIgnoreCase
+Exiba a lista ordenada no console
+
+Desafio Extra:
+Crie um método estático dentro da classe Product chamado:
+compareByPrice(Product p1, Product p2)
+Ordene a lista utilizando a method reference:
+Product::compareByPrice
+
+----
+
+2. Convertendo Strings para Inteiros com Method Reference
+Crie uma lista contendo Strings numéricas, como "10", "25", "40".
+
+Requisitos:
+Converta cada String em um Integer usando a method reference:
+Integer::parseInt
+Armazene os valores convertidos em uma nova List<Integer>
+Imprima todos os inteiros convertidos
+
+Desafio Extra:
+Converta todos os inteiros de volta para String usando a method reference:
+String::valueOf
+
+----
+
+3. Imprimindo Elementos com Method Reference do System.out
+Crie uma lista com nomes de cidades (String).
+
+Requisitos:
+Percorra a lista e imprima cada cidade usando a method reference:
+System.out::println
+Não utilize expressões lambda para a impressão
+
+Desafio Extra:
+Crie um método estático printDecorated(String s) em uma classe utilitária
+Imprima todas as cidades utilizando:
+Utility::printDecorated
+
+----
+
+4. Referência a Método de um Objeto Específico
+Crie uma classe chamada MessagePrinter com o seguinte método:
+printMessage(String message) → imprime a mensagem no console, com algum texto adicional (ex: "Message: ").
+
+Requisitos:
+Na classe principal (main), crie uma instância de MessagePrinter
+Crie uma lista de mensagens (List<String>)
+Utilize uma method reference para chamar o método da instância criada, no formato:
+printer::printMessage
+Percorra a lista e imprima todas as mensagens usando essa referência
+Não utilize expressões lambda
+Exemplo de conceito trabalhado:
+objeto::metodoDeInstancia
+
+Desafio Extra:
+Modifique o método para imprimir a mensagem em letras maiúsculas
+Reutilize a mesma method reference
+
+----
+
+5. Referência a Construtor
+
+Crie uma classe chamada User com os seguintes atributos:
+name (String)
+age (Integer)
+Crie um construtor que receba esses dois valores.
+
+Requisitos:
+Crie duas listas:
+Uma lista de nomes (List<String>)
+Uma lista de idades (List<Integer>)
+Crie uma nova lista de User
+Utilize uma method reference para o construtor:
+User::new
+Combine os dados das listas para criar os objetos User
+Exiba todos os usuários criados no console
+Exemplo de conceito trabalhado:
+Classe::new
+
+Desafio Extra:
+Crie uma interface funcional própria (ex: UserFactory) para representar o construtor
+Utilize a method reference com essa interface

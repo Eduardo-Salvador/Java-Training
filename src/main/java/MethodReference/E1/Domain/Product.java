@@ -1,25 +1,25 @@
 package MethodReference.E1.Domain;
 
-public class Product{
-    private String name;
-    private Double price;
+public class Product {
+    private final String NAME;
+    private final Double PRICE;
+
+    public Product(String NAME, Double PRICE) {
+        this.NAME = NAME;
+        this.PRICE = PRICE;
+    }
 
     public String getName() {
-        return name;
+        return NAME;
     }
 
     public Double getPrice() {
-        return price;
-    }
-
-    public Product(String name, Double price) {
-        this.name = name;
-        this.price = price;
+        return PRICE;
     }
 
     @Override
     public String toString() {
-        return name + " - $" + price;
+        return NAME + " - $" + PRICE;
     }
 
     public static int compareByPrice(Product p1, Product p2){

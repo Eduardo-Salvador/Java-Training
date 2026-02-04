@@ -18,6 +18,7 @@ public class Main {
         integerList.forEach(System.out::println);
 
         System.out.println("-------------------------------");
+        stringListNumber.clear();
 
         for (Integer s : integerList) {
             stringListNumber.add(stringNumToString.apply(s));

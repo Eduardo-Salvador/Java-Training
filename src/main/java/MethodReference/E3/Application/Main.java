@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> cities = new ArrayList<>(List.of("Sao Paulo", "New York", "Florida", "Amsterdam"));
+        List<String> cities = new ArrayList<>(List.of("São Paulo", "New York", "Florida", "Amsterdam"));
         cities.forEach(System.out::println);
         System.out.println("-------------------");
         cities.forEach(Utility::printDecorated);

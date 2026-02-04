@@ -8,9 +8,13 @@ public class Main {
     public static void main(String[] args) {
         List<Product> productList = new ArrayList<>(List.of(new Product("A", 400D),
                 new Product("C", 500D),
-                new Product("B", 600D)));
+                new Product("B", 600D),
+                new Product("F", 720D),
+                new Product("E", 120D)
+            )
+        );
 
-        productList.sort(Comparator.comparing(Product::getName, String::compareToIgnoreCase));
+        productList.sort(Comparator.comparing(Product::getName));
         productList.forEach(System.out::println);
         System.out.println("-----------------------------------------");
         productList.sort(Product::compareByPrice);
