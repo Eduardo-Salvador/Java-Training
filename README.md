@@ -74,7 +74,7 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 ## Optional:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Optionals/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Optionals/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Optionals/README_PT-BR.md)
 
 ## Streams:
 
