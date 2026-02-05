@@ -1,22 +1,43 @@
-Exercise 1 — User Profile Search with Optional:
+User Profile Search with Optional:
 Create a User class with the following attributes:
 id (integer)
 name (String)
 email (String)
 
 Requirements:
-Create a UserRepository class containing a method `Optional<User> findByEmail(String email)` that returns:
-`Optional.of(user) was found`
-`Optional.empty() was not found`
+Create a UserRepository class containing a method Optional<User> findByEmail(String email) that returns:
+Optional.of(user) was found
+Optional.empty() was not found
 In the main method, create a list with some registered users.
+Perform searches using findByEmail and use:
+ifPresent() to display the name of the found user.
+ifPresentOrElse() to display: "User not found" when the Optional is empty.
+orElse() to return a default user.
+orElseGet() to generate an alternate user only when necessary.
+orElseThrow() to throw a custom exception when the user does not exist.
+Apply a map() to the returned Optional to extract only the username.
+Use filter() to return an Optional only if the email contains "@gmail.com".
 
-Perform searches using `findByEmail` and use:
-`ifPresent()` to display the name of the found user.
-`ifPresentOrElse()` to display: "User not found" when the Optional is empty.
-`orElse()` to return a default user.
-`orElseGet()` to generate an alternate user only when necessary.
-`orElseThrow()` to throw a custom exception when the user does not exist.
-Apply a `map()` to the returned Optional to extract only the username.
-Use `filter()` to return an Optional only if the email contains "@gmail.com".
+-----------------
+
+Busca de Perfil de Usuário com Optional:
+Crie uma classe User com os seguintes atributos:
+id (inteiro)
+nome (String)
+email (String)
+
+Requisitos:
+Crie uma classe UserRepository contendo um método Optional<User> findByEmail(String email) que retorne:
+Optional.of(user) encontrado
+Optional.empty() não encontrado
+No método main, crie uma lista com alguns usuários registrados.
+Realize buscas usando findByEmail e utilize:
+ifPresent() para exibir o nome do usuário encontrado.
+ifPresentOrElse() para exibir: "Usuário não encontrado" quando o Optional estiver vazio.
+orElse() para retornar um usuário padrão.
+orElseGet() para gerar um usuário alternativo somente quando necessário.
+orElseThrow() para lançar uma exceção personalizada quando o usuário não existir.
+Aplique um map() ao Optional retornado para extrair apenas o nome de usuário.
+Use filter() para retornar um Optional somente se o e-mail contiver "@gmail.com".
 
 ------

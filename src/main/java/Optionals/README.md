@@ -1,117 +1,164 @@
-# Optional
+<div align="center">
+
+[![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-success.svg)](https://shields.io/)
+
+# Optionals
+
+This module contains a comprehensive exercise demonstrating the use of Optional in Java, a container class introduced in Java 8 to elegantly handle the presence or absence of values.
+
+## Technologies
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+</div>
 
 ---
 
 ## Overview
-This module contains a single exercise demonstrating the use of **Optional** in Java to represent values that may or may not exist, helping avoid `NullPointerException` and encouraging safer, more expressive code.
 
-**Brief explanation:**  
-`Optional<T>` is a container that may hold a value of type `T` or be empty.  
-It provides safe methods to handle the absence of values, replacing manual `null` checks.
+Optional is a **container class introduced in Java 8 that serves as a wrapper for values that may or may not be present.** It's an **elegant way to handle the possibility of absent values, avoiding the dreaded `NullPointerException`.**
 
-The exercise is organized into three main packages:
-- **Domain** — contains the `User` entity  
-- **Controller** — contains the repository responsible for data storage and lookup  
-- **Application** — contains the `Main` class showing Optional in action  
-There is also a **ProblemQuestion.txt** file with the original problem statement.
+Before Optional, it was common to return `null` when a value wasn't available, leading to code filled with null checks and potential errors. **Optional makes it explicit in the code that a value may not exist**, improving code safety and readability.
 
 ---
 
-## Folder Structure
+## Architecture:
 
-### 1. Optionals.Domain
-Contains the main entity used in the exercise.
+The project is organized as follows:
 
-**Class: User**
-- Fields: `id`, `name`, `email`
+- **Domain**: Contains the `User` class modeling the entity
+- **Services**: Contains `UserRepository` with business logic for user search
+- **Application**: Contains the `Main` class demonstrating all Optional methods
+
+---
+
+## 1. What is Optional:
+
+Optional is a container object that may or may not contain a non-null value. It was introduced in Java 8 to **provide a type-level solution for representing optional values instead of null references**.
+
+### 1.1. Creating an Optional:
+
+There are three main ways to create an Optional:
+```java
+// Empty Optional
+Optional<String> empty = Optional.empty();
+
+// Optional with value (throws exception if null)
+Optional<String> withValue = Optional.of("John");
+
+// Optional that can be null
+Optional<String> maybeNull = Optional.ofNullable(possiblyNull);
+```
+
+### 1.2. Main Methods:
+
+**Check presence:**
+- `isPresent()` — returns true if value exists
+- `isEmpty()` — returns true if empty (Java 11+)
+
+**Get value:**
+- `get()` — returns the value (throws exception if empty)
+- `orElse(value)` — returns the value or a default
+- `orElseGet(supplier)` — returns the value or executes function
+- `orElseThrow()` — throws exception if empty
+
+**Transform:**
+- `map(function)` — transforms the value if present
+- `flatMap(function)` — similar to map, but for functions that return Optional
+- `filter(predicate)` — filters based on condition
+
+**Execute actions:**
+- `ifPresent(consumer)` — executes action if value exists
+- `ifPresentOrElse(consumer, runnable)` — executes action or alternative
+
+### 1.3. Benefits of Using Optional:
+
+**Null-safety** — reduces NullPointerException occurrences
+
+**Explicit API** — makes clear when values may be absent
+
+**Functional style** — enables method chaining and transformations
+
+**Better documentation** — method signatures communicate intent
+
+### 1.4. Best Practices:
+
+1. **Never use `Optional.get()` without checking** — use safer alternatives like `orElse()` or `orElseThrow()`
+2. **Avoid Optional in fields** — designed for return types, not storage
+3. **Don't use Optional with collections** — empty collections are better than `Optional<List>`
+4. **Prefer `orElseGet()` over `orElse()`** — when default value creation is expensive
+
+> **In summary:** Optional is a **powerful tool for writing safer, more expressive code** that explicitly handles the absence of values, eliminating much of the need for null checking!
+
+---
+
+## 2. Exercise:
+
+### 2.1. User Profile Search with Optional
+
+Demonstrates comprehensive usage of Optional methods in a user search scenario.
+
+**Key Concepts:**
+- Creating and returning Optional values
+- Checking presence with `isPresent()` and `isEmpty()`
+- Retrieving values with `orElse()`, `orElseGet()`, and `orElseThrow()`
+- Executing actions with `ifPresent()` and `ifPresentOrElse()`
+- Transforming values with `map()`
+- Filtering values with `filter()`
+- Method chaining for concise code
+
+**Domain Class: User**
+- Attributes: `id`, `name`, `email`
+- All attributes are final (immutable)
 - Methods:
-  - Getters (`getId`, `getName`, `getEmail`)
-  - Overridden `toString()` for formatted display
-- Represents a user stored in a simple in-memory list
+  - `getId()`, `getName()`, `getEmail()`
+  - `toString()` override for formatted output
+
+**Service Class: UserRepository**
+- Method: `findByEmail(List<User> userList, String email)`
+  - Returns `Optional.of(user)` when found
+  - Returns `Optional.empty()` when not found
+  - Demonstrates proper Optional creation patterns
+
+**Application:**
+- Creates a list of 7 users with different email providers
+- **Direct Optional printing** — displays Optional container
+- **`ifPresent()`** — prints user if found
+- **`ifPresentOrElse()`** — prints user or "User not found" message
+- **`orElse()`** — returns default user when not found
+- **`orElseGet()`** — creates fallback user only when necessary (lazy evaluation)
+- **`orElseThrow()`** — throws custom exception with proper error handling
+- **`map()`** — extracts only the username from Optional<User>
+- **`filter()`** — returns Optional only if email contains "@gmail.com"
 
 ---
 
-### 2. Optionals.Controller
-Contains the class responsible for storage and lookup logic.
+## 3. Learning Outcomes
 
-**Class: UserRepository**
-- Fields:
-  - `userList` — internal list of users
-- Methods:
-  - `add(User user)` — adds a user, verifying null  
-  - `findByEmail(String email)` — returns `Optional<User>`  
-    - `Optional.of(u)` if found  
-    - `Optional.empty()` if not found  
+**Complete mastery of Optional creation**
+- Understanding `of()`, `empty()`, and `ofNullable()`
+- Knowing when to use each creation method
 
-Shows clearly how Optional should be returned in operations that may or may not succeed.
+**Safe value retrieval**
+- Avoiding `get()` without checks
+- Using `orElse()`, `orElseGet()`, and `orElseThrow()` appropriately
+- Understanding lazy vs eager evaluation
 
----
+**Conditional execution**
+- Using `ifPresent()` for side effects
+- Implementing `ifPresentOrElse()` for complete control flow
 
-### 3. Optionals.Application
-Demonstrates multiple real-world scenarios using `Optional`.
+**Functional transformations**
+- Applying `map()` for value transformation
+- Using `filter()` for conditional Optional results
+- Method chaining for cleaner code
 
-**Class: Main**
-Executes several Optional operations:
+**Exception handling**
+- Creating custom exceptions with `orElseThrow()`
+- Proper try-catch usage with Optional
 
-- **Initial user list creation**
-- **Adding new users**
-- Demonstrates usage of:
-  - `Optional.of`
-  - `Optional.empty`
-  - `ifPresent(System.out::println)`
-  - `ifPresentOrElse`
-  - `orElse` — provides a default value
-  - `orElseGet` — generates fallback value using a function
-  - `orElseThrow` — throws exception when value is missing
-
-**Scenarios demonstrated:**
-- Successful lookup by email and direct printing of the Optional
-- Conditional printing when value exists (`ifPresent`)
-- Alternative action when value does not exist (`ifPresentOrElse`)
-- Default user fallback using `orElse`
-- Dynamically created fallback using `orElseGet`
-- Exception thrown for missing values using `orElseThrow`
-
-This exercise shows how Optional replaces manual null-check logic and makes the intention of the code more explicit and safer.
-
----
-
-## Purpose
-- Teach proper usage of `Optional` in lookups, returns, and validations  
-- Demonstrate best practices that prevent `NullPointerException`  
-- Show essential Optional methods and their real-world application  
-- Encourage more declarative and functional programming style  
-
----
-
-## Files Included
-- **Domain/User.java**
-- **Controller/UserRepository.java**
-- **Application/Main.java**
-- **ProblemQuestion.txt**
-
----
-
-## How to Run
-1. Navigate to the **Optionals/Application** folder  
-2. Run the **Main** class  
-3. Observe the console output demonstrating each Optional operation  
-
----
-
-## Requirements
-- **Java 17+**
-- Basic understanding of collections and OOP
-- Optional familiarity is helpful but not required
-
----
-
-## Notes
-- Consistent usage of Optional in lookup methods  
-- Eliminates manual `null` checks  
-- Demonstrates the most commonly used Optional methods:  
-  - `of`, `empty`, `ifPresent`, `ifPresentOrElse`  
-  - `orElse`, `orElseGet`, `orElseThrow`  
-- Provides clear examples of fallback values and absence handling  
+**Best practices**
+- Writing null-safe code
+- Making APIs more expressive
+- Improving code readability and maintainability
 
 ---

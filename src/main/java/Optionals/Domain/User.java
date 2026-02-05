@@ -1,30 +1,30 @@
 package Optionals.Domain;
 
 public class User {
-    private Integer id;
-    private String name;
-    private String email;
+    private final Integer ID;
+    private final String NAME;
+    private final String EMAIL;
 
-    public User(Integer id, String name, String email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
+    public User(Integer ID, String NAME, String EMAIL) {
+        this.ID = ID;
+        this.NAME = NAME;
+        this.EMAIL = EMAIL;
     }
 
     public Integer getId() {
-        return id;
+        return ID;
     }
 
     public String getName() {
-        return name;
+        return NAME;
     }
 
     public String getEmail() {
-        return email;
+        return EMAIL;
     }
 
     @Override
     public String toString() {
-        return id + " : " + name + " - " + email;
+        return ID + " : " + NAME + " - " + EMAIL;
     }
 }

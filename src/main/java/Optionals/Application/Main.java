@@ -1,7 +1,6 @@
 package Optionals.Application;
-import Optionals.Controller.UserRepository;
+import Optionals.Services.UserRepository;
 import Optionals.Domain.User;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -15,37 +14,61 @@ public class Main {
         User u5 = new User(5, "Eduarda Silva", "eduarda.silva@gmail.com");
         User u6 = new User(6, "Fernando Alves", "fernando.alves@live.com");
         User u7 = new User(7, "Gabriela Costa", "gabriela.costa@gmail.com");
-        List<User> userList = new ArrayList<>(List.of(u1, u2, u3, u4, u5));
-        UserRepository userRepository = new UserRepository(userList);
+        List<User> userList = new ArrayList<>(List.of(u1, u2, u3, u4, u5, u6, u7));
 
-        userRepository.add(u6);
-        userRepository.add(u7);
-        System.out.println("-------------------------");
-
-        Optional<User> email = userRepository.findByEmail("eduarda.silva@gmail.com");
+        Optional<User> email = UserRepository
+                .findByEmail(userList, "eduarda.silva@gmail.com");
         System.out.println(email);
         System.out.println("-------------------------");
 
-        userRepository.findByEmail("fernando.alves@live.com")
+        UserRepository
+                .findByEmail(userList, "fernando.alves@live.com")
                 .ifPresent(System.out::println);
         System.out.println("-------------------------");
 
-        userRepository.findByEmail("heitor.alves@live.com")
-                .ifPresentOrElse(System.out::println,
-                        () -> System.out.println("User not found"));
+        UserRepository
+                .findByEmail(userList, "heitor.alves@live.com")
+                .ifPresentOrElse(System.out::println, () -> System.out.println("User not found"));
         System.out.println("-------------------------");
 
-        User e1 = userRepository.findByEmail("fernando.bairro@live.com").
-                orElse(new User(99, "User Standard", "userstandard@standard.com"));
+        User e1 = UserRepository
+                .findByEmail(userList, "fernando.bairro@live.com")
+                .orElse(new User(99, "User Standard", "userstandard@standard.com"));
         System.out.println(e1);
         System.out.println("-------------------------");
 
-        User fallback = userRepository.findByEmail("ericka@live.com")
+        User fallback = UserRepository
+                .findByEmail(userList, "ericka@live.com")
                 .orElseGet(() -> new User(100, "Fallback", "fallback@mail.com"));
         System.out.println(fallback);
         System.out.println("-------------------------");
 
-        userRepository.findByEmail("12345").orElseThrow();
+        try {
+            UserRepository
+                    .findByEmail(userList, "12345")
+                    .orElseThrow(NullPointerException::new);
+        } catch (NullPointerException e) {
+            System.out.println("Find is: " + e.getMessage());
+        }
+        System.out.println("-------------------------");
+
+        Optional<User> user = UserRepository
+                .findByEmail(userList, "diego.rocha@hotmail.com");
+
+        System.out.println(user.map(User::getName).get());
+
+        System.out.println("-------------------------");
+
+        Optional<User> userGmail = UserRepository
+                .findByEmail(userList, "diego.rocha@hotmail.com")
+                .filter(x -> x.getEmail().contains("@gmail.com"));
+        System.out.println(userGmail);
+
+        userGmail = UserRepository
+                .findByEmail(userList, "gabriela.costa@gmail.com")
+                .filter(x -> x.getEmail().contains("@gmail.com"));
+        System.out.println(userGmail);
+
         System.out.println("-------------------------");
     }
 }
