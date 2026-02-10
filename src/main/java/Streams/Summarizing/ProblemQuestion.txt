@@ -1,0 +1,27 @@
+EN:
+Transaction Statistics:
+Create a class called Transaction with attributes:
+type (String) // "DEPOSIT" or "WITHDRAWAL"
+amount (Double)
+
+Requirements:
+Create a list with 15 transactions (mix of deposits and withdrawals).
+Using summarizingDouble():
+Get statistics (count, sum, min, max, average) for ALL transactions.
+Get statistics for ONLY deposits (filter first).
+Get statistics for ONLY withdrawals (filter first).
+Print all statistics with clear labels.
+
+PT:
+Estatísticas de Transações:
+Crie uma classe chamada Transaction com os atributos:
+type (String) // "DEPOSIT" ou "WITHDRAWAL"
+amount (Double)
+
+Requisitos:
+Crie uma lista com 15 transações (mistura de depósitos e saques).
+Usando summarizingDouble():
+Obtenha estatísticas (count, sum, min, max, average) para TODAS as transações.
+Obtenha estatísticas para APENAS depósitos (filtre primeiro).
+Obtenha estatísticas para APENAS saques (filtre primeiro).
+Imprima todas as estatísticas com rótulos claros.

@@ -1,0 +1,31 @@
+EN:
+Student ID Mapping:
+Create a class called Student with attributes:
+id (Integer)
+name (String)
+course (String)
+
+Requirements:
+Create a list with 10 students.
+Using toMap():
+Create a Map<Integer, String> mapping student ID to student name.
+Create a Map<Integer, Student> mapping student ID to the complete Student object.
+Create a list with some students having duplicate courses, then create a Map<String, String> mapping course to student name (use merge function to keep the first student when duplicates occur).
+Print all maps.
+
+----------------------------
+
+PT:
+Mapeamento de IDs de Estudantes:
+Crie uma classe chamada Student com os atributos:
+id (Integer)
+name (String)
+course (String)
+
+Requisitos:
+Crie uma lista com 10 estudantes.
+Usando toMap():
+Crie um Map<Integer, String> mapeando ID do estudante para nome do estudante.
+Crie um Map<Integer, Student> mapeando ID do estudante para o objeto Student completo.
+Crie uma lista com alguns estudantes tendo cursos duplicados, então crie um Map<String, String> mapeando curso para nome do estudante (use merge function para manter o primeiro estudante quando duplicatas ocorrerem).
+Imprima todos os maps.

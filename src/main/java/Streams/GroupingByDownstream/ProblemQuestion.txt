@@ -1,0 +1,35 @@
+EN:
+Product Analysis by Category:
+Create a class called Product with attributes:
+name (String)
+category (String)
+price (Double)
+stock (Integer)
+
+Requirements:
+Create a list with 15 products from 3 categories (Electronics, Food, Clothing).
+Using groupingBy() with downstream collectors:
+Group by category and calculate the TOTAL price per category using summingDouble().
+Group by category and calculate the AVERAGE price per category using averagingDouble().
+Group by category and get STATISTICS per category using summarizingDouble().
+Group by category and collect only PRODUCT NAMES using mapping().
+Print all results organized by category.
+
+-------------------------
+
+PT:
+Análise de Produtos por Categoria:
+Crie uma classe chamada Product com os atributos:
+name (String)
+category (String)
+price (Double)
+stock (Integer)
+
+Requisitos:
+Crie uma lista com 15 produtos de 3 categorias (Eletrônicos, Alimentos, Roupas).
+Usando groupingBy() com downstream collectors:
+Agrupe por categoria e calcule o preço TOTAL por categoria usando summingDouble().
+Agrupe por categoria e calcule o preço MÉDIO por categoria usando averagingDouble().
+Agrupe por categoria e obtenha ESTATÍSTICAS por categoria usando summarizingDouble().
+Agrupe por categoria e colete apenas NOMES DOS PRODUTOS usando mapping().
+Imprima todos os resultados organizados por categoria.

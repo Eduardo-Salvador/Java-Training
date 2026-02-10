@@ -1,0 +1,33 @@
+EN:
+Sales Multi-Level Grouping:
+Create a class called Sale with attributes:
+region (String) // "North", "South", "East", "West"
+product (String)
+quantity (Integer)
+value (Double)
+
+Requirements:
+Create a list with 20 sales from different regions and products.
+Using nested groupingBy():
+Group by region, then by product into a Map<String, Map<String, List<Sale>>>.
+Group by region, then by product, and COUNT sales into a Map<String, Map<String, Long>>.
+Group by region, then by product, and SUM values into a Map<String, Map<String, Double>>.
+Print the multi-level grouped results.
+
+------------------------
+
+PT:
+Agrupamento Multinível de Vendas:
+Crie uma classe chamada Sale com os atributos:
+region (String) // "Norte", "Sul", "Leste", "Oeste"
+product (String)
+quantity (Integer)
+value (Double)
+
+Requisitos:
+Crie uma lista com 20 vendas de diferentes regiões e produtos.
+Usando groupingBy() aninhado:
+Agrupe por região, depois por produto em um Map<String, Map<String, List<Sale>>>.
+Agrupe por região, depois por produto, e CONTE vendas em um Map<String, Map<String, Long>>.
+Agrupe por região, depois por produto, e SOME valores em um Map<String, Map<String, Double>>.
+Imprima os resultados agrupados multinível.

@@ -1,0 +1,31 @@
+EN:
+Class and Students:
+Create a class called Classroom with attributes:
+className (String)
+students (List<String>)
+
+Requirements:
+Create a list with 4 classrooms, each containing 3-5 student names.
+Using flatMap():
+"Flatten" all students from all classrooms into a single list.
+Filter students whose names start with "A".
+Sort alphabetically.
+Collect into a List<String>.
+Print the final flattened list.
+
+-------------------------------
+
+PT:
+Turmas e Alunos:
+Crie uma classe chamada Classroom com os atributos:
+className (String)
+students (List<String>)
+
+Requisitos:
+Crie uma lista com 4 turmas, cada uma contendo 3-5 nomes de alunos.
+Usando flatMap():
+"Achate" todos os alunos de todas as turmas em uma única lista.
+Filtre alunos cujos nomes começam com "A".
+Ordene alfabeticamente.
+Colete em uma List<String>.
+Imprima a lista final achatada.

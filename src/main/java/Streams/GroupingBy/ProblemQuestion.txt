@@ -1,0 +1,31 @@
+EN:
+Employee Grouping:
+Create a class called Employee with attributes:
+name (String)
+department (String)
+salary (Double)
+
+Requirements:
+Create a list with 12 employees from 4 different departments (IT, HR, Sales, Finance).
+Using groupingBy():
+Group employees by department into a Map<String, List<Employee>>.
+Print each department and its employees.
+Count employees per department using groupingBy() with counting().
+Print the count for each department.
+
+-----------------------
+
+PT:
+Agrupamento de Funcionários:
+Crie uma classe chamada Employee com os atributos:
+name (String)
+department (String)
+salary (Double)
+
+Requisitos:
+Crie uma lista com 12 funcionários de 4 departamentos diferentes (TI, RH, Vendas, Financeiro).
+Usando groupingBy():
+Agrupe funcionários por departamento em um Map<String, List<Employee>>.
+Imprima cada departamento e seus funcionários.
+Conte funcionários por departamento usando groupingBy() com counting().
+Imprima a contagem para cada departamento.

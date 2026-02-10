@@ -1,0 +1,43 @@
+EN:
+Performance Comparison:
+Create a class called Task with attributes:
+id (Integer)
+processingTime (Integer) // milliseconds
+Add a method: execute() that simulates work by sleeping for processingTime milliseconds.
+
+Requirements:
+Create a list with 100 tasks, each with random processing times between 10-50ms.
+
+Sequential processing:
+Use regular stream() and call execute() on each task.
+Measure total execution time.
+
+Parallel processing:
+Use parallelStream() and call execute() on each task.
+Measure total execution time.
+
+Compare and print both execution times.
+Calculate the speedup factor (sequential time / parallel time).
+
+------------------------------------
+
+PT:
+Comparação de Performance:
+Crie uma classe chamada Task com os atributos:
+id (Integer)
+processingTime (Integer) // millisegundos
+Adicione um método: execute() que simula trabalho dormindo por processingTime millisegundos.
+
+Requisitos:
+Crie uma lista com 100 tarefas, cada uma com tempos de processamento aleatórios entre 10-50ms.
+
+Processamento sequencial:
+Use stream() normal e chame execute() em cada tarefa.
+Meça o tempo total de execução.
+
+Processamento paralelo:
+Use parallelStream() e chame execute() em cada tarefa.
+Meça o tempo total de execução.
+
+Compare e imprima ambos os tempos de execução.
+Calcule o fator de aceleração (tempo sequencial / tempo paralelo).

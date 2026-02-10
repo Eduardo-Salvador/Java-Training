@@ -1,0 +1,41 @@
+EN:
+Sales Calculation:
+Create a class called Sale with attributes:
+product (String)
+quantity (Integer)
+unitPrice (Double)
+Add a method: getTotalValue() → returns quantity * unitPrice
+
+Requirements:
+Create a list with 8 sales.
+Using reduce():
+Calculate the total sum of all sales (sum of all getTotalValue()).
+Find the sale with the highest total value using reduce() with max.
+Calculate the product of all quantities (multiply all quantities together).
+
+Print:
+Total revenue
+Sale with highest value
+Product of quantities
+
+-------------------------------------
+
+PT:
+Cálculo de Vendas:
+Crie uma classe chamada Sale com os atributos:
+product (String)
+quantity (Integer)
+unitPrice (Double)
+Adicione um método: getTotalValue() → retorna quantity * unitPrice
+
+Requisitos:
+Crie uma lista com 8 vendas.
+Usando reduce():
+Calcule a soma total de todas as vendas (soma de todos getTotalValue()).
+Encontre a venda com maior valor total usando reduce() com max.
+Calcule o produto de todas as quantidades (multiplique todas as quantidades).
+
+Imprima:
+Receita total
+Venda com maior valor
+Produto das quantidades
