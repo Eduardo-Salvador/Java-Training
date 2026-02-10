@@ -1,0 +1,29 @@
+EN:
+Student Sorting:
+Create a class called Student with attributes:
+name (String)
+grade (Double)
+
+Requirements:
+Create a list with 10 students (some with duplicate names).
+Using Stream:
+Remove duplicate names using distinct().
+Sort by grade in descending order using sorted().
+Collect into a List<Student>.
+Print the sorted list without duplicates.
+
+-------------------------------------------
+
+PT:
+Ordenação de Estudantes:
+Crie uma classe chamada Student com os atributos:
+name (String)
+grade (Double)
+
+Requisitos:
+Crie uma lista com 10 estudantes (alguns com nomes duplicados).
+Usando Stream:
+Remova nomes duplicados usando distinct().
+Ordene por nota em ordem decrescente usando sorted().
+Colete em uma List<Student>.
+Imprima a lista ordenada sem duplicatas.

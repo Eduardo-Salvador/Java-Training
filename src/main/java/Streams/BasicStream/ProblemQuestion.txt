@@ -1,0 +1,31 @@
+EN:
+Product Filtering:
+Create a class called Product with attributes:
+name (String)
+price (Double)
+category (String)
+
+Requirements:
+Create a list with at least 8 products from different categories (Electronics, Books, Clothing).
+Using Stream:
+Filter products with price above 100.
+Map to extract only the product names.
+Collect the result into a List<String>.
+Print the final list.
+
+--------------------------
+
+PT:
+Filtragem de Produtos:
+Crie uma classe chamada Product com os atributos:
+name (String)
+price (Double)
+category (String)
+
+Requisitos:
+Crie uma lista com pelo menos 8 produtos de diferentes categorias (Eletrônicos, Livros, Roupas).
+Usando Stream:
+Filtre produtos com preço acima de 100.
+Mapeie para extrair apenas os nomes dos produtos.
+Colete o resultado em uma List<String>.
+Imprima a lista final.

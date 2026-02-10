@@ -1,0 +1,37 @@
+EN:
+Order Analysis:
+Create a class called Order with attributes:
+id (Integer)
+customerName (String)
+totalValue (Double)
+status (String) // "PENDING", "SHIPPED", "DELIVERED"
+
+Requirements:
+Create a list with 12 orders with different statuses and values.
+Using Stream and terminal operations:
+findFirst() → find the first order with status "PENDING".
+findAny() → find any order with value above 500.
+anyMatch() → is there any order with status "SHIPPED"?
+allMatch() → are all orders above 50?
+noneMatch() → are there no orders with empty customer names?
+Print all results with descriptive messages.
+
+-----------------------------------
+
+PT:
+Análise de Pedidos:
+Crie uma classe chamada Order com os atributos:
+id (Integer)
+customerName (String)
+totalValue (Double)
+status (String) // "PENDING", "SHIPPED", "DELIVERED"
+
+Requisitos:
+Crie uma lista com 12 pedidos com diferentes status e valores.
+Usando Stream e operações terminais:
+findFirst() → encontre o primeiro pedido com status "PENDING".
+findAny() → encontre qualquer pedido com valor acima de 500.
+anyMatch() → existe algum pedido com status "SHIPPED"?
+allMatch() → todos os pedidos estão acima de 50?
+noneMatch() → não há pedidos com nome de cliente vazio?
+Imprima todos os resultados com mensagens descritivas.
