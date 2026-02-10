@@ -1,0 +1,77 @@
+EN:
+E-commerce System:
+Create the following classes:
+
+Customer:
+id (Integer)
+name (String)
+city (String)
+
+Order:
+orderId (Integer)
+customerId (Integer)
+products (List<String>)
+totalValue (Double)
+status (String) // "PENDING", "PROCESSING", "SHIPPED", "DELIVERED"
+
+Requirements:
+Create lists with 10 customers and 25 orders.
+Perform the following operations:
+
+FlatMap:
+Extract all product names from all orders into a single list, remove duplicates.
+GroupingBy + Counting: Group orders by status and count how many orders are in each status.
+GroupingBy + Summing: Group orders by city (join with customers) and calculate total sales per city.
+Filter + Map + Reduce: Find the total value of all "DELIVERED" orders.
+
+Matching:
+Check if there are any orders above 1000.
+Check if all orders have at least one product.
+Check if there are no orders with empty customer names.
+
+Statistics:
+Calculate statistics (min, max, average, sum) for order values.
+ToMap: Create a map of customerId → customer name.
+Multi-level grouping: Group orders by city, then by status.
+
+Print all results with clear, formatted output.
+
+-------------
+
+PT:
+Sistema de E-commerce:
+Crie as seguintes classes:
+
+Customer:
+id (Integer)
+name (String)
+city (String)
+
+Order:
+orderId (Integer)
+customerId (Integer)
+products (List<String>)
+totalValue (Double)
+status (String) // "PENDING", "PROCESSING", "SHIPPED", "DELIVERED"
+
+Requisitos:
+Crie listas com 10 clientes e 25 pedidos.
+Realize as seguintes operações:
+
+FlatMap:
+Extraia todos os nomes de produtos de todos os pedidos em uma única lista, remova duplicatas.
+GroupingBy + Counting: Agrupe pedidos por status e conte quantos pedidos existem em cada status.
+GroupingBy + Summing: Agrupe pedidos por cidade (junte com clientes) e calcule vendas totais por cidade.
+Filter + Map + Reduce: Encontre o valor total de todos os pedidos "DELIVERED".
+
+Matching:
+Verifique se há algum pedido acima de 1000.
+Verifique se todos os pedidos têm pelo menos um produto.
+Verifique se não há pedidos com nomes de clientes vazios.
+
+Statistics:
+Calcule estatísticas (min, max, average, sum) para valores de pedidos.
+ToMap: Crie um mapa de customerId → nome do cliente.
+Agrupamento multinível: Agrupe pedidos por cidade, depois por status.
+
+Imprima todos os resultados com saída clara e formatada.
