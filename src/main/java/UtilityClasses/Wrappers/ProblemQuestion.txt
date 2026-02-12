@@ -1,0 +1,25 @@
+EN-US:
+Create a program that:
+
+Receives a String with comma-separated numbers: "10,20,30,40"
+Uses Integer.parseInt() to convert each one
+Stores in an ArrayList<Integer> (automatic autoboxing)
+Calculates the sum using unboxing
+Uses Integer.compare() to find the highest value
+
+Input example: "10,20,30,40"
+Expected output: Sum: 100, Highest: 40
+
+--------------------------
+
+PT-BR:
+Crie um programa que:
+
+Receba uma String com números separados por vírgula: "10,20,30,40"
+Use Integer.parseInt() para converter cada um
+Armazene em um ArrayList<Integer> (autoboxing automático)
+Calcule a soma usando unboxing
+Use Integer.compare() para encontrar o maior valor
+
+Exemplo de entrada: "10,20,30,40"
+Saída esperada: Soma: 100, Maior: 40

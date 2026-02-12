@@ -62,7 +62,7 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 ## Utility Classes:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/UtilityClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/UtilityClasses/README_PT-BR.md)
 
 ## Parameterizing Behaviors:
 

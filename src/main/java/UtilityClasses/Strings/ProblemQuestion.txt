@@ -1,0 +1,27 @@
+EN-US:
+Create a CPF validator that:
+
+Receives a String (e.g., "123.456.789-10")
+Uses replace() to remove dots and dash
+Uses length() to validate if it has 11 digits
+Uses substring() to separate the first 9 digits from the 2 verifiers
+Uses equals() to compare (don't use ==!)
+
+// Input: "123.456.789-10"
+// Process: "12345678910"
+// Validate size and format
+
+-----------------------
+
+PT-BR:
+Crie um validador de CPF que:
+
+Receba uma String (ex: "123.456.789-10")
+Use replace() para remover pontos e traço
+Use length() para validar se tem 11 dígitos
+Use substring() para separar os 9 primeiros dígitos dos 2 verificadores
+Use equals() para comparar (não use ==!)
+
+// Entrada: "123.456.789-10"
+// Processar: "12345678910"
+// Validar tamanho e formato

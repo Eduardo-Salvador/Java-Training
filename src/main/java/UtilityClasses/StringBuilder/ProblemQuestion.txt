@@ -1,0 +1,23 @@
+EN-US:
+Create a report generator that:
+
+Uses a loop from 1 to 1000
+For each number, adds a line in the format: "Item 001: Product"
+Uses StringBuilder (not concatenated Strings!)
+Uses String.format() or append() to format with leading zeros
+At the end, converts to String and shows the first 5 lines
+
+Comment: Without StringBuilder, creating 1000 concatenated Strings would create 1000 temporary objects in memory! With StringBuilder, you modify the same object, being much more efficient.
+
+----------------------------------
+
+PT-BR:
+Crie um gerador de relatório que:
+
+Use um loop de 1 a 1000
+Para cada número, adicione uma linha no formato: "Item 001: Produto"
+Use StringBuilder (não String concatenada!)
+Use String.format() ou append() para formatar com zeros à esquerda
+No final, converta para String e mostre as primeiras 5 linhas
+
+Comentário: Sem StringBuilder, criar 1000 Strings concatenadas criaria 1000 objetos temporários na memória! Com StringBuilder, você modifica o mesmo objeto, sendo muito mais eficiente.

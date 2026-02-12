@@ -1,0 +1,23 @@
+EN-US:
+Create a program that:
+
+Creates a Date object representing now
+Uses getTime() to get the timestamp in milliseconds
+Adds 24 hours (86400000 ms) using setTime()
+Uses before() and after() to compare the two dates
+Shows the difference in days
+
+Comment: Date is legacy, but still appears in old systems. The important thing is to know that it works with milliseconds since 1970 and is mutable (can cause bugs!).
+
+------------------------
+
+PT-BR:
+Crie um programa que:
+
+Crie um objeto Date representando agora
+Use getTime() para pegar o timestamp em milissegundos
+Adicione 24 horas (86400000 ms) usando setTime()
+Use before() e after() para comparar as duas datas
+Mostre a diferença em dias
+
+Comentário: Date é legada, mas ainda aparece em sistemas antigos. O importante é saber que ela trabalha com milissegundos desde 1970 e é mutável (pode causar bugs!).

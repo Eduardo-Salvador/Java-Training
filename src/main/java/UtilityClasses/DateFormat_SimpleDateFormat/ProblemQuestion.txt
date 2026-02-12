@@ -1,0 +1,21 @@
+Create a date format converter:
+
+Receives a String in American format: "12/25/2025" (MM/dd/yyyy)
+Uses SimpleDateFormat with the correct pattern to parse
+Converts to Brazilian format: "25/12/2025" (dd/MM/yyyy)
+Also shows in extended format: "December 25, 2025"
+Uses setLenient(false) to reject invalid dates
+
+Comment: SimpleDateFormat is NOT thread-safe! If you share the same instance between threads, you may get wrong results. That's why you should always create a new one or use DateTimeFormatter (Java 8+).
+
+-----------------------------------------
+
+Crie um conversor de formatos de data:
+
+Receba uma String no formato americano: "12/25/2025" (MM/dd/yyyy)
+Use SimpleDateFormat com o padrão correto para fazer parse
+Converta para o formato brasileiro: "25/12/2025" (dd/MM/yyyy)
+Mostre também no formato extenso: "25 de dezembro de 2025"
+Use setLenient(false) para rejeitar datas inválidas
+
+Comentário: SimpleDateFormat NÃO é thread-safe! Se você compartilhar a mesma instância entre threads, pode ter resultados errados. Por isso sempre crie uma nova ou use DateTimeFormatter (Java 8+).
