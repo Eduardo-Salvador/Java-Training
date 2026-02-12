@@ -1,1 +1,0 @@
-Format a double value as currency for Brazil, USA and Japan.

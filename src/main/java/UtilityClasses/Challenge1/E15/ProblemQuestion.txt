@@ -1,1 +1,0 @@
-Implement a function that checks whether a String value can be converted to an integer or a double (using try-catch and parseInt / parseDouble).

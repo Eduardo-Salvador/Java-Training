@@ -1,1 +1,0 @@
-Create a system that receives a number and returns its representation in full in different locations (e.g., 1,000.50 in Brazil, 1,000.50 in the USA).

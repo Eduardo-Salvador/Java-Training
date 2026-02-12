@@ -1,6 +1,0 @@
-Appointment Calendar
-Create the following classes:
-Event (name, description, date and time, location)
-Calendar with list of events
-Methods to add and list daily events, weekly events, and future events
-Use TemporalAdjusters to find, for example, "the next available Saturday"

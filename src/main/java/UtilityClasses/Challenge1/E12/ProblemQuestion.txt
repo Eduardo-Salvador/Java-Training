@@ -1,1 +1,0 @@
-Create a method that checks if a sentence is a palindrome, ignoring accents and punctuation.

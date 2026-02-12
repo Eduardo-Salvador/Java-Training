@@ -1,6 +1,0 @@
-Loan System
-Classes:
-Loan with amount, contract date, installments, monthly interest rate
-Method for calculating the amount of each installment considering compound interest
-Method for simulating early repayment and calculating the discount (using Period or ChronoUnit)
-Handle exceptions: invalid number of installments, negative interest, etc.

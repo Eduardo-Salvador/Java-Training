@@ -1,1 +1,0 @@
-Rewrite a sentence by correcting all repeated words using StringBuilder.

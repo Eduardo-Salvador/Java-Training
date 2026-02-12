@@ -1,1 +1,0 @@
-Add 30 days to a date and check if it fell on a weekend with DayOfWeek.

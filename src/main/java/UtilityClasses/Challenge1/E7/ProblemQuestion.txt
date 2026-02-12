@@ -1,1 +1,0 @@
-Calculate the elapsed time between two instants (Instant.now()) with Duration.

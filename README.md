@@ -48,6 +48,10 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/SeminarSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/SeminarSystem/README_PT-BR.md)
 
+## Inner Classes:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/InnerClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/InnerClasses/README_PT-BR.md)
+
 ## Collections:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Collections/README_PT-BR.md)
@@ -56,9 +60,9 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for open the Project for Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)
 
-## Inner Classes:
+## Utility Classes:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/InnerClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/InnerClasses/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
 
 ## Parameterizing Behaviors:
 
@@ -79,10 +83,6 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 ## Streams:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Streams/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Streams/README_PT-BR.md)
-
-## Utility Classes:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/UtilityClasses/README_PT-BR.md)
 
 ## Pet Adoption System (CLI) 
 First Major Learning Challenge: 
