@@ -1,0 +1,26 @@
+EN-US:
+Create an international price formatter:
+
+Receives a value: 1234.56
+Formats this value in 4 different currencies:
+Brazil (R$ 1.234,56)
+USA ($1,234.56)
+Japan (¥1,235 - no cents!)
+Germany (1.234,56 €)
+Uses NumberFormat.getCurrencyInstance(locale) for each
+
+Comment: Locale is essential for international applications. Each country has its own rules for formatting dates, numbers, and currency. Java already has this ready!
+
+------------------------------
+
+PT-BR:
+Crie um formatador internacional de preço:
+
+Receba um valor: 1234.56
+Formate esse valor em 4 moedas diferentes:
+Brasil (R$ 1.234,56)
+EUA ($1,234.56)
+Japão (¥1,235 - sem centavos!)
+Alemanha (1.234,56 €)
+
+Use NumberFormat.getCurrencyInstance(locale) para cada

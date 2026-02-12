@@ -1,0 +1,19 @@
+EN-US:
+Create a log parser:
+
+Receives a log String: "2026-02-11 14:30:45 - System error"
+Extracts the date/time using DateTimeFormatter with pattern "yyyy-MM-dd HH:mm:ss"
+Converts to LocalDateTime
+Reformats to Brazilian standard: "02/11/2026 at 2:30 PM"
+Shows how much time has passed since the log until now
+
+--------
+
+PT-BR:
+Crie um parser de log:
+
+Receba uma String de log: "2026-02-11 14:30:45 - Erro no sistema"
+Extraia a data/hora usando DateTimeFormatter com padrão "yyyy-MM-dd HH:mm:ss"
+Converta para LocalDateTime
+Reformate para o padrão brasileiro: "11/02/2026 às 14h30"
+Mostre quanto tempo se passou desde o log até agora

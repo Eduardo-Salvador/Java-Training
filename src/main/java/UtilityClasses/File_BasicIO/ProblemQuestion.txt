@@ -1,0 +1,23 @@
+EN-US:
+Create a simple log system:
+
+Check if file logs/app.log exists using File.exists()
+If it doesn't exist, create the logs/ directory with mkdir() and the file
+Use BufferedWriter to add 3 log lines (append mode)
+Use BufferedReader to read and show all content
+Show the file size in bytes using File.length()
+
+Comment: Always use BufferedReader/Writer in production! Reading/writing character by character with FileReader/Writer is very slow. The buffer accumulates data in memory before writing to disk.
+
+---------------------------
+
+EN-US:
+Create a simple log system:
+
+Check if file logs/app.log exists using File.exists()
+If it doesn't exist, create the logs/ directory with mkdir() and the file
+Use BufferedWriter to add 3 log lines (append mode)
+Use BufferedReader to read and show all content
+Show the file size in bytes using File.length()
+
+Comment: Always use BufferedReader/Writer in production! Reading/writing character by character with FileReader/Writer is very slow. The buffer accumulates data in memory before writing to disk.

@@ -1,0 +1,25 @@
+EN-US:
+Create a simple multilingual system:
+
+Create 2 .properties files:
+messages_pt_BR.properties: welcome=Bem-vindo, goodbye=Até logo
+messages_en_US.properties: welcome=Welcome, goodbye=Goodbye
+Load messages according to user Locale
+Show messages in Portuguese and English
+Use containsKey() to check if a key exists before fetching
+
+Comment: ResourceBundle is fundamental for internationalization (i18n). In production, you would have hundreds of keys to translate the entire application!
+
+-----------------------------
+
+PT-BR:
+Crie um sistema multilíngue simples:
+
+Crie 2 arquivos .properties:
+messages_pt_BR.properties: welcome=Bem-vindo, goodbye=Até logo
+messages_en_US.properties: welcome=Welcome, goodbye=Goodbye
+Carregue as mensagens de acordo com o Locale do usuário
+Mostre as mensagens em português e inglês
+Use containsKey() para verificar se uma chave existe antes de buscar
+
+Comentário: ResourceBundle é fundamental para internacion

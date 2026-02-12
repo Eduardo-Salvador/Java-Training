@@ -1,0 +1,21 @@
+EN-US:
+Create a CSV reader:
+
+CSV String: "John;25;New York|Mary;30;Los Angeles|Peter;28;Chicago"
+Use useDelimiter("\\|") to separate by person
+For each person, use split(";") to separate name, age, and city
+Show the data formatted in a table
+
+Comment: Scanner is great for simple parsing. The delimiter defines where to "break" the text. By default it's space, but you can change it to any regex!
+
+------------------
+
+PT-BR:
+Crie um leitor de CSV:
+
+String CSV: "João;25;São Paulo|Maria;30;Rio de Janeiro|Pedro;28;Belo Horizonte"
+Use useDelimiter("\\|") para separar por pessoa
+Para cada pessoa, use split(";") para separar nome, idade e cidade
+Mostre os dados formatados em tabela
+
+Comentário: Scanner é ótimo para parsing simples. O delimitador define onde "quebrar" o texto. Por padrão é espaço, mas você pode mudar para qualquer regex!

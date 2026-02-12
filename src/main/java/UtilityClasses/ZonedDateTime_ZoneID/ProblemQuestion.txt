@@ -1,0 +1,25 @@
+EN-US:
+Create a time zone converter:
+
+Create a ZonedDateTime for São Paulo: 12/25/2025 at 10:00 AM
+Convert this same moment to:
+    Tokyo (Japan)
+    New York (USA)
+    London (UK)
+Show the hour difference between each zone
+Use withZoneSameInstant() to convert
+
+Comment: ZonedDateTime stores the complete zone (America/Sao_Paulo), while OffsetDateTime stores only the offset (-03:00). Use ZonedDateTime when you need correct time zone conversions!
+
+----------------------
+
+PT-BR:
+Crie um conversor de fuso horário:
+
+Crie um ZonedDateTime para São Paulo: 25/12/2025 às 10:00
+Converta esse mesmo momento para:
+    Tokyo (Japão)
+    Nova York (EUA)
+    Londres (UK)
+Mostre a diferença de horas entre cada fuso
+Use withZoneSameInstant() para converter

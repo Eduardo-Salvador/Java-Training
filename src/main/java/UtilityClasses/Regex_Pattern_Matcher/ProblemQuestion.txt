@@ -1,0 +1,23 @@
+EN-US:
+Create an information extractor:
+
+Receives a text: "Contact: john@email.com or mary@company.com"
+Uses regex to find all emails: [\w.-]+@[\w.-]+\.\w+
+Uses Matcher.find() in a loop to get all
+Uses group() to extract each found email
+Counts how many emails were found
+
+Comment: Regex is powerful but complex. Start simple and evolve. The important thing is to understand that find() searches for patterns in text, while matches() validates if the ENTIRE text matches the pattern.
+
+--------------------
+
+PT-BR:
+Crie um extrator de informações:
+
+Receba um texto: "Contato: joao@email.com ou maria@empresa.com.br"
+Use regex para encontrar todos os emails: [\w.-]+@[\w.-]+\.\w+
+Use Matcher.find() em loop para pegar todos
+Use group() para extrair cada email encontrado
+Conte quantos emails foram encontrados
+
+Comentário: Regex é poderoso mas complexo. Comece simples e vá evoluindo. O importante é entender que find() procura padrões no texto, enquanto matches() valida se o texto INTEIRO bate com o padrão.

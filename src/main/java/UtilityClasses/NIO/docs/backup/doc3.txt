@@ -1,0 +1,2 @@
+Content of document 3
+Line 2 of doc3

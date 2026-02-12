@@ -1,0 +1,21 @@
+EN-US:
+Create a file organizer:
+
+Create 3 text files with Files.write(): "doc1.txt", "doc2.txt", "doc3.txt"
+List all files in the current directory with Files.list()
+For each .txt file, read the content with Files.readAllLines()
+Use Path.resolve() to create a "backup" subdirectory
+Copy all .txt files to backup using Files.copy()
+
+----------------
+
+PT-BR:
+Crie um organizador de arquivos:
+
+Crie 3 arquivos texto com Files.write(): "doc1.txt", "doc2.txt", "doc3.txt"
+Liste todos os arquivos do diretório atual com Files.list()
+Para cada arquivo .txt, leia o conteúdo com Files.readAllLines()
+Use Path.resolve() para criar um subdiretório "backup"
+Copie todos os .txt para o backup usando Files.copy()
+
+Comentário: NIO é a API moderna! Files tem métodos para TUDO: criar, deletar, copiar, mover, ler, escrever. Muito mais simples que File da API antiga.

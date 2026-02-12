@@ -1,0 +1,23 @@
+EN-US:
+Create a company time calculator:
+
+Hire date: 01/01/2020
+Current date: use LocalDate.now()
+Use Period.between() to calculate years, months, and days
+Use ChronoUnit.DAYS.between() to calculate total days worked
+Show: "5 years, 1 month and 11 days (1868 total days)"
+
+Comment: Period gives you the "human" difference (years/months/days), while ChronoUnit gives you the absolute total. Both are useful depending on context!
+
+------------------
+
+PT-BR:
+Crie um calculador de tempo de empresa:
+
+Data de admissão: 01/01/2020
+Data atual: use LocalDate.now()
+Use Period.between() para calcular anos, meses e dias
+Use ChronoUnit.DAYS.between() para calcular o total de dias trabalhados
+Mostre: "5 anos, 1 mês e 11 dias (1868 dias totais)"
+
+Comentário: Period te dá a diferença "humana" (anos/meses/dias), enquanto ChronoUnit te dá o total absoluto. Ambos são úteis dependendo do contexto!

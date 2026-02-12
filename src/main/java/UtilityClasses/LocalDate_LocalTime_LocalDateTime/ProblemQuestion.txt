@@ -1,0 +1,21 @@
+EN-US:
+Create a scheduling system:
+
+Create an appointment date: 03/15/2026
+Create a time: 14:30
+Combine both into a LocalDateTime
+Add 1 week using plusWeeks()
+Check if the date is on a weekend using getDayOfWeek()
+Format the output as: "Monday, March 15, 2026 at 2:30 PM"
+
+-------------------
+
+PT-BR:
+Crie um sistema de agendamento:
+
+Crie uma data de consulta: 15/03/2026
+Crie um horário: 14:30
+Combine os dois em um LocalDateTime
+Adicione 1 semana usando plusWeeks()
+Verifique se a data está em um final de semana usando getDayOfWeek()
+Formate a saída como: "Segunda-feira, 15 de março de 2026 às 14:30"

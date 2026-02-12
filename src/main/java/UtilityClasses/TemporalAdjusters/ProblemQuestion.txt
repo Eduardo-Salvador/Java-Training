@@ -1,0 +1,23 @@
+EN-US:
+Create a payroll generator:
+
+Base date: today
+Find the last business day of the month using TemporalAdjusters.lastDayOfMonth()
+Find the next Monday using TemporalAdjusters.next(DayOfWeek.MONDAY)
+Find the first day of next month
+Show all these formatted dates
+
+Comment: TemporalAdjusters prevents you from having to do complex manual calendar calculations. Very useful for business rules!
+
+--------------------------
+
+PT-BR:
+Crie um gerador de folha de pagamento:
+
+Data base: hoje
+Encontre o último dia útil do mês usando TemporalAdjusters.lastDayOfMonth()
+Encontre a próxima segunda-feira usando TemporalAdjusters.next(DayOfWeek.MONDAY)
+Encontre o primeiro dia do próximo mês
+Mostre todas essas datas formatadas
+
+Comentário: TemporalAdjusters evita que você tenha que fazer contas manuais complexas com calendário. Muito útil para regras de negócio!
