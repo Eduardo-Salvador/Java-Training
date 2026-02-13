@@ -1,0 +1,25 @@
+EN-US:
+Create a game save system:
+
+Create a Player implements Serializable class with: name, level, points
+Add serialVersionUID = 1L
+Create a player with data
+Save to file "save.dat" using ObjectOutputStream
+Read back using ObjectInputStream
+Add a transient String password field and see that it's not saved
+
+Comment: Serialization transforms objects into bytes. Nowadays, JSON is more used, but Java serialization still appears in cache, sessions, and legacy systems. transient is important to not save sensitive data like passwords!
+
+--------------
+
+PT-BR:
+Crie um sistema de salvamento de jogo:
+
+Crie uma classe Jogador implements Serializable com: nome, nivel, pontos
+Adicione serialVersionUID = 1L
+Crie um jogador com dados
+Salve em arquivo "save.dat" usando ObjectOutputStream
+Leia de volta usando ObjectInputStream
+Adicione um campo transient String senha e veja que ele não é salvo
+
+Comentário: Serialização transforma objetos em bytes. Hoje em dia, JSON é mais usado, mas serialização Java ainda aparece em cache, sessões e sistemas legados. O transient é importante para não salvar dados sensíveis como senhas!
