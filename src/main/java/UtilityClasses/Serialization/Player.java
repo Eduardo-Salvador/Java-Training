@@ -48,4 +48,14 @@ public class Player implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", level=" + level +
+                ", points=" + points +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
