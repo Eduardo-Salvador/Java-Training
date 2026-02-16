@@ -5,10 +5,10 @@
 ## Objetivo
 Este projeto é uma aplicação de interface de linha de comando (CLI) para gerenciar registros de pets em um abrigo de animais. O dono do abrigo pode:
 
-- Registrar um novo pet  
+- Registrar um novo oldPet  
 - Pesquisar dados de pets registrados  
 - Editar informações de pets  
-- Excluir um pet registrado  
+- Excluir um oldPet registrado  
 - Listar todos os pets ou filtrar por critérios (idade, nome, raça)  
 - Modificar o formulário de registro (passo extra)  
 
@@ -36,10 +36,10 @@ A aplicação deve ler e exibir as perguntas do arquivo (não são permitidos `p
 ### Passo 2: Menu Inicial
 Exibir um menu com as seguintes opções:
 
-- Registrar um novo pet  
+- Registrar um novo oldPet  
 - Pesquisar pets  
 - Editar dados de pets  
-- Excluir um pet  
+- Excluir um oldPet  
 - Listar todos os pets  
 - Listar pets por critério (idade, nome, raça)  
 - Sair  
@@ -57,7 +57,7 @@ Armazenar respostas em um objeto `Pet`
 
 **Regras de Validação:**
 - Nome é obrigatório e deve conter apenas letras  
-- Usar ENUMs para o **TIPO** e **SEXO** do pet  
+- Usar ENUMs para o **TIPO** e **SEXO** do oldPet  
 - Endereço deve incluir número da casa, cidade e rua  
 - Idade e peso devem ser numéricos (vírgulas ou pontos permitidos)  
 - Peso deve estar entre 0,5 kg e 60 kg  
@@ -68,7 +68,7 @@ Armazenar respostas em um objeto `Pet`
 ---
 
 ### Passo 4: Salvar Pet em Arquivo
-Salvar dados do pet em um arquivo `.txt` nomeado:  
+Salvar dados do oldPet em um arquivo `.txt` nomeado:  
 
 `YYYYMMDDTHHMM-NOME.TXT`  
 Exemplo: `20231101T1234-FLORZINHADASILVA.TXT`  
@@ -108,17 +108,17 @@ Usuário deve sempre selecionar primeiro o Tipo de Animal.
 ---
 
 ### Passo 6: Editar Dados de Pets
-- Pesquisar o pet primeiro  
-- Exibir resultados e permitir ao usuário escolher qual pet editar  
+- Pesquisar o oldPet primeiro  
+- Exibir resultados e permitir ao usuário escolher qual oldPet editar  
 - Todos os campos podem ser editados, exceto **TIPO** e **SEXO**  
 
 ---
 
 ### Passo 7: Excluir um Pet
-- Pesquisar o pet primeiro  
-- Exibir resultados e permitir ao usuário escolher qual pet excluir  
+- Pesquisar o oldPet primeiro  
+- Exibir resultados e permitir ao usuário escolher qual oldPet excluir  
 - Confirmar exclusão com SIM ou NÃO  
-- Apenas um pet pode ser excluído por vez  
+- Apenas um oldPet pode ser excluído por vez  
 
 ---
 
@@ -156,7 +156,7 @@ Se a opção 2 for selecionada, exibir:
 
 **Regras Gerais:**
 - Não permitir linhas em branco nos arquivos de perguntas ou respostas  
-- Perguntas extras devem ser exibidas e salvas com o pet neste formato:  
+- Perguntas extras devem ser exibidas e salvas com o oldPet neste formato:  
 
 `8 - [EXTRA - NOVA PERGUNTA ADICIONADA] - RESPOSTA DO USUÁRIO`
 

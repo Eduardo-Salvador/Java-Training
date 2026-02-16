@@ -1,6 +1,6 @@
-package StudyChallenges.RegistrationSystem.Controller;
+package StudyChallenges.RegistrationSystem.Services;
 import StudyChallenges.RegistrationSystem.Domain.Pet;
-import StudyChallenges.RegistrationSystem.Domain.PetType;
+import StudyChallenges.RegistrationSystem.Domain.enums.PetType;
 import java.io.*;
 import java.nio.file.*;
 import java.text.Normalizer;

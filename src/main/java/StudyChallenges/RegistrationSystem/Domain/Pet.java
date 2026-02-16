@@ -1,4 +1,7 @@
 package StudyChallenges.RegistrationSystem.Domain;
+import StudyChallenges.RegistrationSystem.Domain.enums.PetSex;
+import StudyChallenges.RegistrationSystem.Domain.enums.PetType;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;

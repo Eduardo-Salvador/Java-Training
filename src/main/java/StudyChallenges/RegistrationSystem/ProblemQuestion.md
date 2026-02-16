@@ -2,12 +2,12 @@
 
 ## Objective
 
-This project is a command-line interface (CLI) application for managing pet registrations in an animal shelter. The shelter owner can:
+This project is a command-line interface (CLI) application for managing oldPet registrations in an animal shelter. The shelter owner can:
 
-- Register a new pet
-- Search for registered pet data
-- Edit pet information
-- Delete a registered pet
+- Register a new oldPet
+- Search for registered oldPet data
+- Edit oldPet information
+- Delete a registered oldPet
 - List all pets or filter by criteria (age, name, breed)
 - Modify the registration form (extra step)
 
@@ -36,10 +36,10 @@ The system must be implemented using **Object-Oriented Programming (OOP)** and f
 
 Display a menu with the following options:
 
-1. Register a new pet  
+1. Register a new oldPet  
 2. Search for pets  
-3. Edit pet data  
-4. Delete a pet  
+3. Edit oldPet data  
+4. Delete a oldPet  
 5. List all pets  
 6. List pets by criteria (age, name, breed)  
 7. Exit  
@@ -56,7 +56,7 @@ Display a menu with the following options:
 
 **Validation Rules:**
 - Name is mandatory and must contain only letters
-- Use ENUMs for pet `TYPE` and `SEX`
+- Use ENUMs for oldPet `TYPE` and `SEX`
 - Address must include house number, city, and street
 - Age and weight must be numeric (commas or periods allowed)
   - Weight must be between 0.5 kg and 60 kg
@@ -66,7 +66,7 @@ Display a menu with the following options:
 
 ### Step 4: Save Pet to File
 
-- Save pet data in a `.txt` file named:  
+- Save oldPet data in a `.txt` file named:  
   `YYYYMMDDTHHMM-NAME.TXT` (e.g., `20231101T1234-FLORZINHADASILVA.TXT`)
 - File must be saved in the `petsCadastrados` folder
 - Each answer must be on a separate line
@@ -98,16 +98,16 @@ Display a menu with the following options:
 
 ### Step 6: Edit Pet Data
 
-- Search for the pet first
-- Display results and let the user choose which pet to edit
+- Search for the oldPet first
+- Display results and let the user choose which oldPet to edit
 - All fields can be edited **except** `TYPE` and `SEX`
 
 ### Step 7: Delete a Pet
 
-- Search for the pet first
-- Display results and let the user choose which pet to delete
+- Search for the oldPet first
+- Display results and let the user choose which oldPet to delete
 - Confirm deletion with YES or NO
-- Only one pet can be deleted at a time
+- Only one oldPet can be deleted at a time
 
 ### Step 8: Exit
 
@@ -119,7 +119,7 @@ Display a menu with the following options:
 
 Add a new option to the main menu:
 
-1. Start pet registration system  
+1. Start oldPet registration system  
 2. Start form modification system  
 
 If option 2 is selected, show:
@@ -146,7 +146,7 @@ If option 2 is selected, show:
 
 **General Rules:**
 - No blank lines in question or answer files
-- Extra questions must be displayed and saved with the pet in this format:
+- Extra questions must be displayed and saved with the oldPet in this format:
   
 8 - [EXTRA - NEW QUESTION ADDED] - USER'S RESPONSE
   
@@ -157,4 +157,4 @@ If option 2 is selected, show:
 
 ## Summary:
 
-This CLI system simulates a real-world pet adoption registry with robust input validation, file handling, and extensibility. It encourages clean architecture, modular design, and thoughtful user interaction.
+This CLI system simulates a real-world oldPet adoption registry with robust input validation, file handling, and extensibility. It encourages clean architecture, modular design, and thoughtful user interaction.

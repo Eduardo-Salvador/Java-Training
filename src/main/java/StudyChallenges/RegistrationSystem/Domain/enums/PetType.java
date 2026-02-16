@@ -1,4 +1,4 @@
-package StudyChallenges.RegistrationSystem.Domain;
+package StudyChallenges.RegistrationSystem.Domain.enums;
 
 public enum PetType {
     DOG(),
