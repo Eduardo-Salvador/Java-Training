@@ -1,0 +1,57 @@
+EN-US:
+Challenge — User Registration with Multiple Screens
+
+Scenario
+Create a simple registration system with two windows.
+
+- Screen 1 — Registration Form
+Must contain the following fields:
+- Name (required, minimum 3 characters)
+- Email (required, must contain @ and .)
+- Age (required, must be a number between 1 and 120)
+- Password (required, minimum 6 characters) — use JPasswordField
+- "Register" Button
+- Screen 2 — Confirmation
+
+When clicking "Register" with all valid data, Screen 1 closes and Screen 2 opens displaying a summary:
+Registration successful!
+Name: João Silva
+Email: joao@email.com
+Age: 25
+If any field is invalid, display an error message with JOptionPane without closing the window.
+
+Technical Requirements
+- Use JFrame for both windows
+- Validate all fields before the requirement
+- Pass data from Screen 1 to Screen 2 via constructor
+- Do not use external libraries
+
+--------------------------------
+
+PT-BR:
+Desafio — Cadastro de Usuário com Múltiplas Telas
+
+Cenário
+Crie um sistema simples de cadastro com duas janelas.
+
+- Tela 1 — Formulário de Cadastro
+Deve conter os seguintes campos:
+- Nome (obrigatório, mínimo 3 caracteres)
+- Email (obrigatório, deve conter @ e .)
+- Idade (obrigatório, deve ser número entre 1 e 120)
+- Senha (obrigatório, mínimo 6 caracteres) — use JPasswordField
+- Botão "Cadastrar"
+
+- Tela 2 — Confirmação
+Ao clicar em "Cadastrar" com todos os dados válidos, fecha a Tela 1 e abre a Tela 2 exibindo um resumo:
+Cadastro realizado com sucesso!
+Nome:  João Silva
+Email: joao@email.com
+Idade: 25
+Se algum campo for inválido, exibe uma mensagem de erro com JOptionPane sem fechar a janela.
+
+Requisitos técnicos
+- Usar JFrame para ambas as janelas
+- Validar todos os campos antes de prosseguir
+- Passar os dados da Tela 1 para a Tela 2 via construtor
+- Não usar bibliotecas externas

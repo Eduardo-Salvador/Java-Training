@@ -1,5 +1,4 @@
 package GUI.BeatBox;
-
 import javax.sound.midi.*;
 import javax.swing.*;
 import java.awt.*;
