@@ -88,6 +88,11 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/GUI/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/GUI/README_PT-BR.md)
 
+## Threads:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads/README_PT-BR.md)
+
+
 ## Pet Adoption System (CLI):
 Major Learning Challenge:
 
