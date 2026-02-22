@@ -136,7 +136,7 @@ Major Learning Challenge:
 ### Graphic User Interfaces (GUI's):
 BeatBox Exercise:
 
-[![Assist to Demo](src\main\java\GUI\BeatBox\assets\result-beatbox.gif)](https://www.youtube.com/watch?v=BSSULFlHvS4)
+[![Assist to Demo]([![Assist to Demo](src/main/java/GUI/BeatBox/assets/result-beatbox.gif)](https://www.youtube.com/watch?v=BSSULFlHvS4))](https://www.youtube.com/watch?v=BSSULFlHvS4)
 
 ### Connections: Channels and Sockets: Client-Server with Threads:
 Full-Duplex Multi-Client Chat:
