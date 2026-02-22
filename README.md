@@ -2,10 +2,12 @@
 
 [![Generic badge](https://img.shields.io/badge/STATUS-IN_PROGRESS-<COLOR>.svg)](https://shields.io/) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)]([https://GitHub.com/Naereen/ama](https://github.com/Eduardo-Salvador))
 
+---
+
 # Java Training Repository:
 ![USA](https://img.shields.io/badge/🇺🇸-English-blue)
 
-The goal is to provide training in the Java language, its best practices, and its entire ecosystem, from its fundamentals and basic features, through Object-Oriented Programming (OOP), flows, collections, lambdas, utility classes, threads, Maven, connections to relational databases (PostgreSQL), CRUD operations, concurrency, patterns, design patterns, and API creation.
+The goal is to provide training in the Java language, its best practices, and its entire ecosystem, from its fundamentals and basic features, through Object-Oriented Programming (OOP), flows, collections, lambdas, utility classes, GUIs, threads, Client-Server, Maven, connections to relational databases (MySQL), CRUD operations, concurrency, patterns, design patterns, unit testing (JUnit), and API creation.
 
 The topics are divided into their respective folders and have explanatory README files (for learning purposes and not for architecture/application purposes).
 
@@ -13,19 +15,28 @@ The topics are divided into their respective folders and have explanatory README
 
 ![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
 
-O objetivo é fornecer treinamento na linguagem Java, suas melhores práticas e todo o seu ecossistema, desde seus fundamentos e recursos básicos, passando por Programação Orientada a Objetos (POO), fluxos, coleções, lambdas, classes utilitárias, threads, Maven, conexões com banco de dados relacionais (PostgreeSQL), operações CRUD, concorrência, padrões, padrões de projeto e a criação de APIs.
+O objetivo é fornecer treinamento na linguagem Java, suas melhores práticas e todo o seu ecossistema, desde os fundamentos e recursos básicos, passando por Programação Orientada a Objetos (POO), fluxos, coleções, lambdas, classes utilitárias, GUIs, threads, arquitetura cliente-servidor, Maven, conexões com bancos de dados relacionais (MySQL), operações CRUD, concorrência, padrões, padrões de projeto, testes unitários (JUnit) e criação de APIs.
 
-Os tópicos estão divididos em suas respectivas pastas e possuem arquivos README explicativos (para fins de aprendizado e não para fins de arquitetura/aplicação).
+Os tópicos estão divididos em pastas e possuem arquivos README explicativos (para fins de aprendizado e não para fins de arquitetura/aplicação).
 
-**A ideia principal é documentar o processo de aprendizagem.**
+**A ideia principal é documentar o processo de aprendizado.**
 
+---
 
 ## Technologies
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)  ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)  ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-f5f5f5?style=for-the-badge&logo=junit5&logoColor=dc524a)
 
 </div>
 
+<div align="center">
+
+---
+
 ## Topics:
+
+---
+</div>
+
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 <div align="center">
@@ -92,11 +103,30 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads/README_PT-BR.md)
 
+## Connections: Channels and Sockets: Client-Server with Threads:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ConnectionsChannelsAndSocketsWithThreads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ConnectionsChannelsAndSocketsWithThreads/README_PT-BR.md)
+
 
 ## Pet Adoption System (CLI):
 Major Learning Challenge:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/RegistrationSystem/README_PT-BR.md)
+
+## Highlighted Results from Module Exercises:
+
+**NOTE:** Most Java topics involved direct output and terminal testing in order to understand how Classes/Methods/Utilities/Tools work, but never a larger project. Starting with GUI and Client-Server Connections topics, it was possible to progress to more robust projects.
+
+**Honorable Mention:** Terminal exercises such as Streams, Generics, Exceptions, Data Structure, OOP, Utility Classes, among others, are extremely important and complex for understanding the Java ecosystem and the computing ecosystem.
+
+### Graphic User Interfaces (GUI's):
+BeatBox Exercise:
+
+[![Assist to Demo](src\main\java\GUI\BeatBox\assets\result-beatbox.gif)](https://www.youtube.com/watch?v=BSSULFlHvS4)
+
+### Connections: Channels and Sockets: Client-Server with Threads:
+Full-Duplex Multi-Client Chat:
+![Chat client receiving messages broadcast by the server in real time](src/main/java/ConnectionsChannelsAndSocketsWithThreads/assets/chat-result.png)
 
 </div>
 
