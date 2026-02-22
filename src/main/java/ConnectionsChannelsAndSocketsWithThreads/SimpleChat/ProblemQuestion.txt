@@ -1,0 +1,32 @@
+Exercise: Full-Duplex Multi-Client Chat
+
+Requirements
+- Connect to the server at 127.0.0.1 on port 5000 using SocketChannel
+- Display incoming messages in a scrollable, non-editable JTextArea
+- Allow the user to type and send messages through a JTextField and a Send button
+- Read incoming messages from the server in a dedicated background thread implemented as a Runnable class named IncomingReader, managed by a single-thread ExecutorService
+- Append each received message to the text area as it arrives
+- Ensure the background reader thread does not block or interfere with the Swing interface
+
+Expected Flow:
+User types message -> Send button -> writer sends to server
+Server broadcasts to all clients
+IncomingReader receives message -> appends to JTextArea
+
+
+---
+
+PT-BR:
+
+Requisitos
+- Conectar ao servidor em 127.0.0.1 na porta 5000 usando SocketChannel
+- Exibir as mensagens recebidas em uma JTextArea com scroll, não editável
+- Permitir ao usuário digitar e enviar mensagens por meio de um JTextField e um botão Enviar
+- Ler as mensagens recebidas do servidor em uma thread de fundo dedicada, implementada como uma classe Runnable chamada IncomingReader, gerenciada por um ExecutorService de thread única
+- Adicionar cada mensagem recebida à área de texto assim que ela chegar
+- Garantir que a thread de leitura em fundo não bloqueie nem interfira na interface Swing
+
+Fluxo Esperado
+Usuário digita mensagem -> botão Enviar -> writer envia ao servidor
+Servidor transmite para todos os clientes
+IncomingReader recebe mensagem -> adiciona na JTextArea
