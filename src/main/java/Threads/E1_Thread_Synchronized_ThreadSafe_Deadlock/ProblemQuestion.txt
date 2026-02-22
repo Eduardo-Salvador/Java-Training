@@ -1,0 +1,36 @@
+Email Delivery System
+
+You must implement a concurrent email delivery system with the following rules:
+
+- There is a shared email queue with a maximum capacity of 10.
+- Multiple delivery threads constantly monitor this queue.
+- When there are no emails in the queue, delivery threads must enter waiting mode without consuming CPU.
+- A user can add emails to the queue via input. When added, all waiting threads must be notified.
+- Each added email must be delivered by only one thread.
+- The system must keep running while there are pending emails or while it is open.
+- The system can be shut down by the user. When closed, threads must finish after processing remaining emails.
+
+Technical requirements:
+* Use wait() and notifyAll() for thread communication
+* Ensure proper synchronization to avoid race conditions
+* The queue must be thread safe
+* Each email delivery takes 2 seconds
+
+--------------------
+
+[PT-BR]
+Você deve implementar um sistema de entrega de e-mails concorrente com as seguintes regras:
+
+- Existe uma fila compartilhada de e-mails com capacidade máxima de 10.
+- Múltiplas threads de entrega ficam monitorando essa fila constantemente.
+- Quando não há e-mails na fila, as threads de entrega devem entrar em modo de espera sem consumir CPU.
+- Um usuário pode adicionar e-mails à fila via input. Ao adicionar, todas as threads em espera devem ser acordadas.
+- Cada e-mail adicionado deve ser entregue por apenas uma thread.
+- O sistema deve continuar rodando enquanto houver e-mails pendentes ou enquanto estiver aberto.
+- O sistema pode ser encerrado pelo usuário. Ao encerrar, as threads devem finalizar após processar os e-mails restantes.
+
+Requisitos técnicos:
+* Use wait() e notifyAll() para comunicação entre threads
+* Garanta sincronização adequada para evitar race conditions
+* A fila deve ser thread safe
+* O tempo de entrega de cada e-mail é de 2 segundos

@@ -1,0 +1,39 @@
+Competitor Product Finder
+
+[EN]
+You must implement a product search system across multiple sources simultaneously with the following rules:
+
+- There are 3 product sources (StoreA, StoreB, StoreC), each returning a list of products with prices.
+- Searches across all 3 sources must happen at the same time, in parallel.
+- Each search simulates a slow query (use Thread.sleep between 1000 and 3000ms randomly).
+- After all searches finish, the system must display the cheapest product found across all sources.
+- The system must have a 5 second timeout. If any source takes longer than that, it must be ignored.
+- A shared variable controls whether the system is still active. It must be correctly visible across all threads.
+
+Technical requirements:
+* Use ExecutorService with an appropriate thread pool
+* Use Callable for searches since they return a result
+* Use Future to collect results with timeout
+* Use volatile on the system state control variable
+* Create a Product class with name and price
+* Create a separate class for each source implementing Callable<List<Product>>
+
+------------------------------------------------------------
+
+[PT-BR]
+Você deve implementar um sistema de busca de produtos em múltiplas fontes simultaneamente com as seguintes regras:
+
+- Existem 3 fontes de produtos (LojaA, LojaB, LojaC), cada uma retorna uma lista de produtos com preços.
+- As buscas nas 3 fontes devem acontecer ao mesmo tempo, em paralelo.
+- Cada busca simula uma consulta lenta (use Thread.sleep entre 1000 e 3000ms aleatório).
+- Após todas as buscas terminarem, o sistema deve exibir o produto mais barato encontrado entre todas as fontes.
+- O sistema deve ter um timeout de 5 segundos. Se alguma fonte demorar mais que isso, ela deve ser ignorada.
+- Uma variável compartilhada controla se o sistema ainda está ativo. Ela deve ser visível entre todas as threads corretamente.
+
+Requisitos técnicos:
+* Use ExecutorService com um pool de threads adequado
+* Use Callable para as buscas, já que retornam resultado
+* Use Future para coletar os resultados com timeout
+* Use volatile na variável de controle de estado do sistema
+* Crie uma classe Produto com nome e preço
+* Crie uma classe separada para cada fonte implementando Callable<List<Produto>>
