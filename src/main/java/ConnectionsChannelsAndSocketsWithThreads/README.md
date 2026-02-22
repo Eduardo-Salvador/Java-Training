@@ -2,7 +2,7 @@
 
 [![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-success.svg)](https://shields.io/)
 
-# Networking: Channels, Sockets and Threads
+# Client-Server: Connections and Networks: Channels, Sockets, and Threads
 
 This module covers network communication in Java, from the fundamentals of IP and TCP to building a functional multi-client chat application using SocketChannel, ServerSocketChannel, and ExecutorService.
 

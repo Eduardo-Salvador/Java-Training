@@ -7,24 +7,30 @@
 # Java Training Repository:
 ![USA](https://img.shields.io/badge/🇺🇸-English-blue)
 
-The goal is to provide training in the Java language, its best practices, and its entire ecosystem, from its fundamentals and basic features, through Object-Oriented Programming (OOP), flows, collections, lambdas, utility classes, GUIs, threads, Client-Server, Maven, connections to relational databases (MySQL), CRUD operations, concurrency, patterns, design patterns, unit testing (JUnit), and API creation.
+The goal is to provide training in the Java language, its best practices, and its entire ecosystem, from fundamentals and basic features, through Object-Oriented Programming (OOP), flows, collections, lambdas, utility classes, GUIs, threads, client-server architecture, Maven, connections to relational databases (MySQL), CRUD operations, concurrency, patterns, design patterns, and unit testing (JUnit).
 
-The topics are divided into their respective folders and have explanatory README files (for learning purposes and not for architecture/application purposes).
+The topics are divided into folders and have explanatory README files (for learning purposes and not for architecture/application purposes).
+
+**NOTE:** We will not delve into Docker (only superficially), web and will not discuss Spring Boot, as there are other projects on my GitHub focused on these topics, with projects in production. This extensive project is for learning, focused on Pure Java and its ecosystem (including its API for communicating with a database or running unit tests, for example).
 
 **The main idea is to document the learning process.**
 
 ![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
 
-O objetivo é fornecer treinamento na linguagem Java, suas melhores práticas e todo o seu ecossistema, desde os fundamentos e recursos básicos, passando por Programação Orientada a Objetos (POO), fluxos, coleções, lambdas, classes utilitárias, GUIs, threads, arquitetura cliente-servidor, Maven, conexões com bancos de dados relacionais (MySQL), operações CRUD, concorrência, padrões, padrões de projeto, testes unitários (JUnit) e criação de APIs.
+O objetivo é fornecer treinamento na linguagem Java, suas melhores práticas e todo o seu ecossistema, desde os fundamentos e recursos básicos, passando por Programação Orientada a Objetos (POO), fluxos, coleções, lambdas, classes utilitárias, GUIs, threads, arquitetura cliente-servidor, Maven, conexões com bancos de dados relacionais (MySQL), operações CRUD, concorrência, padrões, padrões de projeto e testes unitários (JUnit).
 
 Os tópicos estão divididos em pastas e possuem arquivos README explicativos (para fins de aprendizado e não para fins de arquitetura/aplicação).
+
+**NOTA:** Não abordaremos Docker (apenas superficialmente), web e não discutiremos Spring Boot, pois existem outros projetos no meu GitHub focados nesses tópicos, com projetos em produção. Este projeto abrangente é para aprendizado, com foco em Java puro e seu ecossistema (incluindo sua API para comunicação com um banco de dados ou execução de testes unitários, por exemplo).
 
 **A ideia principal é documentar o processo de aprendizado.**
 
 ---
 
 ## Technologies
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)  ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-f5f5f5?style=for-the-badge&logo=junit5&logoColor=dc524a)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) 
+
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-f5f5f5?style=for-the-badge&logo=junit5&logoColor=dc524a)
 
 </div>
 
@@ -115,9 +121,17 @@ Major Learning Challenge:
 
 ## Highlighted Results from Module Exercises:
 
-**NOTE:** Most Java topics involved direct output and terminal testing in order to understand how Classes/Methods/Utilities/Tools work, but never a larger project. Starting with GUI and Client-Server Connections topics, it was possible to progress to more robust projects.
+![USA](https://img.shields.io/badge/🇺🇸-English-blue)
+
+**NOTE:** Most Java topics involved direct output and terminal testing in order to understand how Classes/Methods/Utilities/Tools work, but never a larger exercise. Starting with GUI and Client-Server Connections topics, it was possible to progress to more robust exercises.
 
 **Honorable Mention:** Terminal exercises such as Streams, Generics, Exceptions, Data Structure, OOP, Utility Classes, among others, are extremely important and complex for understanding the Java ecosystem and the computing ecosystem.
+
+![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
+
+**NOTA:** A maioria dos tópicos de Java envolvia saída direta e testes no terminal para entender como Classes/Métodos/Utilitários/Ferramentas funcionam, mas nunca um exercício maior. Começando com tópicos de GUI e Conexões Cliente-Servidor, foi possível progredir para exercícios mais robustos.
+
+**Menção Honrosa:** Exercícios no terminal, como Streams, Genéricos, Exceções, Estruturas de Dados, POO, Classes Utilitárias, entre outros, são extremamente importantes e complexos para a compreensão do ecossistema Java e do ecossistema da computação.
 
 ### Graphic User Interfaces (GUI's):
 BeatBox Exercise:

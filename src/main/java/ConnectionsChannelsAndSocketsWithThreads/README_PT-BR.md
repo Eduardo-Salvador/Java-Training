@@ -2,7 +2,7 @@
 
 [![Generic badge](https://img.shields.io/badge/STATUS-FINALIZADO-success.svg)](https://shields.io/)
 
-# Redes: Channels, Sockets e Threads
+# Cliente-Servidor: Conexões e Redes: Canais, Sockets e Threads
 
 Este módulo cobre comunicação em rede com Java, desde os fundamentos de IP e TCP até a construção de uma aplicação de chat multi-cliente funcional usando SocketChannel, ServerSocketChannel e ExecutorService.
 
