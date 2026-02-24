@@ -14,8 +14,8 @@ public class EmailDeliveryService implements Runnable {
         while(members.isOpen() || members.pendingEmails() > 0) {
             try {
                 String email = members.retrieveEmail();
-                System.out.println(Thread.currentThread().getName() + " sending email: " + email);
                 if(email == null) continue;
+                System.out.println(Thread.currentThread().getName() + " sending email: " + email);
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 System.out.println(e.getMessage());;

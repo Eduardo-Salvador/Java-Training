@@ -44,6 +44,7 @@ public class Members {
         open = false;
         synchronized (this.emails) {
             System.out.println("Sleeping all Threads");
+            this.emails.notifyAll();
         }
     }
 }
