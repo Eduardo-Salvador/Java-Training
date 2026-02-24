@@ -50,7 +50,7 @@ Os tópicos estão divididos em pastas e possuem arquivos README explicativos (p
 ## Programming Logic Training:
 Basic programming language concepts: Variables, Conditional Structures, Loops, Conditionals, Repetition Structures, Switch, Operators, Arrays, etc.
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ProgrammingLogicWithOOP/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/OOP_ProgrammingLogicWithOOP/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/OOP_ProgrammingLogicWithOOP/README_PT-BR.md)
 
 ## Generics:
 
@@ -63,7 +63,7 @@ Basic programming language concepts: Variables, Conditional Structures, Loops, C
 ## Seminar System:
 Challenge of Programming Logic with basic concepts to Object-Oriented Programming, Simple Architecture and [Generics](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/Generics/README.md)
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/StudyChallenges/SeminarSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/SeminarSystem/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/tree/main/src/main/java/Challenges/SeminarSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/SeminarSystem/README_PT-BR.md)
 
 ## Inner Classes:
 
@@ -109,15 +109,30 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads/README_PT-BR.md)
 
-## Connections: Channels and Sockets: Client-Server with Threads:
+## Threads-Connections: Channels and Sockets: Client-Server:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ConnectionsChannelsAndSocketsWithThreads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ConnectionsChannelsAndSocketsWithThreads/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ThreadsConnections_ChannelsAndSocketsClientServer/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ThreadsConnections_ChannelsAndSocketsClientServer/README_PT-BR.md)
 
+## Threads: Concurrency Threads
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreads/README_PT-BR.md)
+
+## Records: Immutable Objects
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README_PT-BR.md)
+
+## Threads: Concurrency Threads with Immutable Objects (Records):
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreadsWithImmutableObjects/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreadsWithImmutableObjects/README_PT-BR.md)
+
+## Threads: Concurrent Data Structures:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentDataStructures/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentDataStructures/README_PT-BR.md)
 
 ## Pet Adoption System (CLI):
 Major Learning Challenge:
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/StudyChallenges/RegistrationSystem/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README_PT-BR.md)
 
 ## Highlighted Results from Module Exercises:
 
@@ -140,7 +155,7 @@ BeatBox Exercise:
 
 ### Connections: Channels and Sockets: Client-Server with Threads:
 Full-Duplex Multi-Client Chat:
-![Chat client receiving messages broadcast by the server in real time](src/main/java/ConnectionsChannelsAndSocketsWithThreads/assets/chat-result.png)
+![Chat client receiving messages broadcast by the server in real time](src/main/java/ThreadsConnections_ChannelsAndSocketsClientServer/assets/chat-result.png)
 
 </div>
 
