@@ -1,0 +1,79 @@
+Objective
+Simulate a shared configuration system where many threads read frequently and few threads write occasionally.
+
+Requirements
+Create a class called ConfigCache.
+
+1. Internal structure
+Use a Map<String, String> to store configuration entries.
+Use a ReentrantReadWriteLock to control access.
+
+2. Required methods
+String get(String key)
+Must use readLock.
+void put(String key, String value)
+Must use writeLock.
+int size()
+Must use readLock.
+void clear()
+Must use writeLock.
+
+3. Thread simulation
+Create 5 reader threads.
+Create 1 writer thread.
+
+4. Execution behavior
+Reader threads must repeatedly call get() inside a loop.
+Writer thread must update values every 5 seconds.
+The program must clearly demonstrate:
+Multiple readers executing concurrently.
+Write operations blocking all readers.
+Reads being blocked while a write is in progress.
+
+Constraints
+Do not use synchronized.
+Do not use concurrent collections.
+All synchronization must be done using ReentrantReadWriteLock.
+Ensure every lock() has a corresponding unlock() inside a finally block.
+
+--------------------------------
+
+PT-BR:
+
+Objetivo
+Simular um sistema de configuração compartilhado onde muitas threads realizam leitura com frequência e poucas threads realizam escrita ocasionalmente.
+
+Requisitos
+Crie uma classe chamada ConfigCache.
+
+1. Estrutura interna
+Use um Map<String, String> para armazenar as configurações.
+Use um ReentrantReadWriteLock para controlar o acesso.
+
+2. Métodos obrigatórios
+String get(String key)
+Deve usar readLock.
+void put(String key, String value)
+Deve usar writeLock.
+int size()
+Deve usar readLock.
+void clear()
+Deve usar writeLock.
+
+3. Simulação de threads
+Crie 5 threads leitoras.
+Crie 1 thread escritora.
+
+4. Comportamento da execução
+As threads leitoras devem chamar get() repetidamente em loop.
+A thread escritora deve atualizar valores a cada 5 segundos.
+O programa deve demonstrar claramente:
+Múltiplos leitores executando ao mesmo tempo.
+Escrita bloqueando todos os leitores.
+Leituras sendo bloqueadas enquanto ocorre uma escrita.
+
+Restrições
+Não use synchronized.
+Não use coleções concorrentes.
+Toda a sincronização deve ser feita usando ReentrantReadWriteLock.
+Garanta que todo lock() tenha um unlock() correspondente dentro de um bloco finally.

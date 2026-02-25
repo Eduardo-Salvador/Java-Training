@@ -11,6 +11,7 @@ public class Main {
         Future<Product> searchA = pool.submit(new StoreA());
         Future<Product> searchB = pool.submit(new StoreB());
         Future<Product> searchC = pool.submit(new StoreC());
+        pool.shutdown();
         try {
             double a = searchA.get(5, TimeUnit.SECONDS).getPrice();
             double b = searchB.get(5, TimeUnit.SECONDS).getPrice();
@@ -32,7 +33,6 @@ public class Main {
                                         "The lowest price is on list C: " + searchC.get()
                 );
             }
-
         } catch (TimeoutException e) {
             if (!searchA.isDone()) System.out.println("StoreA timed out");
             if (!searchB.isDone()) System.out.println("StoreB timed out");
