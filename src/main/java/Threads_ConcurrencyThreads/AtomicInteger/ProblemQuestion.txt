@@ -1,0 +1,44 @@
+Concurrent Counter with AtomicInteger
+
+You are building a simple metrics system that counts how many users accessed a website.
+
+Create a program where:
+5 threads simulate users accessing the system.
+Each thread increments a shared counter 1,000 times.
+The counter must be thread-safe.
+Use AtomicInteger from java.util.concurrent.atomic.
+At the end, print the final counter value.
+
+Requirements
+Do NOT use synchronized.
+Do NOT use locks.
+Use AtomicInteger.
+Wait for all threads to finish before printing the result.
+The result must be deterministic.
+
+Expected Output
+If everything is correct:
+Final counter: 5000
+
+---------------------------------
+
+PT-BR
+Você está construindo um sistema simples de métricas que conta quantos usuários acessaram um site.
+
+Crie um programa onde:
+5 threads simulam usuários acessando o sistema.
+Cada thread incrementa um contador compartilhado 1.000 vezes.
+O contador deve ser thread-safe.
+Use AtomicInteger da biblioteca java.util.concurrent.atomic.
+Ao final, imprima o valor final do contador.
+
+Requisitos
+NÃO usar synchronized.
+NÃO usar locks.
+Usar AtomicInteger.
+Esperar todas as threads terminarem antes de imprimir o resultado.
+O resultado deve ser determinístico.
+
+Saída Esperada
+Se estiver correto:
+Final counter: 5000

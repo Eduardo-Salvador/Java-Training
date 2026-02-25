@@ -3,7 +3,7 @@ import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class Members {
-    private final Queue<String> emails = new ArrayBlockingQueue<>(10); //Thread Safe!
+    private final Queue<String> emails = new ArrayBlockingQueue<>(10);
     private boolean open = true;
 
     public boolean isOpen() {
