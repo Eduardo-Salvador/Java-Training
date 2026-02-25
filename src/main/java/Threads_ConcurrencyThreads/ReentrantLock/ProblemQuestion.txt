@@ -1,0 +1,57 @@
+Create a program where:
+5 threads simulate workers.
+Each thread increments a shared counter 1,000 times.
+The counter must be protected using ReentrantLock.
+Do NOT use AtomicInteger.
+Do NOT use synchronized.
+The result must be deterministic.
+Wait for all threads to finish before printing the result.
+
+Requirements:
+Use ReentrantLock.
+Always release the lock inside a finally block.
+Protect only the critical section (the increment).
+Print the final counter value.
+
+Expected output:
+Final counter: 5000
+
+Extra Challenge:
+
+Add a method: public boolean tryIncrement()
+Use tryLock().
+If the lock is successful, increment the value.
+If it fails, return false.
+
+--------------------------
+
+PT-BR
+
+Você está construindo um sistema de log que conta quantas tarefas foram processadas.
+
+Crie um programa onde:
+5 threads simulam trabalhadores.
+Cada thread incrementa um contador compartilhado 1.000 vezes.
+O contador deve ser protegido usando ReentrantLock.
+NÃO usar AtomicInteger.
+NÃO usar synchronized.
+O resultado deve ser determinístico.
+Esperar todas as threads terminarem antes de imprimir o resultado.
+
+Requisitos:
+Usar ReentrantLock.
+Sempre liberar o lock dentro de um bloco finally.
+Proteger apenas a seção crítica (o incremento).
+Imprimir o valor final do contador.
+
+Saída esperada:
+Final counter: 5000
+
+Desafio Extra:
+
+Adicione um método:
+public boolean tryIncrement()
+
+Usa tryLock().
+Se conseguir o lock, incrementa.
+Se não conseguir,retorna false.
