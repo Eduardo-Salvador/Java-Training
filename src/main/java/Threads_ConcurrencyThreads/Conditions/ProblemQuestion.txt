@@ -1,0 +1,73 @@
+
+You must implement a simple system where:
+One Producer thread generates numbers.
+One Consumer thread consumes numbers.
+There is a shared buffer that can hold only ONE value at a time.
+If the buffer is full, the producer must wait.
+If the buffer is empty, the consumer must wait.
+Use ReentrantLock and Condition.
+Do NOT use synchronized.
+Use while (not if) before await().
+
+Requirements:
+Create a SharedBuffer class.
+Use one ReentrantLock.
+
+Use two Conditions:
+notFull
+notEmpty
+
+The producer must:
+Wait while the buffer is full.
+Insert a value.
+Signal notEmpty.
+
+The consumer must:
+Wait while the buffer is empty
+Remove the value.
+Signal notFull.
+Simulate production and consumption 10 times.
+
+Expected behavior:
+Producer produces value 1
+Consumer consumes value 1
+Producer produces value 2
+Consumer consumes value 2
+
+The order must always be correct (no consuming before producing).
+
+----------------------------------------
+
+PT-BR
+
+Você deve implementar um sistema simples onde:
+Uma thread Produtora gera números.
+Uma thread Consumidora consome números.
+Existe um buffer compartilhado que pode armazenar apenas UM valor por vez.
+Se o buffer estiver cheio, o produtor deve esperar.
+Se o buffer estiver vazio, o consumidor deve esperar.
+Usar ReentrantLock e Condition.
+NÃO usar synchronized.
+Usar while (não if) antes de await().
+
+Requisitos:
+Criar uma classe SharedBuffer.
+Usar um único ReentrantLock.
+
+Usar duas Conditions:
+notFull
+notEmpty
+
+O produtor deve:
+Esperar enquanto o buffer estiver cheio.
+Inserir valor.
+Dar signal em notEmpty.
+
+O consumidor deve:
+Esperar enquanto o buffer estiver vazio.
+Remover valor.
+Dar signal em notFull.
+Simular produção e consumo 10 vezes.
+
+Comportamento esperado:
+O consumidor nunca pode consumir antes do produtor produzir.
