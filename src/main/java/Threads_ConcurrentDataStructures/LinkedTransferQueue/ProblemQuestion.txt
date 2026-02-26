@@ -1,0 +1,20 @@
+Create a class called TaskDispatcher.
+It should have a LinkedTransferQueue of Strings representing tasks.
+Create 2 consumer threads that keep taking tasks from the queue and processing them with a 400ms sleep, printing when they receive and finish each task.
+For example: "Consumer-1 received: task3" and "Consumer-1 finished: task3".
+Create 1 producer thread that tries to transfer 6 tasks one by one using transfer(), printing before and after each transfer.
+For example: "Dispatching: task2" and "task2 confirmed delivered".
+Run the program and observe the producer waiting for confirmation before dispatching the next task.
+Then as a bonus, swap transfer() for put() and notice how the producer no longer waits for confirmation.
+
+-----------------------------------
+
+PT-BR:
+Crie uma classe chamada TaskDispatcher.
+Ela deve ter uma LinkedTransferQueue de Strings representando tarefas.
+Crie 2 threads consumidoras que ficam pegando tarefas da fila e processando com um sleep de 400ms, imprimindo quando recebem e terminam cada tarefa.
+Por exemplo: "Consumer-1 received: task3" e "Consumer-1 finished: task3".
+Crie 1 thread produtora que tenta transferir 6 tarefas uma a uma usando transfer(), imprimindo antes e depois de cada transferência.
+Por exemplo: "Dispatching: task2" e "task2 confirmed delivered".
+Rode o programa e observe o produtor esperando confirmação antes de despachar a próxima tarefa.
+Depois como bonus, troque transfer() por put() e perceba como o produtor para de esperar confirmação.
