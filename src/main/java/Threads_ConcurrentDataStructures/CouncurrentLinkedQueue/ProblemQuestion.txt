@@ -1,0 +1,23 @@
+Create a class called MetricsCollector.
+It should have a ConcurrentLinkedQueue of Strings representing log events.
+Create 4 producer threads that each insert 5 log events into the queue without any delay, printing each insertion.
+For example: "Producer-2 logged: event-3".
+Create 2 consumer threads that keep polling the queue in a loop.
+If poll() returns null, print "queue empty, waiting..." and sleep 100ms before trying again.
+Otherwise process the item with a 200ms sleep and print it.
+For example: "Consumer-1 processed: event-3".
+Use a volatile flag to signal consumers to stop once all producers are done.
+Run the program and observe that no thread ever blocks — they either get an item or get null and handle it themselves.
+
+--------------------------------
+
+PT-BR:
+Crie uma classe chamada MetricsCollector.
+Ela deve ter uma ConcurrentLinkedQueue de Strings representando eventos de log.
+Crie 4 threads produtoras que cada uma insere 5 eventos de log na fila sem nenhum delay, imprimindo cada inserção.
+Por exemplo: "Producer-2 logged: event-3".
+Crie 2 threads consumidoras que ficam fazendo poll() na fila em loop.
+Se poll() retornar null, imprima "queue empty, waiting..." e durma 100ms antes de tentar de novo. Caso contrário processa o item com um sleep de 200ms e imprime.
+Por exemplo: "Consumer-1 processed: event-3".
+Use uma flag volatile para sinalizar aos consumidores que parem quando todos os produtores terminarem.
+Rode o programa e observe que nenhuma thread bloqueia, elas ou pegam um item ou recebem null e tratam elas mesmas.
