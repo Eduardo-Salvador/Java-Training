@@ -1,0 +1,20 @@
+Create a class called DownloadManager.
+It should have an ArrayBlockingQueue of Strings with a capacity of 3, representing download slots.
+Create 2 producer threads that represent "requesters", each one tries to add 5 download URLs to the queue, printing when it does.
+For example: "Requester-1 queued: url5".
+Create 1 consumer thread that represents the "downloader", it takes URLs from the queue one by one, simulates a download with a 300ms sleep, and prints when done.
+For example: "Downloaded: url3".
+Run the program and observe the producers being forced to wait when the queue is full.
+Then as a bonus, try increasing the consumer sleep to 1000ms and see how it affects the producers.
+
+-------------------------------------
+
+PT-BR:
+Crie uma classe chamada DownloadManager.
+Ela deve ter uma ArrayBlockingQueue de Strings com capacidade 3, representando slots de download.
+Crie 2 threads produtoras representando "solicitantes", cada uma tenta adicionar 5 URLs de download à fila, imprimindo quando fizer isso.
+Por exemplo: "Requester-1 queued: url5".
+Crie 1 thread consumidora representando o "downloader", ela retira URLs da fila uma a uma, simula um download com um sleep de 300ms, e imprime quando terminar.
+Por exemplo: "Downloaded: url3".
+Rode o programa e observe os produtores sendo forçados a esperar quando a fila enche.
+Depois como bonus, tente aumentar o sleep do consumidor para 1000ms e veja como isso afeta os produtores.
