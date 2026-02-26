@@ -1,0 +1,34 @@
+Create a class called EventManager.
+It should have a CopyOnWriteArrayList of Strings representing listener names.
+Add 5 listeners to it before anything starts.
+Spawn 3 threads.
+Each one should iterate over the listener list and print which thread is notifying which listener.
+For example: "Thread-1 notifying: listener3".
+While those 3 threads are running, spawn a 4th thread that adds a new listener to the list every 100ms, printing when it does.
+For example: "Added new listener: listener6".
+Run the program and make sure nothing crashes.
+Then, as a bonus, swap CopyOnWriteArrayList for a regular ArrayList and see what happens.
+
+Hint:
+The whole point of this exercise is to see CopyOnWriteArrayList protecting you automatically.
+When you do the bonus and swap to ArrayList, pay attention to which operation breaks it, is it the read, the write, or both?
+That will tell you exactly what CopyOnWriteArrayList is solving under the hood.
+------------
+
+PT-BR:
+
+Crie uma classe chamada EventManager.
+Ela deve ter uma CopyOnWriteArrayList de Strings representando nomes de listeners.
+Adicione 5 listeners nela antes de qualquer coisa começar.
+Crie 3 threads.
+Cada uma deve iterar sobre a lista e imprimir qual thread está notificando qual listener.
+Por exemplo: "Thread-1 notifying: listener3".
+Enquanto essas 3 threads rodam, crie uma 4a thread que adiciona um novo listener à lista a cada 100ms, imprimindo quando fizer isso.
+Por exemplo: "Added new listener: listener6".
+Rode o programa e garanta que nada crasha.
+Depois, como bonus, troque a CopyOnWriteArrayList por um ArrayList comum e veja o que acontece.
+
+Dica:
+O ponto central do exercício é ver a CopyOnWriteArrayList te protegendo automaticamente.
+Quando você fizer o bonus e trocar por ArrayList, preste atenção em qual operação quebra, é a leitura, a escrita, ou as duas?
+Isso vai te dizer exatamente o que a CopyOnWriteArrayList está resolvendo por baixo dos panos.
