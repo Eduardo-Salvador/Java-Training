@@ -1,0 +1,18 @@
+Create a class called ScoreBoard.
+It should have a ConcurrentHashMap where the key is a player name (String) and the value is their score (Integer).
+Create 3 player threads that each try to register themselves on the board using putIfAbsent with an initial score of 0, then increment their own score 5 times using compute(), printing each update.
+For example: "player-1 updated score to: 3".
+Create 1 bonus thread that runs at the same time and tries to double the score of every player on the board using computeIfPresent(), printing when it does.
+For example: "Bonus doubled player-1 score to: 6".
+At the end of main, after all threads finish, print the final scoreboard iterating with forEach(). For example: "Final score - player-1: 10".
+
+-------------------------------------------------
+
+PT-BR:
+Crie uma classe chamada ScoreBoard.
+Ela deve ter um ConcurrentHashMap onde a chave é o nome do jogador (String) e o valor é a pontuação (Integer).
+Crie 3 threads de jogadores que cada uma tenta se registrar no board usando putIfAbsent com score inicial 0, depois incrementa sua própria pontuação 5 vezes usando compute(), imprimindo cada atualização.
+Por exemplo: "player-1 updated score to: 3".
+Crie 1 thread de bonus que roda ao mesmo tempo e tenta dobrar a pontuação de todos os jogadores no board usando computeIfPresent(), imprimindo quando fizer isso.
+Por exemplo: "Bonus doubled player-1 score to: 6".
+No final da main, após todas as threads terminarem, imprima o placar final iterando com forEach(). Por exemplo: "Final score - player-1: 10".
