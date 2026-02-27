@@ -1,0 +1,20 @@
+EN:
+Create a class called ImageProcessor. It should use a newCachedThreadPool to process images concurrently.
+Create a Callable<String> that simulates processing an image, it receives an image name, sleeps for a random time between 500ms and 1500ms to simulate work, and returns a result string.
+For example: "image-3.jpg processed in 1243ms".
+Submit 6 images to the pool and store each returned Future<String> in a list.
+After submitting all tasks, iterate over the futures and print each result using get().
+Shutdown the pool properly after all results are collected.
+As a bonus, call get(2, TimeUnit.SECONDS) instead of get() and submit one task that sleeps for 3000ms to see TimeoutException in action.
+
+------------------------------------------------
+
+PT-BR:
+Crie uma classe chamada ImageProcessor.
+Ela deve usar um newCachedThreadPool para processar imagens de forma concorrente.
+Crie um Callable<String> que simula o processamento de uma imagem, ele recebe o nome de uma imagem, dorme por um tempo aleatório entre 500ms e 1500ms para simular trabalho, e retorna uma string de resultado.
+Por exemplo: "image-3.jpg processed in 1243ms".
+Submeta 6 imagens ao pool e armazene cada Future<String> retornado em uma lista.
+Após submeter todas as tarefas, itere sobre os futures e imprima cada resultado usando get().
+Faça o shutdown do pool corretamente após coletar todos os resultados.
+Como bonus, substitua get() por get(2, TimeUnit.SECONDS) e submeta uma tarefa que dorme por 3000ms para ver o TimeoutException em ação.
