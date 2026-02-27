@@ -4,14 +4,9 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class ImageProcessor implements Callable<String>{
-
-    private String imageName;
+    private final String imageName;
 
     public ImageProcessor(String imageName) {
-        this.imageName = imageName;
-    }
-
-    public void setImageName(String imageName) {
         this.imageName = imageName;
     }
 
@@ -28,12 +23,10 @@ public class ImageProcessor implements Callable<String>{
 
     public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
         ExecutorService imageProcessorFuture = Executors.newCachedThreadPool();
-        ImageProcessor imageProcess = new ImageProcessor("image-");
         List<Future<String>> futureList = new ArrayList<>();
 
         for (int i = 0; i < 6; i++) {
-            imageProcess.setImageName("image-" + i);
-            futureList.add(imageProcessorFuture.submit(imageProcess));
+            futureList.add(imageProcessorFuture.submit(new ImageProcessor("image-" + i)));
         }
 
         for (Future<String> future : futureList) {
