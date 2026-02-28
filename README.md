@@ -113,15 +113,15 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ThreadsConnections_ChannelsAndSocketsClientServer/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/ThreadsConnections_ChannelsAndSocketsClientServer/README_PT-BR.md)
 
-## Threads: Concurrency Threads
+## Threads: Concurrent Threads
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreads/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentThreads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentThreads/README_PT-BR.md)
 
 ## Records: Immutable Objects
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README_PT-BR.md)
 
-## Threads: Concurrency Threads with Immutable Objects (Records):
+## Threads: Concurrent Threads with Immutable Objects (Records):
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreadsWithImmutableObjects/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreadsWithImmutableObjects/README_PT-BR.md)
 
