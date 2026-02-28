@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.AtomicInteger;
+package Threads_ConcurrentThreads.AtomicInteger;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

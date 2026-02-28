@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ReentrantReadWriteLock;
+package Threads_ConcurrentThreads.ReentrantReadWriteLock;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

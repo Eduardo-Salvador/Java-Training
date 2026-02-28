@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ReentrantReadWriteLock;
+package Threads_ConcurrentThreads.ReentrantReadWriteLock;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.Conditions;
+package Threads_ConcurrentThreads.Conditions;
 import java.util.Random;
 
 public class Producer implements Runnable{

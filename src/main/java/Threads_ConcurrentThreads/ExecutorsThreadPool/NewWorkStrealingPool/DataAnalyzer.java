@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ExecutorsThreadPool.NewWorkStrealingPool;
+package Threads_ConcurrentThreads.ExecutorsThreadPool.NewWorkStrealingPool;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;

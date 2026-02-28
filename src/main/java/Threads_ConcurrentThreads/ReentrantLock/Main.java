@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ReentrantLock;
+package Threads_ConcurrentThreads.ReentrantLock;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

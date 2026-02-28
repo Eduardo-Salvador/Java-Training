@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.Conditions;
+package Threads_ConcurrentThreads.Conditions;
 
 public class Consumer implements Runnable{
     SharedBuffer buffer;

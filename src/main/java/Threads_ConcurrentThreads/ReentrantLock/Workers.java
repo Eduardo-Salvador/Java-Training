@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ReentrantLock;
+package Threads_ConcurrentThreads.ReentrantLock;
 
 public class Workers implements Runnable{
     private final Counter counter;

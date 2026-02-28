@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ExecutorsThreadPool.NewScheduledThreadPool;
+package Threads_ConcurrentThreads.ExecutorsThreadPool.NewScheduledThreadPool;
 import java.time.LocalTime;
 import java.util.concurrent.*;
 

@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.Conditions;
+package Threads_ConcurrentThreads.Conditions;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

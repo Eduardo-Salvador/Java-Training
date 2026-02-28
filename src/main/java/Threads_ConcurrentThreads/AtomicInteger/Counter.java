@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.AtomicInteger;
+package Threads_ConcurrentThreads.AtomicInteger;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Counter {

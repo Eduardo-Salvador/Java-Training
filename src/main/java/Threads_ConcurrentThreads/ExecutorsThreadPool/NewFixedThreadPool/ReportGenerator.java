@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ExecutorsThreadPool.NewFixedThreadPool;
+package Threads_ConcurrentThreads.ExecutorsThreadPool.NewFixedThreadPool;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;

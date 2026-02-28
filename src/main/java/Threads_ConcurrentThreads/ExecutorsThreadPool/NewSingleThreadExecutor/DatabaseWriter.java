@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ExecutorsThreadPool.NewSingleThreadExecutor;
+package Threads_ConcurrentThreads.ExecutorsThreadPool.NewSingleThreadExecutor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;

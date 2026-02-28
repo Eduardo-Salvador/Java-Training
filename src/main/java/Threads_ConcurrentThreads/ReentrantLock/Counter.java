@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ReentrantLock;
+package Threads_ConcurrentThreads.ReentrantLock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Counter {

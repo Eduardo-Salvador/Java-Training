@@ -1,4 +1,4 @@
-package Threads_ConcurrencyThreads.ExecutorsThreadPool.NewCachedThreadPool;
+package Threads_ConcurrentThreads.ExecutorsThreadPool.NewCachedThreadPool;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
