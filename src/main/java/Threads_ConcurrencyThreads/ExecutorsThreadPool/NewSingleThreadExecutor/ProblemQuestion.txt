@@ -1,0 +1,20 @@
+Create a class called DatabaseWriter.
+It should use a newSingleThreadExecutor to simulate writing records to a database sequentially, guaranteeing that no two writes happen at the same time.
+Create a Callable<String> that simulates writing a record, it receives a record name, sleeps for 300ms to simulate work, and returns a result string.
+For example: "record-3 written by pool-1-thread-1 at 14:32:05".
+Submit 6 records to the executor and store each Future<String> in a list.
+After submitting all tasks, iterate over the futures and print each result using get().
+Shutdown the executor properly after all results are collected.
+As a bonus, try submitting the same tasks to a newFixedThreadPool(3) and compare the output, notice how the single thread executor always processes one at a time while the fixed pool processes multiple simultaneously.
+
+--------------------------------------------------
+
+PT-BR:
+Crie uma classe chamada DatabaseWriter.
+Ela deve usar um newSingleThreadExecutor para simular a escrita de registros em um banco de dados de forma sequencial, garantindo que duas escritas nunca aconteçam ao mesmo tempo.
+Crie um Callable<String> que simula a escrita de um registro, ele recebe o nome de um registro, dorme por 300ms para simular trabalho, e retorna uma string de resultado.
+Por exemplo: "record-3 written by pool-1-thread-1 at 14:32:05".
+Submeta 6 registros ao executor e armazene cada Future<String> em uma lista.
+Após submeter todas as tarefas, itere sobre os futures e imprima cada resultado usando get().
+Faça o shutdown do executor corretamente após coletar todos os resultados.
+Como bonus, tente submeter as mesmas tarefas para um newFixedThreadPool(3) e compare o output, observe como o single thread executor sempre processa uma por vez enquanto o fixed pool processa múltiplas simultaneamente.
