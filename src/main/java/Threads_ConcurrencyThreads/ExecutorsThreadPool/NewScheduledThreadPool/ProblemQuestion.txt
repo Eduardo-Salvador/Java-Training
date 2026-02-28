@@ -1,0 +1,25 @@
+EN:
+Create a class called TaskScheduler.
+It should use a newScheduledThreadPool(2) to schedule tasks concurrently.
+Create three scheduling scenarios.
+First, schedule a one-time task that runs after a 2 second delay, printing when it executes.
+For example: "One-time task executed by thread-1 at 14:32:05".
+Second, schedule a task that repeats every 1 second using scheduleAtFixedRate(), printing each execution.
+Run it for 5 seconds then cancel it using the returned ScheduledFuture.
+Third, schedule a task that repeats with a 1 second delay between the end of each execution using scheduleWithFixedDelay(), where each execution sleeps for 500ms to simulate work.
+Run it for 5 seconds then cancel it as well.
+Shutdown the pool properly after all tasks are done.
+
+------------------
+
+PT-BR:
+Crie uma classe chamada TaskScheduler.
+Ela deve usar um newScheduledThreadPool(2) para agendar tarefas de forma concorrente.
+Crie três cenários de agendamento.
+Primeiro, agende uma tarefa única que executa após 2 segundos de delay, imprimindo quando executar.
+Por exemplo: "One-time task executed by thread-1 at 14:32:05".
+Segundo, agende uma tarefa que se repete a cada 1 segundo usando scheduleAtFixedRate(), imprimindo cada execução.
+Execute por 5 segundos e depois cancele usando o ScheduledFuture retornado.
+Terceiro, agende uma tarefa que se repete com 1 segundo de delay entre o fim de cada execução usando scheduleWithFixedDelay(), onde cada execução dorme por 500ms para simular trabalho.
+Execute por 5 segundos e depois cancele também.
+Faça o shutdown do pool corretamente após todas as tarefas terminarem.
