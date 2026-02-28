@@ -1,0 +1,20 @@
+Create a class called DataAnalyzer.
+It should use a newWorkStealingPool() to process data chunks in parallel, taking advantage of all available CPU cores.
+Create a Callable<String> that simulates analyzing a data chunk, it receives a chunk name, sleeps for a random time between 200ms and 1000ms to simulate variable workload, and returns a result string.
+For example: "chunk-3 analyzed by ForkJoinPool-1-worker-2 in 743ms".
+Submit 10 chunks to the pool and store each Future<String> in a list.
+After submitting all tasks, iterate over the futures and print each result using get().
+Shutdown the pool properly after all results are collected.
+As a bonus, print Runtime.getRuntime().availableProcessors() before starting to show how many cores the pool is using, and compare the total execution time against a newSingleThreadExecutor running the same 10 tasks.
+
+-------------------------------------
+
+PT-BR:
+Crie uma classe chamada DataAnalyzer.
+Ela deve usar um newWorkStealingPool() para processar chunks de dados em paralelo, aproveitando todos os cores de CPU disponíveis.
+Crie um Callable<String> que simula a análise de um chunk de dados, ele recebe o nome de um chunk, dorme por um tempo aleatório entre 200ms e 1000ms para simular carga variável, e retorna uma string de resultado.
+Por exemplo: "chunk-3 analyzed by ForkJoinPool-1-worker-2 in 743ms".
+Submeta 10 chunks ao pool e armazene cada Future<String> em uma lista.
+Após submeter todas as tarefas, itere sobre os futures e imprima cada resultado usando get().
+Faça o shutdown do pool corretamente após coletar todos os resultados.
+Como bonus, imprima Runtime.getRuntime().availableProcessors() antes de começar para mostrar quantos cores o pool está usando, e compare o tempo total de execução contra um newSingleThreadExecutor rodando as mesmas 10 tarefas.
