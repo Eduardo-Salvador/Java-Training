@@ -1,0 +1,20 @@
+Create a class called DataPipeline.
+It should combine asynchronous data fetching with stream processing in a single CompletableFuture chain.
+Create a supplyAsync() that simulates fetching a list of 10 integers from a remote source, sleeping 400ms and returning a List<Integer> with random values between -50 and 100.
+Chain a thenApply() that uses a stream to filter only positive values, multiply each by 3, and collect into a new list.
+Chain another thenApply() that uses a stream to calculate the sum of the list.
+Chain thenAccept() to print the original list size, the filtered list, and the final sum.
+Add exceptionally() at the end to handle any unexpected errors.
+As a bonus, run the same pipeline twice concurrently using two independent CompletableFuture chains and use thenCombine() to sum the final results of both.
+
+------------------------
+
+PT-BR:
+Crie uma classe chamada DataPipeline.
+Ela deve combinar busca assíncrona de dados com processamento via stream em uma única cadeia de CompletableFuture.
+Crie um supplyAsync() que simula a busca de uma lista de 10 inteiros de uma fonte remota, dormindo 400ms e retornando uma List<Integer> com valores aleatórios entre -50 e 100.
+Encadeie um thenApply() que usa stream para filtrar apenas valores positivos, multiplicar cada um por 3, e coletar em uma nova lista.
+Encadeie outro thenApply() que usa stream para calcular a soma da lista.
+Encadeie thenAccept() para imprimir o tamanho da lista original, a lista filtrada e a soma final.
+Adicione exceptionally() ao final para tratar qualquer erro inesperado.
+Como bonus, rode o mesmo pipeline duas vezes de forma concorrente usando duas cadeias independentes de CompletableFuture e use thenCombine() para somar os resultados finais de ambos.
