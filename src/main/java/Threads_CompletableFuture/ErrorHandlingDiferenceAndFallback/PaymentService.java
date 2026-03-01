@@ -1,5 +1,4 @@
 package Threads_CompletableFuture.ErrorHandlingDiferenceAndFallback;
-
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
