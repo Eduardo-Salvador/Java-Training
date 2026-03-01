@@ -1,0 +1,20 @@
+Create a record called TransactionRecord with the following fields: String transactionId, String sender, String receiver, double amount, String status.
+Add a compact constructor that validates: amount must be greater than zero, sender and receiver cannot be null or blank.
+Throw IllegalArgumentException with a descriptive message for each violation.
+Add a method boolean isHighValue() that returns true if the amount is above 10000.
+Add an alternative constructor that receives only sender, receiver and amount, generating a random transactionId using UUID.randomUUID() and setting status to "PENDING".
+In Main, simulate a payment processing pipeline using CompletableFuture:
+Create 3 transactions with the short constructor, submit each one with supplyAsync() sleeping 300ms and returning the record, chain a thenApply() that returns a new TransactionRecord with status "APPROVED" if isHighValue() is false or "REQUIRES_REVIEW" if true, and print the final result with thenAccept().
+Use allOf().join() to wait for all.
+
+----------------------------
+
+PT-BR:
+Crie um record chamado TransactionRecord com os campos: String transactionId, String sender, String receiver, double amount, String status.
+Adicione um construtor compacto que valide: amount deve ser maior que zero, sender e receiver não podem ser nulos ou em branco.
+Lance IllegalArgumentException com mensagem descritiva para cada violação.
+Adicione um método boolean isHighValue() que retorna true se o valor for acima de 10000.
+Adicione um construtor alternativo que recebe apenas sender, receiver e amount, gerando um transactionId aleatório com UUID.randomUUID() e definindo o status como "PENDING".
+Na Main, simule um pipeline de processamento de pagamentos usando CompletableFuture:
+Crie 3 transações com o construtor curto, submeta cada uma com supplyAsync() dormindo 300ms e retornando o record, encadeie um thenApply() que retorna um novo TransactionRecord com status "APPROVED" se isHighValue() for false ou "REQUIRES_REVIEW" se for true, e imprima o resultado final com thenAccept().
+Use allOf().join() para esperar todas.
