@@ -1,0 +1,24 @@
+Create a class called PaymentService.
+It should simulate a payment processing pipeline where failures can happen and must be handled gracefully.
+Create a supplyAsync() that receives a payment amount.
+If the amount is negative, throw an IllegalArgumentException("Invalid amount").
+If the amount is above 1000, throw a RuntimeException("Payment limit exceeded").
+Otherwise sleep 300ms and return "Payment of $X approved".
+Chain exceptionally() to catch any error and return a fallback string like "Payment failed: <error message>".
+Print the result with thenAccept().
+Then create a second pipeline for the same scenarios but using handle() instead, printing both the result and whether it was a success or failure.
+Run at least 3 cases: a valid amount, a negative amount, and an amount above the limit.
+
+--------------------------------------------------
+
+PT-BR:
+Crie uma classe chamada PaymentService.
+Ela deve simular um pipeline de processamento de pagamento onde falhas podem ocorrer e devem ser tratadas de forma adequada.
+Crie um supplyAsync() que recebe um valor de pagamento.
+Se o valor for negativo, lance IllegalArgumentException("Invalid amount").
+Se o valor for acima de 1000, lance RuntimeException("Payment limit exceeded").
+Caso contrário, durma 300ms e retorne "Payment of $X approved".
+Encadeie exceptionally() para capturar qualquer erro e retornar uma string de fallback como "Payment failed: <mensagem do erro>".
+Imprima o resultado com thenAccept().
+Em seguida crie um segundo pipeline para os mesmos cenários mas usando handle() em vez de exceptionally(), imprimindo tanto o resultado quanto se foi sucesso ou falha.
+Execute pelo menos 3 casos: um valor válido, um valor negativo e um valor acima do limite.
