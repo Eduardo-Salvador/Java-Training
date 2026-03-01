@@ -2,9 +2,10 @@ package Threads_CompletableFuture.ThreadFactoryAndPool;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ReportService {
-    private static int reportCounter = 0;
+    private static final AtomicInteger reportCounter = new AtomicInteger(0);
 
     private static String generateReport(){
         try {
@@ -13,7 +14,7 @@ public class ReportService {
             System.out.println(e.getMessage());
         }
 
-        int id = ++reportCounter;
+        int id = reportCounter.incrementAndGet();
         return "Report-"
                 + id
                 + " by: "

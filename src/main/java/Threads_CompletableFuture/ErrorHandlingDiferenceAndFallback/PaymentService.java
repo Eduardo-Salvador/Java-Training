@@ -14,6 +14,7 @@ public class PaymentService {
             try {
                 TimeUnit.MILLISECONDS.sleep(300);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 System.out.println(e.getMessage());
             }
             return "Payment of $" + value + " approved";
@@ -32,6 +33,7 @@ public class PaymentService {
             try {
                 TimeUnit.MILLISECONDS.sleep(300);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 System.out.println(e.getMessage());
             }
             return "Payment of $" + value + " approved";

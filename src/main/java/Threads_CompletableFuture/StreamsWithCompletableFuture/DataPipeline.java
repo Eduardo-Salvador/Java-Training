@@ -27,7 +27,10 @@ public class DataPipeline {
                 .collect(Collectors.toList())
         ).thenApply(list -> list.stream()
                 .reduce(0, Integer::sum)
-        ).exceptionally(e -> Integer.valueOf(e.getMessage()));
+        ).exceptionally(e -> {
+            System.out.println("Error: " + e.getMessage());
+            return 0;
+        });
     }
 
     public static void main(String[] args) {

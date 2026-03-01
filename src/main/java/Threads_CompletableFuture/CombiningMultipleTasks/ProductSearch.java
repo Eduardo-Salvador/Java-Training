@@ -42,8 +42,7 @@ public class ProductSearch {
         CompletableFuture<Integer> firstComparison = store1.thenCombine(store2, Integer::min);
         CompletableFuture<Integer> finalResult = firstComparison.thenCombine(store3, Integer::min);
 
-        finalResult.thenAccept(minPrice -> System.out.println("Lowest price found: $" + minPrice));
-        finalResult.join();
+        finalResult.thenAccept(minPrice -> System.out.println("Lowest price found: $" + minPrice)).join();
 
         ProductSearch.runAllOfExample();
     }

@@ -1,16 +1,17 @@
 package Threads_CompletableFuture.SimpleAsyncChaining;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Order {
     private final String orderID;
     private final String orderName;
     private final Double price;
-    private static int id = 1;
+    private static final AtomicInteger id = new AtomicInteger(1);
 
     public Order(String orderName, Double price) {
-        this.orderID = "Order#" + id;
+        this.orderID = "Order#" + id.getAndIncrement();
         this.orderName = orderName;
         this.price = price;
-        id++;
     }
 
     public String getOrderID() {
