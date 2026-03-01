@@ -1,0 +1,20 @@
+Create a class called OrderProcessor.
+It should simulate an e-commerce order pipeline using CompletableFuture chaining.
+Create a method that fetches an order by ID using supplyAsync(), sleeping 500ms to simulate a database call and returning a string like "Order#1 - Laptop - $999".
+Chain a thenApply() that applies a 10% discount, returning a new string like "Order#1 - Laptop - $899.1 (10% discount applied)".
+Chain a final thenAccept() that prints the result.
+Run 3 orders concurrently by creating 3 independent CompletableFuture chains.
+Use allOf() to wait for all of them before the main thread exits.
+Print the current thread name at each stage to observe that the main thread is never blocked.
+
+---------------------------------------
+
+PT-BR:
+Crie uma classe chamada OrderProcessor.
+Ela deve simular um pipeline de pedidos de e-commerce usando encadeamento de CompletableFuture.
+Crie um método que busca um pedido por ID usando supplyAsync(), dormindo 500ms para simular uma chamada ao banco e retornando uma string como "Order#1 - Laptop - $999".
+Encadeie um thenApply() que aplica um desconto de 10%, retornando uma nova string como "Order#1 - Laptop - $899.1 (10% discount applied)".
+Encadeie um thenAccept() final que imprime o resultado.
+Execute 3 pedidos concorrentemente criando 3 cadeias independentes de CompletableFuture.
+Use allOf() para esperar todos antes que a main thread encerre.
+Imprima o nome da thread atual em cada etapa para observar que a main thread nunca é bloqueada.
