@@ -1,0 +1,18 @@
+Create a class called ProductSearch.
+It should simulate searching for the cheapest product price across 3 independent stores running in parallel.
+Create 3 CompletableFuture<Integer> using supplyAsync(), each sleeping a random time between 200ms and 1000ms and returning a random price between 50 and 200.
+Use thenCombine() to combine the first two results keeping the lower price.
+Chain another thenCombine() with the third to find the overall lowest price.
+Print the final result with thenAccept().
+Also demonstrate allOf() by running 5 independent tasks and printing a summary only after all of them finish.
+
+---------------------------------
+
+PT-BR:
+Crie uma classe chamada ProductSearch.
+Ela deve simular a busca pelo menor preço de um produto em 3 lojas independentes rodando em paralelo.
+Crie 3 CompletableFuture<Integer> usando supplyAsync(), cada um dormindo um tempo aleatório entre 200ms e 1000ms e retornando um preço aleatório entre 50 e 200.
+Use thenCombine() para combinar os dois primeiros resultados mantendo o menor preço.
+Encadeie outro thenCombine() com o terceiro para encontrar o menor preço geral.
+Imprima o resultado final com thenAccept().
+Também demonstre allOf() rodando 5 tarefas independentes e imprimindo um resumo somente após todas terminarem.
