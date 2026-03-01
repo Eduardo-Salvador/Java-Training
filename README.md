@@ -4,44 +4,133 @@
 
 ---
 
-# Java Training Repository:
+# Quick Navigation
+
+### [Overview](#java-training-repository)  
+### [Technologies](#technologies)  
+### [Important Notes](#important-notes--observações-importantes)  
+### [Topics](#topics)  
+### [Highlighted Results](#highlighted-results-from-module-exercises)  
+### [Apache Maven](#what-is-apache-maven)  
+### [Next Steps](#next-steps--próximos-passos)  
+
+---
+
+
+# Java Training Repository
+
+A structured and progressive deep dive into Java fundamentals and ecosystem mastery.
+
+Uma imersão estruturada e progressiva nos fundamentos do Java e no domínio do ecossistema.
+
+---
+
 ![USA](https://img.shields.io/badge/🇺🇸-English-blue)
 
-The goal is to provide training in the Java language, its best practices, and its entire ecosystem, from fundamentals and basic features, through Object-Oriented Programming (OOP), flows, collections, lambdas, utility classes, GUIs, threads, client-server architecture, Maven, connections to relational databases (MySQL), CRUD operations, concurrency, patterns, design patterns, and unit testing (JUnit).
+This project covers the evolution from basic programming concepts to advanced topics, including:
 
-The topics are divided into folders and have explanatory README files (for learning purposes and not for architecture/application purposes).
+**Object-Oriented Programming (OOP)  
+Collections and Generics  
+Lambdas, Streams and Functional Programming  
+Utility Classes  
+GUI development  
+Threads and Concurrency  
+Client-Server Architecture (Sockets and Channels)  
+Maven  
+Relational Database Integration (MySQL)  
+CRUD Operations  
+Design Patterns  
+Unit Testing (JUnit)**
 
-**NOTE:** We will not delve into Docker (only superficially), web and will not discuss Spring Boot, as there are other projects on my GitHub focused on these topics, with projects in production. This extensive project is for learning, focused on Pure Java and its ecosystem (including its API for communicating with a database or running unit tests, for example).
+All topics are organized into modular folders, each containing explanatory README files.  
+The structure prioritizes **learning progression and conceptual clarity**, rather than production-ready architecture.
 
-**The main idea is to document the learning process.**
+</div>
+
+> **Scope Note:**  
+This repository intentionally focuses on Pure Java and its core ecosystem.  
+It does not deeply explore Docker, Web development, or Spring Boot, as those topics are covered in other repositories dedicated to production-ready backend applications.
+
+<div align="center">
+
+**The primary goal is to document a structured and progressive Java learning journey.**
+
+---
 
 ![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
 
-O objetivo é fornecer treinamento na linguagem Java, suas melhores práticas e todo o seu ecossistema, desde os fundamentos e recursos básicos, passando por Programação Orientada a Objetos (POO), fluxos, coleções, lambdas, classes utilitárias, GUIs, threads, arquitetura cliente-servidor, Maven, conexões com bancos de dados relacionais (MySQL), operações CRUD, concorrência, padrões, padrões de projeto e testes unitários (JUnit).
+O projeto cobre a evolução desde conceitos básicos de programação até tópicos mais avançados, incluindo:
 
-Os tópicos estão divididos em pastas e possuem arquivos README explicativos (para fins de aprendizado e não para fins de arquitetura/aplicação).
+**Programação Orientada a Objetos (POO)  
+Coleções e Genéricos  
+Lambdas, Streams e Programação Funcional  
+Classes Utilitárias  
+Desenvolvimento de Interfaces Gráficas (GUI)  
+Threads e Concorrência  
+Arquitetura Cliente-Servidor (Sockets e Channels)  
+Maven  
+Integração com Banco de Dados Relacional (MySQL)  
+Operações CRUD  
+Padrões de Projeto  
+Testes Unitários (JUnit)**
 
-**NOTA:** Não abordaremos Docker (apenas superficialmente), web e não discutiremos Spring Boot, pois existem outros projetos no meu GitHub focados nesses tópicos, com projetos em produção. Este projeto abrangente é para aprendizado, com foco em Java puro e seu ecossistema (incluindo sua API para comunicação com um banco de dados ou execução de testes unitários, por exemplo).
+Os tópicos estão organizados em pastas modulares, cada uma com README explicativo.  
+A estrutura prioriza **progressão didática e clareza conceitual**, em vez de arquitetura voltada à produção.
 
-**A ideia principal é documentar o processo de aprendizado.**
+</div>
+
+> **Nota de Escopo:**  
+Este repositório tem foco intencional em Java puro e seu ecossistema principal.  
+Docker, desenvolvimento Web e Spring Boot são abordados em outros repositórios voltados para aplicações backend em nível de produção.
+
+<div align="center">
+
+**O objetivo principal é documentar uma jornada estruturada e progressiva de aprendizado em Java.**
 
 ---
 
 ## Technologies
+
+#### Main  
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) 
 
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-f5f5f5?style=for-the-badge&logo=junit5&logoColor=dc524a)
+#### Core Technologies
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-f5f5f5?style=for-the-badge&logo=junit5&logoColor=dc524a)
+
+#### Complementary / Ecosystem Exposure
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+---
+
+## Important Notes / Observações Importantes
+
+![USA](https://img.shields.io/badge/🇺🇸-English-blue)
 
 </div>
 
+- Some package names do not strictly follow the standard Java naming conventions (lowercase structure).
+- This was intentional, as the goal of this repository is educational organization by topic.
+- Other repositories follow conventional production-level package structures.
+- The same applies to the Data Structure project, which also prioritizes learning organization over architectural conventions.
+- The deviation does not reflect lack of knowledge regarding best practices, but rather a didactic choice.
+
 <div align="center">
+
+![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
+
+</div>
+
+- Alguns nomes de pacotes não seguem estritamente as convenções de nomenclatura padrão do Java (estrutura em minúsculas).
+- Isso foi intencional, pois o objetivo deste repositório é a organização educacional por tópico.
+- Outros repositórios seguem estruturas de pacotes convencionais de nível de produção.
+- O mesmo se aplica ao projeto de Estrutura de Dados, que também prioriza a organização do aprendizado em detrimento das convenções arquiteturais.
+- O desvio não reflete falta de conhecimento sobre as melhores práticas, mas sim uma escolha didática.
 
 ---
 
 ## Topics:
 
 ---
-</div>
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
@@ -117,17 +206,17 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentThreads/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentThreads/README_PT-BR.md)
 
-## Records: Immutable Objects
+## Async Threads: Completable Future
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README_PT-BR.md)
-
-## Threads: Concurrent Threads with Immutable Objects (Records):
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreadsWithImmutableObjects/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrencyThreadsWithImmutableObjects/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_CompletableFuture/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_CompletableFuture/README_PT-BR.md)
 
 ## Threads: Concurrent Data Structures:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentDataStructures/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Threads_ConcurrentDataStructures/README_PT-BR.md)
+
+## Records: Immutable Objects
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README_PT-BR.md)
 
 ## Pet Adoption System (CLI):
 Major Learning Challenge:
@@ -170,3 +259,45 @@ Full-Duplex Multi-Client Chat:
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Maven/Maven_README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Maven/Maven_README_PT-BR.md)
 
 </div>
+
+---
+
+## Next Steps / Próximos Passos
+
+<div align="center">
+
+![USA](https://img.shields.io/badge/🇺🇸-English-blue)
+
+</div>
+
+This repository builds a strong foundation in core Java and low-level concepts.
+The next natural step is applying this knowledge in modern backend ecosystems such as:
+- Spring Boot
+- REST API development
+- HTTP communication
+- Docker containerization
+- Software Architecture patterns
+- Scalable backend applications
+
+These topics are explored in other repositories focused on real-world and production-level applications.
+
+<div align="center">
+
+![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
+
+</div>
+
+Este repositório oferece uma base sólida em Java e conceitos de baixo nível.
+O próximo passo natural é aplicar esse conhecimento em ecossistemas de backend modernos.
+- Spring Boot
+- Desenvolvimento de APIs REST
+- Comunicação HTTP
+- Docker
+- Arquitetura de Software
+- Aplicações de backend escaláveis
+
+Esses tópicos são explorados em outros repositórios focados em aplicações do mundo real e em nível de produção.
+
+---
+
+## Production Projects
