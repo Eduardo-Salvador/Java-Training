@@ -1,0 +1,22 @@
+Create a configuration manager for an application using the three Singleton approaches learned.
+Each one must store and manage the same data: String appName, String version, String environment and a Map<String, String> of custom properties.
+Create EagerConfig, LazyConfig and EnumConfig, each using its respective Singleton approach.
+All three must implement a Config interface with the following methods: String getAppName(), String getVersion(), String getEnvironment(), void setProperty(String key, String value) and String getProperty(String key).
+In Main, for each of the three implementations: get the instance twice and prove it is the same object using ==.
+Set at least 2 custom properties on the first reference and read them from the second reference to prove shared state.
+Print all values.
+As a bonus, simulate the thread-safety problem: create 10 threads all calling getInstancia() at the same time and print the instance hashcode from each thread.
+All must print the same hashcode.
+
+--------------------------------------------
+
+PT-BR:
+Crie um gerenciador de configuração para uma aplicação usando as três abordagens de Singleton aprendidas.
+Cada uma deve armazenar e gerenciar os mesmos dados: String appName, String version, String environment e um Map<String, String> de propriedades customizadas.
+Crie EagerConfig, LazyConfig e EnumConfig, cada uma usando sua respectiva abordagem de Singleton.
+As três devem implementar uma interface Config com os seguintes métodos: String getAppName(), String getVersion(), String getEnvironment(), void setProperty(String key, String value) e String getProperty(String key).
+Na Main, para cada uma das três implementações: obtenha a instância duas vezes e prove que é o mesmo objeto usando ==.
+Defina pelo menos 2 propriedades customizadas na primeira referência e leia-as pela segunda referência para provar o estado compartilhado.
+Imprima todos os valores.
+Como bonus, simule o problema de thread-safety: crie 10 threads todas chamando getInstancia() ao mesmo tempo e imprima o hashcode da instância de cada thread.
+Todos devem imprimir o mesmo hashcode.

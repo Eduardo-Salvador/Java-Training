@@ -1,0 +1,16 @@
+Create a notification system using the Factory pattern.
+Create an interface Notification with a single method void send(String message).
+Implement three types: EmailNotification, SmsNotification and PushNotification, each printing the message in a different format.
+Create a NotificationFactory with a static method create(String type) that returns the correct implementation.
+Throw IllegalArgumentException for unknown types.
+In Main, create one notification of each type using only the factory, never using new directly outside of it.
+Send a message through each one.
+
+---------------------------------------
+
+PT-BR:
+Crie um sistema de notificações usando o padrão Factory.
+Crie uma interface Notification com um único método void send(String message).
+Implemente três tipos: EmailNotification, SmsNotification e PushNotification, cada uma imprimindo a mensagem em um formato diferente.
+Crie uma NotificationFactory com um método estático create(String type) que retorna a implementação correta. Lance IllegalArgumentException para tipos desconhecidos.
+Na Main, crie uma notificação de cada tipo usando apenas a factory, nunca usando new diretamente fora dela. Envie uma mensagem por cada uma.

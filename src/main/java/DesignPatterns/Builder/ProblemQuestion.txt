@@ -1,0 +1,16 @@
+Create a class PizzaOrder using the Builder pattern.
+The pizza has the following fields: String size (required, can be "SMALL", "MEDIUM" or "LARGE"), String crust (required, can be "THIN" or "THICK"), String sauce (required), List<String> toppings (optional), boolean extraCheese (optional, default false), String notes (optional).
+The build() method must validate that size, crust and sauce are not null or blank, throwing IllegalArgumentException if any of them is missing.
+Add a method addTopping(String topping) to the Builder that adds one topping at a time to the list.
+Print the final order using toString().
+Create at least 3 orders in Main: one complete, one minimal with only required fields, and one that tries to build without a required field and catches the exception.
+
+----------------------------
+
+PT-BR:
+Crie uma classe PizzaOrder usando o padrão Builder.
+A pizza tem os seguintes campos: String size (obrigatório, pode ser "SMALL", "MEDIUM" ou "LARGE"), String crust (obrigatório, pode ser "THIN" ou "THICK"), String sauce (obrigatório), List<String> toppings (opcional), boolean extraCheese (opcional, padrão false), String notes (opcional).
+O método build() deve validar que size, crust e sauce não são nulos ou em branco, lançando IllegalArgumentException se algum estiver faltando.
+Adicione um método addTopping(String topping) ao Builder que adiciona um topping por vez à lista.
+Imprima o pedido final usando toString().
+Crie pelo menos 3 pedidos na Main: um completo, um mínimo com só os campos obrigatórios, e um que tente construir sem um campo obrigatório e capture a exceção.
