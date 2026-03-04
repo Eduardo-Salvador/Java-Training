@@ -10,6 +10,7 @@ public class Connection {
             System.out.println("Enter one int number: ");
             int newNumber = input.nextInt();
             System.out.println("Number: " + newNumber);
+            connection.close();
         } catch (InputMismatchException e){
             System.out.println("Input invalid!");
         }
