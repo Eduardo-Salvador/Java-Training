@@ -1,7 +1,6 @@
 package Generics.Wildcard.Application;
 import Generics.Wildcard.Services.AnimalManager;
 import Generics.Wildcard.Domain.Animal;
-import Generics.Wildcard.Domain.Cat;
 import Generics.Wildcard.Domain.Dog;
 import Generics.Wildcard.Domain.Lion;
 import java.util.ArrayList;

@@ -1,5 +1,4 @@
 package Generics.GenericClasses.Application;
-
 import Generics.GenericClasses.Domain.Box;
 import Generics.GenericClasses.Domain.Pair;
 import Generics.Wildcard.Domain.Animal;

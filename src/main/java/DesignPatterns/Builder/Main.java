@@ -23,6 +23,7 @@ public class Main {
             PizzaOrder invalidPizza = new PizzaOrder.Builder()
                     .size("LARGE")
                     .build();
+            System.out.println(invalidPizza);
         } catch (IllegalStateException e) {
             System.out.println("Error: " + e.getMessage());
         }

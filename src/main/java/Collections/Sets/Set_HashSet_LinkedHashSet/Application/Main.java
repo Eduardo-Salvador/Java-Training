@@ -58,5 +58,6 @@ public class Main {
         System.out.println("Set Size: " + userLinkedSet.size());
         System.out.println("Linked Hash Set: insertion order:");
         userLinkedSet.forEach(System.out::println);
+        s.close();
     }
 }

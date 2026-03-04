@@ -1,10 +1,8 @@
 package Collections.Maps.NavigableMap_TreeMap.Services;
 import Collections.Maps.NavigableMap_TreeMap.Domain.Contact;
 import java.util.InputMismatchException;
-import java.util.Map;
 import java.util.NavigableMap;
 import java.util.Scanner;
-import java.util.spi.AbstractResourceBundleProvider;
 
 public class ContactManager {
     public static void updateContact(NavigableMap<String, Contact> map){
@@ -14,6 +12,7 @@ public class ContactManager {
         String name = input.nextLine();
         if (!map.containsKey(name)) {
             System.out.println("Contact not found!");
+            input.close();
             return;
         }
         System.out.println("Chose one option to change:");
@@ -64,6 +63,8 @@ public class ContactManager {
             }
         } catch (InputMismatchException e){
             System.out.println("Input type incorrect");
+        } finally {
+            input.close();
         }
     }
 }

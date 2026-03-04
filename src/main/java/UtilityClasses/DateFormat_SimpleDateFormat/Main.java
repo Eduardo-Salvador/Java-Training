@@ -21,14 +21,13 @@ public class Main {
             date = inputFormat.parse(dateEN_US);
         } catch (ParseException e) {
             System.out.println("Invalid Date");
-            return;
         }
 
         String formatted = outputFormat.format(date);
         System.out.println(formatted);
-
         String pattern = "dd 'de' MMMM 'de' yyyy";
         SimpleDateFormat extendOutput = new SimpleDateFormat(pattern, new Locale("pt", "BR"));
         System.out.println(extendOutput.format(date));
+        input.close();
     }
 }

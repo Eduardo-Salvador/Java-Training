@@ -43,5 +43,6 @@ public class Report {
             default:
                 System.out.println("Invalid Option, please try again!");
         }
+        input.close();
     }
 }

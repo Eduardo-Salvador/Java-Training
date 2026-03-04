@@ -135,6 +135,7 @@ public class ReportRoom {
                 runReport();
                 break;
         }
+        input.close();
         return optionMenu;
     }
 

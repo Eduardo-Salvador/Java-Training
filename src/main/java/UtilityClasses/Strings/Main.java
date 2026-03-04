@@ -13,6 +13,7 @@ public class Main {
 
         if (cpf.length() != 11) {
             System.out.println("Invalid CPF: must have 11 digits");
+            input.close();
             return;
         }
         String base = cpf.substring(0, 9);
@@ -27,5 +28,6 @@ public class Main {
         if (dv.equals(checkDigits)) {
             System.out.println("Verifier equals " + dv);
         }
+        input.close();
     }
 }

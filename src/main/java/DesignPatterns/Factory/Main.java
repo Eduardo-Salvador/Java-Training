@@ -15,6 +15,7 @@ public class Main {
 
         try {
             Notification error = NotificationFactory.create("Error");
+            System.out.println(error);
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
