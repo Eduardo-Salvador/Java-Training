@@ -1,20 +1,21 @@
 package DesignPatterns.Singleton;
 import java.util.Map;
-import java.util.HashMap;   
+import java.util.concurrent.ConcurrentHashMap;
 
-public class EagerConfig {
-    private static final EagerConfig instance = new EagerConfig();
+public class EagerConfig implements Config {
+    private static final EagerConfig INSTANCE = new EagerConfig();
     private String appName;
     private String version;
     private String environment;
-    private Map<String, String> settings;
+    private Map<String, String> property = new ConcurrentHashMap<>();
 
     private EagerConfig() {}
 
     public static EagerConfig getInstance() {
-        return instance;
+        return INSTANCE;
     }
 
+    @Override
     public String getAppName() {
         return appName;
     }
@@ -23,6 +24,7 @@ public class EagerConfig {
         this.appName = appName;
     }
 
+    @Override
     public String getVersion() {
         return version;
     }
@@ -31,6 +33,7 @@ public class EagerConfig {
         this.version = version;
     }
 
+    @Override
     public String getEnvironment() {
         return environment;
     }
@@ -39,14 +42,21 @@ public class EagerConfig {
         this.environment = environment;
     }
 
-    public String getSetting(String key) {
-        return settings.get(key);
+    @Override
+    public String getProperty(String key) {
+        return property.get(key);
     }
 
-    public void setSetting(String key, String value) {
-        if (settings == null) {
-            settings = new HashMap<>();
-        }
-        settings.put(key, value);
+    @Override
+    public void setProperty(String key, String value) {
+        property.put(key, value);
+    }
+
+    @Override
+    public String toString() {
+        return "App Name: " + getAppName() +
+                "\n  Version: " + getVersion() +
+                "\n  Environment: " + getEnvironment() +
+                "\n  Database URL: " + getProperty("database_url");
     }
 }

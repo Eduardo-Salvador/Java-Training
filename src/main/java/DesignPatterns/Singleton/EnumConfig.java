@@ -2,25 +2,12 @@ package DesignPatterns.Singleton;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class LazyConfig implements Config {
-    private static volatile LazyConfig INSTANCE;
+public enum EnumConfig implements Config {
+    INSTANCE;
     private String appName;
     private String version;
     private String environment;
     private final Map<String, String> property = new ConcurrentHashMap<>();
-
-    private LazyConfig() {}
-
-    public static LazyConfig getInstance() {
-        if (INSTANCE == null){
-            synchronized(LazyConfig.class){
-                if (INSTANCE == null){
-                    INSTANCE = new LazyConfig();
-                }
-            }
-        }
-        return INSTANCE;
-    }
 
     @Override
     public String getAppName() {

@@ -1,23 +1,19 @@
 package DesignPatterns.Singleton;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
-public class LazyConfig implements Config {
-    private static volatile LazyConfig INSTANCE;
+public class LazyConfigNoThreadSafe implements Config {
+    private static LazyConfigNoThreadSafe INSTANCE;
     private String appName;
     private String version;
     private String environment;
-    private final Map<String, String> property = new ConcurrentHashMap<>();
+    private Map<String, String> property;
 
-    private LazyConfig() {}
+    private LazyConfigNoThreadSafe() {}
 
-    public static LazyConfig getInstance() {
+    public static LazyConfigNoThreadSafe getInstance() {
         if (INSTANCE == null){
-            synchronized(LazyConfig.class){
-                if (INSTANCE == null){
-                    INSTANCE = new LazyConfig();
-                }
-            }
+            INSTANCE = new LazyConfigNoThreadSafe();
         }
         return INSTANCE;
     }
@@ -56,6 +52,9 @@ public class LazyConfig implements Config {
 
     @Override
     public void setProperty(String key, String value) {
+        if (property == null) {
+            property = new HashMap<>();
+        }
         property.put(key, value);
     }
 
