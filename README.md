@@ -218,6 +218,11 @@ Challenge of Programming Logic with basic concepts to Object-Oriented Programmin
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Records/README_PT-BR.md)
 
+## Design Patterns:
+Builder, Factory, Singleton (The 3 Initializations) and Data Transfer Objects (DTOs)
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/DesignPatterns/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/DesignPatterns/README_PT-BR.md)
+
 ## Pet Adoption System (CLI):
 Major Learning Challenge:
 
