@@ -1,0 +1,20 @@
+Create a simple user management system that demonstrates the DTO pattern separating the internal entity from what is exposed externally.
+Create a User entity with the fields Long id, String name, String email, String password and String cpf.
+Create two DTOs as Records: UserResponseDTO(Long id, String name, String email) for responses, and UserRequestDTO(String name, String email, String password) for receiving new users, no id, no cpf exposed.
+Create a UserService with a List<User> simulating a database.
+Implement three methods: UserResponseDTO create(UserRequestDTO request) that generates an id automatically, creates the User internally and returns only the UserResponseDTO. UserResponseDTO findById(Long id) that finds the user and returns the DTO.
+List<UserResponseDTO> findAll() that returns all users as DTOs.
+In Main, create 3 users via UserRequestDTO, print all with findAll(), and search one by id with findById().
+Print all results to show that password and cpf never appear in the output.
+
+--------------------------------
+
+PT-BR:
+Crie um sistema simples de gerenciamento de usuários que demonstre o padrão DTO separando a entidade interna do que é exposto externamente.
+Crie uma entidade User com os campos Long id, String name, String email, String password e String cpf.
+Crie dois DTOs como Records: UserResponseDTO(Long id, String name, String email) para respostas, e UserRequestDTO(String name, String email, String password) para receber novos usuários, sem id, sem cpf exposto.
+Crie um UserService com uma List<User> simulando um banco de dados.
+Implemente três métodos: UserResponseDTO create(UserRequestDTO request) que gera um id automaticamente, cria o User internamente e retorna apenas o UserResponseDTO.
+UserResponseDTO findById(Long id) que encontra o usuário e retorna o DTO. List<UserResponseDTO> findAll() que retorna todos os usuários como DTOs.
+Na Main, crie 3 usuários via UserRequestDTO, imprima todos com findAll(), e busque um pelo id com findById().
+Imprima todos os resultados para mostrar que senha e cpf nunca aparecem no output.
