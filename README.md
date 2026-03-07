@@ -16,7 +16,6 @@
 
 ---
 
-
 # Java Training Repository
 
 A structured and progressive deep dive into Java fundamentals and ecosystem mastery.
@@ -262,6 +261,22 @@ Full-Duplex Multi-Client Chat:
 ## What is Apache Maven?
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Maven/Maven_README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Maven/Maven_README_PT-BR.md)
+
+</div>
+
+---
+
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+<div align="center">
+
+## Docker Config:
+
+| [Click here for view docker-compose.yml](https://github.com/Eduardo-Salvador/Java-Training/blob/main/docker-compose.yml) |
+
+**Quick Overview:** Docker was configured to use MySQL to handle the JDBC topic, one of the most important aspects of the project.
+
+*We will not cover technical explanations about Docker in this project.*
 
 </div>
 
