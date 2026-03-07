@@ -1,0 +1,18 @@
+version: '2.4'
+
+services:
+  db:
+    image: mysql:8
+    container_name: java_training_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - java_training_data:/var/lib/mysql
+
+volumes:
+  java_training_data:

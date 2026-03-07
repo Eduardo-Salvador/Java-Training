@@ -30,6 +30,8 @@ bin/
 
 # IntelliJ
 .idea/
+java_training_data/
+.env
 *.iml
 
 # Build
