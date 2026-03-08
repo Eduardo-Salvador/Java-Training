@@ -10,9 +10,13 @@
 ### [Technologies](#technologies)  
 ### [Important Notes](#important-notes--observações-importantes)  
 ### [Topics](#topics)  
-### [Highlighted Results](#highlighted-results-from-module-exercises)  
-### [Apache Maven](#what-is-apache-maven)  
-### [Next Steps](#next-steps--próximos-passos)  
+### [Highlighted Results](#highlighted-results-from-module-exercises)
+### [Apache Maven](#what-is-apache-maven)
+### [MySQL](#what-is-mysql)
+### [Docker](#summary-about-docker)
+### [JUnit](#what-is-apache-maven)
+### [Final Project](#final-project)
+### [Next Steps](#next-steps--próximos-passos)
 
 ---
 
@@ -222,10 +226,11 @@ Builder, Factory, Singleton (The 3 Initializations) and Data Transfer Objects (D
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/DesignPatterns/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/DesignPatterns/README_PT-BR.md)
 
-## Pet Adoption System (CLI):
-Major Learning Challenge:
+## Java Data Base Connective (JDBC):
 
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README_PT-BR.md)
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/JDBC/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/JDBC/README_PT-BR.md)
+
+---
 
 ## Highlighted Results from Module Exercises:
 
@@ -288,7 +293,7 @@ Full-Duplex Multi-Client Chat:
 
 <div align="center">
 
-## What is Docker?
+## Summary about Docker:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Docker/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Docker/README_PT-BR.md)
 
@@ -301,6 +306,26 @@ Full-Duplex Multi-Client Chat:
 **Quick Overview:** Docker was configured to use MySQL to handle the JDBC topic, one of the most important aspects of the project.
 
 *We will not cover technical explanations about Docker in this project.*
+
+</div>
+
+---
+
+<div align="center">
+
+## Final Project:
+
+### Pet Adoption System v1.0:
+Command Line Project (CLI):
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README_PT-BR.md)
+
+### Pet Adoption System v2.0:
+GUI + JDBC + MySQL + JUnit + All Topics:
+
+- Images
+- Readme
+- Video
 
 </div>
 
