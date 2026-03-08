@@ -266,23 +266,41 @@ Full-Duplex Multi-Client Chat:
 
 ---
 
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
+<div align="center">
+
+## What is MySQL?
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/MySQL/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/MySQL/README_PT-BR.md)
+
+## MySQL Notes:
+
+**Quick Overview:** MySQL was configured through Docker to handle the JDBC topic, one of the most important aspects of the project.
+
+*The SQL operations covered here serve as the foundation for understanding how JDBC interacts with a relational database*
+
+</div>
+
+---
+
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 <div align="center">
+
+## What is Docker?
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Docker/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Docker/README_PT-BR.md)
+
+## Docker Compose Config:
+
+[Click here for view docker-compose.yml](https://github.com/Eduardo-Salvador/Java-Training/blob/main/docker-compose.yml)
 
 ## Docker Notes:
 
 **Quick Overview:** Docker was configured to use MySQL to handle the JDBC topic, one of the most important aspects of the project.
 
 *We will not cover technical explanations about Docker in this project.*
-
-## Docker Compose:
-
-| [Click here for view docker-compose.yml](https://github.com/Eduardo-Salvador/Java-Training/blob/main/docker-compose.yml) |
-
-## Docker Config:
-
-[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Docker/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Docker/README_PT-BR.md)
 
 </div>
 
