@@ -14,7 +14,7 @@
 ### [Apache Maven](#what-is-apache-maven)
 ### [MySQL](#what-is-mysql)
 ### [Docker](#summary-about-docker)
-### [JUnit](#what-is-apache-maven)
+### [JUnit](#what-is-junit)
 ### [Final Project](#final-project)
 ### [Next Steps](#next-steps--próximos-passos)
 
@@ -255,6 +255,11 @@ BeatBox Exercise:
 Full-Duplex Multi-Client Chat:
 ![Chat client receiving messages broadcast by the server in real time](src/main/java/ThreadsConnections_ChannelsAndSocketsClientServer/assets/chat-result.png)
 
+### Java Data Base Connective (JDBC):
+Complete Crud (CLI) - Click to go Youtube:
+
+[![Crud Video](assets/demo-jdbc.gif)](https://www.youtube.com/watch?v=7UkiTacMyzU)
+
 </div>
 
 ---
@@ -323,9 +328,7 @@ Command Line Project (CLI):
 ### Pet Adoption System v2.0:
 GUI + JDBC + MySQL + JUnit + All Topics:
 
-- Images
-- Readme
-- Video
+- Coming soon
 
 </div>
 
@@ -370,3 +373,5 @@ Esses tópicos são explorados em outros repositórios focados em aplicações d
 ---
 
 ## Production Projects
+
+- Coming soon
