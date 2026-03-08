@@ -1,0 +1,65 @@
+LibraryManager
+
+-----------------
+
+EN:
+Create a complete CRUD application via CLI for managing a library using JDBC and MySQL.
+Start by creating the database and table directly in your database IDE.
+The table books must have the following columns:
+    - id as INT AUTO_INCREMENT PRIMARY KEY,
+    - title as VARCHAR(200) NOT NULL,
+    - author as VARCHAR(150) NOT NULL,
+    - year as INT,
+    - available as BOOLEAN DEFAULT TRUE.
+Create a DatabaseConnection class responsible for opening and closing the connection using DriverManager.
+Store the connection credentials (url, user, password) as constants.
+Create a BookRepository class with the following methods:
+    - void create(Book book) that inserts a new book,
+    - List<Book> findAll() that returns all books,
+    - Optional<Book> findById(int id) that finds a book by id,
+    - void update(Book book) that updates title, author, year and available by id,
+    - void delete(int id) that deletes a book by id.
+Create a Book class with all fields matching the table.
+Use the Builder pattern for its construction.
+Create a LibraryMenu class that runs a loop showing a CLI menu with the options:
+    - 1 to add a book,
+    - 2 to list all books,
+    - 3 to search by id,
+    - 4 to update a book,
+    - 5 to delete a book,
+    - 0 to exit.
+Use Scanner to read user input.
+Each option must call the corresponding repository method and print a clear result to the terminal.
+In Main, instantiate LibraryMenu and start the loop.
+
+-----------------
+
+PT-BR:
+Crie uma aplicação CRUD completa via CLI para gerenciamento de uma biblioteca usando JDBC e MySQL.
+Comece criando o banco de dados e a tabela diretamente na sua IDE de banco de dados.
+A tabela books deve ter as seguintes colunas:
+    - id como INT AUTO_INCREMENT PRIMARY KEY,
+    - title como VARCHAR(200) NOT NULL,
+    - author como VARCHAR(150) NOT NULL,
+    - year como INT,
+    - available como BOOLEAN DEFAULT TRUE.
+Crie uma classe DatabaseConnection responsável por abrir e fechar a conexão usando DriverManager.
+Armazene as credenciais de conexão (url, user, password) como constantes.
+Crie uma classe BookRepository com os seguintes métodos:
+    - void create(Book book) que insere um novo livro,
+    - List<Book> findAll() que retorna todos os livros,
+    - Optional<Book> findById(int id) que encontra um livro pelo id,
+    - void update(Book book) que atualiza title, author, year e available pelo id,
+    - void delete(int id) que deleta um livro pelo id.
+Crie uma classe Book com todos os campos correspondendo à tabela.
+Use o padrão Builder para sua construção.
+Crie uma classe LibraryMenu que executa um loop exibindo um menu CLI com as opções:
+    - 1 para adicionar um livro,
+    - 2 para listar todos os livros,
+    - 3 para buscar pelo id,
+    - 4 para atualizar um livro,
+    - 5 para deletar um livro,
+    - 0 para sair.
+Use Scanner para ler a entrada do usuário.
+Cada opção deve chamar o método correspondente do repositório e imprimir um resultado claro no terminal.
+Na Main, instancie LibraryMenu e inicie o loop.
