@@ -1,0 +1,36 @@
+CalculatorServiceTest
+EN:
+Create a CalculatorService class that receives a CalculatorRepository via constructor.
+The repository has a single method void save(int result) that simulates persisting the result.
+The service has four methods:
+    sum(int a, int b), subtract(int a, int b),
+    multiply(int a, int b) and divide(int a, int b).
+All four must call repository.save() with the result before returning it.
+Divide must throw IllegalArgumentException when the divisor is zero.
+Create a CalculatorServiceTest class testing the following scenarios.
+    For sum: should return the correct result, should call repository with the correct result, should throw exception when any value is negative.
+    For subtract: should return the correct result, should call repository with the correct result.
+    For multiply: should return the correct result, should call repository with the correct result.
+    For divide: should return the correct result, should call repository with the correct result, should throw exception when divisor is zero.
+Use @BeforeEach to instantiate the service with the mocked repository.
+Each test must have a single assertion or verification and a name describing the expected behavior.
+
+-----------------------
+
+PT-BR:
+Crie uma classe CalculatorService que recebe um CalculatorRepository via construtor.
+O repositório tem um único método void save(int result) que simula a persistência do resultado.
+O service tem quatro métodos:
+    sum(int a, int b),
+    subtract(int a, int b),
+    multiply(int a, int b) e
+    divide(int a, int b).
+Os quatro devem chamar repository.save() com o resultado antes de retorná-lo.
+Divide deve lançar IllegalArgumentException quando o divisor for zero.
+Crie uma classe CalculatorServiceTest testando os seguintes cenários.
+    Para sum: deve retornar o resultado correto, deve chamar o repositório com o resultado correto, deve lançar exception quando qualquer valor for negativo.
+    Para subtract: deve retornar o resultado correto, deve chamar o repositório com o resultado correto.
+    Para multiply: deve retornar o resultado correto, deve chamar o repositório com o resultado correto.
+    Para divide: deve retornar o resultado correto, deve chamar o repositório com o resultado correto, deve lançar exception quando o divisor for zero.
+Use @BeforeEach para instanciar o service com o repositório mockado.
+Cada teste deve ter uma única assertion ou verificação e um nome descrevendo o comportamento esperado.
