@@ -1,4 +1,4 @@
-package JUnit;
+package JUnit_Mockito;
 
 public class CalculatorRepository {
     public void save(int result) {

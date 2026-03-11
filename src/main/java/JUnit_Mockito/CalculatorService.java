@@ -1,4 +1,4 @@
-package JUnit;
+package JUnit_Mockito;
 
 public class CalculatorService {
     private final CalculatorRepository repository;

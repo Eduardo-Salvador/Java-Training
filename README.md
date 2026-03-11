@@ -14,7 +14,7 @@
 ### [Apache Maven](#what-is-apache-maven)
 ### [MySQL](#what-is-mysql)
 ### [Docker](#summary-about-docker)
-### [JUnit](#what-is-junit)
+### [JUnit and Mockito](#junit-and-mockito)
 ### [Final Project](#final-project)
 ### [Next Steps](#next-steps--próximos-passos)
 
@@ -43,7 +43,7 @@ Maven
 Relational Database Integration (MySQL)  
 CRUD Operations  
 Design Patterns  
-Unit Testing (JUnit)**
+Unit Testing (JUnit and Mockito)**
 
 All topics are organized into modular folders, each containing explanatory README files.  
 The structure prioritizes **learning progression and conceptual clarity**, rather than production-ready architecture.
@@ -75,7 +75,7 @@ Maven
 Integração com Banco de Dados Relacional (MySQL)  
 Operações CRUD  
 Padrões de Projeto  
-Testes Unitários (JUnit)**
+Testes Unitários (JUnit e Mockito)**
 
 Os tópicos estão organizados em pastas modulares, cada uma com README explicativo.  
 A estrutura prioriza **progressão didática e clareza conceitual**, em vez de arquitetura voltada à produção.
@@ -316,6 +316,22 @@ Complete Crud (CLI) - Click to go Youtube:
 
 ---
 
+![JUnit5](https://img.shields.io/badge/JUnit5-f5f5f5?style=for-the-badge&logo=junit5&logoColor=dc524a)
+
+<div align="center">
+
+## JUnit and Mockito:
+
+Basic conceptions:
+
+[Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/JUnit_Mockito/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/JUnit_Mockito/README_PT-BR.md)
+
+Tests: [JUnit and Mockito Exercise](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/test/java/JUnit/CalculatorTest.java)
+
+</div>
+
+---
+
 <div align="center">
 
 ## Final Project:
@@ -326,7 +342,7 @@ Command Line Project (CLI):
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/Challenges/RegistrationSystem/README_PT-BR.md)
 
 ### Pet Adoption System v2.0:
-GUI + JDBC + MySQL + JUnit + All Topics:
+GUI + JDBC + MySQL + JUnit_Mockito + All Topics:
 
 - Coming soon
 
