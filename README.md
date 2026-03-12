@@ -52,7 +52,7 @@ The structure prioritizes **learning progression and conceptual clarity**, rathe
 
 > **Scope Note:**  
 This repository intentionally focuses on Pure Java and its core ecosystem.  
-It does not deeply explore Docker, Web development, or Spring Boot, as those topics are covered in other repositories dedicated to production-ready backend applications.
+It does not deeply explore Docker, Spring Boot, etc. As those topics are covered in other repositories dedicated to production-ready backend applications.
 
 <div align="center">
 
@@ -84,7 +84,7 @@ A estrutura prioriza **progressão didática e clareza conceitual**, em vez de a
 
 > **Nota de Escopo:**  
 Este repositório tem foco intencional em Java puro e seu ecossistema principal.  
-Docker, desenvolvimento Web e Spring Boot são abordados em outros repositórios voltados para aplicações backend em nível de produção.
+Docker, Spring Boot, etc. São abordados em outros repositórios voltados para aplicações backend em nível de produção.
 
 <div align="center">
 
@@ -246,6 +246,10 @@ Builder, Factory, Singleton (The 3 Initializations) and Data Transfer Objects (D
 
 **Menção Honrosa:** Exercícios no terminal, como Streams, Genéricos, Exceções, Estruturas de Dados, POO, Classes Utilitárias, entre outros, são extremamente importantes e complexos para a compreensão do ecossistema Java e do ecossistema da computação.
 
+### Threads with Streams and Lambdas:
+
+[![Threads Run](assets/demo-threads.gif)](https://www.youtube.com/watch?v=7UkiTacMyzU)
+
 ### Graphic User Interfaces (GUI's):
 BeatBox Exercise:
 
@@ -259,6 +263,10 @@ Full-Duplex Multi-Client Chat:
 Complete Crud (CLI) - Click to go Youtube:
 
 [![Crud Video](assets/demo-jdbc.gif)](https://www.youtube.com/watch?v=7UkiTacMyzU)
+
+### JUnit and Mockito:
+
+[![Tests Video](assets/junit-mockito.gif)](https://www.youtube.com/watch?v=7UkiTacMyzU)
 
 </div>
 
@@ -326,7 +334,7 @@ Basic conceptions:
 
 [Click here for read in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/JUnit_Mockito/README.md) | [Click here for read in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/JUnit_Mockito/README_PT-BR.md)
 
-Tests: [JUnit and Mockito Exercise](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/test/java/JUnit/CalculatorTest.java)
+Tests: [JUnit and Mockito Exercise](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/test/java/JUnit_Mockito/CalculatorTest.java)
 
 </div>
 
