@@ -10,30 +10,33 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
 
     @Override
     public void save(Pet entity) throws DatabaseConnectionException  {
-        log.info("Saving pet: {}", entity.getName());
+        log.debug("SQL: INSERT pet name={}, type={}, sex={}", entity.getName(), entity.getType(), entity.getSex());
         String query = "INSERT INTO petadoption.pets (name, type, sex, age, weight, breed, address, status) "
                         + "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
-        try(Connection conn = DatabaseConfig.getConnection();
-            PreparedStatement ps = savePrepareStatement(conn, query, entity)){
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement ps = savePrepareStatement(conn, query, entity)) {
             ps.executeUpdate();
-            ResultSet key = ps.getGeneratedKeys();
-            if (key.next()){
-                entity.setId(key.getLong(1));
+            try (ResultSet key = ps.getGeneratedKeys()) {
+                if (key.next()) {
+                    entity.setId(key.getLong(1));
+                }
             }
         } catch (SQLException e){
+            log.error("Error saving pet name={}: {}", entity.getName(), e.getMessage());
             throw new DatabaseConnectionException("Error connection: " + e);
         }
     }
 
     @Override
-    public Optional<Pet> findById(Long aLong) throws DatabaseConnectionException  {
-        log.info("Searching ID: {}", aLong);
+    public Optional<Pet> findById(Long id) throws DatabaseConnectionException  {
+        log.debug("SQL: SELECT pet WHERE id={}", id);
         String query = "SELECT * FROM petadoption.pets "
                         + "WHERE (ID = ?);";
         try(Connection conn = DatabaseConfig.getConnection();
-            PreparedStatement ps = findByIdPrepareStatement(conn, query, aLong);
+            PreparedStatement ps = findByIdPrepareStatement(conn, query, id);
             ResultSet set = ps.executeQuery();){
-            return Optional.of(Pet.PetBuilder.aPet()
+            if (set.next()) {
+                return Optional.of(Pet.PetBuilder.aPet()
                         .withName(set.getString(1))
                         .withType(PetType.valueOf(set.getString(2)))
                         .withSex(PetSex.valueOf(set.getString(3)))
@@ -43,17 +46,19 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
                         .withAddress(set.getString(7))
                         .withStatus(PetStatus.valueOf(set.getString(8)))
                         .build());
+            }
         } catch (SQLException e){
+            log.error("Error finding pet id={}: {}", id, e.getMessage());
             throw new DatabaseConnectionException("Error connection: " + e);
         } catch (PetValidationException e) {
-            log.error(e);
+            log.error("Error building pet from ResultSet id={}: {}", id, e.getMessage());
         }
         return Optional.empty();
     }
 
     @Override
     public List<Pet> findByType(PetType type) throws DatabaseConnectionException  {
-        log.info("Searching by type: {}", type);
+        log.debug("SQL: SELECT pets WHERE type={}", type);
         String query = "SELECT * FROM petadoption.pets "
                         + "WHERE (type = ?);";
         List<Pet> petList = new ArrayList<>();
@@ -72,17 +77,19 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
                         .withStatus(PetStatus.valueOf(set.getString(8)))
                         .build());
             }
+            log.debug("SQL: SELECT successful, found {} pets of type={}", petList.size(), type);
         } catch (SQLException e){
+            log.error("Error finding pets by type={}: {}", type, e.getMessage());
             throw new DatabaseConnectionException("Error connection: " + e);
         } catch (PetValidationException e){
-            log.error(e);
+            log.error("Error building pet from ResultSet type={}: {}", type, e.getMessage());
         }
         return petList;
     }
 
     @Override
     public List<Pet> findAll() throws DatabaseConnectionException {
-        log.info("Searching all:");
+        log.debug("SQL: SELECT all pets");
         String query = "SELECT * FROM petadoption.pets;";
         List<Pet> petList = new ArrayList<>();
         try(Connection conn = DatabaseConfig.getConnection();
@@ -100,34 +107,49 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
                         .withStatus(PetStatus.valueOf(set.getString(8)))
                         .build());
             }
+            log.debug("SQL: SELECT successful, found {} pets", petList.size());
         } catch (SQLException e){
+            log.error("Error finding all pets: {}", e.getMessage());
             throw new DatabaseConnectionException("Error connection: " + e);
         } catch (PetValidationException e){
-            log.error(e);
+            log.error("Error building pet from ResultSet: {}", e.getMessage());
         }
         return petList;
     }
 
     @Override
     public void update(Pet entity) throws DatabaseConnectionException  {
-        log.info("Updating name: {}", entity.getName());
+        log.debug("SQL: UPDATE pet id={}, name={}", entity.getId(), entity.getName());
         String query = "UPDATE petadoption.pets "
-                        + "SET name = ?, type = ?, sex = ?, age = ?, weight = ?, breed = ?, address = ?, status = ?";
+                        + "SET name = ?, type = ?, sex = ?, age = ?, weight = ?, breed = ?, address = ?, status = ?"
+                        + "WHERE id = ?";
         try(Connection conn = DatabaseConfig.getConnection();
             PreparedStatement ps = updatePrepareStatement(conn, query, entity)){
-
+            ps.executeUpdate();
+            log.debug("SQL: UPDATE successful, pet id={}", entity.getId());
         } catch (SQLException e){
+            log.error("Error updating pet id={}: {}", entity.getId(), e.getMessage());
             throw new DatabaseConnectionException("Error connection: " + e);
         }
     }
 
     @Override
-    public void delete(Long aLong) {
-
+    public void delete(Long id) throws DatabaseConnectionException {
+        log.debug("SQL: DELETE pet WHERE id={}", id);
+        String query = "DELETE FROM petadoption.pets "
+                        + "WHERE id = ?";
+        try(Connection conn = DatabaseConfig.getConnection();
+            PreparedStatement ps = deletePrepareStatement(conn, query, id)){
+            ps.execute();
+            log.debug("SQL: DELETE successful, pet id={}", id);
+        } catch (SQLException e){
+            log.error("Error deleting pet id={}: {}", id, e.getMessage());
+            throw new DatabaseConnectionException("Error connection: " + e);
+        }
     }
 
     private PreparedStatement savePrepareStatement(Connection conn, String query, Pet entity) throws SQLException {
-        PreparedStatement ps = conn.prepareStatement(query);
+        PreparedStatement ps = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, entity.getName());
         ps.setString(2, entity.getType().toString());
         ps.setString(3, entity.getSex().toString());
@@ -165,6 +187,13 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
         ps.setString(6, entity.getBreed());
         ps.setString(7, entity.getAddress());
         ps.setString(8, entity.getStatus().toString());
+        ps.setLong(9, entity.getId());
+        return ps;
+    }
+
+    private PreparedStatement deletePrepareStatement(Connection conn, String query, Long id) throws SQLException {
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setLong(1, id);
         return ps;
     }
 }
