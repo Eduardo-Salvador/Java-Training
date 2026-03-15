@@ -108,10 +108,28 @@ public class PetService {
                 .filter(p -> p.getId().equals(id))
                 .findFirst();
         if (petFind.isPresent()) {
+            Pet pet = petFind.get();
+            CompletableFuture.runAsync(() -> notificationServer.broadcast("Pet: " + pet.getName() + " | Type: " + pet.getType() + " | Status: NOT AVAILABLE"));
             repository.delete(id);
             cache.removeIf(p -> p.getId().equals(id));
             return;
         }
         throw new PetNotFoundException("Pet not found for id: " + id);
+    }
+
+    public void update(Pet pet) throws PetNotFoundException, DatabaseConnectionException {
+        if (pet.getId() == null) {
+            throw new PetNotFoundException("Invalid ID from Update Pet");
+        }
+        Optional<Pet> petFind = cache.stream()
+                .filter(p -> p.getId().equals(pet.getId()))
+                .findFirst();
+        if (petFind.isPresent()) {
+            repository.update(pet);
+            cache.replaceAll(p -> p.getId().equals(pet.getId()) ? pet : p);
+            CompletableFuture.runAsync(() -> notificationServer.notify(pet));
+            return;
+        }
+        throw new PetNotFoundException("Pet not found for id: " + pet.getId());
     }
 }

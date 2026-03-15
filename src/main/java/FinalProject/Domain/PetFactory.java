@@ -1,5 +1,4 @@
 package FinalProject.Domain;
-
 import FinalProject.Exception.PetValidationException;
 
 public class PetFactory {

@@ -37,14 +37,15 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
             ResultSet set = ps.executeQuery();){
             if (set.next()) {
                 return Optional.of(Pet.PetBuilder.aPet()
-                        .withName(set.getString(1))
-                        .withType(PetType.valueOf(set.getString(2)))
-                        .withSex(PetSex.valueOf(set.getString(3)))
-                        .withAge(set.getDouble(4))
-                        .withWeight(set.getDouble(5))
-                        .withBreed(set.getString(6))
-                        .withAddress(set.getString(7))
-                        .withStatus(PetStatus.valueOf(set.getString(8)))
+                        .withId(set.getLong("id"))
+                        .withName(set.getString("name"))
+                        .withType(PetType.valueOf(set.getString("type")))
+                        .withSex(PetSex.valueOf(set.getString("sex")))
+                        .withAge(set.getDouble("age"))
+                        .withWeight(set.getDouble("weight"))
+                        .withBreed(set.getString("breed"))
+                        .withAddress(set.getString("address"))
+                        .withStatus(PetStatus.valueOf(set.getString("status")))
                         .build());
             }
         } catch (SQLException e){
@@ -67,14 +68,15 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
             ResultSet set = ps.executeQuery();){
             while (set.next()){
                 petList.add(Pet.PetBuilder.aPet()
-                        .withName(set.getString(1))
-                        .withType(PetType.valueOf(set.getString(2)))
-                        .withSex(PetSex.valueOf(set.getString(3)))
-                        .withAge(set.getDouble(4))
-                        .withWeight(set.getDouble(5))
-                        .withBreed(set.getString(6))
-                        .withAddress(set.getString(7))
-                        .withStatus(PetStatus.valueOf(set.getString(8)))
+                        .withId(set.getLong("id"))
+                        .withName(set.getString("name"))
+                        .withType(PetType.valueOf(set.getString("type")))
+                        .withSex(PetSex.valueOf(set.getString("sex")))
+                        .withAge(set.getDouble("age"))
+                        .withWeight(set.getDouble("weight"))
+                        .withBreed(set.getString("breed"))
+                        .withAddress(set.getString("address"))
+                        .withStatus(PetStatus.valueOf(set.getString("status")))
                         .build());
             }
             log.debug("SQL: SELECT successful, found {} pets of type={}", petList.size(), type);
@@ -97,14 +99,15 @@ public class PetRepositoryImpl implements PetRepository<Pet, Long>{
             ResultSet set = ps.executeQuery();){
             while (set.next()){
                 petList.add(Pet.PetBuilder.aPet()
-                        .withName(set.getString(1))
-                        .withType(PetType.valueOf(set.getString(2)))
-                        .withSex(PetSex.valueOf(set.getString(3)))
-                        .withAge(set.getDouble(4))
-                        .withWeight(set.getDouble(5))
-                        .withBreed(set.getString(6))
-                        .withAddress(set.getString(7))
-                        .withStatus(PetStatus.valueOf(set.getString(8)))
+                        .withId(set.getLong("id"))
+                        .withName(set.getString("name"))
+                        .withType(PetType.valueOf(set.getString("type")))
+                        .withSex(PetSex.valueOf(set.getString("sex")))
+                        .withAge(set.getDouble("age"))
+                        .withWeight(set.getDouble("weight"))
+                        .withBreed(set.getString("breed"))
+                        .withAddress(set.getString("address"))
+                        .withStatus(PetStatus.valueOf(set.getString("status")))
                         .build());
             }
             log.debug("SQL: SELECT successful, found {} pets", petList.size());

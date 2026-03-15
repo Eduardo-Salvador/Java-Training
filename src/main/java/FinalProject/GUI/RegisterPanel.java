@@ -9,6 +9,7 @@ import java.awt.*;
 @Log4j2
 public class RegisterPanel extends JPanel {
     private final PetService service;
+    private final ReportPanel reportPanel;
     private final JTextField nameField    = new JTextField(20);
     private final JTextField breedField   = new JTextField(20);
     private final JTextField addressField = new JTextField(20);
@@ -18,8 +19,9 @@ public class RegisterPanel extends JPanel {
     private final JComboBox<PetSex>    sexCombo    = new JComboBox<>(PetSex.values());
     private final JComboBox<PetStatus> statusCombo = new JComboBox<>(PetStatus.values());
 
-    public RegisterPanel(PetService service) {
+    public RegisterPanel(PetService service, ReportPanel reportPanel) {
         this.service = service;
+        this.reportPanel = reportPanel;
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);
@@ -63,6 +65,7 @@ public class RegisterPanel extends JPanel {
                 );
                 service.register(dto);
                 JOptionPane.showMessageDialog(this, "Pet successfully registered.!");
+                reportPanel.refresh();
                 clearForm();
             } catch (PetValidationException e) {
                 JOptionPane.showMessageDialog(this, e.getMessage(), "Validation Error", JOptionPane.ERROR_MESSAGE);

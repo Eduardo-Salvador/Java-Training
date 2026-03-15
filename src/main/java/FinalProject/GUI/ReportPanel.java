@@ -6,7 +6,6 @@ import java.awt.*;
 
 @Log4j2
 public class ReportPanel extends JPanel {
-
     private final PetService service;
     private final JTextArea reportArea = new JTextArea(20, 50);
 
@@ -25,7 +24,7 @@ public class ReportPanel extends JPanel {
         refresh();
     }
 
-    private void refresh() {
+    public void refresh() {
         SwingUtilities.invokeLater(() -> {
             StringBuilder sb = new StringBuilder();
 

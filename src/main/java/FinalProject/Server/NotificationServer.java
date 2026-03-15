@@ -1,4 +1,5 @@
 package FinalProject.Server;
+
 import FinalProject.Domain.Pet;
 import lombok.extern.log4j.Log4j2;
 import java.io.IOException;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 
 @Log4j2
 public class NotificationServer implements Runnable {
@@ -32,7 +32,7 @@ public class NotificationServer implements Runnable {
 
     public void notify(Pet pet) {
         CompletableFuture.runAsync(() ->
-                broadcast("Pet available: " + pet.getName() + " | Type: " + pet.getType())
+                broadcast("Pet: " + pet.getName() + " | Type: " + pet.getType() + " | Status: " + pet.getStatus())
         );
     }
 

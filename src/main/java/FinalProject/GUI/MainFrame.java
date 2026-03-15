@@ -1,9 +1,7 @@
 package FinalProject.GUI;
 import FinalProject.Service.PetService;
-import lombok.extern.log4j.Log4j2;
 import javax.swing.*;
 
-@Log4j2
 public class MainFrame extends JFrame {
     private final PetService service;
     private final JTextArea logArea = new JTextArea();
@@ -12,13 +10,17 @@ public class MainFrame extends JFrame {
         this.service = service;
         setTitle("Pet Adoption System");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(900, 650);
         setLocationRelativeTo(null);
 
         JTabbedPane tabbedPane = new JTabbedPane();
-        tabbedPane.addTab("Register", new RegisterPanel(service));
-        tabbedPane.addTab("Search", new SearchPanel(service));
-        tabbedPane.addTab("Summary", new ReportPanel(service));
+
+        ReportPanel reportPanel = new ReportPanel(service);
+
+        tabbedPane.addTab("Register",      new RegisterPanel(service, reportPanel));
+        tabbedPane.addTab("Search",        new SearchPanel(service, reportPanel));
+        tabbedPane.addTab("Edit",          new EditPanel(service, reportPanel));
+        tabbedPane.addTab("Summary",       reportPanel);
 
         logArea.setEditable(false);
         tabbedPane.addTab("Notifications", new JScrollPane(logArea));

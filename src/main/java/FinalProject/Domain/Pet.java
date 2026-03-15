@@ -70,6 +70,11 @@ public class Pet {
             return new PetBuilder();
         }
 
+        public PetBuilder withId(Long id){
+            this.id = id;
+            return this;
+        }
+
         public PetBuilder withName(String name) {
             this.name = name;
             return this;
