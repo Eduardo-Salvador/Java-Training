@@ -6,12 +6,16 @@ import java.sql.SQLException;
 
 public class DatabaseConfig {
     private static final DatabaseConfig INSTANCE = new DatabaseConfig();
-    private final Connection connection;
+    private Connection connection;
 
-    private DatabaseConfig() throws RuntimeException {
+    private DatabaseConfig() {
+        connect();
+    }
+
+    private void connect() {
         try {
             Dotenv dotenv = Dotenv.load();
-            String url = dotenv.get("DB_URL");
+            String url      = dotenv.get("DB_URL");
             String username = dotenv.get("DB_USER");
             String password = dotenv.get("DB_PASSWORD");
             this.connection = DriverManager.getConnection(url, username, password);
@@ -20,7 +24,10 @@ public class DatabaseConfig {
         }
     }
 
-    public static Connection getConnection() {
+    public static Connection getConnection() throws SQLException {
+        if (INSTANCE.connection == null || INSTANCE.connection.isClosed()) {
+            INSTANCE.connect();
+        }
         return INSTANCE.connection;
     }
 }

@@ -1,6 +1,7 @@
 package FinalProject.Domain;
 
 public record PetResponseDTO(
+        Long id,
         String name,
         PetType type,
         PetSex sex,
@@ -12,6 +13,7 @@ public record PetResponseDTO(
 ) {
     public static PetResponseDTO fromPet(Pet pet) {
         return new PetResponseDTO(
+                pet.getId(),
                 pet.getName(),
                 pet.getType(),
                 pet.getSex(),

@@ -1,9 +1,9 @@
 package FinalProject.Service;
 
 public class PetValidator {
-    public static boolean validName(String name){
+    public static boolean isValidName(String name){
         boolean numbers = name.matches(".*\\d.*");
-        return numbers && name.length() > 2;
+        return !numbers && name.length() > 2;
     }
 
     public static boolean isValidAge(Double age){

@@ -26,7 +26,7 @@ public class PetService {
     public PetResponseDTO register(PetRequestDTO petRequestDTO) throws PetValidationException {
         if (petRequestDTO != null){
             Pet newPet = PetFactory.create(petRequestDTO);
-            if (PetValidator.validName(newPet.getName())
+            if (PetValidator.isValidName(newPet.getName())
                 && PetValidator.isValidAge(newPet.getAge())
                 && PetValidator.isValidWeight(newPet.getWeight())
                 && PetValidator.isValidAddress(newPet.getAddress())) {
@@ -101,5 +101,17 @@ public class PetService {
     public Map<PetType, Double> averageWeightByType() {
         return cache.stream()
                 .collect(Collectors.groupingBy(Pet::getType, Collectors.averagingDouble(Pet::getWeight)));
+    }
+
+    public void delete(Long id) throws PetNotFoundException, DatabaseConnectionException {
+        Optional<Pet> petFind = cache.stream()
+                .filter(p -> p.getId().equals(id))
+                .findFirst();
+        if (petFind.isPresent()) {
+            repository.delete(id);
+            cache.removeIf(p -> p.getId().equals(id));
+            return;
+        }
+        throw new PetNotFoundException("Pet not found for id: " + id);
     }
 }
