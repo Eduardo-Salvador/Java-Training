@@ -65,7 +65,7 @@ gui/            MainFrame, RegisterPanel, SearchPanel, ReportPanel (Swing)
 server/         NotificationServer and NotificationClient (Channels and Sockets)
 util/           PetValidator — static validation methods
 exception/      PetNotFoundException, PetValidationException, DatabaseConnectionException
-test/           PetServiceTest and PetRepositoryTest (JUnit 5 + Mockito)
+test/           FinalProject.PetServiceTest and PetRepositoryTest (JUnit 5 + Mockito)
 ```
 
 ---
@@ -203,16 +203,16 @@ Summary panel that displays: total pets per type (from `countByType()`), average
 
 ### Step 7: Tests
 
-Write `PetServiceTest` using JUnit 5 and Mockito. The repository and the notification server must be mocked. Tests must cover:
+Write `FinalProject.PetServiceTest` using JUnit 5 and Mockito. The repository and the notification server must be mocked. Tests must cover:
 
-- `register` — happy path, returns correct DTO and calls `repository.save` exactly once
-- `register` — throws `PetValidationException` when name is blank
-- `findById` — returns correct DTO when pet exists
-- `findById` — throws `PetNotFoundException` when id does not exist
-- `adopt` — changes status and calls `repository.update` exactly once
-- `adopt` — throws `PetNotFoundException` when id does not exist
-- `findByNameAndBreed` — returns filtered results correctly
-- `countByType` — returns correct counts per type
+- `register` — Happy path, returns correct DTO and calls `repository.save` exactly once
+- `register` — Throws `PetValidationException` when name is blank
+- `findById` — Returns correct DTO when pet exists
+- `findById` — Throws `PetNotFoundException` when id does not exist
+- `adopt` — Changes status and calls `repository.update` exactly once
+- `adopt` — Yhrows `PetNotFoundException` when id does not exist
+- `findByNameAndBreed` — Returns filtered results correctly
+- `countByType` — Returns correct counts per type
 
 Write `PetRepositoryTest` covering `save`, `findById`, `findAll`, `update` and `delete` against the real Docker MySQL container or an H2 in-memory database.
 

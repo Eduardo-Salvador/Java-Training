@@ -26,6 +26,9 @@ public class PetService {
     public PetResponseDTO register(PetRequestDTO petRequestDTO) throws PetValidationException {
         if (petRequestDTO != null){
             Pet newPet = PetFactory.create(petRequestDTO);
+            if (newPet == null) {
+                throw new PetValidationException("Invalid Request");
+            }
             if (PetValidator.isValidName(newPet.getName())
                 && PetValidator.isValidAge(newPet.getAge())
                 && PetValidator.isValidWeight(newPet.getWeight())
