@@ -1,22 +1,23 @@
 <div align="center">
 
-[![Generic badge](https://img.shields.io/badge/STATUS-IN_PROGRESS-<COLOR>.svg)](https://shields.io/) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)]([https://GitHub.com/Naereen/ama](https://github.com/Eduardo-Salvador))
+[![Generic badge](https://img.shields.io/badge/STATUS-FINISHED-<COLOR>.svg)](https://shields.io/) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)]([https://GitHub.com/Naereen/ama](https://github.com/Eduardo-Salvador))
 
 ---
 
 # Quick Navigation
 
-### [Overview](#java-training-repository)  
-### [Technologies](#technologies)  
-### [Important Notes](#important-notes--observações-importantes)  
-### [Topics](#topics)  
-### [Highlighted Results](#highlighted-results-from-module-exercises)
-### [Apache Maven](#what-is-apache-maven)
-### [MySQL](#what-is-mysql)
-### [Docker](#summary-about-docker)
-### [JUnit and Mockito](#junit-and-mockito)
-### [Final Project](#final-project)
-### [Next Steps](#next-steps--próximos-passos)
+
+#### [Overview](#java-training-repository)  
+#### [Technologies](#technologies)  
+#### [Important Notes](#important-notes--observações-importantes)  
+#### [Topics](#topics)  
+#### [Highlighted Results](#highlighted-results-from-module-exercises)
+#### [Apache Maven](#what-is-apache-maven)
+#### [MySQL](#what-is-mysql)
+#### [Docker](#summary-about-docker)
+#### [JUnit and Mockito](#junit-and-mockito)
+#### [Final Project](#final-project)
+#### [Next Steps](#next-steps--próximos-passos)
 
 ---
 
@@ -24,7 +25,11 @@
 
 A structured and progressive deep dive into Java fundamentals and ecosystem mastery.
 
+The [final project](#final-project) encompasses all the learning gained from this repository.
+
 Uma imersão estruturada e progressiva nos fundamentos do Java e no domínio do ecossistema.
+
+O [projeto final](#final-project) engloba todo o aprendizado obtido a partir deste repositório.
 
 ---
 
@@ -352,13 +357,29 @@ Command Line Project (CLI):
 ### Pet Adoption System v2.0:
 GUI + JDBC + MySQL + JUnit_Mockito + All Topics:
 
-- Coming soon
+#### Results:
+
+[![Crud Video](assets/demo-final-project.gif)](https://www.youtube.com/watch?v=auGUECGNZtc)
+
+#### Tests:
+
+[![Crud Video](assets/demo-tests-final-project.gif)](https://www.youtube.com/watch?v=auGUECGNZtc)
+
+#### Problem Question:
+
+[Click here for Problem question in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/FinalProject/ProblemQuestion.md) | [Click here for Problem Question in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/FinalProject/ProblemQuestion_PT-BR.md)
+
+#### README for solution:
+
+[Click here for Reame in English](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/FinalProject/README.md) | [Click here for Readme in Portuguese-BR](https://github.com/Eduardo-Salvador/Java-Training/blob/main/src/main/java/FinalProject/README_PT-BR.md)
 
 </div>
 
 ---
 
 ## Next Steps / Próximos Passos
+
+https://github.com/Eduardo-Salvador
 
 <div align="center">
 
@@ -395,7 +416,3 @@ O próximo passo natural é aplicar esse conhecimento em ecossistemas de backend
 Esses tópicos são explorados em outros repositórios focados em aplicações do mundo real e em nível de produção.
 
 ---
-
-## Production Projects
-
-- Coming soon

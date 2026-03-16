@@ -11,14 +11,11 @@ import org.mockito.junit.jupiter.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import org.mockito.quality.Strictness;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
 class PetServiceTest {
-
     @Mock
     private PetRepository<Pet, Long> repository;
 
